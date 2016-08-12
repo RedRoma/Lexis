@@ -1,2 +1,4 @@
-# Lexus
-Lexus - An inspired dictionary by RedRoma
+Lexis
+==========================================
+
+Lexis - An inspired dictionary by RedRoma
