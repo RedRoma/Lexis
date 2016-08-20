@@ -1,9 +1,9 @@
 Lexis
 ==========================================
 
-![Lexis](Design/Logo/Book_Black_Sleek/Icon-Original.png)
+![Lexis](Design/Logo/Book_Red_Sleek/Icon-Original.png)
 
-## An inspired dictionary by RedRoma
+## The Lexicon of Rome
 
 
 # Intro
