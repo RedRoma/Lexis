@@ -38,3 +38,44 @@ We not only want to know what a word's definition is, but we also want to know:
 + Any images associated with the word.   
 + If the word is being used by a company. You probably wouldn't want to use it for a Business Name.
 + If the word is used in popular culture (Movies, Music, etc)  
+
+
+# Poetry
+
+## Looking up a word
+
+I was reading a book in Latin  
+Saw a word I didn't know  
+Paused for a second, annoyed  
+Decided it was better to look it up  
+I wanted a complete understanding  
+Opened my Latin Dictionary  
+Then I remembered that I did not have one  
+Even more annoyed now  
+Unlocked my phone   
+Thankful for the fingerprint unlock  
+Scour the App Store for a couple of digital dictionaries  
+Open up the first one  
+Annoying ad prevents usage  
+Try the next one  
+It is even worse  
+They all sucked  
+Frustrated  
+Crisis turned to opportunity  
+Project Lexis born  
+
+
+## Meaning
+
+Language is meaning  
+Humans make Language  
+So Humans make meaning  
+Meaning is created  
+Not found  
+
+The definition of Life  
+Is that which cannot be defined  
+For to be defined  
+Is to fit in the mind  
+And that which is Divine  
+Eludes our sense of time
