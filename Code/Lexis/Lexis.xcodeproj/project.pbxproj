@@ -12,6 +12,12 @@
 		DE1294FC1D6977F700687CA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1294FA1D6977F700687CA5 /* Main.storyboard */; };
 		DE1294FE1D6977F700687CA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE1294FD1D6977F700687CA5 /* Assets.xcassets */; };
 		DE1295011D6977F700687CA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1294FF1D6977F700687CA5 /* LaunchScreen.storyboard */; };
+		DE12950F1D6982FF00687CA5 /* Cinzel-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE1295091D6982FF00687CA5 /* Cinzel-Black.otf */; };
+		DE1295101D6982FF00687CA5 /* Cinzel-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE12950A1D6982FF00687CA5 /* Cinzel-Bold.otf */; };
+		DE1295111D6982FF00687CA5 /* Cinzel-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE12950B1D6982FF00687CA5 /* Cinzel-Regular.otf */; };
+		DE1295121D6982FF00687CA5 /* CinzelDecorative-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE12950C1D6982FF00687CA5 /* CinzelDecorative-Black.otf */; };
+		DE1295131D6982FF00687CA5 /* CinzelDecorative-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE12950D1D6982FF00687CA5 /* CinzelDecorative-Bold.otf */; };
+		DE1295141D6982FF00687CA5 /* CinzelDecorative-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE12950E1D6982FF00687CA5 /* CinzelDecorative-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		DE1294FD1D6977F700687CA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE1295001D6977F700687CA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE1295021D6977F700687CA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE1295091D6982FF00687CA5 /* Cinzel-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cinzel-Black.otf"; sourceTree = "<group>"; };
+		DE12950A1D6982FF00687CA5 /* Cinzel-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cinzel-Bold.otf"; sourceTree = "<group>"; };
+		DE12950B1D6982FF00687CA5 /* Cinzel-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cinzel-Regular.otf"; sourceTree = "<group>"; };
+		DE12950C1D6982FF00687CA5 /* CinzelDecorative-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CinzelDecorative-Black.otf"; sourceTree = "<group>"; };
+		DE12950D1D6982FF00687CA5 /* CinzelDecorative-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CinzelDecorative-Bold.otf"; sourceTree = "<group>"; };
+		DE12950E1D6982FF00687CA5 /* CinzelDecorative-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CinzelDecorative-Regular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 		DE1294F51D6977F700687CA5 /* Lexis */ = {
 			isa = PBXGroup;
 			children = (
+				DE1295081D6982D100687CA5 /* Fonts */,
 				DE1294F61D6977F700687CA5 /* AppDelegate.swift */,
 				DE1294F81D6977F700687CA5 /* ViewController.swift */,
 				DE1294FA1D6977F700687CA5 /* Main.storyboard */,
@@ -62,6 +75,19 @@
 				DE1295021D6977F700687CA5 /* Info.plist */,
 			);
 			path = Lexis;
+			sourceTree = "<group>";
+		};
+		DE1295081D6982D100687CA5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DE1295091D6982FF00687CA5 /* Cinzel-Black.otf */,
+				DE12950A1D6982FF00687CA5 /* Cinzel-Bold.otf */,
+				DE12950B1D6982FF00687CA5 /* Cinzel-Regular.otf */,
+				DE12950C1D6982FF00687CA5 /* CinzelDecorative-Black.otf */,
+				DE12950D1D6982FF00687CA5 /* CinzelDecorative-Bold.otf */,
+				DE12950E1D6982FF00687CA5 /* CinzelDecorative-Regular.otf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,9 +150,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE1295141D6982FF00687CA5 /* CinzelDecorative-Regular.otf in Resources */,
+				DE1295101D6982FF00687CA5 /* Cinzel-Bold.otf in Resources */,
+				DE1295131D6982FF00687CA5 /* CinzelDecorative-Bold.otf in Resources */,
 				DE1295011D6977F700687CA5 /* LaunchScreen.storyboard in Resources */,
+				DE1295121D6982FF00687CA5 /* CinzelDecorative-Black.otf in Resources */,
 				DE1294FE1D6977F700687CA5 /* Assets.xcassets in Resources */,
+				DE12950F1D6982FF00687CA5 /* Cinzel-Black.otf in Resources */,
 				DE1294FC1D6977F700687CA5 /* Main.storyboard in Resources */,
+				DE1295111D6982FF00687CA5 /* Cinzel-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
