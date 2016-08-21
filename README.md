@@ -24,7 +24,8 @@ I'll be honest here. I just feel like creating dope shit. There is no business j
 
 Classic with a modern feel.  
 Useful, but not verbose.  
-Embellished, but not overdone.
+Embellished, but not overdone.   
+
 
 
 # Features
