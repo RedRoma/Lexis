@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		DEFB29EC1D55AE590065CBCD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFB29EB1D55AE590065CBCD /* main.swift */; };
 		DEFB29F71D55B5F10065CBCD /* LatinDictionary.txt in Resources */ = {isa = PBXBuildFile; fileRef = DEFB29F31D55AE9E0065CBCD /* LatinDictionary.txt */; };
-		DEFB29F91D55B62C0065CBCD /* IMG_9387.PNG in Resources */ = {isa = PBXBuildFile; fileRef = DEFB29F81D55B62C0065CBCD /* IMG_9387.PNG */; };
 		DEFB29FB1D55B77A0065CBCD /* LatinDictionary.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = DEFB29F31D55AE9E0065CBCD /* LatinDictionary.txt */; };
-		DEFB29FC1D55B77E0065CBCD /* IMG_9387.PNG in CopyFiles */ = {isa = PBXBuildFile; fileRef = DEFB29F81D55B62C0065CBCD /* IMG_9387.PNG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,7 +28,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
-				DEFB29FC1D55B77E0065CBCD /* IMG_9387.PNG in CopyFiles */,
 				DEFB29FB1D55B77A0065CBCD /* LatinDictionary.txt in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,7 +38,6 @@
 		DEFB29E81D55AE590065CBCD /* LexisCommandLine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LexisCommandLine; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEFB29EB1D55AE590065CBCD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		DEFB29F31D55AE9E0065CBCD /* LatinDictionary.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LatinDictionary.txt; sourceTree = "<group>"; };
-		DEFB29F81D55B62C0065CBCD /* IMG_9387.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_9387.PNG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +72,6 @@
 			children = (
 				DEFB29F21D55AE8C0065CBCD /* Resources */,
 				DEFB29EB1D55AE590065CBCD /* main.swift */,
-				DEFB29F81D55B62C0065CBCD /* IMG_9387.PNG */,
 			);
 			path = LexisCommandLine;
 			sourceTree = "<group>";
@@ -151,7 +146,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEFB29F91D55B62C0065CBCD /* IMG_9387.PNG in Resources */,
 				DEFB29F71D55B5F10065CBCD /* LatinDictionary.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +285,7 @@
 				DEFB29F11D55AE590065CBCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

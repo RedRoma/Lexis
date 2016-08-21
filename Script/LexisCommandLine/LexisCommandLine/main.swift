@@ -12,7 +12,7 @@ import Foundation
 let manager = FileManager.default
 let bundle = Bundle.main
 
-let files = bundle.pathsForResources(ofType: nil, inDirectory: nil)
+let files = bundle.paths(forResourcesOfType: nil, inDirectory: nil)
 print("Resources:\n")
 files.forEach() { print($0) }
 print()
@@ -26,7 +26,7 @@ func loadDictionary() -> String?
 
     do
     {
-        guard let url = bundle.urlForResource(dictionaryName, withExtension: ext)
+        guard let url = bundle.url(forResource: dictionaryName, withExtension: ext)
         else
         {
             print("Failed to load Dictionary")
