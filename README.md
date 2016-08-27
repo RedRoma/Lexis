@@ -8,12 +8,12 @@ Lexis
 
 # Intro
 
-I was working on another project, and we were at the point where we needed to pick a name.   
+I was working on a project, and we were at the point where we needed to pick a name.   
 Of course, we had to look through the latin dictionary.  
 I went to the App Store to download a legit Latin Dictionary app.  
 They all sucked.
 
-Rome deserves better.
+### Rome deserves better.
 
 # Motivation
 
