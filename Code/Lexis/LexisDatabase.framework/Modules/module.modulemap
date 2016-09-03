@@ -1,0 +1,10 @@
+framework module LexisDatabase {
+  umbrella header "LexisDatabase.h"
+
+  export *
+  module * { export * }
+}
+
+module LexisDatabase.Swift {
+    header "LexisDatabase-Swift.h"
+}
