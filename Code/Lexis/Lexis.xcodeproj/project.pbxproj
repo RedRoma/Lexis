@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE0E00051D7E976300B70D62 /* RedRomaColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0E00041D7E976300B70D62 /* RedRomaColors.framework */; };
+		DE0E00061D7E976300B70D62 /* RedRomaColors.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE0E00041D7E976300B70D62 /* RedRomaColors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DE0EFFD61D7E843400B70D62 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0EFFD51D7E843400B70D62 /* WelcomePage.swift */; };
 		DE0EFFD91D7E856500B70D62 /* Strings+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0EFFD81D7E856500B70D62 /* Strings+.swift */; };
 		DE1294F71D6977F700687CA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1294F61D6977F700687CA5 /* AppDelegate.swift */; };
@@ -35,6 +37,7 @@
 			files = (
 				DE60BCC61D7B6AE800EF15C6 /* LexisDatabase.framework in Embed Frameworks */,
 				DE60BCCA1D7B6AF100EF15C6 /* Sulcus.framework in Embed Frameworks */,
+				DE0E00061D7E976300B70D62 /* RedRomaColors.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,6 +45,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DE0E00041D7E976300B70D62 /* RedRomaColors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RedRomaColors.framework; sourceTree = "<group>"; };
 		DE0EFFD51D7E843400B70D62 /* WelcomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
 		DE0EFFD81D7E856500B70D62 /* Strings+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+.swift"; sourceTree = "<group>"; };
 		DE1294F31D6977F700687CA5 /* Lexis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lexis.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +73,7 @@
 			files = (
 				DE60BCC51D7B6AE800EF15C6 /* LexisDatabase.framework in Frameworks */,
 				DE60BCC91D7B6AF100EF15C6 /* Sulcus.framework in Frameworks */,
+				DE0E00051D7E976300B70D62 /* RedRomaColors.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +99,7 @@
 		DE1294EA1D6977F700687CA5 = {
 			isa = PBXGroup;
 			children = (
+				DE0E00041D7E976300B70D62 /* RedRomaColors.framework */,
 				DE60BCC81D7B6AF100EF15C6 /* Sulcus.framework */,
 				DE60BCC41D7B6AE800EF15C6 /* LexisDatabase.framework */,
 				DE1294F51D6977F700687CA5 /* Lexis */,
