@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xSu-fu-JCG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WKa-lF-JFp">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -43,10 +43,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Welcome Page Template View Controller-->
         <scene sceneID="Ow8-3x-ogi">
             <objects>
-                <viewController id="xSu-fu-JCG" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomePageTemplate" id="xSu-fu-JCG" customClass="WelcomePageTemplateViewController" customModule="Lexis" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Gbi-Ae-bXY"/>
                         <viewControllerLayoutGuide type="bottom" id="AkG-GL-Pjk"/>
@@ -55,12 +55,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLASSIC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sak-Q6-cVP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="CLASSIC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="Sak-Q6-cVP">
                                 <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="56"/>
                                 <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="with a modern feel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Az3-k2-NBQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="with a modern feel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="Az3-k2-NBQ">
                                 <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="24"/>
                                 <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -84,22 +84,36 @@
                             <constraint firstItem="If2-mT-rf8" firstAttribute="centerX" secondItem="ui5-n0-Zot" secondAttribute="centerX" id="Mjh-Ay-Kii"/>
                             <constraint firstItem="If2-mT-rf8" firstAttribute="top" secondItem="Az3-k2-NBQ" secondAttribute="bottom" constant="24" id="UyH-ME-C2H"/>
                             <constraint firstItem="If2-mT-rf8" firstAttribute="width" secondItem="ui5-n0-Zot" secondAttribute="width" multiplier="0.7" id="Ycq-kI-MbG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Sak-Q6-cVP" secondAttribute="trailing" id="au7-eZ-goa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Sak-Q6-cVP" secondAttribute="trailing" constant="8" id="au7-eZ-goa"/>
                             <constraint firstItem="Az3-k2-NBQ" firstAttribute="centerX" secondItem="Sak-Q6-cVP" secondAttribute="centerX" id="b0d-sB-ahv"/>
                             <constraint firstItem="1ro-35-nno" firstAttribute="top" relation="greaterThanOrEqual" secondItem="If2-mT-rf8" secondAttribute="bottom" constant="8" id="esR-PC-ZSK"/>
-                            <constraint firstItem="Sak-Q6-cVP" firstAttribute="leading" secondItem="ui5-n0-Zot" secondAttribute="leadingMargin" id="j6K-as-yul"/>
+                            <constraint firstItem="Sak-Q6-cVP" firstAttribute="leading" secondItem="ui5-n0-Zot" secondAttribute="leadingMargin" constant="8" id="j6K-as-yul"/>
                             <constraint firstItem="1ro-35-nno" firstAttribute="leading" secondItem="ui5-n0-Zot" secondAttribute="leading" id="nWY-xP-oay"/>
                             <constraint firstItem="AkG-GL-Pjk" firstAttribute="top" secondItem="1ro-35-nno" secondAttribute="bottom" constant="24" id="ptK-xH-WFg"/>
                             <constraint firstItem="Az3-k2-NBQ" firstAttribute="width" secondItem="Sak-Q6-cVP" secondAttribute="width" id="pxh-Lj-kTN"/>
                             <constraint firstAttribute="trailing" secondItem="1ro-35-nno" secondAttribute="trailing" id="v3H-8i-vTX"/>
                             <constraint firstItem="Sak-Q6-cVP" firstAttribute="centerX" secondItem="ui5-n0-Zot" secondAttribute="centerX" id="v58-h6-QX1"/>
-                            <constraint firstItem="Sak-Q6-cVP" firstAttribute="top" secondItem="Gbi-Ae-bXY" secondAttribute="bottom" constant="58" id="xTk-s2-crq"/>
+                            <constraint firstItem="Sak-Q6-cVP" firstAttribute="top" secondItem="Gbi-Ae-bXY" secondAttribute="bottom" constant="52" id="xTk-s2-crq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="artImageView" destination="1ro-35-nno" id="Qs0-WC-WZW"/>
+                        <outlet property="decorativeDivider" destination="If2-mT-rf8" id="kkU-1S-Xfg"/>
+                        <outlet property="subtitleLabel" destination="Az3-k2-NBQ" id="b7n-sR-wCP"/>
+                        <outlet property="titleLabel" destination="Sak-Q6-cVP" id="9l2-tg-m6m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uIn-36-JZ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="830" y="37"/>
+            <point key="canvasLocation" x="1860" y="37"/>
+        </scene>
+        <!--Welcome Page View Controller-->
+        <scene sceneID="fh3-a4-yfp">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="WKa-lF-JFp" customClass="WelcomePageViewController" customModule="Lexis" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lLM-ag-h4A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="882" y="37"/>
         </scene>
     </scenes>
     <resources>
