@@ -24,7 +24,7 @@ class WelcomePageViewController: UIPageViewController, UIPageViewControllerDeleg
         self.dataSource = self
         self.delegate = self
         
-        guard let firstPage = viewControllerForIndex(index: currentIndex) else { return }
+        guard let firstPage = createViewController(atIndex: currentIndex) else { return }
         self.setViewControllers([firstPage], direction: .forward, animated: true, completion: nil)
     }
     
@@ -41,7 +41,7 @@ class WelcomePageViewController: UIPageViewController, UIPageViewControllerDeleg
             return nil
         }
         
-        return viewControllerForIndex(index: index)
+        return createViewController(atIndex: index)
      
     }
     
@@ -55,7 +55,7 @@ class WelcomePageViewController: UIPageViewController, UIPageViewControllerDeleg
             return nil
         }
         
-        return viewControllerForIndex(index: index)
+        return createViewController(atIndex: index)
     }
     
     func presentationCount(for pageViewController: UIPageViewController) -> Int
@@ -77,7 +77,7 @@ class WelcomePageViewController: UIPageViewController, UIPageViewControllerDeleg
 private extension WelcomePageViewController
 {
     
-    func viewControllerForIndex(index: Int) -> UIViewController?
+    func createViewController(atIndex index: Int) -> UIViewController?
     {
         guard index >= 0 else { return nil }
         guard index <= 3 else { return nil }
