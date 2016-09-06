@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE0EFFD61D7E843400B70D62 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0EFFD51D7E843400B70D62 /* WelcomePage.swift */; };
+		DE0EFFD91D7E856500B70D62 /* Strings+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0EFFD81D7E856500B70D62 /* Strings+.swift */; };
 		DE1294F71D6977F700687CA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1294F61D6977F700687CA5 /* AppDelegate.swift */; };
 		DE1294F91D6977F700687CA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1294F81D6977F700687CA5 /* ViewController.swift */; };
 		DE1294FC1D6977F700687CA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1294FA1D6977F700687CA5 /* Main.storyboard */; };
@@ -40,6 +42,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DE0EFFD51D7E843400B70D62 /* WelcomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
+		DE0EFFD81D7E856500B70D62 /* Strings+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+.swift"; sourceTree = "<group>"; };
 		DE1294F31D6977F700687CA5 /* Lexis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lexis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1294F61D6977F700687CA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE1294F81D6977F700687CA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +75,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE0EFFD41D7E813100B70D62 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				DE0EFFD51D7E843400B70D62 /* WelcomePage.swift */,
+			);
+			name = Welcome;
+			sourceTree = "<group>";
+		};
+		DE0EFFD71D7E855000B70D62 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DE0EFFD81D7E856500B70D62 /* Strings+.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		DE1294EA1D6977F700687CA5 = {
 			isa = PBXGroup;
 			children = (
@@ -93,7 +113,9 @@
 		DE1294F51D6977F700687CA5 /* Lexis */ = {
 			isa = PBXGroup;
 			children = (
+				DE0EFFD71D7E855000B70D62 /* Extensions */,
 				DE1295081D6982D100687CA5 /* Fonts */,
+				DE0EFFD41D7E813100B70D62 /* Welcome */,
 				DE1294F61D6977F700687CA5 /* AppDelegate.swift */,
 				DE1294F81D6977F700687CA5 /* ViewController.swift */,
 				DE1294FA1D6977F700687CA5 /* Main.storyboard */,
@@ -205,7 +227,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE0EFFD61D7E843400B70D62 /* WelcomePage.swift in Sources */,
 				DE1294F91D6977F700687CA5 /* ViewController.swift in Sources */,
+				DE0EFFD91D7E856500B70D62 /* Strings+.swift in Sources */,
 				DE1294F71D6977F700687CA5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
