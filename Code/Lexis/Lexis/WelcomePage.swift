@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import Sulcus
+import RedRomaColors
 import UIKit
 
 class WelcomePage
@@ -36,13 +38,57 @@ class WelcomePage
         var title: String? = nil
         var subtitle: String? = nil
         var image: UIImage? = nil
-        var lineColor: UIColor? = nil
+        var lineColor: UIColor = RedRomaColors.blackPrimary
         
         
+        func with(title: String) -> Builder
+        {
+            self.title = title
+            return self
+        }
+        
+        func with(subtitle: String) -> Builder
+        {
+            self.subtitle = subtitle
+            return self
+        }
+        
+        func with(image: UIImage) -> Builder
+        {
+            self.image = image
+            return self
+        }
+        
+        func with(lineColor: UIColor) -> Builder
+        {
+            self.lineColor = lineColor
+            return self
+        }
         
         func build() -> WelcomePage?
         {
             guard let title = title, title.notEmpty
+            else
+            {
+                LOG.warn("Missing Title")
+                return nil
+            }
+            
+            guard let subtitle = subtitle, subtitle.notEmpty
+            else
+            {
+                LOG.warn("Missing subtitle")
+                return nil
+            }
+            
+            guard let image = image
+            else
+            {
+                LOG.warn("Missing Welcome Page Image")
+                return nil
+            }
+            
+            return WelcomePage(title: title, subtitle: subtitle, image: image, lineColor: lineColor)
         }
     }
 }
