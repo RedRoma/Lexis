@@ -26,7 +26,6 @@ class WelcomePage
         self.lineColor = lineColor
     }
     
-    
     enum InvalidArgumentException: Error
     {
         case MissingArgument(message: String)
@@ -40,6 +39,10 @@ class WelcomePage
         var image: UIImage? = nil
         var lineColor: UIColor = RedRomaColors.blackPrimary
         
+        static func new() -> Builder
+        {
+            return Builder()
+        }
         
         func with(title: String) -> Builder
         {
@@ -91,4 +94,38 @@ class WelcomePage
             return WelcomePage(title: title, subtitle: subtitle, image: image, lineColor: lineColor)
         }
     }
+}
+
+extension WelcomePage
+{
+    static let first = WelcomePage.Builder.new()
+        .with(title: "CLASSIC")
+        .with(subtitle: "WITH A MODERN FEEL")
+        .with(image: #imageLiteral(resourceName: "Art-Open-Book"))
+        .with(lineColor: RedRomaColors.blackPrimary)
+        .build()
+    
+    
+    static let second = WelcomePage.Builder.new()
+        .with(title: "REDISCOVER")
+        .with(subtitle: "THE LANGUAGE OF MEANING")
+        .with(image: #imageLiteral(resourceName: "Art-Books-On-Shelf"))
+        .with(lineColor: Colors.from(hexString: "990808")!)
+        .build()
+    
+    static let third = WelcomePage.Builder.new()
+        .with(title: "UNLOCK")
+        .with(subtitle: "SECRETS OF THE ANCIENT EMPIRE")
+        .with(image: #imageLiteral(resourceName: "Art-Mural"))
+        .with(lineColor: RedRomaColors.darkPurple)
+        .build()
+    
+    static let fourth = WelcomePage.Builder.new()
+        .with(title: "CONQUER")
+        .with(subtitle: "THE LEXICON OF POWER")
+        .with(image: #imageLiteral(resourceName: "Art-Cicero"))
+        .with(lineColor: RedRomaColors.redPrimary)
+        .build()
+    
+    static let pages = [first, second, third, fourth]
 }
