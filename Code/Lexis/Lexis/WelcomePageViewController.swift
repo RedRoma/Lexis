@@ -63,13 +63,6 @@ class WelcomePageViewController: UIPageViewController, UIPageViewControllerDeleg
         return pages.count
     }
     
-//    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool)
-//    {
-//        if let viewController = previousViewControllers.first as? WelcomePageTemplateViewController
-//        {
-//            self.currentIndex = viewController.index
-//        }
-//    }
     
     func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController])
     {
