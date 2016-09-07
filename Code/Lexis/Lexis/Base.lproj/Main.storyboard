@@ -4,15 +4,9 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Cinzel-Regular.otf">
-            <string>Cinzel-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -40,88 +34,41 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="WKa-lF-JFp" kind="show" identifier="ToWelcome" id="j8m-8y-UjF"/>
+                        <segue destination="pRC-NC-gtv" kind="show" identifier="ToWelcome" id="j8m-8y-UjF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-39" y="36"/>
         </scene>
-        <!--Welcome Page Template View Controller-->
-        <scene sceneID="Ow8-3x-ogi">
+        <!--View Controller-->
+        <scene sceneID="C1c-6M-B4B">
             <objects>
-                <viewController storyboardIdentifier="WelcomePageTemplate" id="xSu-fu-JCG" customClass="WelcomePageTemplateViewController" customModule="Lexis" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LSY-8Z-q8N" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Gbi-Ae-bXY"/>
-                        <viewControllerLayoutGuide type="bottom" id="AkG-GL-Pjk"/>
+                        <viewControllerLayoutGuide type="top" id="Ox2-f8-Wsr"/>
+                        <viewControllerLayoutGuide type="bottom" id="jLG-99-xBY"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ui5-n0-Zot">
+                    <view key="view" contentMode="scaleToFill" id="VFg-uU-tiL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="CLASSIC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="Sak-Q6-cVP">
-                                <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="56"/>
-                                <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="with a modern feel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="Az3-k2-NBQ">
-                                <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="24"/>
-                                <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="If2-mT-rf8">
-                                <color key="backgroundColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="3" id="nGd-wc-mDs"/>
-                                </constraints>
-                            </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Art-Open-Book" translatesAutoresizingMaskIntoConstraints="NO" id="1ro-35-nno">
-                                <color key="tintColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="1ro-35-nno" secondAttribute="height" multiplier="1:1" id="juA-O3-atv"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Az3-k2-NBQ" firstAttribute="top" secondItem="Sak-Q6-cVP" secondAttribute="bottom" constant="24" id="BYA-G7-xZv"/>
-                            <constraint firstItem="If2-mT-rf8" firstAttribute="centerX" secondItem="ui5-n0-Zot" secondAttribute="centerX" id="Mjh-Ay-Kii"/>
-                            <constraint firstItem="If2-mT-rf8" firstAttribute="top" secondItem="Az3-k2-NBQ" secondAttribute="bottom" constant="24" id="UyH-ME-C2H"/>
-                            <constraint firstItem="If2-mT-rf8" firstAttribute="width" secondItem="ui5-n0-Zot" secondAttribute="width" multiplier="0.7" id="Ycq-kI-MbG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Sak-Q6-cVP" secondAttribute="trailing" constant="8" id="au7-eZ-goa"/>
-                            <constraint firstItem="Az3-k2-NBQ" firstAttribute="centerX" secondItem="Sak-Q6-cVP" secondAttribute="centerX" id="b0d-sB-ahv"/>
-                            <constraint firstItem="1ro-35-nno" firstAttribute="top" relation="greaterThanOrEqual" secondItem="If2-mT-rf8" secondAttribute="bottom" constant="8" id="esR-PC-ZSK"/>
-                            <constraint firstItem="Sak-Q6-cVP" firstAttribute="leading" secondItem="ui5-n0-Zot" secondAttribute="leadingMargin" constant="8" id="j6K-as-yul"/>
-                            <constraint firstItem="1ro-35-nno" firstAttribute="leading" secondItem="ui5-n0-Zot" secondAttribute="leading" id="nWY-xP-oay"/>
-                            <constraint firstItem="AkG-GL-Pjk" firstAttribute="top" secondItem="1ro-35-nno" secondAttribute="bottom" constant="24" id="ptK-xH-WFg"/>
-                            <constraint firstItem="Az3-k2-NBQ" firstAttribute="width" secondItem="Sak-Q6-cVP" secondAttribute="width" id="pxh-Lj-kTN"/>
-                            <constraint firstAttribute="trailing" secondItem="1ro-35-nno" secondAttribute="trailing" id="v3H-8i-vTX"/>
-                            <constraint firstItem="Sak-Q6-cVP" firstAttribute="centerX" secondItem="ui5-n0-Zot" secondAttribute="centerX" id="v58-h6-QX1"/>
-                            <constraint firstItem="Sak-Q6-cVP" firstAttribute="top" secondItem="Gbi-Ae-bXY" secondAttribute="bottom" constant="52" id="xTk-s2-crq"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="artImageView" destination="1ro-35-nno" id="Qs0-WC-WZW"/>
-                        <outlet property="decorativeDivider" destination="If2-mT-rf8" id="kkU-1S-Xfg"/>
-                        <outlet property="subtitleLabel" destination="Az3-k2-NBQ" id="b7n-sR-wCP"/>
-                        <outlet property="titleLabel" destination="Sak-Q6-cVP" id="9l2-tg-m6m"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uIn-36-JZ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pUe-3W-51b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1860" y="37"/>
+            <point key="canvasLocation" x="898" y="36"/>
         </scene>
-        <!--Welcome Page View Controller-->
-        <scene sceneID="fh3-a4-yfp">
+        <!--WelcomePageViewController-->
+        <scene sceneID="oSx-Hh-6RX">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="WKa-lF-JFp" customClass="WelcomePageViewController" customModule="Lexis" customModuleProvider="target" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lLM-ag-h4A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Welcome" referencedIdentifier="WelcomePageViewController" id="pRC-NC-gtv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jAc-hU-Jlw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="882" y="37"/>
+            <point key="canvasLocation" x="-686" y="37"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Art-Open-Book" width="360" height="500"/>
         <image name="Book-Red" width="400" height="400"/>
     </resources>
 </document>

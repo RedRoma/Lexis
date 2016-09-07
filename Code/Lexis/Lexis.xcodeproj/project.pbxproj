@@ -13,6 +13,7 @@
 		DE0E000A1D7E9A8A00B70D62 /* WelcomePageTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0E00091D7E9A8A00B70D62 /* WelcomePageTemplateViewController.swift */; };
 		DE0E87211D7FEF9900F42DB3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0E87201D7FEF9900F42DB3 /* MainViewController.swift */; };
 		DE0E87241D7FEFC900F42DB3 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0E87231D7FEFC900F42DB3 /* Settings.swift */; };
+		DE0E872A1D7FF41D00F42DB3 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE0E87281D7FF41D00F42DB3 /* Welcome.storyboard */; };
 		DE0EFFD61D7E843400B70D62 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0EFFD51D7E843400B70D62 /* WelcomePage.swift */; };
 		DE0EFFD91D7E856500B70D62 /* Strings+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0EFFD81D7E856500B70D62 /* Strings+.swift */; };
 		DE1294F71D6977F700687CA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1294F61D6977F700687CA5 /* AppDelegate.swift */; };
@@ -53,6 +54,7 @@
 		DE0E00091D7E9A8A00B70D62 /* WelcomePageTemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePageTemplateViewController.swift; sourceTree = "<group>"; };
 		DE0E87201D7FEF9900F42DB3 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DE0E87231D7FEFC900F42DB3 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		DE0E87291D7FF41D00F42DB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Welcome.storyboard; sourceTree = "<group>"; };
 		DE0EFFD51D7E843400B70D62 /* WelcomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
 		DE0EFFD81D7E856500B70D62 /* Strings+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+.swift"; sourceTree = "<group>"; };
 		DE1294F31D6977F700687CA5 /* Lexis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lexis.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +144,7 @@
 				DE1294F61D6977F700687CA5 /* AppDelegate.swift */,
 				DE0E87201D7FEF9900F42DB3 /* MainViewController.swift */,
 				DE1294FA1D6977F700687CA5 /* Main.storyboard */,
+				DE0E87281D7FF41D00F42DB3 /* Welcome.storyboard */,
 				DE1294FD1D6977F700687CA5 /* Assets.xcassets */,
 				DE1294FF1D6977F700687CA5 /* LaunchScreen.storyboard */,
 				DE1295021D6977F700687CA5 /* Info.plist */,
@@ -236,6 +239,7 @@
 				DE1295131D6982FF00687CA5 /* CinzelDecorative-Bold.otf in Resources */,
 				DE1295011D6977F700687CA5 /* LaunchScreen.storyboard in Resources */,
 				DE1295121D6982FF00687CA5 /* CinzelDecorative-Black.otf in Resources */,
+				DE0E872A1D7FF41D00F42DB3 /* Welcome.storyboard in Resources */,
 				DE1294FE1D6977F700687CA5 /* Assets.xcassets in Resources */,
 				DE12950F1D6982FF00687CA5 /* Cinzel-Black.otf in Resources */,
 				DE1294FC1D6977F700687CA5 /* Main.storyboard in Resources */,
@@ -263,6 +267,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		DE0E87281D7FF41D00F42DB3 /* Welcome.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE0E87291D7FF41D00F42DB3 /* Base */,
+			);
+			name = Welcome.storyboard;
+			sourceTree = "<group>";
+		};
 		DE1294FA1D6977F700687CA5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
