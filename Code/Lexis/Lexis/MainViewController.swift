@@ -16,5 +16,28 @@ class MainViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        if Settings.instance.isFirstTime
+        {
+            LOG.info("First time running this app")
+            Settings.instance.isFirstTime = false
+        }
+        else
+        {
+            LOG.info("This is not the first time running this App")
+        }
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool)
+    {
+        super.viewDidAppear(animated)
+        
+        goToWelcomeScreen()
+    }
+    
+    private func goToWelcomeScreen()
+    {
+        self.performSegue(withIdentifier: "ToWelcome", sender: self)
     }
 }
