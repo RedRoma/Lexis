@@ -12,6 +12,9 @@
         <array key="Cinzel-Regular.otf">
             <string>Cinzel-Regular</string>
         </array>
+        <array key="Raleway 300.ttf">
+            <string>Raleway-Light</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Main View Controller-->
@@ -57,11 +60,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="50" id="lov-X9-60s">
-                                <rect key="frame" x="0.0" y="56" width="320" height="50"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="80" id="lov-X9-60s">
+                                <rect key="frame" x="0.0" y="56" width="320" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lov-X9-60s" id="Hpk-15-DIY">
-                                    <frame key="frameInset" width="320" height="50"/>
+                                    <frame key="frameInset" width="320" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ORE-S4-oYs" userLabel="Highlight Line">
@@ -77,10 +80,9 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="ORE-S4-oYs" firstAttribute="top" secondItem="Hpk-15-DIY" secondAttribute="topMargin" constant="8" id="7GT-Nd-Aeg"/>
-                                        <constraint firstItem="ORE-S4-oYs" firstAttribute="width" secondItem="Hpk-15-DIY" secondAttribute="width" multiplier="0.4" id="EOx-lG-C2p"/>
+                                        <constraint firstItem="ORE-S4-oYs" firstAttribute="width" secondItem="Qyd-zb-c9U" secondAttribute="width" multiplier="0.9" id="K88-u8-DVt"/>
                                         <constraint firstItem="ORE-S4-oYs" firstAttribute="centerX" secondItem="Hpk-15-DIY" secondAttribute="centerX" id="NIH-R0-2QL"/>
-                                        <constraint firstItem="Qyd-zb-c9U" firstAttribute="width" secondItem="Hpk-15-DIY" secondAttribute="width" multiplier="0.9" id="SSM-tb-6Ds"/>
+                                        <constraint firstItem="Qyd-zb-c9U" firstAttribute="centerY" secondItem="Hpk-15-DIY" secondAttribute="centerY" id="R9t-We-l0o"/>
                                         <constraint firstItem="Qyd-zb-c9U" firstAttribute="centerX" secondItem="Hpk-15-DIY" secondAttribute="centerX" id="Zyg-cq-GUX"/>
                                         <constraint firstItem="Qyd-zb-c9U" firstAttribute="top" secondItem="ORE-S4-oYs" secondAttribute="bottom" constant="4" id="mbK-nU-YU3"/>
                                     </constraints>
@@ -88,7 +90,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordCell" rowHeight="100" id="rZq-bg-NmT">
-                                <rect key="frame" x="0.0" y="106" width="320" height="100"/>
+                                <rect key="frame" x="0.0" y="136" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rZq-bg-NmT" id="AVI-8j-Fve">
                                     <frame key="frameInset" width="320" height="100"/>
@@ -119,43 +121,81 @@
                                             </constraints>
                                         </view>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="7q6-xW-ezg" secondAttribute="bottom" constant="8" id="8G7-F4-LS9"/>
+                                        <constraint firstItem="7q6-xW-ezg" firstAttribute="top" secondItem="AVI-8j-Fve" secondAttribute="top" constant="8" id="B2y-61-val"/>
                                         <constraint firstAttribute="trailing" secondItem="7q6-xW-ezg" secondAttribute="trailing" constant="4" id="HsO-Cz-dVD"/>
                                         <constraint firstItem="7q6-xW-ezg" firstAttribute="leading" secondItem="AVI-8j-Fve" secondAttribute="leading" constant="4" id="Xld-OH-fBJ"/>
-                                        <constraint firstItem="7q6-xW-ezg" firstAttribute="top" secondItem="AVI-8j-Fve" secondAttribute="top" constant="8" id="u0L-rb-900"/>
-                                        <constraint firstAttribute="bottom" secondItem="7q6-xW-ezg" secondAttribute="bottom" id="xKL-nH-CUz"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DefinitionCell" rowHeight="100" id="BBa-83-aoe">
-                                <rect key="frame" x="0.0" y="206" width="320" height="100"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DefinitionCell" rowHeight="50" id="BBa-83-aoe">
+                                <rect key="frame" x="0.0" y="236" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BBa-83-aoe" id="8qX-bT-sJV">
-                                    <frame key="frameInset" width="320" height="100"/>
+                                    <frame key="frameInset" width="320" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k4O-1n-z1n">
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="‣ Admit, Let in, Hear, Learn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRQ-aW-0s4">
-                                                    <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="30"/>
+                                                    <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="21"/>
                                                     <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Disclosure" translatesAutoresizingMaskIntoConstraints="NO" id="hqG-qB-L9m"/>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstItem="dRQ-aW-0s4" firstAttribute="trailing" secondItem="k4O-1n-z1n" secondAttribute="trailingMargin" constant="8" id="tLs-EH-Jn0"/>
+                                                <constraint firstItem="hqG-qB-L9m" firstAttribute="height" secondItem="k4O-1n-z1n" secondAttribute="height" multiplier="0.5" id="7ZZ-Hk-VUs"/>
+                                                <constraint firstItem="hqG-qB-L9m" firstAttribute="centerY" secondItem="k4O-1n-z1n" secondAttribute="centerY" id="O2k-Es-Ips"/>
+                                                <constraint firstItem="hqG-qB-L9m" firstAttribute="trailing" secondItem="k4O-1n-z1n" secondAttribute="trailingMargin" id="qyb-s4-NSC"/>
                                                 <constraint firstItem="dRQ-aW-0s4" firstAttribute="leading" secondItem="k4O-1n-z1n" secondAttribute="leadingMargin" constant="8" id="tRx-Uc-n7f"/>
                                                 <constraint firstItem="dRQ-aW-0s4" firstAttribute="centerY" secondItem="k4O-1n-z1n" secondAttribute="centerY" id="zXI-GW-M5c"/>
                                             </constraints>
                                         </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="k4O-1n-z1n" firstAttribute="top" secondItem="8qX-bT-sJV" secondAttribute="top" constant="8" id="I45-kH-QNa"/>
+                                        <constraint firstItem="k4O-1n-z1n" firstAttribute="top" secondItem="8qX-bT-sJV" secondAttribute="top" id="I45-kH-QNa"/>
                                         <constraint firstAttribute="bottom" secondItem="k4O-1n-z1n" secondAttribute="bottom" id="KSm-Vq-vlG"/>
                                         <constraint firstItem="k4O-1n-z1n" firstAttribute="leading" secondItem="8qX-bT-sJV" secondAttribute="leading" constant="4" id="dAT-XF-hmL"/>
                                         <constraint firstAttribute="trailing" secondItem="k4O-1n-z1n" secondAttribute="trailing" constant="4" id="lmP-Nm-XLL"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordDescriptionCell" rowHeight="80" id="z8S-lO-xO6">
+                                <rect key="frame" x="0.0" y="286" width="320" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z8S-lO-xO6" id="Ts9-J8-yR0">
+                                    <frame key="frameInset" width="320" height="80"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hod-Im-7PP">
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Used very frequently throughout the ages. This word appeared in all Latin elementary books." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6UX-of-etj">
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="6UX-of-etj" secondAttribute="bottom" constant="8" id="0Sk-it-l9n"/>
+                                                <constraint firstItem="6UX-of-etj" firstAttribute="leading" secondItem="Hod-Im-7PP" secondAttribute="leadingMargin" constant="8" id="HS9-GI-SoO"/>
+                                                <constraint firstItem="6UX-of-etj" firstAttribute="top" secondItem="Hod-Im-7PP" secondAttribute="topMargin" constant="8" id="IiF-18-mC1"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="6UX-of-etj" secondAttribute="trailing" constant="8" id="gQX-Ko-OfN"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Hod-Im-7PP" secondAttribute="bottom" id="0r9-Rd-A6t"/>
+                                        <constraint firstItem="Hod-Im-7PP" firstAttribute="leading" secondItem="Ts9-J8-yR0" secondAttribute="leading" constant="4" id="KW9-cC-1E9"/>
+                                        <constraint firstAttribute="trailing" secondItem="Hod-Im-7PP" secondAttribute="trailing" constant="4" id="ZdO-Cr-Xmi"/>
+                                        <constraint firstItem="Hod-Im-7PP" firstAttribute="top" secondItem="Ts9-J8-yR0" secondAttribute="top" constant="2" id="bB7-5y-tfM"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -200,5 +240,6 @@
     </scenes>
     <resources>
         <image name="Book-Red" width="400" height="400"/>
+        <image name="Disclosure" width="14" height="26"/>
     </resources>
 </document>
