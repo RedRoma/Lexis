@@ -96,7 +96,7 @@
                                     <frame key="frameInset" width="320" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7q6-xW-ezg">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7q6-xW-ezg" userLabel="Card">
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACCIPIO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJ9-6J-3IY">
                                                     <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="30"/>
@@ -125,8 +125,8 @@
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="7q6-xW-ezg" secondAttribute="bottom" constant="8" id="8G7-F4-LS9"/>
                                         <constraint firstItem="7q6-xW-ezg" firstAttribute="top" secondItem="AVI-8j-Fve" secondAttribute="top" constant="8" id="B2y-61-val"/>
-                                        <constraint firstAttribute="trailing" secondItem="7q6-xW-ezg" secondAttribute="trailing" constant="4" id="HsO-Cz-dVD"/>
-                                        <constraint firstItem="7q6-xW-ezg" firstAttribute="leading" secondItem="AVI-8j-Fve" secondAttribute="leading" constant="4" id="Xld-OH-fBJ"/>
+                                        <constraint firstAttribute="trailing" secondItem="7q6-xW-ezg" secondAttribute="trailing" constant="8" id="HsO-Cz-dVD"/>
+                                        <constraint firstItem="7q6-xW-ezg" firstAttribute="leading" secondItem="AVI-8j-Fve" secondAttribute="leading" constant="8" id="Xld-OH-fBJ"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -138,7 +138,7 @@
                                     <frame key="frameInset" width="320" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k4O-1n-z1n">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k4O-1n-z1n" userLabel="Card">
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="‣ Admit, Let in, Hear, Learn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRQ-aW-0s4">
                                                     <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="21"/>
@@ -160,8 +160,8 @@
                                     <constraints>
                                         <constraint firstItem="k4O-1n-z1n" firstAttribute="top" secondItem="8qX-bT-sJV" secondAttribute="top" id="I45-kH-QNa"/>
                                         <constraint firstAttribute="bottom" secondItem="k4O-1n-z1n" secondAttribute="bottom" id="KSm-Vq-vlG"/>
-                                        <constraint firstItem="k4O-1n-z1n" firstAttribute="leading" secondItem="8qX-bT-sJV" secondAttribute="leading" constant="4" id="dAT-XF-hmL"/>
-                                        <constraint firstAttribute="trailing" secondItem="k4O-1n-z1n" secondAttribute="trailing" constant="4" id="lmP-Nm-XLL"/>
+                                        <constraint firstItem="k4O-1n-z1n" firstAttribute="leading" secondItem="8qX-bT-sJV" secondAttribute="leading" constant="8" id="dAT-XF-hmL"/>
+                                        <constraint firstAttribute="trailing" secondItem="k4O-1n-z1n" secondAttribute="trailing" constant="8" id="lmP-Nm-XLL"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -173,7 +173,7 @@
                                     <frame key="frameInset" width="320" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hod-Im-7PP">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hod-Im-7PP" userLabel="Card">
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Used very frequently throughout the ages. This word appeared in all Latin elementary books." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6UX-of-etj">
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -184,17 +184,17 @@
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="6UX-of-etj" secondAttribute="bottom" constant="8" id="0Sk-it-l9n"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="6UX-of-etj" secondAttribute="bottom" constant="4" id="0Sk-it-l9n"/>
                                                 <constraint firstItem="6UX-of-etj" firstAttribute="leading" secondItem="Hod-Im-7PP" secondAttribute="leadingMargin" constant="8" id="HS9-GI-SoO"/>
-                                                <constraint firstItem="6UX-of-etj" firstAttribute="top" secondItem="Hod-Im-7PP" secondAttribute="topMargin" constant="8" id="IiF-18-mC1"/>
+                                                <constraint firstItem="6UX-of-etj" firstAttribute="top" secondItem="Hod-Im-7PP" secondAttribute="topMargin" constant="4" id="IiF-18-mC1"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="6UX-of-etj" secondAttribute="trailing" constant="8" id="gQX-Ko-OfN"/>
                                             </constraints>
                                         </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="Hod-Im-7PP" secondAttribute="bottom" id="0r9-Rd-A6t"/>
-                                        <constraint firstItem="Hod-Im-7PP" firstAttribute="leading" secondItem="Ts9-J8-yR0" secondAttribute="leading" constant="4" id="KW9-cC-1E9"/>
-                                        <constraint firstAttribute="trailing" secondItem="Hod-Im-7PP" secondAttribute="trailing" constant="4" id="ZdO-Cr-Xmi"/>
+                                        <constraint firstItem="Hod-Im-7PP" firstAttribute="leading" secondItem="Ts9-J8-yR0" secondAttribute="leading" constant="8" id="KW9-cC-1E9"/>
+                                        <constraint firstAttribute="trailing" secondItem="Hod-Im-7PP" secondAttribute="trailing" constant="8" id="ZdO-Cr-Xmi"/>
                                         <constraint firstItem="Hod-Im-7PP" firstAttribute="top" secondItem="Ts9-J8-yR0" secondAttribute="top" constant="2" id="bB7-5y-tfM"/>
                                     </constraints>
                                 </tableViewCellContentView>
