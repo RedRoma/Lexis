@@ -1,0 +1,10 @@
+framework module AlchemyGenerator {
+  umbrella header "AlchemyGenerator.h"
+
+  export *
+  module * { export * }
+}
+
+module AlchemyGenerator.Swift {
+    header "AlchemyGenerator-Swift.h"
+}
