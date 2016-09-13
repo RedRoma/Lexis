@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A319" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -23,7 +23,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Book-Red" translatesAutoresizingMaskIntoConstraints="NO" id="TuH-0h-kB7">
@@ -53,24 +53,24 @@
             <objects>
                 <tableViewController id="2j9-lJ-S9d" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Po1-wa-b3g">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="50" id="lov-X9-60s">
-                                <rect key="frame" x="0.0" y="56" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="56" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lov-X9-60s" id="Hpk-15-DIY">
-                                    <frame key="frameInset" width="375" height="50"/>
+                                    <frame key="frameInset" width="320" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ORE-S4-oYs">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ORE-S4-oYs" userLabel="Highlight Line">
                                             <color key="backgroundColor" red="0.72549019607843135" green="0.050980392156862744" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="3" id="eWd-og-Nn8"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORD OF THE DAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qyd-zb-c9U">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORD OF THE DAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qyd-zb-c9U">
                                             <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="16"/>
                                             <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -79,38 +79,83 @@
                                     <constraints>
                                         <constraint firstItem="ORE-S4-oYs" firstAttribute="top" secondItem="Hpk-15-DIY" secondAttribute="topMargin" constant="8" id="7GT-Nd-Aeg"/>
                                         <constraint firstItem="ORE-S4-oYs" firstAttribute="width" secondItem="Hpk-15-DIY" secondAttribute="width" multiplier="0.4" id="EOx-lG-C2p"/>
-                                        <constraint firstItem="Qyd-zb-c9U" firstAttribute="centerX" secondItem="Hpk-15-DIY" secondAttribute="centerX" id="Mts-lV-AYr"/>
                                         <constraint firstItem="ORE-S4-oYs" firstAttribute="centerX" secondItem="Hpk-15-DIY" secondAttribute="centerX" id="NIH-R0-2QL"/>
+                                        <constraint firstItem="Qyd-zb-c9U" firstAttribute="width" secondItem="Hpk-15-DIY" secondAttribute="width" multiplier="0.9" id="SSM-tb-6Ds"/>
+                                        <constraint firstItem="Qyd-zb-c9U" firstAttribute="centerX" secondItem="Hpk-15-DIY" secondAttribute="centerX" id="Zyg-cq-GUX"/>
                                         <constraint firstItem="Qyd-zb-c9U" firstAttribute="top" secondItem="ORE-S4-oYs" secondAttribute="bottom" constant="4" id="mbK-nU-YU3"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="50" id="rZq-bg-NmT">
-                                <rect key="frame" x="0.0" y="106" width="375" height="50"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordCell" rowHeight="100" id="rZq-bg-NmT">
+                                <rect key="frame" x="0.0" y="106" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rZq-bg-NmT" id="AVI-8j-Fve">
-                                    <frame key="frameInset" width="375" height="50"/>
+                                    <frame key="frameInset" width="320" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYB-Fe-hfQ">
-                                            <color key="backgroundColor" red="0.72549019609999998" green="0.050980392159999999" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7q6-xW-ezg">
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACCIPIO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJ9-6J-3IY">
+                                                    <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="30"/>
+                                                    <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verb, 3rd declension" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYr-4M-SqR">
+                                                    <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="12"/>
+                                                    <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="3" id="Y7P-Cx-Sy6"/>
+                                                <constraint firstItem="qYr-4M-SqR" firstAttribute="top" secondItem="qJ9-6J-3IY" secondAttribute="bottom" constant="8" id="7fh-Mv-y4z"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="qYr-4M-SqR" secondAttribute="bottom" id="Eii-rS-QOv"/>
+                                                <constraint firstItem="qYr-4M-SqR" firstAttribute="leading" secondItem="7q6-xW-ezg" secondAttribute="leadingMargin" constant="8" id="Of4-cj-ene"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="qYr-4M-SqR" secondAttribute="trailing" id="cRX-p4-TSi"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="qJ9-6J-3IY" secondAttribute="trailing" id="cqw-rp-Eic"/>
+                                                <constraint firstItem="qJ9-6J-3IY" firstAttribute="top" secondItem="7q6-xW-ezg" secondAttribute="topMargin" constant="8" id="fSq-F0-mnd"/>
+                                                <constraint firstItem="qJ9-6J-3IY" firstAttribute="leading" secondItem="7q6-xW-ezg" secondAttribute="leadingMargin" constant="8" id="q7y-4Y-P1c"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORD OF THE DAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pth-ZE-oUP">
-                                            <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="16"/>
-                                            <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Pth-ZE-oUP" firstAttribute="centerX" secondItem="AVI-8j-Fve" secondAttribute="centerX" id="JHN-1n-bix"/>
-                                        <constraint firstItem="Pth-ZE-oUP" firstAttribute="top" secondItem="ZYB-Fe-hfQ" secondAttribute="bottom" constant="4" id="grA-Ar-ap3"/>
-                                        <constraint firstItem="ZYB-Fe-hfQ" firstAttribute="top" secondItem="AVI-8j-Fve" secondAttribute="topMargin" constant="8" id="r9k-7l-HCh"/>
-                                        <constraint firstItem="ZYB-Fe-hfQ" firstAttribute="width" secondItem="AVI-8j-Fve" secondAttribute="width" multiplier="0.4" id="rR3-Ej-fnP"/>
-                                        <constraint firstItem="ZYB-Fe-hfQ" firstAttribute="centerX" secondItem="AVI-8j-Fve" secondAttribute="centerX" id="u1b-Rv-aj5"/>
+                                        <constraint firstAttribute="trailing" secondItem="7q6-xW-ezg" secondAttribute="trailing" constant="4" id="HsO-Cz-dVD"/>
+                                        <constraint firstItem="7q6-xW-ezg" firstAttribute="leading" secondItem="AVI-8j-Fve" secondAttribute="leading" constant="4" id="Xld-OH-fBJ"/>
+                                        <constraint firstItem="7q6-xW-ezg" firstAttribute="top" secondItem="AVI-8j-Fve" secondAttribute="top" constant="8" id="u0L-rb-900"/>
+                                        <constraint firstAttribute="bottom" secondItem="7q6-xW-ezg" secondAttribute="bottom" id="xKL-nH-CUz"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DefinitionCell" rowHeight="100" id="BBa-83-aoe">
+                                <rect key="frame" x="0.0" y="206" width="320" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BBa-83-aoe" id="8qX-bT-sJV">
+                                    <frame key="frameInset" width="320" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k4O-1n-z1n">
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="‣ Admit, Let in, Hear, Learn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRQ-aW-0s4">
+                                                    <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="30"/>
+                                                    <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="dRQ-aW-0s4" firstAttribute="trailing" secondItem="k4O-1n-z1n" secondAttribute="trailingMargin" constant="8" id="tLs-EH-Jn0"/>
+                                                <constraint firstItem="dRQ-aW-0s4" firstAttribute="leading" secondItem="k4O-1n-z1n" secondAttribute="leadingMargin" constant="8" id="tRx-Uc-n7f"/>
+                                                <constraint firstItem="dRQ-aW-0s4" firstAttribute="centerY" secondItem="k4O-1n-z1n" secondAttribute="centerY" id="zXI-GW-M5c"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="k4O-1n-z1n" firstAttribute="top" secondItem="8qX-bT-sJV" secondAttribute="top" constant="8" id="I45-kH-QNa"/>
+                                        <constraint firstAttribute="bottom" secondItem="k4O-1n-z1n" secondAttribute="bottom" id="KSm-Vq-vlG"/>
+                                        <constraint firstItem="k4O-1n-z1n" firstAttribute="leading" secondItem="8qX-bT-sJV" secondAttribute="leading" constant="4" id="dAT-XF-hmL"/>
+                                        <constraint firstAttribute="trailing" secondItem="k4O-1n-z1n" secondAttribute="trailing" constant="4" id="lmP-Nm-XLL"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -125,7 +170,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LSR-3L-20H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1961" y="36"/>
+            <point key="canvasLocation" x="1959.375" y="34.859154929577464"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AcH-VC-WgK">
