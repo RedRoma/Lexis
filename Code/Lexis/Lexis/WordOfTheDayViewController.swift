@@ -89,3 +89,27 @@ extension WordOfTheDayViewController
     }
     
 }
+
+//MARK: Table View Delegate Methods
+extension WordOfTheDayViewController
+{
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        let sizesForSection: [Int: CGFloat] =
+        [
+            0: 80,
+            1: 100,
+            2: 50,
+            3: 80
+        ]
+        
+        let section = indexPath.section
+        
+        return sizesForSection[section] ?? 80
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return UITableViewAutomaticDimension
+    }
+}

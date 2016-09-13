@@ -55,7 +55,7 @@
         <scene sceneID="IIM-m0-fFD">
             <objects>
                 <tableViewController id="2j9-lJ-S9d" customClass="WordOfTheDayViewController" customModule="Lexis" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Po1-wa-b3g">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="80" sectionHeaderHeight="18" sectionFooterHeight="18" id="Po1-wa-b3g">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -112,7 +112,7 @@
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="qYr-4M-SqR" firstAttribute="top" secondItem="qJ9-6J-3IY" secondAttribute="bottom" constant="8" id="7fh-Mv-y4z"/>
-                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="qYr-4M-SqR" secondAttribute="bottom" id="Eii-rS-QOv"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="qYr-4M-SqR" secondAttribute="bottom" priority="750" constant="8" id="8sV-bX-4aq"/>
                                                 <constraint firstItem="qYr-4M-SqR" firstAttribute="leading" secondItem="7q6-xW-ezg" secondAttribute="leadingMargin" constant="8" id="Of4-cj-ene"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="qYr-4M-SqR" secondAttribute="trailing" id="cRX-p4-TSi"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="qJ9-6J-3IY" secondAttribute="trailing" id="cqw-rp-Eic"/>
