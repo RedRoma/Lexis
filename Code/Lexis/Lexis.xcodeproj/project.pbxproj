@@ -51,6 +51,10 @@
 		DE5D14321D87E43200B8B3CC /* RedRomaColors.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE5D142C1D87E43200B8B3CC /* RedRomaColors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DE5D14341D87E43E00B8B3CC /* Sulcus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE5D14331D87E43E00B8B3CC /* Sulcus.framework */; };
 		DE5D14351D87E43E00B8B3CC /* Sulcus.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE5D14331D87E43E00B8B3CC /* Sulcus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE5D14391D88474400B8B3CC /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D14381D88474400B8B3CC /* HeaderCell.swift */; };
+		DE5D143B1D8847BD00B8B3CC /* WordNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D143A1D8847BD00B8B3CC /* WordNameCell.swift */; };
+		DE5D143D1D8847D100B8B3CC /* WordDefinitionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D143C1D8847D100B8B3CC /* WordDefinitionCell.swift */; };
+		DE5D143F1D8847E600B8B3CC /* WordDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D143E1D8847E600B8B3CC /* WordDescriptionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -113,6 +117,10 @@
 		DE5D142B1D87E43200B8B3CC /* LexisDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LexisDatabase.framework; sourceTree = "<group>"; };
 		DE5D142C1D87E43200B8B3CC /* RedRomaColors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RedRomaColors.framework; sourceTree = "<group>"; };
 		DE5D14331D87E43E00B8B3CC /* Sulcus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sulcus.framework; sourceTree = "<group>"; };
+		DE5D14381D88474400B8B3CC /* HeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		DE5D143A1D8847BD00B8B3CC /* WordNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordNameCell.swift; sourceTree = "<group>"; };
+		DE5D143C1D8847D100B8B3CC /* WordDefinitionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordDefinitionCell.swift; sourceTree = "<group>"; };
+		DE5D143E1D8847E600B8B3CC /* WordDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordDescriptionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +184,7 @@
 		DE1294F51D6977F700687CA5 /* Lexis */ = {
 			isa = PBXGroup;
 			children = (
+				DE5D14371D88471000B8B3CC /* Cells */,
 				DE5D14271D87E14400B8B3CC /* Word_Of_The_Day */,
 				DE0E87221D7FEFBE00F42DB3 /* Settings */,
 				DE0EFFD71D7E855000B70D62 /* Extensions */,
@@ -229,6 +238,17 @@
 				DE5D14281D87E15B00B8B3CC /* WordOfTheDayViewController.swift */,
 			);
 			name = Word_Of_The_Day;
+			sourceTree = "<group>";
+		};
+		DE5D14371D88471000B8B3CC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DE5D14381D88474400B8B3CC /* HeaderCell.swift */,
+				DE5D143A1D8847BD00B8B3CC /* WordNameCell.swift */,
+				DE5D143C1D8847D100B8B3CC /* WordDefinitionCell.swift */,
+				DE5D143E1D8847E600B8B3CC /* WordDescriptionCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		DE60BCC11D7B6ADE00EF15C6 /* Frameworks */ = {
@@ -344,8 +364,12 @@
 				DE0EFFD61D7E843400B70D62 /* WelcomePage.swift in Sources */,
 				DE0E000A1D7E9A8A00B70D62 /* WelcomePageTemplateViewController.swift in Sources */,
 				DE0EFFD91D7E856500B70D62 /* Strings+.swift in Sources */,
+				DE5D143D1D8847D100B8B3CC /* WordDefinitionCell.swift in Sources */,
 				DE0E87211D7FEF9900F42DB3 /* MainViewController.swift in Sources */,
+				DE5D14391D88474400B8B3CC /* HeaderCell.swift in Sources */,
 				DE5D14291D87E15B00B8B3CC /* WordOfTheDayViewController.swift in Sources */,
+				DE5D143B1D8847BD00B8B3CC /* WordNameCell.swift in Sources */,
+				DE5D143F1D8847E600B8B3CC /* WordDescriptionCell.swift in Sources */,
 				DE0E87241D7FEFC900F42DB3 /* Settings.swift in Sources */,
 				DE1294F71D6977F700687CA5 /* AppDelegate.swift in Sources */,
 				DE0E00081D7E984C00B70D62 /* WelcomePageViewController.swift in Sources */,
