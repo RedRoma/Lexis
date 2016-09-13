@@ -220,7 +220,7 @@
 				DE5D14131D87CDF800B8B3CC /* Raleway italic.ttf */,
 				DE5D14141D87CDF800B8B3CC /* Raleway regular.ttf */,
 			);
-			name = Fonts;
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		DE5D14271D87E14400B8B3CC /* Word_Of_The_Day */ = {
