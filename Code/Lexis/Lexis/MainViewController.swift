@@ -33,11 +33,23 @@ class MainViewController: UIViewController
     {
         super.viewDidAppear(animated)
         
-        goToWelcomeScreen()
+        if Settings.instance.isFirstTime
+        {
+            goToWelcomeScreen()
+        }
+        else
+        {
+            goToWordOfTheDay()
+        }
     }
     
     private func goToWelcomeScreen()
     {
         self.performSegue(withIdentifier: "ToWelcome", sender: self)
+    }
+    
+    private func goToWordOfTheDay()
+    {
+        self.performSegue(withIdentifier: "ToWordOfTheDay", sender: self)
     }
 }
