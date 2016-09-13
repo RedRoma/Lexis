@@ -15,6 +15,9 @@ class WordOfTheDayViewController: UITableViewController
 {
     
     fileprivate var words: [LexisWord] = [LexisDatabase.instance.anyWord]
+    fileprivate var word: LexisWord { return words.first! }
+    fileprivate var emptyCell = UITableViewCell()
+    
     
     override func viewDidLoad()
     {
@@ -46,7 +49,6 @@ extension WordOfTheDayViewController
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let emptyCell = UITableViewCell()
         
         let section = indexPath.section
         
@@ -70,21 +72,33 @@ extension WordOfTheDayViewController
     
     private func createWordTitleCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "WordCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "WordCell", for: indexPath) as? WordNameCell
+        else { return emptyCell }
+        
+        let title = word.forms.first ?? "Accipio"
+        cell.wordNameLabel.text = title
         
         return cell
     }
     
     private func createWordDefinitionCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DefinitionCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DefinitionCell", for: indexPath) as? WordDefinitionCell
+        else { return emptyCell }
+        
+        let row = indexPath.row
+        let definition = word.definitions[row]
+        
+        cell.definitionLabel.text = definition.terms.joined(separator: ", ")
         
         return cell
     }
     
     private func createFooterCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "WordDescriptionCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "WordDescriptionCell", for: indexPath) as? WordDescriptionCell
+        else { return emptyCell }
+        
         return cell
     }
     

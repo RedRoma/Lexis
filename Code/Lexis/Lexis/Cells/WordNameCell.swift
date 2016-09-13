@@ -12,4 +12,7 @@ import UIKit
 class WordNameCell: UITableViewCell
 {
     
+    @IBOutlet weak var cardView: UIView!
+    @IBOutlet weak var wordNameLabel: UILabel!
+    @IBOutlet weak var wordInformationLabel: UILabel!
 }

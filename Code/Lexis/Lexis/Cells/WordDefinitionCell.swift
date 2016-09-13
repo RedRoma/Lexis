@@ -12,4 +12,7 @@ import UIKit
 class WordDefinitionCell: UITableViewCell
 {
     
+    @IBOutlet weak var cardView: UIView!
+    @IBOutlet weak var definitionLabel: UILabel!
+    @IBOutlet weak var disclosureImageView: UIImageView!
 }

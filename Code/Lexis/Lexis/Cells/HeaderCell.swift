@@ -11,5 +11,7 @@ import UIKit
 
 class HeaderCell: UITableViewCell
 {
+    @IBOutlet weak var highlightLine: UIView!
+    @IBOutlet weak var headerTitleLabel: UILabel!
     
 }
