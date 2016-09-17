@@ -5,6 +5,10 @@ Lexis
 
 ## The Lexicon of Rome
 
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Build Status](https://travis-ci.org/RedRoma/Lexis.svg?branch=develop)](https://travis-ci.org/RedRoma/Lexis)
+
+---
 
 # Intro
 
@@ -31,7 +35,7 @@ Clean, but not sterile.
 
 # Features
 
-We not only want to know what a word's definition is, but we also want to know: 
+We not only want to know what a word's definition is, but we also want to know:
 
 + Word of the day. Something to keep it fresh.
 + The Top 10 Google results of the word. See how the word is being used today.
