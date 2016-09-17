@@ -25,14 +25,34 @@
 		DE1295131D6982FF00687CA5 /* CinzelDecorative-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE12950D1D6982FF00687CA5 /* CinzelDecorative-Bold.otf */; };
 		DE1295141D6982FF00687CA5 /* CinzelDecorative-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE12950E1D6982FF00687CA5 /* CinzelDecorative-Regular.otf */; };
 		DE24652E1D8D174B00A138EB /* LexisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE24652D1D8D174B00A138EB /* LexisTests.swift */; };
-		DE4DA0C71D8DCCAE003183F4 /* AlchemyGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA0C31D8DCCAE003183F4 /* AlchemyGenerator.framework */; };
-		DE4DA0C81D8DCCAE003183F4 /* AlchemyGenerator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA0C31D8DCCAE003183F4 /* AlchemyGenerator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE4DA0C91D8DCCAE003183F4 /* LexisDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA0C41D8DCCAE003183F4 /* LexisDatabase.framework */; };
-		DE4DA0CA1D8DCCAE003183F4 /* LexisDatabase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA0C41D8DCCAE003183F4 /* LexisDatabase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE4DA0CB1D8DCCAE003183F4 /* RedRomaColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA0C51D8DCCAE003183F4 /* RedRomaColors.framework */; };
-		DE4DA0CC1D8DCCAE003183F4 /* RedRomaColors.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA0C51D8DCCAE003183F4 /* RedRomaColors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE4DA0CD1D8DCCAE003183F4 /* Sulcus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA0C61D8DCCAE003183F4 /* Sulcus.framework */; };
-		DE4DA0CE1D8DCCAE003183F4 /* Sulcus.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA0C61D8DCCAE003183F4 /* Sulcus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE4DA29A1D8DF1D5003183F4 /* AlchemyGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA2921D8DF1D5003183F4 /* AlchemyGenerator.framework */; };
+		DE4DA29C1D8DF1D5003183F4 /* AromaSwiftClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA2931D8DF1D5003183F4 /* AromaSwiftClient.framework */; };
+		DE4DA29E1D8DF1D5003183F4 /* AromaThrift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA2941D8DF1D5003183F4 /* AromaThrift.framework */; };
+		DE4DA2A01D8DF1D5003183F4 /* LexisDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA2951D8DF1D5003183F4 /* LexisDatabase.framework */; };
+		DE4DA2A21D8DF1D5003183F4 /* RedRomaColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA2961D8DF1D5003183F4 /* RedRomaColors.framework */; };
+		DE4DA2A41D8DF1D5003183F4 /* Sulcus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA2971D8DF1D5003183F4 /* Sulcus.framework */; };
+		DE4DA2A61D8DF1D5003183F4 /* SwiftExceptionCatcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA2981D8DF1D5003183F4 /* SwiftExceptionCatcher.framework */; };
+		DE4DA2A81D8DF278003183F4 /* AlchemyGenerator.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE4DA2921D8DF1D5003183F4 /* AlchemyGenerator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE4DA2A91D8DF278003183F4 /* AromaSwiftClient.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE4DA2931D8DF1D5003183F4 /* AromaSwiftClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE4DA2AA1D8DF278003183F4 /* AromaThrift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE4DA2941D8DF1D5003183F4 /* AromaThrift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE4DA2AB1D8DF278003183F4 /* LexisDatabase.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE4DA2951D8DF1D5003183F4 /* LexisDatabase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE4DA2AC1D8DF278003183F4 /* RedRomaColors.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE4DA2961D8DF1D5003183F4 /* RedRomaColors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE4DA2AD1D8DF278003183F4 /* Sulcus.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE4DA2971D8DF1D5003183F4 /* Sulcus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE4DA2AE1D8DF278003183F4 /* SwiftExceptionCatcher.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE4DA2981D8DF1D5003183F4 /* SwiftExceptionCatcher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE4DA2B71D8DF358003183F4 /* AlchemyGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA2921D8DF1D5003183F4 /* AlchemyGenerator.framework */; };
+		DE4DA2B81D8DF358003183F4 /* AlchemyGenerator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA2921D8DF1D5003183F4 /* AlchemyGenerator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE4DA2B91D8DF358003183F4 /* AromaSwiftClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA2931D8DF1D5003183F4 /* AromaSwiftClient.framework */; };
+		DE4DA2BA1D8DF358003183F4 /* AromaSwiftClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA2931D8DF1D5003183F4 /* AromaSwiftClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE4DA2BB1D8DF358003183F4 /* AromaThrift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA2941D8DF1D5003183F4 /* AromaThrift.framework */; };
+		DE4DA2BC1D8DF358003183F4 /* AromaThrift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA2941D8DF1D5003183F4 /* AromaThrift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE4DA2BD1D8DF358003183F4 /* LexisDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA2951D8DF1D5003183F4 /* LexisDatabase.framework */; };
+		DE4DA2BE1D8DF358003183F4 /* LexisDatabase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA2951D8DF1D5003183F4 /* LexisDatabase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE4DA2BF1D8DF358003183F4 /* RedRomaColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA2961D8DF1D5003183F4 /* RedRomaColors.framework */; };
+		DE4DA2C01D8DF358003183F4 /* RedRomaColors.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA2961D8DF1D5003183F4 /* RedRomaColors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE4DA2C11D8DF358003183F4 /* Sulcus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA2971D8DF1D5003183F4 /* Sulcus.framework */; };
+		DE4DA2C21D8DF358003183F4 /* Sulcus.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA2971D8DF1D5003183F4 /* Sulcus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE4DA2C31D8DF358003183F4 /* SwiftExceptionCatcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA2981D8DF1D5003183F4 /* SwiftExceptionCatcher.framework */; };
+		DE4DA2C41D8DF358003183F4 /* SwiftExceptionCatcher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA2981D8DF1D5003183F4 /* SwiftExceptionCatcher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DE5D14151D87CDF800B8B3CC /* Raleway 100.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D14031D87CDF800B8B3CC /* Raleway 100.ttf */; };
 		DE5D14161D87CDF800B8B3CC /* Raleway 100italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D14041D87CDF800B8B3CC /* Raleway 100italic.ttf */; };
 		DE5D14171D87CDF800B8B3CC /* Raleway 200.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D14051D87CDF800B8B3CC /* Raleway 200.ttf */; };
@@ -75,12 +95,31 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DE4DA0C81D8DCCAE003183F4 /* AlchemyGenerator.framework in Embed Frameworks */,
-				DE4DA0CA1D8DCCAE003183F4 /* LexisDatabase.framework in Embed Frameworks */,
-				DE4DA0CC1D8DCCAE003183F4 /* RedRomaColors.framework in Embed Frameworks */,
-				DE4DA0CE1D8DCCAE003183F4 /* Sulcus.framework in Embed Frameworks */,
+				DE4DA2BA1D8DF358003183F4 /* AromaSwiftClient.framework in Embed Frameworks */,
+				DE4DA2C01D8DF358003183F4 /* RedRomaColors.framework in Embed Frameworks */,
+				DE4DA2BE1D8DF358003183F4 /* LexisDatabase.framework in Embed Frameworks */,
+				DE4DA2C21D8DF358003183F4 /* Sulcus.framework in Embed Frameworks */,
+				DE4DA2C41D8DF358003183F4 /* SwiftExceptionCatcher.framework in Embed Frameworks */,
+				DE4DA2B81D8DF358003183F4 /* AlchemyGenerator.framework in Embed Frameworks */,
+				DE4DA2BC1D8DF358003183F4 /* AromaThrift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE4DA2A71D8DF26F003183F4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DE4DA2A81D8DF278003183F4 /* AlchemyGenerator.framework in CopyFiles */,
+				DE4DA2A91D8DF278003183F4 /* AromaSwiftClient.framework in CopyFiles */,
+				DE4DA2AA1D8DF278003183F4 /* AromaThrift.framework in CopyFiles */,
+				DE4DA2AB1D8DF278003183F4 /* LexisDatabase.framework in CopyFiles */,
+				DE4DA2AC1D8DF278003183F4 /* RedRomaColors.framework in CopyFiles */,
+				DE4DA2AD1D8DF278003183F4 /* Sulcus.framework in CopyFiles */,
+				DE4DA2AE1D8DF278003183F4 /* SwiftExceptionCatcher.framework in CopyFiles */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -108,10 +147,13 @@
 		DE24652B1D8D174B00A138EB /* LexisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LexisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE24652D1D8D174B00A138EB /* LexisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexisTests.swift; sourceTree = "<group>"; };
 		DE24652F1D8D174B00A138EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE4DA0C31D8DCCAE003183F4 /* AlchemyGenerator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlchemyGenerator.framework; sourceTree = "<group>"; };
-		DE4DA0C41D8DCCAE003183F4 /* LexisDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LexisDatabase.framework; sourceTree = "<group>"; };
-		DE4DA0C51D8DCCAE003183F4 /* RedRomaColors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RedRomaColors.framework; sourceTree = "<group>"; };
-		DE4DA0C61D8DCCAE003183F4 /* Sulcus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sulcus.framework; sourceTree = "<group>"; };
+		DE4DA2921D8DF1D5003183F4 /* AlchemyGenerator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlchemyGenerator.framework; sourceTree = "<group>"; };
+		DE4DA2931D8DF1D5003183F4 /* AromaSwiftClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AromaSwiftClient.framework; sourceTree = "<group>"; };
+		DE4DA2941D8DF1D5003183F4 /* AromaThrift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AromaThrift.framework; sourceTree = "<group>"; };
+		DE4DA2951D8DF1D5003183F4 /* LexisDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LexisDatabase.framework; sourceTree = "<group>"; };
+		DE4DA2961D8DF1D5003183F4 /* RedRomaColors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RedRomaColors.framework; sourceTree = "<group>"; };
+		DE4DA2971D8DF1D5003183F4 /* Sulcus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sulcus.framework; sourceTree = "<group>"; };
+		DE4DA2981D8DF1D5003183F4 /* SwiftExceptionCatcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftExceptionCatcher.framework; sourceTree = "<group>"; };
 		DE5D14031D87CDF800B8B3CC /* Raleway 100.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 100.ttf"; sourceTree = "<group>"; };
 		DE5D14041D87CDF800B8B3CC /* Raleway 100italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 100italic.ttf"; sourceTree = "<group>"; };
 		DE5D14051D87CDF800B8B3CC /* Raleway 200.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 200.ttf"; sourceTree = "<group>"; };
@@ -142,10 +184,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE4DA0C71D8DCCAE003183F4 /* AlchemyGenerator.framework in Frameworks */,
-				DE4DA0C91D8DCCAE003183F4 /* LexisDatabase.framework in Frameworks */,
-				DE4DA0CB1D8DCCAE003183F4 /* RedRomaColors.framework in Frameworks */,
-				DE4DA0CD1D8DCCAE003183F4 /* Sulcus.framework in Frameworks */,
+				DE4DA2B91D8DF358003183F4 /* AromaSwiftClient.framework in Frameworks */,
+				DE4DA2BF1D8DF358003183F4 /* RedRomaColors.framework in Frameworks */,
+				DE4DA2BD1D8DF358003183F4 /* LexisDatabase.framework in Frameworks */,
+				DE4DA2C11D8DF358003183F4 /* Sulcus.framework in Frameworks */,
+				DE4DA2C31D8DF358003183F4 /* SwiftExceptionCatcher.framework in Frameworks */,
+				DE4DA2B71D8DF358003183F4 /* AlchemyGenerator.framework in Frameworks */,
+				DE4DA2BB1D8DF358003183F4 /* AromaThrift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +198,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE4DA29C1D8DF1D5003183F4 /* AromaSwiftClient.framework in Frameworks */,
+				DE4DA2A21D8DF1D5003183F4 /* RedRomaColors.framework in Frameworks */,
+				DE4DA2A01D8DF1D5003183F4 /* LexisDatabase.framework in Frameworks */,
+				DE4DA2A41D8DF1D5003183F4 /* Sulcus.framework in Frameworks */,
+				DE4DA2A61D8DF1D5003183F4 /* SwiftExceptionCatcher.framework in Frameworks */,
+				DE4DA29A1D8DF1D5003183F4 /* AlchemyGenerator.framework in Frameworks */,
+				DE4DA29E1D8DF1D5003183F4 /* AromaThrift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,10 +339,13 @@
 		DE60BCC11D7B6ADE00EF15C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DE4DA0C31D8DCCAE003183F4 /* AlchemyGenerator.framework */,
-				DE4DA0C41D8DCCAE003183F4 /* LexisDatabase.framework */,
-				DE4DA0C51D8DCCAE003183F4 /* RedRomaColors.framework */,
-				DE4DA0C61D8DCCAE003183F4 /* Sulcus.framework */,
+				DE4DA2921D8DF1D5003183F4 /* AlchemyGenerator.framework */,
+				DE4DA2931D8DF1D5003183F4 /* AromaSwiftClient.framework */,
+				DE4DA2941D8DF1D5003183F4 /* AromaThrift.framework */,
+				DE4DA2951D8DF1D5003183F4 /* LexisDatabase.framework */,
+				DE4DA2961D8DF1D5003183F4 /* RedRomaColors.framework */,
+				DE4DA2971D8DF1D5003183F4 /* Sulcus.framework */,
+				DE4DA2981D8DF1D5003183F4 /* SwiftExceptionCatcher.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -330,6 +385,7 @@
 				DE2465271D8D174B00A138EB /* Sources */,
 				DE2465281D8D174B00A138EB /* Frameworks */,
 				DE2465291D8D174B00A138EB /* Resources */,
+				DE4DA2A71D8DF26F003183F4 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -624,6 +680,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = LexisTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ly.generalassemb.LexisTests;
@@ -637,6 +697,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = LexisTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ly.generalassemb.LexisTests;

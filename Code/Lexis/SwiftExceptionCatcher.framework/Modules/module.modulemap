@@ -1,0 +1,10 @@
+framework module SwiftExceptionCatcher {
+  umbrella header "SwiftExceptionCatcher.h"
+
+  export *
+  module * { export * }
+}
+
+module SwiftExceptionCatcher.Swift {
+    header "SwiftExceptionCatcher-Swift.h"
+}

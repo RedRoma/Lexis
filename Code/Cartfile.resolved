@@ -1,4 +1,7 @@
 github "SirWellington/AlchemyGenerator" "bd256b4151f325b2e348c099fcb47e6c959be05d"
+github "RedRoma/AromaThrift" "95f99d0bb68e57677d4c5a39094da96183df13f5"
 github "RedRoma/RedRomaColors" "62805e9a426687efa8f7602db469bcde5b9ca991"
 github "RedRoma/Sulcus" "e9894eb969724a96e5d1fe36d1c3668b3e1ace1d"
-github "RedRoma/Lexis-Database" "1efff176a088736236aa85be6b88b9e6df3f8264"
+github "RedRoma/SwiftExceptionCatcher" "1.2"
+github "RedRoma/Lexis-Database" "820f0f2a16759e32f17cb3ff690a7d5bcaaeb210"
+github "RedRoma/AromaSwiftClient" "d759c2440778b99f5a5369502a9e5ec987d50065"

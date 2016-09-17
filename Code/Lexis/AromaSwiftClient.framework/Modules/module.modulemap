@@ -1,0 +1,10 @@
+framework module AromaSwiftClient {
+  umbrella header "AromaSwiftClient.h"
+
+  export *
+  module * { export * }
+}
+
+module AromaSwiftClient.Swift {
+    header "AromaSwiftClient-Swift.h"
+}

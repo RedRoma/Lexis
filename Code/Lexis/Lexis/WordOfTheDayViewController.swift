@@ -160,18 +160,36 @@ fileprivate extension WordOfTheDayViewController
             case .Interjection:
                 return "Conjunction"
             case let .Noun(declension, gender):
-                return "Noun (\(declension.name)), (\(gender.name))"
+                return "\(declension.name) Noun, (\(gender.name))"
             case .Numeral:
                 return "Numeral"
             case .PersonalPronoun:
                 return "Personal Pronoun"
             case let .Preposition(declension):
                 return "Preposition \(declension.name)"
+            case let .Verb(conjugation, verbType):
+                let conjugationString = numberForConjugation(conjugation: conjugation)
+                return "Verb \(conjugationString) \(verbType.name)"
             default:
                 break
         }
         
         
         return ""
+    }
+    
+    func numberForConjugation(conjugation: Conjugation) -> String
+    {
+        let numbers: [Conjugation: String] =
+        [
+            .First : "1st",
+            .Second: "2nd",
+            .Third: "3rd",
+            .Fourth: "4th",
+            .Irregular: "Irreg.",
+            .Unconjugated: "Unconjugated"
+        ]
+        
+        return numbers[conjugation] ?? ""
     }
 }

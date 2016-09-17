@@ -6,6 +6,7 @@
 //  Copyright © 2016 RedRoma, Inc. All rights reserved.
 //
 
+import AromaSwiftClient
 import Sulcus
 import UIKit
 
@@ -15,10 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 
     var window: UIWindow?
 
+    private let buildNumber: String = Bundle.main.infoDictionary?[kCFBundleVersionKey as String] as? String ?? ""
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
     {
         LOG.level = .info
+        
+        AromaClient.TOKEN_ID = "655e0541-b719-47af-9c9e-53e161d26e53"
+        
+        AromaClient.being(withTitle: "App Launched")
+            .addBody("Build #\(buildNumber)")
+            .withPriority(.medium)
+            .send()
+        
         return true
     }
 
