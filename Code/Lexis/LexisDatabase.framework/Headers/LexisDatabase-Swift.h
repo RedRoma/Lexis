@@ -110,8 +110,64 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # define SWIFT_UNAVAILABLE __attribute__((unavailable))
 #endif
 #if defined(__has_feature) && __has_feature(modules)
+@import ObjectiveC;
+@import Foundation;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
+@class NSCoder;
+
+SWIFT_CLASS("_TtC13LexisDatabase15LexisDefinition")
+@interface LexisDefinition : NSObject <NSCoding>
+@property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull terms;
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
+- (nonnull instancetype)initWithTerms:(NSArray<NSString *> * _Nonnull)terms OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)decoder;
+- (void)encodeWithCoder:(NSCoder * _Nonnull)encoder;
+- (BOOL)isEqual:(id _Nullable)object;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
+@end
+
+
+@interface LexisDefinition (SWIFT_EXTENSION(LexisDatabase))
+@property (nonatomic, readonly) NSInteger hashValue;
+@property (nonatomic, readonly) NSUInteger hash;
+@end
+
+
+SWIFT_CLASS("_TtC13LexisDatabase9LexisWord")
+@interface LexisWord : NSObject <NSCoding>
+/**
+  A Word’s forms represnts the different parts to a Latin vocabulary entry.
+  For instance, a noun will have its nominative and genitive forms.
+*/
+@property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull forms;
+/**
+  This represent a Word’s separate definitions. Although each \code
+  Definition
+  \endcode object may have different words,
+  they all essentially represent the same meaning.
+  Whereas a different \code
+  Definition
+  \endcode object represents a different meaning.
+*/
+@property (nonatomic, readonly, copy) NSArray<LexisDefinition *> * _Nonnull definitions;
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)encoder;
+- (void)encodeWithCoder:(NSCoder * _Nonnull)decoder;
+- (BOOL)isEqual:(id _Nullable)object;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
+@end
+
+
+@interface LexisWord (SWIFT_EXTENSION(LexisDatabase))
+@end
+
+
+@interface LexisWord (SWIFT_EXTENSION(LexisDatabase))
+@property (nonatomic, readonly) NSInteger hashValue;
+@property (nonatomic, readonly) NSUInteger hash;
+@end
+
 #pragma clang diagnostic pop

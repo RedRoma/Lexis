@@ -148,6 +148,23 @@ fileprivate extension WordOfTheDayViewController
     {
         let type = word.wordType
         
+        switch type
+        {
+        case .Adjective :
+            return "Adj"
+        case .Adverb:
+            return "Adv"
+        case .Conjunction:
+            return "Conjunction"
+        case .Interjection:
+            return "Conjunction"
+        case let .Noun(declension, gender):
+            return "Noun \(declension.name) (\(gender.name)"
+        default:
+            break
+        }
+        
+        
         return ""
     }
 }
