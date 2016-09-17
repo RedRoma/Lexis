@@ -24,6 +24,7 @@
 		DE1295121D6982FF00687CA5 /* CinzelDecorative-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE12950C1D6982FF00687CA5 /* CinzelDecorative-Black.otf */; };
 		DE1295131D6982FF00687CA5 /* CinzelDecorative-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE12950D1D6982FF00687CA5 /* CinzelDecorative-Bold.otf */; };
 		DE1295141D6982FF00687CA5 /* CinzelDecorative-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE12950E1D6982FF00687CA5 /* CinzelDecorative-Regular.otf */; };
+		DE24652E1D8D174B00A138EB /* LexisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE24652D1D8D174B00A138EB /* LexisTests.swift */; };
 		DE5D14151D87CDF800B8B3CC /* Raleway 100.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D14031D87CDF800B8B3CC /* Raleway 100.ttf */; };
 		DE5D14161D87CDF800B8B3CC /* Raleway 100italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D14041D87CDF800B8B3CC /* Raleway 100italic.ttf */; };
 		DE5D14171D87CDF800B8B3CC /* Raleway 200.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D14051D87CDF800B8B3CC /* Raleway 200.ttf */; };
@@ -56,6 +57,16 @@
 		DE5D143D1D8847D100B8B3CC /* WordDefinitionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D143C1D8847D100B8B3CC /* WordDefinitionCell.swift */; };
 		DE5D143F1D8847E600B8B3CC /* WordDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D143E1D8847E600B8B3CC /* WordDescriptionCell.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE2465301D8D174B00A138EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE1294EB1D6977F700687CA5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE1294F21D6977F700687CA5;
+			remoteInfo = Lexis;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		DE60BCC71D7B6AE800EF15C6 /* Embed Frameworks */ = {
@@ -94,6 +105,9 @@
 		DE12950C1D6982FF00687CA5 /* CinzelDecorative-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CinzelDecorative-Black.otf"; sourceTree = "<group>"; };
 		DE12950D1D6982FF00687CA5 /* CinzelDecorative-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CinzelDecorative-Bold.otf"; sourceTree = "<group>"; };
 		DE12950E1D6982FF00687CA5 /* CinzelDecorative-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CinzelDecorative-Regular.otf"; sourceTree = "<group>"; };
+		DE24652B1D8D174B00A138EB /* LexisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LexisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE24652D1D8D174B00A138EB /* LexisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexisTests.swift; sourceTree = "<group>"; };
+		DE24652F1D8D174B00A138EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE5D14031D87CDF800B8B3CC /* Raleway 100.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 100.ttf"; sourceTree = "<group>"; };
 		DE5D14041D87CDF800B8B3CC /* Raleway 100italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 100italic.ttf"; sourceTree = "<group>"; };
 		DE5D14051D87CDF800B8B3CC /* Raleway 200.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 200.ttf"; sourceTree = "<group>"; };
@@ -135,6 +149,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DE2465281D8D174B00A138EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -168,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				DE1294F51D6977F700687CA5 /* Lexis */,
+				DE24652C1D8D174B00A138EB /* LexisTests */,
 				DE1294F41D6977F700687CA5 /* Products */,
 				DE60BCC11D7B6ADE00EF15C6 /* Frameworks */,
 			);
@@ -177,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				DE1294F31D6977F700687CA5 /* Lexis.app */,
+				DE24652B1D8D174B00A138EB /* LexisTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -232,6 +255,15 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		DE24652C1D8D174B00A138EB /* LexisTests */ = {
+			isa = PBXGroup;
+			children = (
+				DE24652D1D8D174B00A138EB /* LexisTests.swift */,
+				DE24652F1D8D174B00A138EB /* Info.plist */,
+			);
+			path = LexisTests;
+			sourceTree = "<group>";
+		};
 		DE5D14271D87E14400B8B3CC /* Word_Of_The_Day */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +315,24 @@
 			productReference = DE1294F31D6977F700687CA5 /* Lexis.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DE24652A1D8D174B00A138EB /* LexisTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE2465341D8D174B00A138EB /* Build configuration list for PBXNativeTarget "LexisTests" */;
+			buildPhases = (
+				DE2465271D8D174B00A138EB /* Sources */,
+				DE2465281D8D174B00A138EB /* Frameworks */,
+				DE2465291D8D174B00A138EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE2465311D8D174B00A138EB /* PBXTargetDependency */,
+			);
+			name = LexisTests;
+			productName = LexisTests;
+			productReference = DE24652B1D8D174B00A138EB /* LexisTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -297,6 +347,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 5JBF7MD4UT;
 						ProvisioningStyle = Automatic;
+					};
+					DE24652A1D8D174B00A138EB = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DE1294F21D6977F700687CA5;
 					};
 				};
 			};
@@ -314,6 +369,7 @@
 			projectRoot = "";
 			targets = (
 				DE1294F21D6977F700687CA5 /* Lexis */,
+				DE24652A1D8D174B00A138EB /* LexisTests */,
 			);
 		};
 /* End PBXProject section */
@@ -354,6 +410,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DE2465291D8D174B00A138EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -376,7 +439,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DE2465271D8D174B00A138EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE24652E1D8D174B00A138EB /* LexisTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE2465311D8D174B00A138EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE1294F21D6977F700687CA5 /* Lexis */;
+			targetProxy = DE2465301D8D174B00A138EB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DE0E87281D7FF41D00F42DB3 /* Welcome.storyboard */ = {
@@ -533,6 +612,32 @@
 			};
 			name = Release;
 		};
+		DE2465321D8D174B00A138EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LexisTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ly.generalassemb.LexisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lexis.app/Lexis";
+			};
+			name = Debug;
+		};
+		DE2465331D8D174B00A138EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LexisTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ly.generalassemb.LexisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lexis.app/Lexis";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -553,6 +658,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		DE2465341D8D174B00A138EB /* Build configuration list for PBXNativeTarget "LexisTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE2465321D8D174B00A138EB /* Debug */,
+				DE2465331D8D174B00A138EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
