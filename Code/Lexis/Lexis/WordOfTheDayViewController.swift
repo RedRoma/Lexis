@@ -14,8 +14,8 @@ import UIKit
 class WordOfTheDayViewController: UITableViewController
 {
     
-    fileprivate var words: [LexisWord] = [LexisDatabase.instance.anyWord]
-    fileprivate var word: LexisWord { return words.first! }
+    fileprivate var words: [LexisWord] { return [word] }
+    fileprivate var word: LexisWord = LexisDatabase.instance.anyWord
     fileprivate var emptyCell = UITableViewCell()
     
     
@@ -24,6 +24,17 @@ class WordOfTheDayViewController: UITableViewController
         super.viewDidLoad()
         
         LOG.info("Loaded W.O.D. View Controller")
+        
+        refreshControl = UIRefreshControl()
+        refreshControl?.backgroundColor = UIColor.clear
+        refreshControl?.addTarget(self, action: #selector(self.update), for: .valueChanged)
+    }
+    
+    func update()
+    {
+        word = LexisDatabase.instance.anyWord
+        tableView.reloadData()
+        refreshControl?.endRefreshing()
     }
 }
 
@@ -89,7 +100,8 @@ extension WordOfTheDayViewController
         let row = indexPath.row
         let definition = word.definitions[row]
         
-        cell.definitionLabel.text = definition.terms.joined(separator: ", ")
+        let definitionText = "‣ " + definition.terms.joined(separator: ", ")
+        cell.definitionLabel.text = definitionText
         
         return cell
     }
@@ -125,5 +137,17 @@ extension WordOfTheDayViewController
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
         return UITableViewAutomaticDimension
+    }
+}
+
+//MARK: Word Information
+fileprivate extension WordOfTheDayViewController
+{
+    
+    func wordTypeInfo(for word: LexisWord) -> String
+    {
+        let type = word.wordType
+        
+        return ""
     }
 }

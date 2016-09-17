@@ -25,6 +25,14 @@
 		DE1295131D6982FF00687CA5 /* CinzelDecorative-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE12950D1D6982FF00687CA5 /* CinzelDecorative-Bold.otf */; };
 		DE1295141D6982FF00687CA5 /* CinzelDecorative-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE12950E1D6982FF00687CA5 /* CinzelDecorative-Regular.otf */; };
 		DE24652E1D8D174B00A138EB /* LexisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE24652D1D8D174B00A138EB /* LexisTests.swift */; };
+		DE4DA0B21D8DC6CE003183F4 /* AlchemyGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA0AE1D8DC6CE003183F4 /* AlchemyGenerator.framework */; };
+		DE4DA0B31D8DC6CE003183F4 /* AlchemyGenerator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA0AE1D8DC6CE003183F4 /* AlchemyGenerator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE4DA0B41D8DC6CE003183F4 /* LexisDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA0AF1D8DC6CE003183F4 /* LexisDatabase.framework */; };
+		DE4DA0B51D8DC6CE003183F4 /* LexisDatabase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA0AF1D8DC6CE003183F4 /* LexisDatabase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE4DA0B61D8DC6CE003183F4 /* RedRomaColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA0B01D8DC6CE003183F4 /* RedRomaColors.framework */; };
+		DE4DA0B71D8DC6CE003183F4 /* RedRomaColors.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA0B01D8DC6CE003183F4 /* RedRomaColors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE4DA0B81D8DC6CE003183F4 /* Sulcus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA0B11D8DC6CE003183F4 /* Sulcus.framework */; };
+		DE4DA0B91D8DC6CE003183F4 /* Sulcus.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE4DA0B11D8DC6CE003183F4 /* Sulcus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DE5D14151D87CDF800B8B3CC /* Raleway 100.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D14031D87CDF800B8B3CC /* Raleway 100.ttf */; };
 		DE5D14161D87CDF800B8B3CC /* Raleway 100italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D14041D87CDF800B8B3CC /* Raleway 100italic.ttf */; };
 		DE5D14171D87CDF800B8B3CC /* Raleway 200.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D14051D87CDF800B8B3CC /* Raleway 200.ttf */; };
@@ -48,18 +56,6 @@
 		DE5D143B1D8847BD00B8B3CC /* WordNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D143A1D8847BD00B8B3CC /* WordNameCell.swift */; };
 		DE5D143D1D8847D100B8B3CC /* WordDefinitionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D143C1D8847D100B8B3CC /* WordDefinitionCell.swift */; };
 		DE5D143F1D8847E600B8B3CC /* WordDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D143E1D8847E600B8B3CC /* WordDescriptionCell.swift */; };
-		DE7B308C1D8D2B8C00AD44C1 /* AlchemyGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE7B30881D8D2B8C00AD44C1 /* AlchemyGenerator.framework */; };
-		DE7B308D1D8D2B8C00AD44C1 /* AlchemyGenerator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE7B30881D8D2B8C00AD44C1 /* AlchemyGenerator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE7B308E1D8D2B8C00AD44C1 /* LexisDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE7B30891D8D2B8C00AD44C1 /* LexisDatabase.framework */; };
-		DE7B308F1D8D2B8C00AD44C1 /* LexisDatabase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE7B30891D8D2B8C00AD44C1 /* LexisDatabase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE7B30901D8D2B8C00AD44C1 /* RedRomaColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE7B308A1D8D2B8C00AD44C1 /* RedRomaColors.framework */; };
-		DE7B30911D8D2B8C00AD44C1 /* RedRomaColors.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE7B308A1D8D2B8C00AD44C1 /* RedRomaColors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE7B30921D8D2B8C00AD44C1 /* Sulcus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE7B308B1D8D2B8C00AD44C1 /* Sulcus.framework */; };
-		DE7B30931D8D2B8C00AD44C1 /* Sulcus.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE7B308B1D8D2B8C00AD44C1 /* Sulcus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE7B30991D8D2BA400AD44C1 /* AlchemyGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE7B30951D8D2BA400AD44C1 /* AlchemyGenerator.framework */; };
-		DE7B309A1D8D2BA400AD44C1 /* LexisDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE7B30961D8D2BA400AD44C1 /* LexisDatabase.framework */; };
-		DE7B309B1D8D2BA400AD44C1 /* RedRomaColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE7B30971D8D2BA400AD44C1 /* RedRomaColors.framework */; };
-		DE7B309C1D8D2BA400AD44C1 /* Sulcus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE7B30981D8D2BA400AD44C1 /* Sulcus.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,16 +69,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		DE7B30941D8D2B8D00AD44C1 /* Embed Frameworks */ = {
+		DE4DA0BA1D8DC6CE003183F4 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DE7B308D1D8D2B8C00AD44C1 /* AlchemyGenerator.framework in Embed Frameworks */,
-				DE7B308F1D8D2B8C00AD44C1 /* LexisDatabase.framework in Embed Frameworks */,
-				DE7B30911D8D2B8C00AD44C1 /* RedRomaColors.framework in Embed Frameworks */,
-				DE7B30931D8D2B8C00AD44C1 /* Sulcus.framework in Embed Frameworks */,
+				DE4DA0B31D8DC6CE003183F4 /* AlchemyGenerator.framework in Embed Frameworks */,
+				DE4DA0B51D8DC6CE003183F4 /* LexisDatabase.framework in Embed Frameworks */,
+				DE4DA0B71D8DC6CE003183F4 /* RedRomaColors.framework in Embed Frameworks */,
+				DE4DA0B91D8DC6CE003183F4 /* Sulcus.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +108,10 @@
 		DE24652B1D8D174B00A138EB /* LexisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LexisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE24652D1D8D174B00A138EB /* LexisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexisTests.swift; sourceTree = "<group>"; };
 		DE24652F1D8D174B00A138EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE4DA0AE1D8DC6CE003183F4 /* AlchemyGenerator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlchemyGenerator.framework; sourceTree = "<group>"; };
+		DE4DA0AF1D8DC6CE003183F4 /* LexisDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LexisDatabase.framework; sourceTree = "<group>"; };
+		DE4DA0B01D8DC6CE003183F4 /* RedRomaColors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RedRomaColors.framework; sourceTree = "<group>"; };
+		DE4DA0B11D8DC6CE003183F4 /* Sulcus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sulcus.framework; sourceTree = "<group>"; };
 		DE5D14031D87CDF800B8B3CC /* Raleway 100.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 100.ttf"; sourceTree = "<group>"; };
 		DE5D14041D87CDF800B8B3CC /* Raleway 100italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 100italic.ttf"; sourceTree = "<group>"; };
 		DE5D14051D87CDF800B8B3CC /* Raleway 200.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 200.ttf"; sourceTree = "<group>"; };
@@ -135,14 +135,6 @@
 		DE5D143A1D8847BD00B8B3CC /* WordNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordNameCell.swift; sourceTree = "<group>"; };
 		DE5D143C1D8847D100B8B3CC /* WordDefinitionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordDefinitionCell.swift; sourceTree = "<group>"; };
 		DE5D143E1D8847E600B8B3CC /* WordDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordDescriptionCell.swift; sourceTree = "<group>"; };
-		DE7B30881D8D2B8C00AD44C1 /* AlchemyGenerator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlchemyGenerator.framework; sourceTree = "<group>"; };
-		DE7B30891D8D2B8C00AD44C1 /* LexisDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LexisDatabase.framework; sourceTree = "<group>"; };
-		DE7B308A1D8D2B8C00AD44C1 /* RedRomaColors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RedRomaColors.framework; sourceTree = "<group>"; };
-		DE7B308B1D8D2B8C00AD44C1 /* Sulcus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sulcus.framework; sourceTree = "<group>"; };
-		DE7B30951D8D2BA400AD44C1 /* AlchemyGenerator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlchemyGenerator.framework; path = ../Carthage/Build/iOS/AlchemyGenerator.framework; sourceTree = "<group>"; };
-		DE7B30961D8D2BA400AD44C1 /* LexisDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LexisDatabase.framework; path = ../Carthage/Build/iOS/LexisDatabase.framework; sourceTree = "<group>"; };
-		DE7B30971D8D2BA400AD44C1 /* RedRomaColors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RedRomaColors.framework; path = ../Carthage/Build/iOS/RedRomaColors.framework; sourceTree = "<group>"; };
-		DE7B30981D8D2BA400AD44C1 /* Sulcus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sulcus.framework; path = ../Carthage/Build/iOS/Sulcus.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,10 +142,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE7B308C1D8D2B8C00AD44C1 /* AlchemyGenerator.framework in Frameworks */,
-				DE7B308E1D8D2B8C00AD44C1 /* LexisDatabase.framework in Frameworks */,
-				DE7B30901D8D2B8C00AD44C1 /* RedRomaColors.framework in Frameworks */,
-				DE7B30921D8D2B8C00AD44C1 /* Sulcus.framework in Frameworks */,
+				DE4DA0B21D8DC6CE003183F4 /* AlchemyGenerator.framework in Frameworks */,
+				DE4DA0B41D8DC6CE003183F4 /* LexisDatabase.framework in Frameworks */,
+				DE4DA0B61D8DC6CE003183F4 /* RedRomaColors.framework in Frameworks */,
+				DE4DA0B81D8DC6CE003183F4 /* Sulcus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,10 +153,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE7B30991D8D2BA400AD44C1 /* AlchemyGenerator.framework in Frameworks */,
-				DE7B309A1D8D2BA400AD44C1 /* LexisDatabase.framework in Frameworks */,
-				DE7B309B1D8D2BA400AD44C1 /* RedRomaColors.framework in Frameworks */,
-				DE7B309C1D8D2BA400AD44C1 /* Sulcus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,10 +188,6 @@
 		DE1294EA1D6977F700687CA5 = {
 			isa = PBXGroup;
 			children = (
-				DE7B30881D8D2B8C00AD44C1 /* AlchemyGenerator.framework */,
-				DE7B30891D8D2B8C00AD44C1 /* LexisDatabase.framework */,
-				DE7B308A1D8D2B8C00AD44C1 /* RedRomaColors.framework */,
-				DE7B308B1D8D2B8C00AD44C1 /* Sulcus.framework */,
 				DE1294F51D6977F700687CA5 /* Lexis */,
 				DE24652C1D8D174B00A138EB /* LexisTests */,
 				DE1294F41D6977F700687CA5 /* Products */,
@@ -223,8 +207,9 @@
 		DE1294F51D6977F700687CA5 /* Lexis */ = {
 			isa = PBXGroup;
 			children = (
+				DE7B309D1D8D2C4A00AD44C1 /* LexisDictionaryAdditions */,
 				DE5D14371D88471000B8B3CC /* Cells */,
-				DE5D14271D87E14400B8B3CC /* Word_Of_The_Day */,
+				DE5D14271D87E14400B8B3CC /* WordOfTheDay */,
 				DE0E87221D7FEFBE00F42DB3 /* Settings */,
 				DE0EFFD71D7E855000B70D62 /* Extensions */,
 				DE1295081D6982D100687CA5 /* Fonts */,
@@ -280,12 +265,12 @@
 			path = LexisTests;
 			sourceTree = "<group>";
 		};
-		DE5D14271D87E14400B8B3CC /* Word_Of_The_Day */ = {
+		DE5D14271D87E14400B8B3CC /* WordOfTheDay */ = {
 			isa = PBXGroup;
 			children = (
 				DE5D14281D87E15B00B8B3CC /* WordOfTheDayViewController.swift */,
 			);
-			name = Word_Of_The_Day;
+			name = WordOfTheDay;
 			sourceTree = "<group>";
 		};
 		DE5D14371D88471000B8B3CC /* Cells */ = {
@@ -302,12 +287,19 @@
 		DE60BCC11D7B6ADE00EF15C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DE7B30951D8D2BA400AD44C1 /* AlchemyGenerator.framework */,
-				DE7B30961D8D2BA400AD44C1 /* LexisDatabase.framework */,
-				DE7B30971D8D2BA400AD44C1 /* RedRomaColors.framework */,
-				DE7B30981D8D2BA400AD44C1 /* Sulcus.framework */,
+				DE4DA0AE1D8DC6CE003183F4 /* AlchemyGenerator.framework */,
+				DE4DA0AF1D8DC6CE003183F4 /* LexisDatabase.framework */,
+				DE4DA0B01D8DC6CE003183F4 /* RedRomaColors.framework */,
+				DE4DA0B11D8DC6CE003183F4 /* Sulcus.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE7B309D1D8D2C4A00AD44C1 /* LexisDictionaryAdditions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = LexisDictionaryAdditions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,7 +312,7 @@
 				DE1294EF1D6977F700687CA5 /* Sources */,
 				DE1294F01D6977F700687CA5 /* Frameworks */,
 				DE1294F11D6977F700687CA5 /* Resources */,
-				DE7B30941D8D2B8D00AD44C1 /* Embed Frameworks */,
+				DE4DA0BA1D8DC6CE003183F4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
