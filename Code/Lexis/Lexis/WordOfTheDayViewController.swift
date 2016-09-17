@@ -88,6 +88,7 @@ extension WordOfTheDayViewController
         
         let title = word.forms.first ?? "Accipio"
         cell.wordNameLabel.text = title
+        cell.wordInformationLabel.text = wordTypeInfo(for: word)
         
         return cell
     }
@@ -150,18 +151,24 @@ fileprivate extension WordOfTheDayViewController
         
         switch type
         {
-        case .Adjective :
-            return "Adj"
-        case .Adverb:
-            return "Adv"
-        case .Conjunction:
-            return "Conjunction"
-        case .Interjection:
-            return "Conjunction"
-        case let .Noun(declension, gender):
-            return "Noun \(declension.name) (\(gender.name)"
-        default:
-            break
+            case .Adjective :
+                return "Adjective"
+            case .Adverb:
+                return "Adverb"
+            case .Conjunction:
+                return "Conjunction"
+            case .Interjection:
+                return "Conjunction"
+            case let .Noun(declension, gender):
+                return "Noun (\(declension.name)), (\(gender.name))"
+            case .Numeral:
+                return "Numeral"
+            case .PersonalPronoun:
+                return "Personal Pronoun"
+            case let .Preposition(declension):
+                return "Preposition \(declension.name)"
+            default:
+                break
         }
         
         
