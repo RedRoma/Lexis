@@ -26,7 +26,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Book-Red" translatesAutoresizingMaskIntoConstraints="NO" id="TuH-0h-kB7">
@@ -56,15 +56,15 @@
             <objects>
                 <tableViewController id="2j9-lJ-S9d" customClass="WordOfTheDayViewController" customModule="Lexis" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="80" sectionHeaderHeight="18" sectionFooterHeight="18" id="Po1-wa-b3g">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="80" id="lov-X9-60s" customClass="HeaderCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="55.333333333333336" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lov-X9-60s" id="Hpk-15-DIY">
-                                    <frame key="frameInset" width="375" height="80"/>
+                                    <frame key="frameInset" width="414" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ORE-S4-oYs" userLabel="Highlight Line">
@@ -73,10 +73,13 @@
                                                 <constraint firstAttribute="height" constant="3" id="eWd-og-Nn8"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORD OF THE DAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qyd-zb-c9U">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORD OF THE MOMENT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qyd-zb-c9U">
                                             <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="16"/>
                                             <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="widthClass=regular">
+                                                <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="18"/>
+                                            </variation>
                                         </label>
                                     </subviews>
                                     <constraints>
@@ -93,11 +96,11 @@
                                     <outlet property="highlightLine" destination="ORE-S4-oYs" id="N5M-5r-eLB"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordCell" rowHeight="100" id="rZq-bg-NmT" customClass="WordNameCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="135.5" width="375" height="100"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordCell" rowHeight="120" id="rZq-bg-NmT" customClass="WordNameCell" customModule="Lexis" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="135.33333333333334" width="414" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rZq-bg-NmT" id="AVI-8j-Fve">
-                                    <frame key="frameInset" width="375" height="100"/>
+                                    <frame key="frameInset" width="414" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7q6-xW-ezg" userLabel="Card">
@@ -106,6 +109,9 @@
                                                     <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="30"/>
                                                     <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=regular">
+                                                        <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="36"/>
+                                                    </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verb, 3rd declension" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYr-4M-SqR">
                                                     <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="12"/>
@@ -116,11 +122,15 @@
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="qYr-4M-SqR" firstAttribute="top" secondItem="qJ9-6J-3IY" secondAttribute="bottom" constant="8" id="7fh-Mv-y4z"/>
-                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="qYr-4M-SqR" secondAttribute="bottom" priority="750" constant="8" id="8sV-bX-4aq"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="qYr-4M-SqR" secondAttribute="bottom" priority="750" constant="8" id="8sV-bX-4aq">
+                                                    <variation key="widthClass=regular" constant="16"/>
+                                                </constraint>
                                                 <constraint firstItem="qYr-4M-SqR" firstAttribute="leading" secondItem="7q6-xW-ezg" secondAttribute="leadingMargin" constant="8" id="Of4-cj-ene"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="qYr-4M-SqR" secondAttribute="trailing" id="cRX-p4-TSi"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="qJ9-6J-3IY" secondAttribute="trailing" id="cqw-rp-Eic"/>
-                                                <constraint firstItem="qJ9-6J-3IY" firstAttribute="top" secondItem="7q6-xW-ezg" secondAttribute="topMargin" constant="8" id="fSq-F0-mnd"/>
+                                                <constraint firstItem="qJ9-6J-3IY" firstAttribute="top" secondItem="7q6-xW-ezg" secondAttribute="topMargin" constant="8" id="fSq-F0-mnd">
+                                                    <variation key="widthClass=regular" constant="16"/>
+                                                </constraint>
                                                 <constraint firstItem="qJ9-6J-3IY" firstAttribute="leading" secondItem="7q6-xW-ezg" secondAttribute="leadingMargin" constant="8" id="q7y-4Y-P1c"/>
                                             </constraints>
                                         </view>
@@ -141,10 +151,10 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DefinitionCell" rowHeight="50" id="BBa-83-aoe" customClass="WordDefinitionCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="235.5" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="255.33333333333334" width="414" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BBa-83-aoe" id="8qX-bT-sJV">
-                                    <frame key="frameInset" width="375" height="50"/>
+                                    <frame key="frameInset" width="414" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k4O-1n-z1n" userLabel="Card">
@@ -153,6 +163,9 @@
                                                     <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="21"/>
                                                     <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=regular">
+                                                        <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="24"/>
+                                                    </variation>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Disclosure" translatesAutoresizingMaskIntoConstraints="NO" id="hqG-qB-L9m"/>
                                             </subviews>
@@ -182,10 +195,10 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordDescriptionCell" rowHeight="80" id="z8S-lO-xO6" customClass="WordDescriptionCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="285.5" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="305.33333333333337" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z8S-lO-xO6" id="Ts9-J8-yR0">
-                                    <frame key="frameInset" width="375" height="80"/>
+                                    <frame key="frameInset" width="414" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hod-Im-7PP" userLabel="Card">
@@ -195,6 +208,9 @@
                                                     <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <variation key="widthClass=regular">
+                                                        <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="17"/>
+                                                    </variation>
                                                 </textView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -219,6 +235,112 @@
                                     <outlet property="wordDescriptionLabel" destination="6UX-of-etj" id="iI0-Id-nRd"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchEntryCell" rowHeight="100" id="y98-iL-76Q" customClass="HeaderCell" customModule="Lexis" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="385.33333333333337" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y98-iL-76Q" id="Ebc-9P-3PY">
+                                    <frame key="frameInset" width="414" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uXg-CG-2UV" userLabel="Highlight Line">
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="2" id="6Fg-4y-DVg"/>
+                                            </constraints>
+                                        </view>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="PR |" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BEQ-rI-xyN">
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="27"/>
+                                            <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="BEQ-rI-xyN" firstAttribute="leading" secondItem="Ebc-9P-3PY" secondAttribute="leadingMargin" constant="16" id="Ed3-HI-I1I"/>
+                                        <constraint firstItem="uXg-CG-2UV" firstAttribute="leading" secondItem="BEQ-rI-xyN" secondAttribute="leading" id="Rax-1A-uIx"/>
+                                        <constraint firstItem="uXg-CG-2UV" firstAttribute="width" secondItem="BEQ-rI-xyN" secondAttribute="width" id="UPC-jp-nsF"/>
+                                        <constraint firstItem="BEQ-rI-xyN" firstAttribute="top" secondItem="Ebc-9P-3PY" secondAttribute="topMargin" constant="16" id="XhT-FL-hw2"/>
+                                        <constraint firstItem="uXg-CG-2UV" firstAttribute="centerX" secondItem="Ebc-9P-3PY" secondAttribute="centerX" id="ZkV-PS-ESl"/>
+                                        <constraint firstItem="BEQ-rI-xyN" firstAttribute="width" secondItem="Ebc-9P-3PY" secondAttribute="width" multiplier="0.5" id="dN2-YF-PWN"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="BEQ-rI-xyN" secondAttribute="trailing" constant="16" id="nF6-qz-plB"/>
+                                        <constraint firstItem="uXg-CG-2UV" firstAttribute="top" secondItem="BEQ-rI-xyN" secondAttribute="bottom" constant="16" id="p5h-cj-OB3"/>
+                                        <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="uXg-CG-2UV" secondAttribute="bottom" constant="8" id="qFN-TR-1aV"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="dN2-YF-PWN"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="widthClass=regular">
+                                        <mask key="constraints">
+                                            <include reference="dN2-YF-PWN"/>
+                                            <exclude reference="nF6-qz-plB"/>
+                                            <exclude reference="ZkV-PS-ESl"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="highlightLine" destination="uXg-CG-2UV" id="O39-E8-iUb"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchResultCell" rowHeight="60" id="5dG-AZ-tXl" customClass="WordNameCell" customModule="Lexis" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="485.33333333333337" width="414" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5dG-AZ-tXl" id="pUW-DS-8N1">
+                                    <frame key="frameInset" width="414" height="60"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YdF-JW-A3J" userLabel="Card">
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRABEO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTr-6Z-Q70">
+                                                    <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="24"/>
+                                                    <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=regular">
+                                                        <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="30"/>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(V) (2ND)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJ6-Gb-vQ7">
+                                                    <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="14"/>
+                                                    <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="FTr-6Z-Q70" firstAttribute="centerY" secondItem="YdF-JW-A3J" secondAttribute="centerY" id="7hW-uO-mlP"/>
+                                                <constraint firstItem="FTr-6Z-Q70" firstAttribute="leading" secondItem="YdF-JW-A3J" secondAttribute="leadingMargin" constant="16" id="Iv5-Wa-lUB"/>
+                                                <constraint firstItem="PJ6-Gb-vQ7" firstAttribute="bottom" secondItem="FTr-6Z-Q70" secondAttribute="bottom" constant="-2" id="T2N-58-WfU"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PJ6-Gb-vQ7" secondAttribute="trailing" constant="8" id="WAB-zb-Zfq"/>
+                                                <constraint firstItem="PJ6-Gb-vQ7" firstAttribute="leading" secondItem="FTr-6Z-Q70" secondAttribute="trailing" constant="16" id="Zsu-QW-UNY"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhh-mi-x76" userLabel="Line">
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="Qsd-DK-bof"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="YdF-JW-A3J" firstAttribute="top" secondItem="pUW-DS-8N1" secondAttribute="top" id="Alt-eM-CFg"/>
+                                        <constraint firstItem="YdF-JW-A3J" firstAttribute="leading" secondItem="pUW-DS-8N1" secondAttribute="leading" id="KLf-2D-p5H"/>
+                                        <constraint firstItem="dhh-mi-x76" firstAttribute="leading" secondItem="pUW-DS-8N1" secondAttribute="leading" id="Vpd-Ev-996"/>
+                                        <constraint firstAttribute="bottom" secondItem="YdF-JW-A3J" secondAttribute="bottom" id="WkZ-sn-8uz"/>
+                                        <constraint firstAttribute="bottom" secondItem="dhh-mi-x76" secondAttribute="bottom" id="i1J-Iz-Gbg"/>
+                                        <constraint firstAttribute="trailing" secondItem="dhh-mi-x76" secondAttribute="trailing" id="lXh-Gr-I06"/>
+                                        <constraint firstAttribute="trailing" secondItem="YdF-JW-A3J" secondAttribute="trailing" id="vAW-UW-xCo"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="cardView" destination="YdF-JW-A3J" id="oGQ-Yc-PWe"/>
+                                    <outlet property="wordInformationLabel" destination="PJ6-Gb-vQ7" id="YXT-BD-Qc8"/>
+                                    <outlet property="wordNameLabel" destination="FTr-6Z-Q70" id="ERR-vK-x6O"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="2j9-lJ-S9d" id="dXJ-8p-FkI"/>
@@ -228,7 +350,7 @@
                     <navigationItem key="navigationItem" id="Pum-0d-A7o">
                         <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="ohq-IW-8qj">
-                            <rect key="frame" x="123.5" y="5.5" width="128" height="33"/>
+                            <rect key="frame" x="143" y="6" width="128" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEXIS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22C-oG-JeO">
@@ -246,11 +368,14 @@
                                 <constraint firstItem="22C-oG-JeO" firstAttribute="leading" secondItem="ohq-IW-8qj" secondAttribute="leading" id="a5z-8c-2TD"/>
                             </constraints>
                         </view>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="ANH-xU-6T9">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LSR-3L-20H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1959.375" y="34.859154929577464"/>
+            <point key="canvasLocation" x="1957.9710144927537" y="34.239130434782609"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AcH-VC-WgK">
