@@ -26,7 +26,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Book-Red" translatesAutoresizingMaskIntoConstraints="NO" id="TuH-0h-kB7">
@@ -56,15 +56,23 @@
             <objects>
                 <tableViewController id="2j9-lJ-S9d" customClass="WordOfTheDayViewController" customModule="Lexis" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="80" sectionHeaderHeight="18" sectionFooterHeight="18" id="Po1-wa-b3g">
-                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" barStyle="black" id="IWt-YV-Sf7">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="2j9-lJ-S9d" id="d34-Vt-Si9"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="80" id="lov-X9-60s" customClass="HeaderCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="55.333333333333336" width="414" height="80"/>
+                                <rect key="frame" x="0.0" y="99.5" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lov-X9-60s" id="Hpk-15-DIY">
-                                    <frame key="frameInset" width="414" height="80"/>
+                                    <frame key="frameInset" width="375" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ORE-S4-oYs" userLabel="Highlight Line">
@@ -97,10 +105,10 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordCell" rowHeight="120" id="rZq-bg-NmT" customClass="WordNameCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="135.33333333333334" width="414" height="120"/>
+                                <rect key="frame" x="0.0" y="179.5" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rZq-bg-NmT" id="AVI-8j-Fve">
-                                    <frame key="frameInset" width="414" height="120"/>
+                                    <frame key="frameInset" width="375" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7q6-xW-ezg" userLabel="Card">
@@ -151,10 +159,10 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DefinitionCell" rowHeight="50" id="BBa-83-aoe" customClass="WordDefinitionCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="255.33333333333334" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="299.5" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BBa-83-aoe" id="8qX-bT-sJV">
-                                    <frame key="frameInset" width="414" height="50"/>
+                                    <frame key="frameInset" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k4O-1n-z1n" userLabel="Card">
@@ -195,10 +203,10 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordDescriptionCell" rowHeight="80" id="z8S-lO-xO6" customClass="WordDescriptionCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="305.33333333333337" width="414" height="80"/>
+                                <rect key="frame" x="0.0" y="349.5" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z8S-lO-xO6" id="Ts9-J8-yR0">
-                                    <frame key="frameInset" width="414" height="80"/>
+                                    <frame key="frameInset" width="375" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hod-Im-7PP" userLabel="Card">
@@ -235,11 +243,11 @@
                                     <outlet property="wordDescriptionLabel" destination="6UX-of-etj" id="iI0-Id-nRd"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchEntryCell" rowHeight="100" id="y98-iL-76Q" customClass="HeaderCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="385.33333333333337" width="414" height="100"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchEntryCell" rowHeight="100" id="y98-iL-76Q" customClass="SearchEntryCell" customModule="Lexis" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="429.5" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y98-iL-76Q" id="Ebc-9P-3PY">
-                                    <frame key="frameInset" width="414" height="100"/>
+                                    <frame key="frameInset" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uXg-CG-2UV" userLabel="Highlight Line">
@@ -281,14 +289,15 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <outlet property="highlightLine" destination="uXg-CG-2UV" id="O39-E8-iUb"/>
+                                    <outlet property="highlightLine" destination="uXg-CG-2UV" id="6ny-yi-BPO"/>
+                                    <outlet property="searchTextField" destination="BEQ-rI-xyN" id="CAD-5l-f0o"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchResultCell" rowHeight="60" id="5dG-AZ-tXl" customClass="WordNameCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="485.33333333333337" width="414" height="60"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchResultCell" rowHeight="60" id="5dG-AZ-tXl" customClass="SearchResultCell" customModule="Lexis" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="529.5" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5dG-AZ-tXl" id="pUW-DS-8N1">
-                                    <frame key="frameInset" width="414" height="60"/>
+                                    <frame key="frameInset" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YdF-JW-A3J" userLabel="Card">
@@ -337,8 +346,54 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="cardView" destination="YdF-JW-A3J" id="oGQ-Yc-PWe"/>
-                                    <outlet property="wordInformationLabel" destination="PJ6-Gb-vQ7" id="YXT-BD-Qc8"/>
-                                    <outlet property="wordNameLabel" destination="FTr-6Z-Q70" id="ERR-vK-x6O"/>
+                                    <outlet property="wordInformationLabel" destination="PJ6-Gb-vQ7" id="vMa-Vd-EAN"/>
+                                    <outlet property="wordLabel" destination="FTr-6Z-Q70" id="rVV-cm-62A"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchEmptyCell" rowHeight="500" id="fPX-Dd-cW0" customClass="SearchEmptyCell" customModule="Lexis" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="589.5" width="375" height="500"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fPX-Dd-cW0" id="W7f-Hg-6c3">
+                                    <frame key="frameInset" width="375" height="500"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Art-Open-Book" translatesAutoresizingMaskIntoConstraints="NO" id="Kci-Cc-PYq">
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="Kci-Cc-PYq" secondAttribute="height" multiplier="1:1" id="4vQ-Al-WAM"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nothing found" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pui-F9-dKm">
+                                            <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="36"/>
+                                            <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="widthClass=regular">
+                                                <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="42"/>
+                                            </variation>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ga-uL-8fb" userLabel="Highlight Line">
+                                            <color key="backgroundColor" red="0.95686274510000002" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="2" id="9p8-HK-u8q"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="6Ga-uL-8fb" firstAttribute="width" secondItem="pui-F9-dKm" secondAttribute="width" multiplier="0.7" id="8A0-hc-ER2"/>
+                                        <constraint firstItem="Kci-Cc-PYq" firstAttribute="leading" secondItem="W7f-Hg-6c3" secondAttribute="leading" id="EmG-3v-CaK"/>
+                                        <constraint firstItem="pui-F9-dKm" firstAttribute="top" secondItem="W7f-Hg-6c3" secondAttribute="topMargin" constant="24" id="PIS-yN-ZJx"/>
+                                        <constraint firstItem="6Ga-uL-8fb" firstAttribute="top" secondItem="pui-F9-dKm" secondAttribute="bottom" constant="16" id="iOg-x3-GLo"/>
+                                        <constraint firstAttribute="trailing" secondItem="Kci-Cc-PYq" secondAttribute="trailing" id="soN-g9-rqI"/>
+                                        <constraint firstItem="6Ga-uL-8fb" firstAttribute="centerX" secondItem="pui-F9-dKm" secondAttribute="centerX" id="t6w-74-8lH"/>
+                                        <constraint firstAttribute="bottom" secondItem="Kci-Cc-PYq" secondAttribute="bottom" id="tmf-ZN-i0g"/>
+                                        <constraint firstItem="pui-F9-dKm" firstAttribute="centerX" secondItem="W7f-Hg-6c3" secondAttribute="centerX" id="ynA-DX-MzB"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="artImageView" destination="Kci-Cc-PYq" id="lco-WD-t4D"/>
+                                    <outlet property="headingLabel" destination="pui-F9-dKm" id="Wsb-Hj-gJI"/>
+                                    <outlet property="highlightLine" destination="6Ga-uL-8fb" id="YKj-Yn-haJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -350,7 +405,7 @@
                     <navigationItem key="navigationItem" id="Pum-0d-A7o">
                         <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="ohq-IW-8qj">
-                            <rect key="frame" x="143" y="6" width="128" height="33"/>
+                            <rect key="frame" x="124" y="6" width="128" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEXIS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22C-oG-JeO">
@@ -372,8 +427,20 @@
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="bMv-Xg-2B9" id="RMo-Be-sUt"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LSR-3L-20H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="bMv-Xg-2B9">
+                    <connections>
+                        <outlet property="delegate" destination="2j9-lJ-S9d" id="Tbf-kA-I5y"/>
+                        <outlet property="searchBar" destination="IWt-YV-Sf7" id="zr2-Uv-zTA"/>
+                        <outlet property="searchContentsController" destination="2j9-lJ-S9d" id="8VT-YX-z66"/>
+                        <outlet property="searchResultsDataSource" destination="2j9-lJ-S9d" id="F1p-85-hoe"/>
+                        <outlet property="searchResultsDelegate" destination="2j9-lJ-S9d" id="xsx-Tc-E2j"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="34.239130434782609"/>
         </scene>
@@ -381,7 +448,7 @@
         <scene sceneID="AcH-VC-WgK">
             <objects>
                 <navigationController id="5DF-8E-0sR" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="enL-zh-NGv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" id="enL-zh-NGv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.95686274510000002" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -404,6 +471,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Art-Open-Book" width="360" height="500"/>
         <image name="Book-Red" width="400" height="400"/>
         <image name="Disclosure" width="14" height="26"/>
     </resources>
