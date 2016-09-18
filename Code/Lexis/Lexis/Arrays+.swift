@@ -15,4 +15,13 @@ extension Array
     {
         return !isEmpty
     }
+    
+    func first(numberOfElements number: Int) -> [Element]
+    {
+        guard number < count else { return self }
+        
+        let subArray = Array(self[0..<number])
+        
+        return subArray
+    }
 }
