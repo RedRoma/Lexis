@@ -16,14 +16,31 @@ class WordOfTheDayViewController: UITableViewController
     
     fileprivate var words: [LexisWord] { return [word] }
     fileprivate var word: LexisWord = LexisDatabase.instance.anyWord
+    fileprivate var searchResults: [LexisWord] = []
+    fileprivate var currentSearchTerm = ""
+    
     fileprivate var emptyCell = UITableViewCell()
     
+    //MARK: Searching
+    fileprivate var isSearching = false
+    {
+        didSet
+        {
+            self.updateTableForSearch()
+        }
+    }
+    
+    fileprivate var notSearching: Bool
+    {
+        return !isSearching
+    }
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
         LOG.info("Loaded W.O.D. View Controller")
+        self.tableView.contentInset = UIEdgeInsetsMake(-35, 0, 0, 0)
         
         refreshControl = UIRefreshControl()
         refreshControl?.backgroundColor = UIColor.clear
@@ -36,6 +53,7 @@ class WordOfTheDayViewController: UITableViewController
         tableView.reloadData()
         refreshControl?.endRefreshing()
     }
+ 
 }
 
 //MARK: Table View Data Source Methods
@@ -43,24 +61,45 @@ extension WordOfTheDayViewController
 {
     override func numberOfSections(in tableView: UITableView) -> Int
     {
-        return 4
+        if notSearching
+        {
+            return 4
+        }
+        else
+        {
+            return 1
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        switch section
+        if isSearching
         {
-            case 0, 1, 3 : return 1
-            default : break
+            return numberOfRowsWhenSearching(atSection: section)
         }
-        
-        let numberOfDefinition = words.first!.definitions.count
-        return numberOfDefinition
+        else
+        {
+            return numberOfRowsWhenNotSearching(atSection: section)
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         
+        if notSearching
+        {
+            let cell = createCellWhenNotSearching(tableView, atIndexPath: indexPath)
+            return cell
+        }
+        else
+        {
+            let cell = createCellWhenSearching(tableView, atIndexPath: indexPath)
+            return cell
+        }
+    }
+    
+    private func createCellWhenNotSearching(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
+    {
         let section = indexPath.section
         
         switch section
@@ -74,6 +113,7 @@ extension WordOfTheDayViewController
         
         return emptyCell
     }
+    
     
     private func createHeaderCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
     {
@@ -139,6 +179,20 @@ extension WordOfTheDayViewController
     {
         return UITableViewAutomaticDimension
     }
+    
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
+    {
+        if let searchEntryCell = cell as? SearchEntryCell
+        {
+            searchEntryCell.searchTextField.becomeFirstResponder()
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        LOG.info("Selected row \(indexPath)")
+    }
 }
 
 //MARK: Word Information
@@ -168,8 +222,7 @@ fileprivate extension WordOfTheDayViewController
             case let .Preposition(declension):
                 return "Preposition \(declension.name)"
             case let .Verb(conjugation, verbType):
-                let conjugationString = numberForConjugation(conjugation: conjugation)
-                return "Verb \(conjugationString) \(verbType.name)"
+                return "Verb \(conjugation.shortNumber) \(verbType.name)"
             default:
                 break
         }
@@ -178,18 +231,166 @@ fileprivate extension WordOfTheDayViewController
         return ""
     }
     
-    func numberForConjugation(conjugation: Conjugation) -> String
+}
+
+//MARK: Search Logic
+extension WordOfTheDayViewController: UITextFieldDelegate
+{
+    
+    fileprivate var anySearchResults: Bool
     {
-        let numbers: [Conjugation: String] =
-        [
-            .First : "1st",
-            .Second: "2nd",
-            .Third: "3rd",
-            .Fourth: "4th",
-            .Irregular: "Irreg.",
-            .Unconjugated: "Unconjugated"
-        ]
+        return searchResults.notEmpty
+    }
+    
+    @IBAction func onSearch(_ sender: AnyObject)
+    {
+        isSearching = !isSearching
+    }
+    
+    fileprivate func updateTableForSearch()
+    {
+        //For now, a simple table reload
+        self.tableView?.reloadData()
+    }
+    
+    fileprivate func numberOfRowsWhenNotSearching(atSection section: Int) -> Int
+    {
+        switch section
+        {
+            case 0, 1, 3 : return 1
+            default : break
+        }
         
-        return numbers[conjugation] ?? ""
+        let numberOfDefinitions = words.first!.definitions.count
+        return numberOfDefinitions
+    }
+    
+    fileprivate func numberOfRowsWhenSearching(atSection section: Int) -> Int
+    {
+        if anySearchResults
+        {
+            //1 for the text field
+            //and the others for the search results
+            return 1 + searchResults.count
+        }
+        else
+        {
+            //1 for the text field
+            //and another for the emptyCell
+            return 2
+        }
+    }
+    
+    fileprivate func createCellWhenSearching(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
+    {
+        let row = indexPath.row
+      
+        if row == 0
+        {
+            return createSearchTextFieldCell(tableView, atIndexPath: indexPath)
+        }
+        
+        if anySearchResults
+        {
+            return createSearchResultCell(tableView, atIndexPath: indexPath)
+        }
+        else
+        {
+            return createEmptySearchResultsCell(tableView, atIndexPath: indexPath)
+        }
+        
+        return emptyCell
+    }
+    
+    private func createSearchTextFieldCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
+    {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchEntryCell", for: indexPath) as? SearchEntryCell
+        else
+        {
+            LOG.warn("Failed to load SearchEntryCell")
+            return emptyCell
+        }
+        
+        cell.searchTextField.delegate = self
+        
+        return cell
+    }
+    
+    private func createSearchResultCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
+    {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchResultCell", for: indexPath) as? SearchResultCell
+        else
+        {
+            LOG.error("Could not load SearchResultCell")
+            return emptyCell
+        }
+        
+        let row = indexPath.row
+        let indexForWord = row - 1
+        
+        let word = searchResults[indexForWord]
+        
+        cell.wordLabel.text = word.forms.first!
+        
+        let wordInfo = shortDescription(for: word)
+        cell.wordInformationLabel.text = wordInfo
+        
+        return cell
+    }
+    
+    private func createEmptySearchResultsCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
+    {
+        guard let emptySearchCell = tableView.dequeueReusableCell(withIdentifier: "SearchEmptyCell", for: indexPath) as? SearchEmptyCell
+        else
+        {
+            LOG.error("Failed to load SearchEmptyCell")
+            return emptyCell
+        }
+        
+        return emptySearchCell
+    }
+    
+    private func shortDescription(for word: LexisWord) -> String
+    {
+        let type = word.wordType
+        
+        switch type
+        {
+            case .Adjective:
+                return "(Adj)"
+            
+            case .Adverb:
+                return "(Adv)"
+           
+            case .Conjunction:
+                return "(Conj)"
+            
+            case .Interjection:
+                return "(Interj)"
+            
+            case let .Noun(_, gender) :
+                return "(Noun, \(gender.letter))"
+           
+            case .Numeral:
+                return "(Num)"
+            
+            case .PersonalPronoun:
+                return "(Pers. Pron)"
+           
+            case .Preposition:
+                return "(Prep)"
+            
+            case .Pronoun:
+                return "(Pron)"
+            
+            case let .Verb(conjugation, verbType):
+                let verbTypeShort = verbType.shortName
+                return "(V) (\(conjugation.shortNumber)) (\(verbTypeShort))"
+           
+            default:
+                break
+        }
+        
+        return ""
     }
 }
