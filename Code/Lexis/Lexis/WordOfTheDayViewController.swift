@@ -17,7 +17,13 @@ class WordOfTheDayViewController: UITableViewController
     fileprivate var words: [LexisWord] { return [word] }
     fileprivate var word: LexisWord = LexisDatabase.instance.anyWord
     fileprivate var searchResults: [LexisWord] = []
-    fileprivate var currentSearchTerm = ""
+    fileprivate var searchTerm = ""
+    {
+        didSet { self.updateSearchResults() }
+    }
+    
+    fileprivate let main = OperationQueue.main
+    fileprivate let async = OperationQueue()
     
     fileprivate var emptyCell = UITableViewCell()
     
@@ -61,13 +67,13 @@ extension WordOfTheDayViewController
 {
     override func numberOfSections(in tableView: UITableView) -> Int
     {
-        if notSearching
+        if isSearching
         {
-            return 4
+            return 2
         }
         else
         {
-            return 1
+            return 4
         }
     }
     
@@ -185,6 +191,7 @@ extension WordOfTheDayViewController
     {
         if let searchEntryCell = cell as? SearchEntryCell
         {
+            searchEntryCell.searchTextField.text = nil
             searchEntryCell.searchTextField.becomeFirstResponder()
         }
     }
@@ -192,6 +199,20 @@ extension WordOfTheDayViewController
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         LOG.info("Selected row \(indexPath)")
+        
+        let row = indexPath.row
+        
+        if isSearching
+        {
+            let index = row
+            guard index > 0 && index < searchResults.count else { return }
+            
+            let word = searchResults[index]
+            self.word = word
+            self.isSearching = false
+            self.searchTerm = ""
+        }
+        
     }
 }
 
@@ -234,7 +255,7 @@ fileprivate extension WordOfTheDayViewController
 }
 
 //MARK: Search Logic
-extension WordOfTheDayViewController: UITextFieldDelegate
+extension WordOfTheDayViewController
 {
     
     fileprivate var anySearchResults: Bool
@@ -267,29 +288,32 @@ extension WordOfTheDayViewController: UITextFieldDelegate
     
     fileprivate func numberOfRowsWhenSearching(atSection section: Int) -> Int
     {
+        if section == 0
+        {
+            return 1
+        }
+        
         if anySearchResults
         {
-            //1 for the text field
-            //and the others for the search results
-            return 1 + searchResults.count
+            return  searchResults.count
         }
         else
         {
-            //1 for the text field
-            //and another for the emptyCell
-            return 2
+            //This is one is for the empty art view
+            return 1
         }
     }
     
     fileprivate func createCellWhenSearching(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
     {
-        let row = indexPath.row
-      
-        if row == 0
+        let section = indexPath.section
+        
+        //Is the Search Text Field
+        if section == 0
         {
             return createSearchTextFieldCell(tableView, atIndexPath: indexPath)
         }
-        
+      
         if anySearchResults
         {
             return createSearchResultCell(tableView, atIndexPath: indexPath)
@@ -299,7 +323,6 @@ extension WordOfTheDayViewController: UITextFieldDelegate
             return createEmptySearchResultsCell(tableView, atIndexPath: indexPath)
         }
         
-        return emptyCell
     }
     
     private func createSearchTextFieldCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
@@ -311,7 +334,7 @@ extension WordOfTheDayViewController: UITextFieldDelegate
             return emptyCell
         }
         
-        cell.searchTextField.delegate = self
+        cell.searchTextField.addTarget(self, action: #selector(self.editingDidChange(_:)), for: .editingChanged)
         
         return cell
     }
@@ -326,9 +349,8 @@ extension WordOfTheDayViewController: UITextFieldDelegate
         }
         
         let row = indexPath.row
-        let indexForWord = row - 1
         
-        let word = searchResults[indexForWord]
+        let word = searchResults[row]
         
         cell.wordLabel.text = word.forms.first!
         
@@ -391,6 +413,44 @@ extension WordOfTheDayViewController: UITextFieldDelegate
                 break
         }
         
-        return ""
+        return "(Uknwn)"
     }
+    
+    fileprivate func updateSearchResults()
+    {
+        guard searchTerm.notEmpty
+        else
+        {
+            searchResults = []
+            return
+        }
+        
+        self.async.addOperation
+        { [weak self] in
+            
+            guard let `self` = self else { return }
+            
+            let results = LexisDatabase.instance.findWord(withTerm: self.searchTerm)
+                .first(numberOfElements: 200)
+            
+            self.main.addOperation
+            {
+                self.searchResults = results
+                let searchResultsSection = IndexSet(integer: 1)
+                self.tableView?.reloadSections(searchResultsSection, with: .automatic)
+            }
+        }
+    }
+}
+
+//MARK: TextField Delegate
+extension WordOfTheDayViewController: UITextFieldDelegate
+{
+
+    func editingDidChange(_ textField: UITextField)
+    {
+        let text = textField.text ?? ""
+        self.searchTerm = text
+    }
+    
 }

@@ -88,8 +88,8 @@
                                         <constraint firstItem="ORE-S4-oYs" firstAttribute="width" secondItem="Qyd-zb-c9U" secondAttribute="width" multiplier="0.9" id="K88-u8-DVt"/>
                                         <constraint firstItem="ORE-S4-oYs" firstAttribute="centerX" secondItem="Hpk-15-DIY" secondAttribute="centerX" id="NIH-R0-2QL"/>
                                         <constraint firstItem="Qyd-zb-c9U" firstAttribute="centerX" secondItem="Hpk-15-DIY" secondAttribute="centerX" id="Zyg-cq-GUX"/>
-                                        <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="Qyd-zb-c9U" secondAttribute="bottom" constant="16" id="cfB-Yh-qND"/>
-                                        <constraint firstItem="ORE-S4-oYs" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Hpk-15-DIY" secondAttribute="topMargin" constant="24" id="eN3-mM-6UT"/>
+                                        <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="Qyd-zb-c9U" secondAttribute="bottom" constant="8" id="cfB-Yh-qND"/>
+                                        <constraint firstItem="ORE-S4-oYs" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Hpk-15-DIY" secondAttribute="topMargin" constant="32" id="eN3-mM-6UT"/>
                                         <constraint firstItem="Qyd-zb-c9U" firstAttribute="top" secondItem="ORE-S4-oYs" secondAttribute="bottom" constant="6" id="mbK-nU-YU3"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -192,7 +192,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="cardView" destination="k4O-1n-z1n" id="fo1-tu-3i8"/>
+                                    <outlet property="cardView" destination="k4O-1n-z1n" id="2FZ-zK-2yS"/>
                                     <outlet property="definitionLabel" destination="dRQ-aW-0s4" id="YCJ-4l-pbf"/>
                                     <outlet property="disclosureImageView" destination="hqG-qB-L9m" id="bZB-aJ-T3P"/>
                                 </connections>
@@ -340,7 +340,6 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="cardView" destination="YdF-JW-A3J" id="oGQ-Yc-PWe"/>
                                     <outlet property="wordInformationLabel" destination="PJ6-Gb-vQ7" id="vMa-Vd-EAN"/>
                                     <outlet property="wordLabel" destination="FTr-6Z-Q70" id="rVV-cm-62A"/>
                                 </connections>
