@@ -8,6 +8,7 @@
 
 import Foundation
 import LexisDatabase
+import RedRomaColors
 import Sulcus
 import UIKit
 
@@ -46,7 +47,7 @@ class WordOfTheDayViewController: UITableViewController
         super.viewDidLoad()
         
         LOG.info("Loaded W.O.D. View Controller")
-        self.tableView.contentInset = UIEdgeInsetsMake(-35, 0, 0, 0)
+//        self.tableView.contentInset = UIEdgeInsetsMake(-35, 0, 0, 0)
         
         refreshControl = UIRefreshControl()
         refreshControl?.backgroundColor = UIColor.clear
@@ -186,6 +187,16 @@ extension WordOfTheDayViewController
         return UITableViewAutomaticDimension
     }
     
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
+    {
+        return isSearching ? 0.0001 : 30
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat
+    {
+        return isSearching ? 0.0001 : 30
+    }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
     {
@@ -421,7 +432,7 @@ extension WordOfTheDayViewController
         guard searchTerm.notEmpty
         else
         {
-            searchResults = []
+//            searchResults = []
             return
         }
         
