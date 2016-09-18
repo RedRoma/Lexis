@@ -205,7 +205,7 @@ extension WordOfTheDayViewController
         if isSearching
         {
             let index = row
-            guard index > 0 && index < searchResults.count else { return }
+            guard index >= 0 && index < searchResults.count else { return }
             
             let word = searchResults[index]
             self.word = word

@@ -7,11 +7,21 @@
 //
 
 import Foundation
+import LexisDatabase
 import Sulcus
 import UIKit
 
 class MainViewController: UIViewController
 {
+    @IBOutlet weak var progressIndicator: UIActivityIndicatorView!
+    
+    private let main = OperationQueue.main
+    private let async: OperationQueue =
+    {
+        let queue = OperationQueue()
+        queue.maxConcurrentOperationCount = 1
+        return queue
+    }()
     
     override func viewDidLoad()
     {
@@ -50,6 +60,22 @@ class MainViewController: UIViewController
     
     private func goToWordOfTheDay()
     {
-        self.performSegue(withIdentifier: "ToWordOfTheDay", sender: self)
+        progressIndicator.startAnimating()
+        
+        self.async.addOperation
+        {
+            LOG.info("Initializing")
+            LexisDatabase.instance.initialize()
+            LOG.info("Database initialized")
+            
+            self.main.addOperation
+            {
+                self.progressIndicator.stopAnimating()
+                self.performSegue(withIdentifier: "ToWordOfTheDay", sender: nil)
+            }
+        }
+        
+       
     }
+    
 }
