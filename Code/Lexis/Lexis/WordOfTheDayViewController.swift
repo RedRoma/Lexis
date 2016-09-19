@@ -42,6 +42,9 @@ class WordOfTheDayViewController: UITableViewController
         return !isSearching
     }
     
+    fileprivate let numberOfSectionsWhenSearching = 2
+    fileprivate let numberOfSectionsWhenNotSearching = 4
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -70,11 +73,11 @@ extension WordOfTheDayViewController
     {
         if isSearching
         {
-            return 2
+            return numberOfSectionsWhenSearching
         }
         else
         {
-            return 4
+            return numberOfSectionsWhenNotSearching
         }
     }
     
@@ -190,12 +193,12 @@ extension WordOfTheDayViewController
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
     {
-        return isSearching ? 0.0001 : 30
+        return isSearching ? 0.0001 : 20
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat
     {
-        return isSearching ? 0.0001 : 30
+        return isSearching ? 0.0001 : 20
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
@@ -281,8 +284,32 @@ extension WordOfTheDayViewController
     
     fileprivate func updateTableForSearch()
     {
-        //For now, a simple table reload
-        self.tableView?.reloadData()
+        let wasSearching = !isSearching
+        
+        if isSearching
+        {
+            let sectionsToReload = IndexSet.init(integersIn: 0...1)
+            let sectionsToRemove = IndexSet.init(integersIn: 2...3)
+            
+            self.tableView.beginUpdates()
+            self.tableView.deleteSections(sectionsToRemove, with: .bottom)
+            self.tableView.reloadSections(sectionsToReload, with: .automatic)
+            self.tableView.endUpdates()
+        }
+        else if wasSearching
+        {
+            let sectionsToReload = IndexSet.init(integersIn: 0...1)
+            let sectionsToAdd = IndexSet.init(integersIn: 2...3)
+            
+            self.tableView.beginUpdates()
+            self.tableView.insertSections(sectionsToAdd, with: .bottom)
+            self.tableView.reloadSections(sectionsToReload, with: .automatic)
+            self.tableView.endUpdates()
+        }
+        else
+        {
+            self.tableView.reloadData()
+        }
     }
     
     fileprivate func numberOfRowsWhenNotSearching(atSection section: Int) -> Int
@@ -432,17 +459,16 @@ extension WordOfTheDayViewController
         guard searchTerm.notEmpty
         else
         {
-//            searchResults = []
             return
         }
         
         self.async.addOperation
-        { [weak self] in
+        { [weak self, searchTerm] in
+            
+            let results = LexisDatabase.instance.seaarchForms(startingWith: searchTerm)
+                .first(numberOfElements: 200)
             
             guard let `self` = self else { return }
-            
-            let results = LexisDatabase.instance.findWord(withTerm: self.searchTerm)
-                .first(numberOfElements: 200)
             
             self.main.addOperation
             {

@@ -60,41 +60,34 @@
 		DE5D143B1D8847BD00B8B3CC /* WordNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D143A1D8847BD00B8B3CC /* WordNameCell.swift */; };
 		DE5D143D1D8847D100B8B3CC /* WordDefinitionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D143C1D8847D100B8B3CC /* WordDefinitionCell.swift */; };
 		DE5D143F1D8847E600B8B3CC /* WordDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D143E1D8847E600B8B3CC /* WordDescriptionCell.swift */; };
-		DE8888041D8E77B7009C5ECB /* 5C2E49A8-AD91-3DAB-88E9-7555486BE797.bcsymbolmap in Resources */ = {isa = PBXBuildFile; fileRef = DE8887E81D8E77B7009C5ECB /* 5C2E49A8-AD91-3DAB-88E9-7555486BE797.bcsymbolmap */; };
-		DE8888051D8E77B7009C5ECB /* 7F344765-CDBC-31D1-9D01-B935A5CBBC36.bcsymbolmap in Resources */ = {isa = PBXBuildFile; fileRef = DE8887E91D8E77B7009C5ECB /* 7F344765-CDBC-31D1-9D01-B935A5CBBC36.bcsymbolmap */; };
-		DE8888061D8E77B7009C5ECB /* 131AD9F9-CCDC-3EF9-B45F-57F9BD18F8B9.bcsymbolmap in Resources */ = {isa = PBXBuildFile; fileRef = DE8887EA1D8E77B7009C5ECB /* 131AD9F9-CCDC-3EF9-B45F-57F9BD18F8B9.bcsymbolmap */; };
-		DE8888071D8E77B7009C5ECB /* 424F4D66-954C-3236-93E5-228D356A9029.bcsymbolmap in Resources */ = {isa = PBXBuildFile; fileRef = DE8887EB1D8E77B7009C5ECB /* 424F4D66-954C-3236-93E5-228D356A9029.bcsymbolmap */; };
-		DE8888081D8E77B7009C5ECB /* 934B74D3-3998-3F09-BA0E-273D26391380.bcsymbolmap in Resources */ = {isa = PBXBuildFile; fileRef = DE8887EC1D8E77B7009C5ECB /* 934B74D3-3998-3F09-BA0E-273D26391380.bcsymbolmap */; };
-		DE8888091D8E77B7009C5ECB /* 4653DBE1-7555-3EDD-A2F4-7A7D0604F42A.bcsymbolmap in Resources */ = {isa = PBXBuildFile; fileRef = DE8887ED1D8E77B7009C5ECB /* 4653DBE1-7555-3EDD-A2F4-7A7D0604F42A.bcsymbolmap */; };
-		DE88880A1D8E77B7009C5ECB /* 494868A5-8647-3187-905A-00725587398A.bcsymbolmap in Resources */ = {isa = PBXBuildFile; fileRef = DE8887EE1D8E77B7009C5ECB /* 494868A5-8647-3187-905A-00725587398A.bcsymbolmap */; };
-		DE88880B1D8E77B7009C5ECB /* 2329705E-5382-32E9-BE83-6C6976BC0902.bcsymbolmap in Resources */ = {isa = PBXBuildFile; fileRef = DE8887EF1D8E77B7009C5ECB /* 2329705E-5382-32E9-BE83-6C6976BC0902.bcsymbolmap */; };
-		DE88880C1D8E77B7009C5ECB /* 19057239-FCE3-39F1-910C-E2DB1DC94A21.bcsymbolmap in Resources */ = {isa = PBXBuildFile; fileRef = DE8887F01D8E77B7009C5ECB /* 19057239-FCE3-39F1-910C-E2DB1DC94A21.bcsymbolmap */; };
-		DE88880D1D8E77B7009C5ECB /* A2DB9359-60C8-34D2-89F1-A66A15A2AB65.bcsymbolmap in Resources */ = {isa = PBXBuildFile; fileRef = DE8887F11D8E77B7009C5ECB /* A2DB9359-60C8-34D2-89F1-A66A15A2AB65.bcsymbolmap */; };
-		DE88880F1D8E77B7009C5ECB /* AlchemyGenerator.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = DE8887F31D8E77B7009C5ECB /* AlchemyGenerator.framework.dSYM */; };
-		DE8888111D8E77B7009C5ECB /* AromaSwiftClient.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = DE8887F51D8E77B7009C5ECB /* AromaSwiftClient.framework.dSYM */; };
-		DE8888131D8E77B7009C5ECB /* AromaThrift.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = DE8887F71D8E77B7009C5ECB /* AromaThrift.framework.dSYM */; };
-		DE8888141D8E77B7009C5ECB /* BB26619C-E1CA-3568-98C5-CAE63E72F35B.bcsymbolmap in Resources */ = {isa = PBXBuildFile; fileRef = DE8887F81D8E77B7009C5ECB /* BB26619C-E1CA-3568-98C5-CAE63E72F35B.bcsymbolmap */; };
-		DE8888151D8E77B7009C5ECB /* C02104A2-4916-357D-AD2E-D127879E0E56.bcsymbolmap in Resources */ = {isa = PBXBuildFile; fileRef = DE8887F91D8E77B7009C5ECB /* C02104A2-4916-357D-AD2E-D127879E0E56.bcsymbolmap */; };
-		DE8888161D8E77B7009C5ECB /* E0BE6204-177C-3D2D-B7A0-C8EE0C0A35F2.bcsymbolmap in Resources */ = {isa = PBXBuildFile; fileRef = DE8887FA1D8E77B7009C5ECB /* E0BE6204-177C-3D2D-B7A0-C8EE0C0A35F2.bcsymbolmap */; };
-		DE8888171D8E77B7009C5ECB /* FD967189-310A-31C9-8C5E-A4929D9528D5.bcsymbolmap in Resources */ = {isa = PBXBuildFile; fileRef = DE8887FB1D8E77B7009C5ECB /* FD967189-310A-31C9-8C5E-A4929D9528D5.bcsymbolmap */; };
-		DE8888191D8E77B7009C5ECB /* LexisDatabase.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = DE8887FD1D8E77B7009C5ECB /* LexisDatabase.framework.dSYM */; };
-		DE88881B1D8E77B7009C5ECB /* RedRomaColors.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = DE8887FF1D8E77B7009C5ECB /* RedRomaColors.framework.dSYM */; };
-		DE88881D1D8E77B7009C5ECB /* Sulcus.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = DE8888011D8E77B7009C5ECB /* Sulcus.framework.dSYM */; };
-		DE88881F1D8E77B7009C5ECB /* SwiftExceptionCatcher.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = DE8888031D8E77B7009C5ECB /* SwiftExceptionCatcher.framework.dSYM */; };
-		DE8888211D8E77C5009C5ECB /* AlchemyGenerator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE8887F21D8E77B7009C5ECB /* AlchemyGenerator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE8888231D8E77C5009C5ECB /* AromaSwiftClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE8887F41D8E77B7009C5ECB /* AromaSwiftClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE8888251D8E77C5009C5ECB /* AromaThrift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE8887F61D8E77B7009C5ECB /* AromaThrift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE8888271D8E77C5009C5ECB /* LexisDatabase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE8887FC1D8E77B7009C5ECB /* LexisDatabase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE8888291D8E77C5009C5ECB /* RedRomaColors.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE8887FE1D8E77B7009C5ECB /* RedRomaColors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE88882B1D8E77C5009C5ECB /* Sulcus.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE8888001D8E77B7009C5ECB /* Sulcus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE88882D1D8E77C5009C5ECB /* SwiftExceptionCatcher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE8888021D8E77B7009C5ECB /* SwiftExceptionCatcher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE88882E1D8E7B4F009C5ECB /* AlchemyGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE8887F21D8E77B7009C5ECB /* AlchemyGenerator.framework */; };
-		DE88882F1D8E7B4F009C5ECB /* AromaSwiftClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE8887F41D8E77B7009C5ECB /* AromaSwiftClient.framework */; };
-		DE8888301D8E7B4F009C5ECB /* AromaThrift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE8887F61D8E77B7009C5ECB /* AromaThrift.framework */; };
-		DE8888311D8E7B4F009C5ECB /* LexisDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE8887FC1D8E77B7009C5ECB /* LexisDatabase.framework */; };
-		DE8888321D8E7B4F009C5ECB /* RedRomaColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE8887FE1D8E77B7009C5ECB /* RedRomaColors.framework */; };
-		DE8888331D8E7B4F009C5ECB /* Sulcus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE8888001D8E77B7009C5ECB /* Sulcus.framework */; };
-		DE8888341D8E7B4F009C5ECB /* SwiftExceptionCatcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE8888021D8E77B7009C5ECB /* SwiftExceptionCatcher.framework */; };
+		DE9E9EBD1D9029F9004E4CD3 /* AlchemyGenerator.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = DE9E9EAF1D9029F9004E4CD3 /* AlchemyGenerator.framework.dSYM */; };
+		DE9E9EBE1D9029F9004E4CD3 /* AromaSwiftClient.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = DE9E9EB01D9029F9004E4CD3 /* AromaSwiftClient.framework.dSYM */; };
+		DE9E9EBF1D9029F9004E4CD3 /* AromaThrift.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = DE9E9EB11D9029F9004E4CD3 /* AromaThrift.framework.dSYM */; };
+		DE9E9EC01D9029F9004E4CD3 /* LexisDatabase.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = DE9E9EB21D9029F9004E4CD3 /* LexisDatabase.framework.dSYM */; };
+		DE9E9EC11D9029F9004E4CD3 /* RedRomaColors.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = DE9E9EB31D9029F9004E4CD3 /* RedRomaColors.framework.dSYM */; };
+		DE9E9EC21D9029F9004E4CD3 /* Sulcus.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = DE9E9EB41D9029F9004E4CD3 /* Sulcus.framework.dSYM */; };
+		DE9E9EC31D9029F9004E4CD3 /* SwiftExceptionCatcher.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = DE9E9EB51D9029F9004E4CD3 /* SwiftExceptionCatcher.framework.dSYM */; };
+		DE9E9ECC1D902A00004E4CD3 /* AlchemyGenerator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE9E9EB61D9029F9004E4CD3 /* AlchemyGenerator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE9E9ECE1D902A00004E4CD3 /* AromaSwiftClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE9E9EB71D9029F9004E4CD3 /* AromaSwiftClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE9E9ED01D902A00004E4CD3 /* AromaThrift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE9E9EB81D9029F9004E4CD3 /* AromaThrift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE9E9ED21D902A00004E4CD3 /* LexisDatabase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE9E9EB91D9029F9004E4CD3 /* LexisDatabase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE9E9ED41D902A00004E4CD3 /* RedRomaColors.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE9E9EBA1D9029F9004E4CD3 /* RedRomaColors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE9E9ED61D902A00004E4CD3 /* Sulcus.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE9E9EBB1D9029F9004E4CD3 /* Sulcus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE9E9ED81D902A00004E4CD3 /* SwiftExceptionCatcher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE9E9EBC1D9029F9004E4CD3 /* SwiftExceptionCatcher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE9E9EDA1D902A0A004E4CD3 /* AlchemyGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE9E9EB61D9029F9004E4CD3 /* AlchemyGenerator.framework */; };
+		DE9E9EDB1D902A0A004E4CD3 /* AromaSwiftClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE9E9EB71D9029F9004E4CD3 /* AromaSwiftClient.framework */; };
+		DE9E9EDC1D902A0A004E4CD3 /* AromaThrift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE9E9EB81D9029F9004E4CD3 /* AromaThrift.framework */; };
+		DE9E9EDD1D902A0A004E4CD3 /* LexisDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE9E9EB91D9029F9004E4CD3 /* LexisDatabase.framework */; };
+		DE9E9EDE1D902A0A004E4CD3 /* RedRomaColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE9E9EBA1D9029F9004E4CD3 /* RedRomaColors.framework */; };
+		DE9E9EDF1D902A0A004E4CD3 /* Sulcus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE9E9EBB1D9029F9004E4CD3 /* Sulcus.framework */; };
+		DE9E9EE01D902A0A004E4CD3 /* SwiftExceptionCatcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE9E9EBC1D9029F9004E4CD3 /* SwiftExceptionCatcher.framework */; };
+		DE9E9EE11D902A21004E4CD3 /* AlchemyGenerator.framework.dSYM in Frameworks */ = {isa = PBXBuildFile; fileRef = DE9E9EAF1D9029F9004E4CD3 /* AlchemyGenerator.framework.dSYM */; };
+		DE9E9EE21D902A21004E4CD3 /* AromaSwiftClient.framework.dSYM in Frameworks */ = {isa = PBXBuildFile; fileRef = DE9E9EB01D9029F9004E4CD3 /* AromaSwiftClient.framework.dSYM */; };
+		DE9E9EE31D902A21004E4CD3 /* AromaThrift.framework.dSYM in Frameworks */ = {isa = PBXBuildFile; fileRef = DE9E9EB11D9029F9004E4CD3 /* AromaThrift.framework.dSYM */; };
+		DE9E9EE41D902A21004E4CD3 /* LexisDatabase.framework.dSYM in Frameworks */ = {isa = PBXBuildFile; fileRef = DE9E9EB21D9029F9004E4CD3 /* LexisDatabase.framework.dSYM */; };
+		DE9E9EE51D902A21004E4CD3 /* RedRomaColors.framework.dSYM in Frameworks */ = {isa = PBXBuildFile; fileRef = DE9E9EB31D9029F9004E4CD3 /* RedRomaColors.framework.dSYM */; };
+		DE9E9EE61D902A21004E4CD3 /* Sulcus.framework.dSYM in Frameworks */ = {isa = PBXBuildFile; fileRef = DE9E9EB41D9029F9004E4CD3 /* Sulcus.framework.dSYM */; };
+		DE9E9EE71D902A21004E4CD3 /* SwiftExceptionCatcher.framework.dSYM in Frameworks */ = {isa = PBXBuildFile; fileRef = DE9E9EB51D9029F9004E4CD3 /* SwiftExceptionCatcher.framework.dSYM */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,23 +101,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		DE4DA0BA1D8DC6CE003183F4 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				DE8888231D8E77C5009C5ECB /* AromaSwiftClient.framework in Embed Frameworks */,
-				DE8888291D8E77C5009C5ECB /* RedRomaColors.framework in Embed Frameworks */,
-				DE8888271D8E77C5009C5ECB /* LexisDatabase.framework in Embed Frameworks */,
-				DE88882B1D8E77C5009C5ECB /* Sulcus.framework in Embed Frameworks */,
-				DE88882D1D8E77C5009C5ECB /* SwiftExceptionCatcher.framework in Embed Frameworks */,
-				DE8888211D8E77C5009C5ECB /* AlchemyGenerator.framework in Embed Frameworks */,
-				DE8888251D8E77C5009C5ECB /* AromaThrift.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DE4DA2A71D8DF26F003183F4 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -132,6 +108,23 @@
 			dstSubfolderSpec = 10;
 			files = (
 			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE9E9ED91D902A00004E4CD3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DE9E9ECE1D902A00004E4CD3 /* AromaSwiftClient.framework in Embed Frameworks */,
+				DE9E9ED41D902A00004E4CD3 /* RedRomaColors.framework in Embed Frameworks */,
+				DE9E9ED21D902A00004E4CD3 /* LexisDatabase.framework in Embed Frameworks */,
+				DE9E9ED61D902A00004E4CD3 /* Sulcus.framework in Embed Frameworks */,
+				DE9E9ED81D902A00004E4CD3 /* SwiftExceptionCatcher.framework in Embed Frameworks */,
+				DE9E9ECC1D902A00004E4CD3 /* AlchemyGenerator.framework in Embed Frameworks */,
+				DE9E9ED01D902A00004E4CD3 /* AromaThrift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -188,34 +181,20 @@
 		DE5D143A1D8847BD00B8B3CC /* WordNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordNameCell.swift; sourceTree = "<group>"; };
 		DE5D143C1D8847D100B8B3CC /* WordDefinitionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordDefinitionCell.swift; sourceTree = "<group>"; };
 		DE5D143E1D8847E600B8B3CC /* WordDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordDescriptionCell.swift; sourceTree = "<group>"; };
-		DE8887E81D8E77B7009C5ECB /* 5C2E49A8-AD91-3DAB-88E9-7555486BE797.bcsymbolmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "5C2E49A8-AD91-3DAB-88E9-7555486BE797.bcsymbolmap"; sourceTree = "<group>"; };
-		DE8887E91D8E77B7009C5ECB /* 7F344765-CDBC-31D1-9D01-B935A5CBBC36.bcsymbolmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "7F344765-CDBC-31D1-9D01-B935A5CBBC36.bcsymbolmap"; sourceTree = "<group>"; };
-		DE8887EA1D8E77B7009C5ECB /* 131AD9F9-CCDC-3EF9-B45F-57F9BD18F8B9.bcsymbolmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "131AD9F9-CCDC-3EF9-B45F-57F9BD18F8B9.bcsymbolmap"; sourceTree = "<group>"; };
-		DE8887EB1D8E77B7009C5ECB /* 424F4D66-954C-3236-93E5-228D356A9029.bcsymbolmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "424F4D66-954C-3236-93E5-228D356A9029.bcsymbolmap"; sourceTree = "<group>"; };
-		DE8887EC1D8E77B7009C5ECB /* 934B74D3-3998-3F09-BA0E-273D26391380.bcsymbolmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "934B74D3-3998-3F09-BA0E-273D26391380.bcsymbolmap"; sourceTree = "<group>"; };
-		DE8887ED1D8E77B7009C5ECB /* 4653DBE1-7555-3EDD-A2F4-7A7D0604F42A.bcsymbolmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "4653DBE1-7555-3EDD-A2F4-7A7D0604F42A.bcsymbolmap"; sourceTree = "<group>"; };
-		DE8887EE1D8E77B7009C5ECB /* 494868A5-8647-3187-905A-00725587398A.bcsymbolmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "494868A5-8647-3187-905A-00725587398A.bcsymbolmap"; sourceTree = "<group>"; };
-		DE8887EF1D8E77B7009C5ECB /* 2329705E-5382-32E9-BE83-6C6976BC0902.bcsymbolmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2329705E-5382-32E9-BE83-6C6976BC0902.bcsymbolmap"; sourceTree = "<group>"; };
-		DE8887F01D8E77B7009C5ECB /* 19057239-FCE3-39F1-910C-E2DB1DC94A21.bcsymbolmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "19057239-FCE3-39F1-910C-E2DB1DC94A21.bcsymbolmap"; sourceTree = "<group>"; };
-		DE8887F11D8E77B7009C5ECB /* A2DB9359-60C8-34D2-89F1-A66A15A2AB65.bcsymbolmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "A2DB9359-60C8-34D2-89F1-A66A15A2AB65.bcsymbolmap"; sourceTree = "<group>"; };
-		DE8887F21D8E77B7009C5ECB /* AlchemyGenerator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlchemyGenerator.framework; sourceTree = "<group>"; };
-		DE8887F31D8E77B7009C5ECB /* AlchemyGenerator.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = AlchemyGenerator.framework.dSYM; sourceTree = "<group>"; };
-		DE8887F41D8E77B7009C5ECB /* AromaSwiftClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AromaSwiftClient.framework; sourceTree = "<group>"; };
-		DE8887F51D8E77B7009C5ECB /* AromaSwiftClient.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = AromaSwiftClient.framework.dSYM; sourceTree = "<group>"; };
-		DE8887F61D8E77B7009C5ECB /* AromaThrift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AromaThrift.framework; sourceTree = "<group>"; };
-		DE8887F71D8E77B7009C5ECB /* AromaThrift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = AromaThrift.framework.dSYM; sourceTree = "<group>"; };
-		DE8887F81D8E77B7009C5ECB /* BB26619C-E1CA-3568-98C5-CAE63E72F35B.bcsymbolmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "BB26619C-E1CA-3568-98C5-CAE63E72F35B.bcsymbolmap"; sourceTree = "<group>"; };
-		DE8887F91D8E77B7009C5ECB /* C02104A2-4916-357D-AD2E-D127879E0E56.bcsymbolmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "C02104A2-4916-357D-AD2E-D127879E0E56.bcsymbolmap"; sourceTree = "<group>"; };
-		DE8887FA1D8E77B7009C5ECB /* E0BE6204-177C-3D2D-B7A0-C8EE0C0A35F2.bcsymbolmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "E0BE6204-177C-3D2D-B7A0-C8EE0C0A35F2.bcsymbolmap"; sourceTree = "<group>"; };
-		DE8887FB1D8E77B7009C5ECB /* FD967189-310A-31C9-8C5E-A4929D9528D5.bcsymbolmap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "FD967189-310A-31C9-8C5E-A4929D9528D5.bcsymbolmap"; sourceTree = "<group>"; };
-		DE8887FC1D8E77B7009C5ECB /* LexisDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LexisDatabase.framework; sourceTree = "<group>"; };
-		DE8887FD1D8E77B7009C5ECB /* LexisDatabase.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = LexisDatabase.framework.dSYM; sourceTree = "<group>"; };
-		DE8887FE1D8E77B7009C5ECB /* RedRomaColors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RedRomaColors.framework; sourceTree = "<group>"; };
-		DE8887FF1D8E77B7009C5ECB /* RedRomaColors.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RedRomaColors.framework.dSYM; sourceTree = "<group>"; };
-		DE8888001D8E77B7009C5ECB /* Sulcus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sulcus.framework; sourceTree = "<group>"; };
-		DE8888011D8E77B7009C5ECB /* Sulcus.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = Sulcus.framework.dSYM; sourceTree = "<group>"; };
-		DE8888021D8E77B7009C5ECB /* SwiftExceptionCatcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftExceptionCatcher.framework; sourceTree = "<group>"; };
-		DE8888031D8E77B7009C5ECB /* SwiftExceptionCatcher.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = SwiftExceptionCatcher.framework.dSYM; sourceTree = "<group>"; };
+		DE9E9EAF1D9029F9004E4CD3 /* AlchemyGenerator.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = AlchemyGenerator.framework.dSYM; sourceTree = "<group>"; };
+		DE9E9EB01D9029F9004E4CD3 /* AromaSwiftClient.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = AromaSwiftClient.framework.dSYM; sourceTree = "<group>"; };
+		DE9E9EB11D9029F9004E4CD3 /* AromaThrift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = AromaThrift.framework.dSYM; sourceTree = "<group>"; };
+		DE9E9EB21D9029F9004E4CD3 /* LexisDatabase.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = LexisDatabase.framework.dSYM; sourceTree = "<group>"; };
+		DE9E9EB31D9029F9004E4CD3 /* RedRomaColors.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RedRomaColors.framework.dSYM; sourceTree = "<group>"; };
+		DE9E9EB41D9029F9004E4CD3 /* Sulcus.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = Sulcus.framework.dSYM; sourceTree = "<group>"; };
+		DE9E9EB51D9029F9004E4CD3 /* SwiftExceptionCatcher.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = SwiftExceptionCatcher.framework.dSYM; sourceTree = "<group>"; };
+		DE9E9EB61D9029F9004E4CD3 /* AlchemyGenerator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlchemyGenerator.framework; sourceTree = "<group>"; };
+		DE9E9EB71D9029F9004E4CD3 /* AromaSwiftClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AromaSwiftClient.framework; sourceTree = "<group>"; };
+		DE9E9EB81D9029F9004E4CD3 /* AromaThrift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AromaThrift.framework; sourceTree = "<group>"; };
+		DE9E9EB91D9029F9004E4CD3 /* LexisDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LexisDatabase.framework; sourceTree = "<group>"; };
+		DE9E9EBA1D9029F9004E4CD3 /* RedRomaColors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RedRomaColors.framework; sourceTree = "<group>"; };
+		DE9E9EBB1D9029F9004E4CD3 /* Sulcus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sulcus.framework; sourceTree = "<group>"; };
+		DE9E9EBC1D9029F9004E4CD3 /* SwiftExceptionCatcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftExceptionCatcher.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,13 +202,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE88882E1D8E7B4F009C5ECB /* AlchemyGenerator.framework in Frameworks */,
-				DE88882F1D8E7B4F009C5ECB /* AromaSwiftClient.framework in Frameworks */,
-				DE8888301D8E7B4F009C5ECB /* AromaThrift.framework in Frameworks */,
-				DE8888311D8E7B4F009C5ECB /* LexisDatabase.framework in Frameworks */,
-				DE8888321D8E7B4F009C5ECB /* RedRomaColors.framework in Frameworks */,
-				DE8888331D8E7B4F009C5ECB /* Sulcus.framework in Frameworks */,
-				DE8888341D8E7B4F009C5ECB /* SwiftExceptionCatcher.framework in Frameworks */,
+				DE9E9EDA1D902A0A004E4CD3 /* AlchemyGenerator.framework in Frameworks */,
+				DE9E9EDB1D902A0A004E4CD3 /* AromaSwiftClient.framework in Frameworks */,
+				DE9E9EDC1D902A0A004E4CD3 /* AromaThrift.framework in Frameworks */,
+				DE9E9EDD1D902A0A004E4CD3 /* LexisDatabase.framework in Frameworks */,
+				DE9E9EDE1D902A0A004E4CD3 /* RedRomaColors.framework in Frameworks */,
+				DE9E9EDF1D902A0A004E4CD3 /* Sulcus.framework in Frameworks */,
+				DE9E9EE01D902A0A004E4CD3 /* SwiftExceptionCatcher.framework in Frameworks */,
+				DE9E9EE11D902A21004E4CD3 /* AlchemyGenerator.framework.dSYM in Frameworks */,
+				DE9E9EE21D902A21004E4CD3 /* AromaSwiftClient.framework.dSYM in Frameworks */,
+				DE9E9EE31D902A21004E4CD3 /* AromaThrift.framework.dSYM in Frameworks */,
+				DE9E9EE41D902A21004E4CD3 /* LexisDatabase.framework.dSYM in Frameworks */,
+				DE9E9EE51D902A21004E4CD3 /* RedRomaColors.framework.dSYM in Frameworks */,
+				DE9E9EE61D902A21004E4CD3 /* Sulcus.framework.dSYM in Frameworks */,
+				DE9E9EE71D902A21004E4CD3 /* SwiftExceptionCatcher.framework.dSYM in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,34 +360,20 @@
 		DE60BCC11D7B6ADE00EF15C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DE8887E81D8E77B7009C5ECB /* 5C2E49A8-AD91-3DAB-88E9-7555486BE797.bcsymbolmap */,
-				DE8887E91D8E77B7009C5ECB /* 7F344765-CDBC-31D1-9D01-B935A5CBBC36.bcsymbolmap */,
-				DE8887EA1D8E77B7009C5ECB /* 131AD9F9-CCDC-3EF9-B45F-57F9BD18F8B9.bcsymbolmap */,
-				DE8887EB1D8E77B7009C5ECB /* 424F4D66-954C-3236-93E5-228D356A9029.bcsymbolmap */,
-				DE8887EC1D8E77B7009C5ECB /* 934B74D3-3998-3F09-BA0E-273D26391380.bcsymbolmap */,
-				DE8887ED1D8E77B7009C5ECB /* 4653DBE1-7555-3EDD-A2F4-7A7D0604F42A.bcsymbolmap */,
-				DE8887EE1D8E77B7009C5ECB /* 494868A5-8647-3187-905A-00725587398A.bcsymbolmap */,
-				DE8887EF1D8E77B7009C5ECB /* 2329705E-5382-32E9-BE83-6C6976BC0902.bcsymbolmap */,
-				DE8887F01D8E77B7009C5ECB /* 19057239-FCE3-39F1-910C-E2DB1DC94A21.bcsymbolmap */,
-				DE8887F11D8E77B7009C5ECB /* A2DB9359-60C8-34D2-89F1-A66A15A2AB65.bcsymbolmap */,
-				DE8887F21D8E77B7009C5ECB /* AlchemyGenerator.framework */,
-				DE8887F31D8E77B7009C5ECB /* AlchemyGenerator.framework.dSYM */,
-				DE8887F41D8E77B7009C5ECB /* AromaSwiftClient.framework */,
-				DE8887F51D8E77B7009C5ECB /* AromaSwiftClient.framework.dSYM */,
-				DE8887F61D8E77B7009C5ECB /* AromaThrift.framework */,
-				DE8887F71D8E77B7009C5ECB /* AromaThrift.framework.dSYM */,
-				DE8887F81D8E77B7009C5ECB /* BB26619C-E1CA-3568-98C5-CAE63E72F35B.bcsymbolmap */,
-				DE8887F91D8E77B7009C5ECB /* C02104A2-4916-357D-AD2E-D127879E0E56.bcsymbolmap */,
-				DE8887FA1D8E77B7009C5ECB /* E0BE6204-177C-3D2D-B7A0-C8EE0C0A35F2.bcsymbolmap */,
-				DE8887FB1D8E77B7009C5ECB /* FD967189-310A-31C9-8C5E-A4929D9528D5.bcsymbolmap */,
-				DE8887FC1D8E77B7009C5ECB /* LexisDatabase.framework */,
-				DE8887FD1D8E77B7009C5ECB /* LexisDatabase.framework.dSYM */,
-				DE8887FE1D8E77B7009C5ECB /* RedRomaColors.framework */,
-				DE8887FF1D8E77B7009C5ECB /* RedRomaColors.framework.dSYM */,
-				DE8888001D8E77B7009C5ECB /* Sulcus.framework */,
-				DE8888011D8E77B7009C5ECB /* Sulcus.framework.dSYM */,
-				DE8888021D8E77B7009C5ECB /* SwiftExceptionCatcher.framework */,
-				DE8888031D8E77B7009C5ECB /* SwiftExceptionCatcher.framework.dSYM */,
+				DE9E9EAF1D9029F9004E4CD3 /* AlchemyGenerator.framework.dSYM */,
+				DE9E9EB01D9029F9004E4CD3 /* AromaSwiftClient.framework.dSYM */,
+				DE9E9EB11D9029F9004E4CD3 /* AromaThrift.framework.dSYM */,
+				DE9E9EB21D9029F9004E4CD3 /* LexisDatabase.framework.dSYM */,
+				DE9E9EB31D9029F9004E4CD3 /* RedRomaColors.framework.dSYM */,
+				DE9E9EB41D9029F9004E4CD3 /* Sulcus.framework.dSYM */,
+				DE9E9EB51D9029F9004E4CD3 /* SwiftExceptionCatcher.framework.dSYM */,
+				DE9E9EB61D9029F9004E4CD3 /* AlchemyGenerator.framework */,
+				DE9E9EB71D9029F9004E4CD3 /* AromaSwiftClient.framework */,
+				DE9E9EB81D9029F9004E4CD3 /* AromaThrift.framework */,
+				DE9E9EB91D9029F9004E4CD3 /* LexisDatabase.framework */,
+				DE9E9EBA1D9029F9004E4CD3 /* RedRomaColors.framework */,
+				DE9E9EBB1D9029F9004E4CD3 /* Sulcus.framework */,
+				DE9E9EBC1D9029F9004E4CD3 /* SwiftExceptionCatcher.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -426,7 +398,7 @@
 				DE1294EF1D6977F700687CA5 /* Sources */,
 				DE1294F01D6977F700687CA5 /* Frameworks */,
 				DE1294F11D6977F700687CA5 /* Resources */,
-				DE4DA0BA1D8DC6CE003183F4 /* Embed Frameworks */,
+				DE9E9ED91D902A00004E4CD3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -502,53 +474,39 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE8888091D8E77B7009C5ECB /* 4653DBE1-7555-3EDD-A2F4-7A7D0604F42A.bcsymbolmap in Resources */,
 				DE5D14211D87CDF800B8B3CC /* Raleway 800.ttf in Resources */,
 				DE5D14241D87CDF800B8B3CC /* Raleway 900italic.ttf in Resources */,
 				DE1295141D6982FF00687CA5 /* CinzelDecorative-Regular.otf in Resources */,
-				DE88880B1D8E77B7009C5ECB /* 2329705E-5382-32E9-BE83-6C6976BC0902.bcsymbolmap in Resources */,
-				DE8888141D8E77B7009C5ECB /* BB26619C-E1CA-3568-98C5-CAE63E72F35B.bcsymbolmap in Resources */,
 				DE1295101D6982FF00687CA5 /* Cinzel-Bold.otf in Resources */,
 				DE1295131D6982FF00687CA5 /* CinzelDecorative-Bold.otf in Resources */,
-				DE8888061D8E77B7009C5ECB /* 131AD9F9-CCDC-3EF9-B45F-57F9BD18F8B9.bcsymbolmap in Resources */,
 				DE5D141F1D87CDF800B8B3CC /* Raleway 700.ttf in Resources */,
 				DE1295011D6977F700687CA5 /* LaunchScreen.storyboard in Resources */,
-				DE8888151D8E77B7009C5ECB /* C02104A2-4916-357D-AD2E-D127879E0E56.bcsymbolmap in Resources */,
 				DE5D14201D87CDF800B8B3CC /* Raleway 700italic.ttf in Resources */,
 				DE1295121D6982FF00687CA5 /* CinzelDecorative-Black.otf in Resources */,
 				DE5D14171D87CDF800B8B3CC /* Raleway 200.ttf in Resources */,
 				DE5D141E1D87CDF800B8B3CC /* Raleway 600italic.ttf in Resources */,
-				DE88881F1D8E77B7009C5ECB /* SwiftExceptionCatcher.framework.dSYM in Resources */,
 				DE5D14161D87CDF800B8B3CC /* Raleway 100italic.ttf in Resources */,
 				DE5D14251D87CDF800B8B3CC /* Raleway italic.ttf in Resources */,
 				DE5D141B1D87CDF800B8B3CC /* Raleway 500.ttf in Resources */,
+				DE9E9EBE1D9029F9004E4CD3 /* AromaSwiftClient.framework.dSYM in Resources */,
 				DE5D14261D87CDF800B8B3CC /* Raleway regular.ttf in Resources */,
+				DE9E9EC31D9029F9004E4CD3 /* SwiftExceptionCatcher.framework.dSYM in Resources */,
+				DE9E9EBD1D9029F9004E4CD3 /* AlchemyGenerator.framework.dSYM in Resources */,
 				DE0E872A1D7FF41D00F42DB3 /* Welcome.storyboard in Resources */,
-				DE8888191D8E77B7009C5ECB /* LexisDatabase.framework.dSYM in Resources */,
+				DE9E9EC11D9029F9004E4CD3 /* RedRomaColors.framework.dSYM in Resources */,
+				DE9E9EC21D9029F9004E4CD3 /* Sulcus.framework.dSYM in Resources */,
 				DE5D141D1D87CDF800B8B3CC /* Raleway 600.ttf in Resources */,
-				DE88881B1D8E77B7009C5ECB /* RedRomaColors.framework.dSYM in Resources */,
+				DE9E9EBF1D9029F9004E4CD3 /* AromaThrift.framework.dSYM in Resources */,
 				DE5D14181D87CDF800B8B3CC /* Raleway 200italic.ttf in Resources */,
-				DE88880D1D8E77B7009C5ECB /* A2DB9359-60C8-34D2-89F1-A66A15A2AB65.bcsymbolmap in Resources */,
-				DE8888131D8E77B7009C5ECB /* AromaThrift.framework.dSYM in Resources */,
-				DE8888161D8E77B7009C5ECB /* E0BE6204-177C-3D2D-B7A0-C8EE0C0A35F2.bcsymbolmap in Resources */,
 				DE1294FE1D6977F700687CA5 /* Assets.xcassets in Resources */,
-				DE88880F1D8E77B7009C5ECB /* AlchemyGenerator.framework.dSYM in Resources */,
-				DE8888081D8E77B7009C5ECB /* 934B74D3-3998-3F09-BA0E-273D26391380.bcsymbolmap in Resources */,
 				DE5D141C1D87CDF800B8B3CC /* Raleway 500italic.ttf in Resources */,
-				DE8888051D8E77B7009C5ECB /* 7F344765-CDBC-31D1-9D01-B935A5CBBC36.bcsymbolmap in Resources */,
 				DE12950F1D6982FF00687CA5 /* Cinzel-Black.otf in Resources */,
 				DE5D14151D87CDF800B8B3CC /* Raleway 100.ttf in Resources */,
-				DE8888041D8E77B7009C5ECB /* 5C2E49A8-AD91-3DAB-88E9-7555486BE797.bcsymbolmap in Resources */,
-				DE88880A1D8E77B7009C5ECB /* 494868A5-8647-3187-905A-00725587398A.bcsymbolmap in Resources */,
 				DE5D14231D87CDF800B8B3CC /* Raleway 900.ttf in Resources */,
-				DE88880C1D8E77B7009C5ECB /* 19057239-FCE3-39F1-910C-E2DB1DC94A21.bcsymbolmap in Resources */,
 				DE5D14191D87CDF800B8B3CC /* Raleway 300.ttf in Resources */,
-				DE8888111D8E77B7009C5ECB /* AromaSwiftClient.framework.dSYM in Resources */,
-				DE8888071D8E77B7009C5ECB /* 424F4D66-954C-3236-93E5-228D356A9029.bcsymbolmap in Resources */,
-				DE8888171D8E77B7009C5ECB /* FD967189-310A-31C9-8C5E-A4929D9528D5.bcsymbolmap in Resources */,
-				DE88881D1D8E77B7009C5ECB /* Sulcus.framework.dSYM in Resources */,
 				DE5D14221D87CDF800B8B3CC /* Raleway 800italic.ttf in Resources */,
 				DE1294FC1D6977F700687CA5 /* Main.storyboard in Resources */,
+				DE9E9EC01D9029F9004E4CD3 /* LexisDatabase.framework.dSYM in Resources */,
 				DE1295111D6982FF00687CA5 /* Cinzel-Regular.otf in Resources */,
 				DE5D141A1D87CDF800B8B3CC /* Raleway 300italic.ttf in Resources */,
 			);
@@ -747,6 +705,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tech.redroma.Lexis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -764,6 +723,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tech.redroma.Lexis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

@@ -20,15 +20,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
     {
-        LOG.level = .warn
+        LOG.level = .info
         LOG.enable()
         
         AromaClient.TOKEN_ID = "655e0541-b719-47af-9c9e-53e161d26e53"
         
-        AromaClient.being(withTitle: "App Launched")
+        AromaClient.beginMessage(withTitle: "App Launched")
             .addBody("Build #\(buildNumber)")
             .withPriority(.medium)
             .send()
+        
+        NSSetUncaughtExceptionHandler() { error in
+            
+            LOG.error("Uncaught Exception: \(error)")
+            
+            AromaClient.beginMessage(withTitle: "App Crashed")
+                .addBody("On Device: \(UIDevice.current.name)")
+                .addLine(2)
+                .addBody("\(error)")
+                .withPriority(.medium)
+                .send()
+        }
         
         return true
     }
