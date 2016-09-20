@@ -131,6 +131,10 @@ SWIFT_CLASS("_TtC13LexisDatabase15LexisDefinition")
 
 
 @interface LexisDefinition (SWIFT_EXTENSION(LexisDatabase))
+@end
+
+
+@interface LexisDefinition (SWIFT_EXTENSION(LexisDatabase))
 @property (nonatomic, readonly) NSInteger hashValue;
 @property (nonatomic, readonly) NSUInteger hash;
 @end
@@ -154,8 +158,8 @@ SWIFT_CLASS("_TtC13LexisDatabase9LexisWord")
 */
 @property (nonatomic, readonly, copy) NSArray<LexisDefinition *> * _Nonnull definitions;
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)encoder;
-- (void)encodeWithCoder:(NSCoder * _Nonnull)decoder;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)decoder;
+- (void)encodeWithCoder:(NSCoder * _Nonnull)encoder;
 - (BOOL)isEqual:(id _Nullable)object;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 @end
@@ -166,8 +170,28 @@ SWIFT_CLASS("_TtC13LexisDatabase9LexisWord")
 
 
 @interface LexisWord (SWIFT_EXTENSION(LexisDatabase))
+@end
+
+
+@interface LexisWord (SWIFT_EXTENSION(LexisDatabase))
 @property (nonatomic, readonly) NSInteger hashValue;
 @property (nonatomic, readonly) NSUInteger hash;
+@end
+
+
+SWIFT_CLASS("_TtCC13LexisDatabase9LexisWord23SupplementalInformation")
+@interface SupplementalInformation : NSObject <NSCoding>
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)decoder;
+- (void)encodeWithCoder:(NSCoder * _Nonnull)encoder;
+- (BOOL)isEqual:(id _Nullable)object;
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
+@property (nonatomic, readonly) NSInteger hashValue;
+@property (nonatomic, readonly, copy) NSString * _Nonnull humanReadableDescription;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
+@end
+
+
+@interface SupplementalInformation (SWIFT_EXTENSION(LexisDatabase))
 @end
 
 #pragma clang diagnostic pop
