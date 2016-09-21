@@ -114,6 +114,8 @@
 		DEDB43971D925AC700BF092E /* RedRomaColors.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DEDB434F1D925AA600BF092E /* RedRomaColors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DEDB43981D925AC700BF092E /* Sulcus.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DEDB43501D925AA600BF092E /* Sulcus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DEDB43991D925AC700BF092E /* SwiftExceptionCatcher.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DEDB43511D925AA600BF092E /* SwiftExceptionCatcher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DEDB439C1D925F5700BF092E /* LexisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDB439B1D925F5700BF092E /* LexisView.swift */; };
+		DEDB439D1D925F5700BF092E /* LexisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDB439B1D925F5700BF092E /* LexisView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -236,6 +238,7 @@
 		DEDB436A1D925AAE00BF092E /* RedRomaColors.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RedRomaColors.framework.dSYM; sourceTree = "<group>"; };
 		DEDB436B1D925AAE00BF092E /* Sulcus.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = Sulcus.framework.dSYM; sourceTree = "<group>"; };
 		DEDB436C1D925AAE00BF092E /* SwiftExceptionCatcher.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = SwiftExceptionCatcher.framework.dSYM; sourceTree = "<group>"; };
+		DEDB439B1D925F5700BF092E /* LexisView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LexisView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,6 +325,7 @@
 		DE1294F51D6977F700687CA5 /* Lexis */ = {
 			isa = PBXGroup;
 			children = (
+				DEDB439A1D925F4400BF092E /* UI */,
 				DE7B309D1D8D2C4A00AD44C1 /* Extensions */,
 				DE5D14371D88471000B8B3CC /* Cells */,
 				DE5D14271D87E14400B8B3CC /* WordOfTheDay */,
@@ -435,6 +439,14 @@
 				DE4DA2D71D8E667E003183F4 /* ViewControllers+.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		DEDB439A1D925F4400BF092E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				DEDB439B1D925F5700BF092E /* LexisView.swift */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -600,6 +612,7 @@
 				DE4DA2C61D8E37A5003183F4 /* SearchEntryCell.swift in Sources */,
 				DE4DA2D81D8E667E003183F4 /* ViewControllers+.swift in Sources */,
 				DE5D143F1D8847E600B8B3CC /* WordDescriptionCell.swift in Sources */,
+				DEDB439C1D925F5700BF092E /* LexisView.swift in Sources */,
 				DE0E87241D7FEFC900F42DB3 /* Settings.swift in Sources */,
 				DE1294F71D6977F700687CA5 /* AppDelegate.swift in Sources */,
 				DE0E00081D7E984C00B70D62 /* WelcomePageViewController.swift in Sources */,
@@ -613,6 +626,7 @@
 			files = (
 				DE4DA2C71D8E37A5003183F4 /* SearchEntryCell.swift in Sources */,
 				DE4DA2D01D8E3C5D003183F4 /* Arrays+.swift in Sources */,
+				DEDB439D1D925F5700BF092E /* LexisView.swift in Sources */,
 				DE4DA2CD1D8E37B8003183F4 /* SearchEmptyCell.swift in Sources */,
 				DE4DA2D91D8E667E003183F4 /* ViewControllers+.swift in Sources */,
 				DE4DA2D31D8E3F5C003183F4 /* LexisWord+.swift in Sources */,
