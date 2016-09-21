@@ -507,8 +507,22 @@ extension WordOfTheDayViewController
         self.async.addOperation
         { [weak self, searchTerm] in
             
-            let results = LexisDatabase.instance.seaarchForms(startingWith: searchTerm)
-                .first(numberOfElements: 200)
+            //First search words starting with
+            var results = LexisDatabase.instance.seaarchForms(startingWith: searchTerm).first(numberOfElements: 200)
+            
+            //If no results, search through for words containing the search term.
+            //At this point they could be at any position.
+            if results.isEmpty
+            {
+                results = LexisDatabase.instance.searchForms(withTerm: searchTerm).first(numberOfElements: 100)
+            }
+            
+            //If still no results, search through the word's definition.
+            //This might happen, for example, if the user enters an English word
+            if results.isEmpty
+            {
+                results = LexisDatabase.instance.searchDefinitions(withTerm: searchTerm).first(numberOfElements: 50)
+            }
             
             guard let `self` = self else { return }
             
