@@ -79,7 +79,7 @@ class MainViewController: UIViewController
             LOG.info("Database initialization took \(delay) seconds")
             
             AromaClient.beginMessage(withTitle: "LexisDatabase Initialized")
-                .addBody("Opertion took \(delay) seconds")
+                .addBody("Operation took \(delay) seconds")
                 .withPriority(.low)
                 .send()
             
