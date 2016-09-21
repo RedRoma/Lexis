@@ -152,8 +152,11 @@ extension WordOfTheDayViewController
         let row = indexPath.row
         let definition = word.definitions[row]
         
-        let definitionText = "‣ " + definition.terms.joined(separator: ", ")
-        cell.definitionLabel.text = definitionText.removingFirstCharacterIfWhitespace()
+        var definitionText = definition.terms.joined(separator: ", ")
+        definitionText = definitionText.removingFirstCharacterIfWhitespace()
+        definitionText =  "‣ " + definitionText
+        
+        cell.definitionLabel.text = definitionText
         
         styleDefinitionCell(cell, for: indexPath)
         

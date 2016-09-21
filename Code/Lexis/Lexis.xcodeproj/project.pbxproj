@@ -311,14 +311,6 @@
 			name = Welcome;
 			sourceTree = "<group>";
 		};
-		DE0EFFD71D7E855000B70D62 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				DE0EFFD81D7E856500B70D62 /* Strings+.swift */,
-			);
-			name = Extensions;
-			sourceTree = "<group>";
-		};
 		DE1294EA1D6977F700687CA5 = {
 			isa = PBXGroup;
 			children = (
@@ -346,7 +338,6 @@
 				DE5D14371D88471000B8B3CC /* Cells */,
 				DE5D14271D87E14400B8B3CC /* WordOfTheDay */,
 				DE0E87221D7FEFBE00F42DB3 /* Settings */,
-				DE0EFFD71D7E855000B70D62 /* Extensions */,
 				DE1295081D6982D100687CA5 /* Fonts */,
 				DE0EFFD41D7E813100B70D62 /* Welcome */,
 				DE1294F61D6977F700687CA5 /* AppDelegate.swift */,
@@ -452,6 +443,7 @@
 			children = (
 				DE4DA2CE1D8E3C5D003183F4 /* Arrays+.swift */,
 				DE4DA2D11D8E3F5C003183F4 /* LexisWord+.swift */,
+				DE0EFFD81D7E856500B70D62 /* Strings+.swift */,
 				DE4DA2D71D8E667E003183F4 /* ViewControllers+.swift */,
 			);
 			name = Extensions;

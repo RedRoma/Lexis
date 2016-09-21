@@ -30,4 +30,23 @@ extension String
     {
         return self.asUrl
     }
+    
+    func removingFirstCharacterIfWhitespace() -> String
+    {
+        guard self.notEmpty else { return self }
+        
+        let firstCharacter: String = "\(self[startIndex])"
+        
+        let isWhitespace = firstCharacter.rangeOfCharacter(from: .whitespaces) != nil
+        
+        if !isWhitespace
+        {
+            return self
+        }
+        else
+        {
+            return self.substring(from: self.index(after: self.startIndex))
+        }
+        
+    }
 }
