@@ -153,8 +153,30 @@ extension WordOfTheDayViewController
         
         let definitionText = "‣ " + definition.terms.joined(separator: ", ")
         cell.definitionLabel.text = definitionText
+        styleDefinitionCell(cell, for: indexPath)
         
         return cell
+    }
+    
+    private func styleDefinitionCell(_ cell: WordDefinitionCell, for indexPath: IndexPath)
+    {
+        let row = indexPath.row
+        let isFirst = row == 0
+        let isLast = row == self.word.definitions.count - 1
+        
+        cell.bottomLine.isHidden = true
+        cell.topLine.isHidden = true
+        
+        if isFirst
+        {
+            cell.topLine.isHidden = false
+        }
+        
+        if isLast
+        {
+            cell.bottomLine.isHidden = false
+        }
+        
     }
     
     private func createFooterCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
