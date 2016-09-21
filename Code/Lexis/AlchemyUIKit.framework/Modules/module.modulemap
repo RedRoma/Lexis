@@ -1,0 +1,10 @@
+framework module AlchemyUIKit {
+  umbrella header "AlchemyUIKit.h"
+
+  export *
+  module * { export * }
+}
+
+module AlchemyUIKit.Swift {
+    header "AlchemyUIKit-Swift.h"
+}
