@@ -153,7 +153,8 @@ extension WordOfTheDayViewController
         let definition = word.definitions[row]
         
         let definitionText = "‣ " + definition.terms.joined(separator: ", ")
-        cell.definitionLabel.text = definitionText
+        cell.definitionLabel.text = definitionText.removingFirstCharacterIfWhitespace()
+        
         styleDefinitionCell(cell, for: indexPath)
         
         return cell
@@ -184,6 +185,9 @@ extension WordOfTheDayViewController
     {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "WordDescriptionCell", for: indexPath) as? WordDescriptionCell
         else { return emptyCell }
+        
+        let wordSynopsis = word.supplementalInformation.humanReadableDescription
+        cell.wordDescriptionLabel.text = wordSynopsis
         
         return cell
     }
