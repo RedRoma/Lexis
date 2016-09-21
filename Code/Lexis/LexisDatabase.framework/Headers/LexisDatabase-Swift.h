@@ -139,6 +139,7 @@ SWIFT_CLASS("_TtC13LexisDatabase15LexisDefinition")
 @property (nonatomic, readonly) NSUInteger hash;
 @end
 
+@class SupplementalInformation;
 
 SWIFT_CLASS("_TtC13LexisDatabase9LexisWord")
 @interface LexisWord : NSObject <NSCoding>
@@ -157,6 +158,12 @@ SWIFT_CLASS("_TtC13LexisDatabase9LexisWord")
   \endcode object represents a different meaning.
 */
 @property (nonatomic, readonly, copy) NSArray<LexisDefinition *> * _Nonnull definitions;
+/**
+  This supplemental informations provides some additional back-story on a Latin word.
+  It lets the user know in what time period the word was used, how frequently,
+  and in what subject area.
+*/
+@property (nonatomic, readonly, strong) SupplementalInformation * _Nonnull supplementalInformation;
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)decoder;
 - (void)encodeWithCoder:(NSCoder * _Nonnull)encoder;
