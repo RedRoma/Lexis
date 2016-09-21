@@ -154,7 +154,7 @@ extension WordOfTheDayViewController
         
         var definitionText = definition.terms.joined(separator: ", ")
         definitionText = definitionText.removingFirstCharacterIfWhitespace()
-        definitionText =  "‣ " + definitionText
+        definitionText =  "‣  " + definitionText
         
         cell.definitionLabel.text = definitionText
         
