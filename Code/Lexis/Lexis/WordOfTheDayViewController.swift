@@ -6,6 +6,7 @@
 //  Copyright © 2016 RedRoma, Inc. All rights reserved.
 //
 
+import AromaSwiftClient
 import Foundation
 import LexisDatabase
 import RedRomaColors
@@ -223,15 +224,6 @@ extension WordOfTheDayViewController
         return isSearching ? 0.0001 : 20
     }
     
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
-    {
-        if let searchEntryCell = cell as? SearchEntryCell
-        {
-            searchEntryCell.searchTextField.text = nil
-            searchEntryCell.searchTextField.becomeFirstResponder()
-        }
-    }
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         LOG.info("Selected row \(indexPath)")
@@ -247,8 +239,27 @@ extension WordOfTheDayViewController
             self.word = word
             self.isSearching = false
             self.searchTerm = ""
+            
         }
         
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
+    {
+        if let searchEntryCell = cell as? SearchEntryCell
+        {
+            searchEntryCell.searchTextField.text = nil
+            searchEntryCell.searchTextField.becomeFirstResponder()
+        }
+        
+        if notSearching && cell is WordNameCell
+        {
+            AromaClient.beginMessage(withTitle: "Word Viewed")
+                .addBody("\(word.forms.first!)").addLine(2)
+                .addBody("\(word.description)")
+                .withPriority(.low)
+                .send()
+        }
     }
 }
 
@@ -310,6 +321,8 @@ extension WordOfTheDayViewController
         
         if isSearching
         {
+            AromaClient.sendLowPriorityMessage(withTitle: "Search Enabled")
+            
             let sectionsToReload = IndexSet.init(integersIn: 0...1)
             let sectionsToRemove = IndexSet.init(integersIn: 2...3)
             

@@ -6,6 +6,7 @@
 //  Copyright © 2016 RedRoma, Inc. All rights reserved.
 //
 
+import AromaSwiftClient
 import Foundation
 import LexisDatabase
 import Sulcus
@@ -45,6 +46,12 @@ class MainViewController: UIViewController
         
         if Settings.instance.isFirstTime
         {
+            
+            AromaClient.beginMessage(withTitle: "First Time User")
+                .addBody("Showing them the welcome screen")
+                .withPriority(.medium)
+                .send()
+            
             goToWelcomeScreen()
         }
         else
@@ -64,9 +71,17 @@ class MainViewController: UIViewController
         
         self.async.addOperation
         {
+            let begin = Date()
             LOG.info("Initializing")
             LexisDatabase.instance.initialize()
-            LOG.info("Database initialized")
+            
+            let delay = abs(begin.timeIntervalSinceNow)
+            LOG.info("Database initialization took \(delay) seconds")
+            
+            AromaClient.beginMessage(withTitle: "LexisDatabase Initialized")
+                .addBody("Opertion took \(delay) seconds")
+                .withPriority(.low)
+                .send()
             
             self.main.addOperation
             {
