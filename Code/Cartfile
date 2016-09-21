@@ -1,9 +1,8 @@
-github "RedRoma/Sulcus" "develop"
-github "RedRoma/Lexis-Database" "develop"
-github "RedRoma/RedRomaColors" "develop"
-github "RedRoma/AromaSwiftClient" "develop"
+github "RedRoma/Sulcus"
+github "RedRoma/Lexis-Database"
+github "RedRoma/RedRomaColors"
+github "RedRoma/AromaSwiftClient"
 
 github "SirWellington/AlchemyGenerator" "develop"
 github "SirWellington/AlchemyUIKit" "develop"
 github "lexrus/LTMorphingLabel" "swift3"
-github "Ramotion/circle-menu"
