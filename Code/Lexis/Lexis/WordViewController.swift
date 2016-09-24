@@ -178,6 +178,7 @@ extension WordViewController
             return emptyCell
         }
         
+        cell.toolbar.clipsToBounds = true
         cell.shareCallback = { [word, tableView] cell in
             
             let titlePath = IndexPath(row: 0, section: 1)
