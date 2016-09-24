@@ -51,7 +51,6 @@ class WordOfTheDayViewController: UITableViewController
         super.viewDidLoad()
         
         LOG.info("Loaded W.O.D. View Controller")
-//        self.tableView.contentInset = UIEdgeInsetsMake(-35, 0, 0, 0)
         
         refreshControl = UIRefreshControl()
         refreshControl?.backgroundColor = UIColor.clear
@@ -231,6 +230,7 @@ extension WordOfTheDayViewController
         return isSearching ? 0.0001 : 20
     }
     
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         LOG.info("Selected row \(indexPath)")
@@ -250,6 +250,33 @@ extension WordOfTheDayViewController
         }
         
     }
+    
+    override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool
+    {
+        
+        if isSearching
+        {
+            let searchFieldRow = IndexPath(item: 0, section: 0)
+         
+            if noSearchResults
+            {
+                return false
+            }
+            else
+            {
+                return indexPath != searchFieldRow
+            }
+        }
+        else
+        {
+            let highlightedSection = indexPath.section
+            let headerSection = 0
+            let wordDescriptionSection = 3
+            
+            return highlightedSection != headerSection && highlightedSection != wordDescriptionSection
+        }
+    }
+    
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
     {
@@ -315,6 +342,11 @@ extension WordOfTheDayViewController
     fileprivate var anySearchResults: Bool
     {
         return searchResults.notEmpty
+    }
+    
+    fileprivate var noSearchResults: Bool
+    {
+        return !anySearchResults
     }
     
     @IBAction func onSearch(_ sender: AnyObject)

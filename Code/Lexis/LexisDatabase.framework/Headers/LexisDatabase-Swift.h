@@ -179,6 +179,13 @@ SWIFT_CLASS("_TtC13LexisDatabase9LexisWord")
 @interface LexisWord (SWIFT_EXTENSION(LexisDatabase))
 @end
 
+@class NSDictionary;
+
+@interface LexisWord (SWIFT_EXTENSION(LexisDatabase))
+@property (nonatomic, readonly, strong) NSDictionary * _Nonnull json;
+- (nullable instancetype)initWithJson:(NSDictionary * _Nonnull)json;
+@end
+
 
 @interface LexisWord (SWIFT_EXTENSION(LexisDatabase))
 @property (nonatomic, readonly) NSInteger hashValue;
