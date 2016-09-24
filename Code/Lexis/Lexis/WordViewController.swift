@@ -16,20 +16,19 @@ import UIKit
 class WordViewController: UITableViewController
 {
     
+    //WORDS
+    //========================================================================
     fileprivate var words: [LexisWord] { return [word] }
     fileprivate var word: LexisWord = LexisDatabase.instance.anyWord
+    
+    //SEARCH
+     //========================================================================
     fileprivate var searchResults: [LexisWord] = []
     fileprivate var searchTerm = ""
     {
         didSet { self.updateSearchResults() }
     }
     
-    fileprivate let main = OperationQueue.main
-    fileprivate let async = OperationQueue()
-    
-    fileprivate var emptyCell = UITableViewCell()
-    
-    //MARK: Searching
     fileprivate var isSearching = false
     {
         didSet
@@ -45,6 +44,18 @@ class WordViewController: UITableViewController
     
     fileprivate let numberOfSectionsWhenSearching = 2
     fileprivate let numberOfSectionsWhenNotSearching = 4
+    
+    //ASYNC
+    //========================================================================
+    fileprivate let main = OperationQueue.main
+    fileprivate let async = OperationQueue()
+    
+    fileprivate var emptyCell = UITableViewCell()
+    
+    //EXPANDING CELLS
+    //========================================================================
+    fileprivate var expandedCells: [IndexPath: Bool] = [:]
+    
     
     override func viewDidLoad()
     {
@@ -145,6 +156,18 @@ extension WordViewController
     
     private func createWordDefinitionCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
     {
+        if isExpanded(indexPath)
+        {
+            return createExpandedWordDefinitionCell(tableView, atIndexPath: indexPath)
+        }
+        else
+        {
+            return createCollapsedWordDefinitionCell(tableView, atIndexPath: indexPath)
+        }
+    }
+    
+    private func createCollapsedWordDefinitionCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
+    {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "DefinitionCell", for: indexPath) as? WordDefinitionCell
         else { return emptyCell }
         
@@ -158,6 +181,25 @@ extension WordViewController
         cell.definitionLabel.text = definitionText
         
         styleDefinitionCell(cell, for: indexPath)
+        
+        return cell
+    }
+    
+    private func createExpandedWordDefinitionCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
+    {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ExpandedDefinitionCell", for: indexPath) as? ExpandedDefinitionCell
+        else
+        {
+            return emptyCell
+        }
+        
+        let row = indexPath.row
+        let definition = word.definitions[row]
+        
+        var definitionText = definition.terms.joined(separator: "\n")
+        definitionText = definitionText.removingFirstCharacterIfWhitespace()
+        
+        cell.definitionTextView.text = definitionText
         
         return cell
     }
@@ -246,7 +288,20 @@ extension WordViewController
             self.word = word
             self.isSearching = false
             self.searchTerm = ""
-            
+        }
+        else
+        {
+            if isDefinitionCell(indexPath: indexPath)
+            {
+                if isExpanded(indexPath)
+                {
+                    collapseDefinition(atIndexPath: indexPath)
+                }
+                else
+                {
+                    expandDefinition(atIndexPath: indexPath)
+                }
+            }
         }
         
     }
@@ -361,6 +416,8 @@ extension WordViewController
         if isSearching
         {
             AromaClient.sendLowPriorityMessage(withTitle: "Search Enabled")
+            
+            self.clearAllExpandedCells()
             
             let sectionsToReload = IndexSet.init(integersIn: 0...1)
             let sectionsToRemove = IndexSet.init(integersIn: 2...3)
@@ -578,4 +635,39 @@ extension WordViewController: UITextFieldDelegate
         self.searchTerm = text
     }
     
+}
+
+//MARK: Expanding Cells
+//========================================================================
+extension WordViewController
+{
+    func isDefinitionCell(indexPath: IndexPath) -> Bool
+    {
+        guard notSearching else { return false }
+        
+        let section = indexPath.section
+        return section == 2
+    }
+    
+    func isExpanded(_ indexPath: IndexPath) -> Bool
+    {
+        return self.expandedCells[indexPath] != nil
+    }
+    
+    func expandDefinition(atIndexPath indexPath: IndexPath)
+    {
+        self.expandedCells[indexPath] = true
+        self.tableView.reloadRows(at: [indexPath], with: .automatic)
+    }
+    
+    func collapseDefinition(atIndexPath indexPath: IndexPath)
+    {
+        self.expandedCells[indexPath] = nil
+        self.tableView.reloadRows(at: [indexPath], with: .automatic)
+    }
+    
+    func clearAllExpandedCells()
+    {
+        self.expandedCells.removeAll()
+    }
 }
