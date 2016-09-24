@@ -21,7 +21,7 @@ class Settings
     {
         get
         {
-            return (userDefaults.object(forKey: Keys.isFirstTime) as? Bool) ?? false
+            return (userDefaults.object(forKey: Keys.isFirstTime) as? Bool) ?? true
         }
         set(value)
         {

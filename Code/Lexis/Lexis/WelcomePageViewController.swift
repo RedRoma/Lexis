@@ -88,6 +88,12 @@ private extension WelcomePageViewController
         {
             viewController.pageInfo = pageInfo
             viewController.index = index
+            
+            viewController.onDoneCallback = { _ in
+                LOG.info("Dimissing Welcome screens.")
+                self.presentingViewController?.dismiss(animated: true, completion: nil)
+            }
+            
             return viewController
         }
         

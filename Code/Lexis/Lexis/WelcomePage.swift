@@ -17,13 +17,15 @@ class WelcomePage
     let subtitle: String
     let image: UIImage
     let lineColor: UIColor
+    let isLast: Bool
     
-    init(title: String, subtitle: String, image: UIImage, lineColor: UIColor)
+    init(title: String, subtitle: String, image: UIImage, lineColor: UIColor, isLast: Bool = false)
     {
         self.title = title
         self.subtitle = subtitle
         self.image = image
         self.lineColor = lineColor
+        self.isLast = isLast
     }
     
     enum InvalidArgumentException: Error
@@ -38,6 +40,7 @@ class WelcomePage
         var subtitle: String? = nil
         var image: UIImage? = nil
         var lineColor: UIColor = RedRomaColors.blackPrimary
+        var isLast = false
         
         static func new() -> Builder
         {
@@ -68,6 +71,12 @@ class WelcomePage
             return self
         }
         
+        func asLast() -> Builder
+        {
+            self.isLast = true
+            return self
+        }
+        
         func build() -> WelcomePage?
         {
             guard let title = title, title.notEmpty
@@ -91,7 +100,7 @@ class WelcomePage
                 return nil
             }
             
-            return WelcomePage(title: title, subtitle: subtitle, image: image, lineColor: lineColor)
+            return WelcomePage(title: title, subtitle: subtitle, image: image, lineColor: lineColor, isLast: isLast)
         }
     }
 }
@@ -125,6 +134,7 @@ extension WelcomePage
         .with(subtitle: "THE LEXICON OF POWER")
         .with(image: #imageLiteral(resourceName: "Art-Cicero"))
         .with(lineColor: RedRomaColors.redPrimary)
+        .asLast()
         .build()
     
     static let pages = [first, second, third, fourth]

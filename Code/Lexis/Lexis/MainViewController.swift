@@ -27,17 +27,6 @@ class MainViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        if Settings.instance.isFirstTime
-        {
-            LOG.info("First time running this app")
-            Settings.instance.isFirstTime = false
-        }
-        else
-        {
-            LOG.info("This is not the first time running this App")
-        }
-        
     }
     
     override func viewDidAppear(_ animated: Bool)
@@ -46,6 +35,7 @@ class MainViewController: UIViewController
         
         if Settings.instance.isFirstTime
         {
+            LOG.info("First time running this App.")
             
             AromaClient.beginMessage(withTitle: "First Time User")
                 .addBody("Showing them the welcome screen")
@@ -53,9 +43,12 @@ class MainViewController: UIViewController
                 .send()
             
             goToWelcomeScreen()
+            
+            Settings.instance.isFirstTime = false
         }
         else
         {
+            LOG.info("This is not the first time this app has run.")
             goToWordOfTheDay()
         }
     }
@@ -63,10 +56,23 @@ class MainViewController: UIViewController
     private func goToWelcomeScreen()
     {
         self.performSegue(withIdentifier: "ToWelcome", sender: self)
+        
+        initializeDictionary()
+        {
+            
+        }
     }
     
     private func goToWordOfTheDay()
     {
+        initializeDictionary()
+        {
+            self.performSegue(withIdentifier: "ToWordOfTheDay", sender: nil)
+        }
+    }
+    
+    private func initializeDictionary(_ callback: @escaping () -> Void) {
+        
         progressIndicator.startAnimating()
         
         self.async.addOperation
@@ -95,11 +101,10 @@ class MainViewController: UIViewController
             self.main.addOperation
             {
                 self.progressIndicator.stopAnimating()
-                self.performSegue(withIdentifier: "ToWordOfTheDay", sender: nil)
+                callback()
             }
         }
-        
-       
+
     }
     
 }

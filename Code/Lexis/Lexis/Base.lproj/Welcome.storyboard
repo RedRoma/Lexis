@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WKa-lF-JFp">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A319" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WKa-lF-JFp">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -11,6 +11,9 @@
     <customFonts key="customFonts">
         <array key="Cinzel-Regular.otf">
             <string>Cinzel-Regular</string>
+        </array>
+        <array key="Raleway regular.ttf">
+            <string>Raleway-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -48,6 +51,15 @@
                                     <constraint firstAttribute="width" secondItem="1ro-35-nno" secondAttribute="height" multiplier="1:1" id="juA-O3-atv"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97K-ku-Ao7">
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="0.72549019609999998" green="0.050980392159999999" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onDone:" destination="xSu-fu-JCG" eventType="touchUpInside" id="Qk6-fq-RjT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -55,8 +67,10 @@
                             <constraint firstItem="If2-mT-rf8" firstAttribute="centerX" secondItem="ui5-n0-Zot" secondAttribute="centerX" id="Mjh-Ay-Kii"/>
                             <constraint firstItem="If2-mT-rf8" firstAttribute="top" secondItem="Az3-k2-NBQ" secondAttribute="bottom" constant="24" id="UyH-ME-C2H"/>
                             <constraint firstItem="If2-mT-rf8" firstAttribute="width" secondItem="ui5-n0-Zot" secondAttribute="width" multiplier="0.7" id="Ycq-kI-MbG"/>
+                            <constraint firstItem="97K-ku-Ao7" firstAttribute="top" secondItem="Gbi-Ae-bXY" secondAttribute="bottom" constant="8" id="aeT-ce-cWI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Sak-Q6-cVP" secondAttribute="trailing" constant="8" id="au7-eZ-goa"/>
                             <constraint firstItem="Az3-k2-NBQ" firstAttribute="centerX" secondItem="Sak-Q6-cVP" secondAttribute="centerX" id="b0d-sB-ahv"/>
+                            <constraint firstItem="97K-ku-Ao7" firstAttribute="trailing" secondItem="ui5-n0-Zot" secondAttribute="trailingMargin" id="de7-5y-nPs"/>
                             <constraint firstItem="1ro-35-nno" firstAttribute="top" relation="greaterThanOrEqual" secondItem="If2-mT-rf8" secondAttribute="bottom" constant="8" id="esR-PC-ZSK"/>
                             <constraint firstItem="Sak-Q6-cVP" firstAttribute="leading" secondItem="ui5-n0-Zot" secondAttribute="leadingMargin" constant="8" id="j6K-as-yul"/>
                             <constraint firstItem="1ro-35-nno" firstAttribute="leading" secondItem="ui5-n0-Zot" secondAttribute="leading" id="nWY-xP-oay"/>
@@ -70,6 +84,7 @@
                     <connections>
                         <outlet property="artImageView" destination="1ro-35-nno" id="Qs0-WC-WZW"/>
                         <outlet property="decorativeDivider" destination="If2-mT-rf8" id="kkU-1S-Xfg"/>
+                        <outlet property="doneButton" destination="97K-ku-Ao7" id="4KM-qI-M1V"/>
                         <outlet property="subtitleLabel" destination="Az3-k2-NBQ" id="b7n-sR-wCP"/>
                         <outlet property="titleLabel" destination="Sak-Q6-cVP" id="9l2-tg-m6m"/>
                     </connections>
