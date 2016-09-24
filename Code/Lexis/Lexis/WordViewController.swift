@@ -142,17 +142,6 @@ extension WordViewController
         return cell
     }
     
-    private func createWordTitleCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
-    {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "WordCell", for: indexPath) as? WordNameCell
-        else { return emptyCell }
-        
-        let title = word.forms.first ?? "Accipio"
-        cell.wordNameLabel.text = title
-        cell.wordInformationLabel.text = wordTypeInfo(for: word)
-        
-        return cell
-    }
     
     private func createWordDefinitionCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
     {
@@ -234,15 +223,15 @@ extension WordViewController
         }
         else
         {
-            if isDefinitionCell(indexPath: indexPath)
+            if isExpandable(indexPath: indexPath)
             {
                 if isExpanded(indexPath)
                 {
-                    collapseDefinition(atIndexPath: indexPath)
+                    collapse(atIndexPath: indexPath)
                 }
                 else
                 {
-                    expandDefinition(atIndexPath: indexPath)
+                    expand(atIndexPath: indexPath)
                 }
             }
         }
@@ -293,44 +282,6 @@ extension WordViewController
                 .send()
         }
     }
-}
-
-//MARK: Word Information
-fileprivate extension WordViewController
-{
-    
-    func wordTypeInfo(for word: LexisWord) -> String
-    {
-        let type = word.wordType
-        
-        switch type
-        {
-            case .Adjective :
-                return "Adjective"
-            case .Adverb:
-                return "Adverb"
-            case .Conjunction:
-                return "Conjunction"
-            case .Interjection:
-                return "Conjunction"
-            case let .Noun(declension, gender):
-                return "\(declension.name) Noun, (\(gender.name))"
-            case .Numeral:
-                return "Numeral"
-            case .PersonalPronoun:
-                return "Personal Pronoun"
-            case let .Preposition(declension):
-                return "Preposition \(declension.name)"
-            case let .Verb(conjugation, verbType):
-                return "Verb \(conjugation.shortNumber) \(verbType.name)"
-            default:
-                break
-        }
-        
-        
-        return ""
-    }
-    
 }
 
 
