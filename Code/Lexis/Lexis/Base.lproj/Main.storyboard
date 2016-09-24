@@ -291,11 +291,12 @@
                                                         <constraint firstAttribute="height" constant="1" id="uEf-YS-bKb"/>
                                                     </constraints>
                                                 </view>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="cast/throw/fling/drive out/up, extraction" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyt-Fy-2F0">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="cast/throw/fling/drive out/up, extraction" translatesAutoresizingMaskIntoConstraints="NO" id="dyt-Fy-2F0">
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="21"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <dataDetectorType key="dataDetectorTypes" lookupSuggestion="YES"/>
                                                     <variation key="widthClass=regular">
                                                         <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="27"/>
                                                     </variation>

@@ -18,18 +18,18 @@ class WordViewController: UITableViewController
     
     //WORDS
     //========================================================================
-    fileprivate var words: [LexisWord] { return [word] }
-    fileprivate var word: LexisWord = LexisDatabase.instance.anyWord
+    internal var words: [LexisWord] { return [word] }
+    internal var word: LexisWord = LexisDatabase.instance.anyWord
     
     //SEARCH
      //========================================================================
-    fileprivate var searchResults: [LexisWord] = []
-    fileprivate var searchTerm = ""
+    internal var searchResults: [LexisWord] = []
+    internal var searchTerm = ""
     {
         didSet { self.updateSearchResults() }
     }
     
-    fileprivate var isSearching = false
+    internal var isSearching = false
     {
         didSet
         {
@@ -37,24 +37,24 @@ class WordViewController: UITableViewController
         }
     }
     
-    fileprivate var notSearching: Bool
+    internal var notSearching: Bool
     {
         return !isSearching
     }
     
-    fileprivate let numberOfSectionsWhenSearching = 2
-    fileprivate let numberOfSectionsWhenNotSearching = 4
+    internal let numberOfSectionsWhenSearching = 2
+    internal let numberOfSectionsWhenNotSearching = 4
     
     //ASYNC
     //========================================================================
-    fileprivate let main = OperationQueue.main
-    fileprivate let async = OperationQueue()
+    internal let main = OperationQueue.main
+    internal let async = OperationQueue()
     
-    fileprivate var emptyCell = UITableViewCell()
+    internal var emptyCell = UITableViewCell()
     
     //EXPANDING CELLS
     //========================================================================
-    fileprivate var expandedCells: [IndexPath: Bool] = [:]
+    internal var expandedCells: [IndexPath: Bool] = [:]
     
     
     override func viewDidLoad()
@@ -166,64 +166,7 @@ extension WordViewController
         }
     }
     
-    private func createCollapsedWordDefinitionCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
-    {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DefinitionCell", for: indexPath) as? WordDefinitionCell
-        else { return emptyCell }
-        
-        let row = indexPath.row
-        let definition = word.definitions[row]
-        
-        var definitionText = definition.terms.joined(separator: ", ")
-        definitionText = definitionText.removingFirstCharacterIfWhitespace()
-        definitionText =  "‣  " + definitionText
-        
-        cell.definitionLabel.text = definitionText
-        
-        styleDefinitionCell(cell, for: indexPath)
-        
-        return cell
-    }
     
-    private func createExpandedWordDefinitionCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
-    {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ExpandedDefinitionCell", for: indexPath) as? ExpandedDefinitionCell
-        else
-        {
-            return emptyCell
-        }
-        
-        let row = indexPath.row
-        let definition = word.definitions[row]
-        
-        var definitionText = definition.terms.joined(separator: "\n")
-        definitionText = definitionText.removingFirstCharacterIfWhitespace()
-        
-        cell.definitionTextView.text = definitionText
-        
-        return cell
-    }
-    
-    private func styleDefinitionCell(_ cell: WordDefinitionCell, for indexPath: IndexPath)
-    {
-        let row = indexPath.row
-        let isFirst = row == 0
-        let isLast = row == self.word.definitions.count - 1
-        
-        cell.bottomLine.isHidden = true
-        cell.topLine.isHidden = true
-        
-        if isFirst
-        {
-            cell.topLine.isHidden = false
-        }
-        
-        if isLast
-        {
-            cell.bottomLine.isHidden = false
-        }
-        
-    }
     
     private func createFooterCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
     {
@@ -264,7 +207,7 @@ extension WordViewController
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
     {
-        return isSearching ? 0.0001 : 20
+        return isSearching ? 0.0001 : 15
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat
@@ -390,240 +333,6 @@ fileprivate extension WordViewController
     
 }
 
-//MARK: Search Logic
-extension WordViewController
-{
-    
-    fileprivate var anySearchResults: Bool
-    {
-        return searchResults.notEmpty
-    }
-    
-    fileprivate var noSearchResults: Bool
-    {
-        return !anySearchResults
-    }
-    
-    @IBAction func onSearch(_ sender: AnyObject)
-    {
-        isSearching = !isSearching
-    }
-    
-    fileprivate func updateTableForSearch()
-    {
-        let wasSearching = !isSearching
-        
-        if isSearching
-        {
-            AromaClient.sendLowPriorityMessage(withTitle: "Search Enabled")
-            
-            self.clearAllExpandedCells()
-            
-            let sectionsToReload = IndexSet.init(integersIn: 0...1)
-            let sectionsToRemove = IndexSet.init(integersIn: 2...3)
-            
-            self.tableView.beginUpdates()
-            self.tableView.deleteSections(sectionsToRemove, with: .bottom)
-            self.tableView.reloadSections(sectionsToReload, with: .automatic)
-            self.tableView.endUpdates()
-        }
-        else if wasSearching
-        {
-            let sectionsToReload = IndexSet.init(integersIn: 0...1)
-            let sectionsToAdd = IndexSet.init(integersIn: 2...3)
-            
-            self.tableView.beginUpdates()
-            self.tableView.insertSections(sectionsToAdd, with: .bottom)
-            self.tableView.reloadSections(sectionsToReload, with: .automatic)
-            self.tableView.endUpdates()
-        }
-        else
-        {
-            self.tableView.reloadData()
-        }
-    }
-    
-    fileprivate func numberOfRowsWhenNotSearching(atSection section: Int) -> Int
-    {
-        switch section
-        {
-            case 0, 1, 3 : return 1
-            default : break
-        }
-        
-        let numberOfDefinitions = words.first!.definitions.count
-        return numberOfDefinitions
-    }
-    
-    fileprivate func numberOfRowsWhenSearching(atSection section: Int) -> Int
-    {
-        if section == 0
-        {
-            return 1
-        }
-        
-        if anySearchResults
-        {
-            return  searchResults.count
-        }
-        else
-        {
-            //This is one is for the empty art view
-            return 1
-        }
-    }
-    
-    fileprivate func createCellWhenSearching(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
-    {
-        let section = indexPath.section
-        
-        //Is the Search Text Field
-        if section == 0
-        {
-            return createSearchTextFieldCell(tableView, atIndexPath: indexPath)
-        }
-      
-        if anySearchResults
-        {
-            return createSearchResultCell(tableView, atIndexPath: indexPath)
-        }
-        else
-        {
-            return createEmptySearchResultsCell(tableView, atIndexPath: indexPath)
-        }
-        
-    }
-    
-    private func createSearchTextFieldCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
-    {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchEntryCell", for: indexPath) as? SearchEntryCell
-        else
-        {
-            LOG.warn("Failed to load SearchEntryCell")
-            return emptyCell
-        }
-        
-        cell.searchTextField.addTarget(self, action: #selector(self.editingDidChange(_:)), for: .editingChanged)
-        
-        return cell
-    }
-    
-    private func createSearchResultCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
-    {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchResultCell", for: indexPath) as? SearchResultCell
-        else
-        {
-            LOG.error("Could not load SearchResultCell")
-            return emptyCell
-        }
-        
-        let row = indexPath.row
-        
-        let word = searchResults[row]
-        
-        cell.wordLabel.text = word.forms.first!
-        
-        let wordInfo = shortDescription(for: word)
-        cell.wordInformationLabel.text = wordInfo
-        
-        return cell
-    }
-    
-    private func createEmptySearchResultsCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
-    {
-        guard let emptySearchCell = tableView.dequeueReusableCell(withIdentifier: "SearchEmptyCell", for: indexPath) as? SearchEmptyCell
-        else
-        {
-            LOG.error("Failed to load SearchEmptyCell")
-            return emptyCell
-        }
-        
-        return emptySearchCell
-    }
-    
-    private func shortDescription(for word: LexisWord) -> String
-    {
-        let type = word.wordType
-        
-        switch type
-        {
-            case .Adjective:
-                return "(Adj)"
-            
-            case .Adverb:
-                return "(Adv)"
-           
-            case .Conjunction:
-                return "(Conj)"
-            
-            case .Interjection:
-                return "(Interj)"
-            
-            case let .Noun(_, gender) :
-                return "(Noun, \(gender.letter))"
-           
-            case .Numeral:
-                return "(Num)"
-            
-            case .PersonalPronoun:
-                return "(Pers. Pron)"
-           
-            case .Preposition:
-                return "(Prep)"
-            
-            case .Pronoun:
-                return "(Pron)"
-            
-            case let .Verb(conjugation, verbType):
-                let verbTypeShort = verbType.shortName
-                return "(V) (\(conjugation.shortNumber)) (\(verbTypeShort))"
-           
-            default:
-                break
-        }
-        
-        return "(Uknwn)"
-    }
-    
-    fileprivate func updateSearchResults()
-    {
-        guard searchTerm.notEmpty
-        else
-        {
-            return
-        }
-        
-        self.async.addOperation
-        { [weak self, searchTerm] in
-            
-            //First search words starting with
-            var results = LexisDatabase.instance.seaarchForms(startingWith: searchTerm).first(numberOfElements: 200)
-            
-            //If no results, search through for words containing the search term.
-            //At this point they could be at any position.
-            if results.isEmpty
-            {
-                results = LexisDatabase.instance.searchForms(withTerm: searchTerm).first(numberOfElements: 100)
-            }
-            
-            //If still no results, search through the word's definition.
-            //This might happen, for example, if the user enters an English word
-            if results.isEmpty
-            {
-                results = LexisDatabase.instance.searchDefinitions(withTerm: searchTerm).first(numberOfElements: 50)
-            }
-            
-            guard let `self` = self else { return }
-            
-            self.main.addOperation
-            {
-                self.searchResults = results
-                let searchResultsSection = IndexSet(integer: 1)
-                self.tableView?.reloadSections(searchResultsSection, with: .automatic)
-            }
-        }
-    }
-}
 
 //MARK: TextField Delegate
 extension WordViewController: UITextFieldDelegate
@@ -635,39 +344,4 @@ extension WordViewController: UITextFieldDelegate
         self.searchTerm = text
     }
     
-}
-
-//MARK: Expanding Cells
-//========================================================================
-extension WordViewController
-{
-    func isDefinitionCell(indexPath: IndexPath) -> Bool
-    {
-        guard notSearching else { return false }
-        
-        let section = indexPath.section
-        return section == 2
-    }
-    
-    func isExpanded(_ indexPath: IndexPath) -> Bool
-    {
-        return self.expandedCells[indexPath] != nil
-    }
-    
-    func expandDefinition(atIndexPath indexPath: IndexPath)
-    {
-        self.expandedCells[indexPath] = true
-        self.tableView.reloadRows(at: [indexPath], with: .automatic)
-    }
-    
-    func collapseDefinition(atIndexPath indexPath: IndexPath)
-    {
-        self.expandedCells[indexPath] = nil
-        self.tableView.reloadRows(at: [indexPath], with: .automatic)
-    }
-    
-    func clearAllExpandedCells()
-    {
-        self.expandedCells.removeAll()
-    }
 }
