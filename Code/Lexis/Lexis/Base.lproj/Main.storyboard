@@ -66,13 +66,13 @@
             <objects>
                 <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="2j9-lJ-S9d" customClass="WordOfTheDayViewController" customModule="Lexis" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="80" sectionHeaderHeight="18" sectionFooterHeight="18" id="Po1-wa-b3g">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="936"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.72549019609999998" green="0.050980392159999999" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="80" id="lov-X9-60s" customClass="HeaderCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lov-X9-60s" id="Hpk-15-DIY">
                                     <frame key="frameInset" width="375" height="80"/>
@@ -109,7 +109,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordCell" rowHeight="120" id="rZq-bg-NmT" customClass="WordNameCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="135.5" width="375" height="120"/>
+                                <rect key="frame" x="0.0" y="136" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rZq-bg-NmT" id="AVI-8j-Fve">
                                     <frame key="frameInset" width="375" height="120"/>
@@ -171,7 +171,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DefinitionCell" rowHeight="50" id="BBa-83-aoe" customClass="WordDefinitionCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="255.5" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="256" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BBa-83-aoe" id="8qX-bT-sJV">
                                     <frame key="frameInset" width="375" height="50"/>
@@ -255,7 +255,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordDescriptionCell" rowHeight="80" id="z8S-lO-xO6" customClass="WordDescriptionCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="305.5" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="306" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z8S-lO-xO6" id="Ts9-J8-yR0">
                                     <frame key="frameInset" width="375" height="80"/>
@@ -304,7 +304,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SearchEntryCell" rowHeight="120" id="y98-iL-76Q" customClass="SearchEntryCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="385.5" width="375" height="120"/>
+                                <rect key="frame" x="0.0" y="386" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y98-iL-76Q" id="Ebc-9P-3PY">
                                     <frame key="frameInset" width="375" height="120"/>
@@ -354,7 +354,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchResultCell" rowHeight="60" id="5dG-AZ-tXl" customClass="SearchResultCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="505.5" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="506" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5dG-AZ-tXl" id="pUW-DS-8N1">
                                     <frame key="frameInset" width="375" height="60"/>
@@ -410,20 +410,16 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SearchEmptyCell" rowHeight="500" id="fPX-Dd-cW0" customClass="SearchEmptyCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="565.5" width="375" height="500"/>
+                                <rect key="frame" x="0.0" y="566" width="375" height="500"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fPX-Dd-cW0" id="W7f-Hg-6c3">
                                     <frame key="frameInset" width="375" height="500"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Art-Open-Book" translatesAutoresizingMaskIntoConstraints="NO" id="Kci-Cc-PYq">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Art-Open-Book" translatesAutoresizingMaskIntoConstraints="NO" id="Kci-Cc-PYq">
                                             <color key="tintColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="Kci-Cc-PYq" secondAttribute="height" multiplier="1:1" id="Cgh-Mq-NXJ"/>
-                                                <constraint firstAttribute="height" constant="375" id="aN1-4b-q52">
-                                                    <variation key="widthClass=regular" constant="500"/>
-                                                    <variation key="heightClass=compact-widthClass=regular" constant="300"/>
-                                                </constraint>
                                             </constraints>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ga-uL-8fb" userLabel="Highlight Line">
@@ -445,7 +441,7 @@
                                     <constraints>
                                         <constraint firstItem="6Ga-uL-8fb" firstAttribute="width" secondItem="pui-F9-dKm" secondAttribute="width" multiplier="0.7" id="8A0-hc-ER2"/>
                                         <constraint firstItem="Kci-Cc-PYq" firstAttribute="leading" secondItem="W7f-Hg-6c3" secondAttribute="leading" id="EmG-3v-CaK"/>
-                                        <constraint firstItem="Kci-Cc-PYq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Ga-uL-8fb" secondAttribute="bottom" constant="48" id="Jsu-Re-GGE"/>
+                                        <constraint firstItem="Kci-Cc-PYq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Ga-uL-8fb" secondAttribute="bottom" constant="24" id="Jsu-Re-GGE"/>
                                         <constraint firstItem="pui-F9-dKm" firstAttribute="top" secondItem="W7f-Hg-6c3" secondAttribute="topMargin" constant="24" id="PIS-yN-ZJx"/>
                                         <constraint firstItem="Kci-Cc-PYq" firstAttribute="centerX" secondItem="W7f-Hg-6c3" secondAttribute="centerX" id="TjZ-Pp-Mx7"/>
                                         <constraint firstItem="6Ga-uL-8fb" firstAttribute="top" secondItem="pui-F9-dKm" secondAttribute="bottom" constant="16" id="iOg-x3-GLo"/>
@@ -453,6 +449,7 @@
                                         <constraint firstItem="6Ga-uL-8fb" firstAttribute="centerX" secondItem="pui-F9-dKm" secondAttribute="centerX" id="t6w-74-8lH"/>
                                         <constraint firstAttribute="bottom" secondItem="Kci-Cc-PYq" secondAttribute="bottom" id="tmf-ZN-i0g"/>
                                         <constraint firstItem="pui-F9-dKm" firstAttribute="centerX" secondItem="W7f-Hg-6c3" secondAttribute="centerX" id="ynA-DX-MzB"/>
+                                        <constraint firstItem="Kci-Cc-PYq" firstAttribute="top" secondItem="6Ga-uL-8fb" secondAttribute="bottom" constant="48" id="zIU-OI-aRA"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -496,6 +493,8 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1000"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LSR-3L-20H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -530,7 +529,7 @@
         <scene sceneID="AcH-VC-WgK">
             <objects>
                 <navigationController id="5DF-8E-0sR" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" id="enL-zh-NGv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="enL-zh-NGv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.95686274509803915" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
