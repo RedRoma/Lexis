@@ -77,11 +77,20 @@ class MainViewController: UIViewController
             
             let delay = abs(begin.timeIntervalSinceNow)
             LOG.info("Database initialization took \(delay) seconds")
+            let threshold = 4.0
             
-            AromaClient.beginMessage(withTitle: "LexisDatabase Initialized")
+            let message = AromaClient.beginMessage(withTitle: "LexisDatabase Initialized")
                 .addBody("Operation took \(delay) seconds")
                 .withPriority(.low)
-                .send()
+            
+            if delay > threshold
+            {
+                message.withPriority(.high).send()
+            }
+            else
+            {
+                message.withPriority(.medium).send()
+            }
             
             self.main.addOperation
             {

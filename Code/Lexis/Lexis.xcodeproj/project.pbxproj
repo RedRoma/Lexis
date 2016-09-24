@@ -76,6 +76,8 @@
 		DE6C286E1D96FE1900BB1D33 /* WordViewController+ExpandingCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6C286D1D96FE1900BB1D33 /* WordViewController+ExpandingCells.swift */; };
 		DE6C28701D96FEB100BB1D33 /* WordViewController+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6C286F1D96FEB100BB1D33 /* WordViewController+Search.swift */; };
 		DE6C28721D97022600BB1D33 /* ExpandedWordNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6C28711D97022600BB1D33 /* ExpandedWordNameCell.swift */; };
+		DE6C28741D97071E00BB1D33 /* ActionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6C28731D97071E00BB1D33 /* ActionsCell.swift */; };
+		DE6C28761D9708BC00BB1D33 /* WordViewController+Sharing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6C28751D9708BC00BB1D33 /* WordViewController+Sharing.swift */; };
 		DEDB43531D925AA600BF092E /* AlchemyGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDB43491D925AA600BF092E /* AlchemyGenerator.framework */; };
 		DEDB43551D925AA600BF092E /* AlchemyUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDB434A1D925AA600BF092E /* AlchemyUIKit.framework */; };
 		DEDB43571D925AA600BF092E /* AromaSwiftClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDB434B1D925AA600BF092E /* AromaSwiftClient.framework */; };
@@ -236,6 +238,8 @@
 		DE6C286D1D96FE1900BB1D33 /* WordViewController+ExpandingCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WordViewController+ExpandingCells.swift"; sourceTree = "<group>"; };
 		DE6C286F1D96FEB100BB1D33 /* WordViewController+Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WordViewController+Search.swift"; sourceTree = "<group>"; };
 		DE6C28711D97022600BB1D33 /* ExpandedWordNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandedWordNameCell.swift; sourceTree = "<group>"; };
+		DE6C28731D97071E00BB1D33 /* ActionsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionsCell.swift; sourceTree = "<group>"; };
+		DE6C28751D9708BC00BB1D33 /* WordViewController+Sharing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WordViewController+Sharing.swift"; sourceTree = "<group>"; };
 		DEDB43491D925AA600BF092E /* AlchemyGenerator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlchemyGenerator.framework; sourceTree = "<group>"; };
 		DEDB434A1D925AA600BF092E /* AlchemyUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlchemyUIKit.framework; sourceTree = "<group>"; };
 		DEDB434B1D925AA600BF092E /* AromaSwiftClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AromaSwiftClient.framework; sourceTree = "<group>"; };
@@ -403,6 +407,7 @@
 				DE5D14281D87E15B00B8B3CC /* WordViewController.swift */,
 				DE6C286D1D96FE1900BB1D33 /* WordViewController+ExpandingCells.swift */,
 				DE6C286F1D96FEB100BB1D33 /* WordViewController+Search.swift */,
+				DE6C28751D9708BC00BB1D33 /* WordViewController+Sharing.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -419,6 +424,7 @@
 				DE4DA2CB1D8E37B8003183F4 /* SearchEmptyCell.swift */,
 				DE6C286B1D96FA3000BB1D33 /* ExpandedDefinitionCell.swift */,
 				DE6C28711D97022600BB1D33 /* ExpandedWordNameCell.swift */,
+				DE6C28731D97071E00BB1D33 /* ActionsCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -619,6 +625,7 @@
 				DE6C286E1D96FE1900BB1D33 /* WordViewController+ExpandingCells.swift in Sources */,
 				DE0E000A1D7E9A8A00B70D62 /* WelcomePageTemplateViewController.swift in Sources */,
 				DE6C28721D97022600BB1D33 /* ExpandedWordNameCell.swift in Sources */,
+				DE6C28741D97071E00BB1D33 /* ActionsCell.swift in Sources */,
 				DE0EFFD91D7E856500B70D62 /* Strings+.swift in Sources */,
 				DE5D143D1D8847D100B8B3CC /* WordDefinitionCell.swift in Sources */,
 				DE4DA2D21D8E3F5C003183F4 /* LexisWord+.swift in Sources */,
@@ -630,6 +637,7 @@
 				DE5D143B1D8847BD00B8B3CC /* WordNameCell.swift in Sources */,
 				DE4DA2C61D8E37A5003183F4 /* SearchEntryCell.swift in Sources */,
 				DE6C28701D96FEB100BB1D33 /* WordViewController+Search.swift in Sources */,
+				DE6C28761D9708BC00BB1D33 /* WordViewController+Sharing.swift in Sources */,
 				DE4DA2D81D8E667E003183F4 /* ViewControllers+.swift in Sources */,
 				DE5D143F1D8847E600B8B3CC /* WordDescriptionCell.swift in Sources */,
 				DEDB439C1D925F5700BF092E /* LexisView.swift in Sources */,

@@ -451,8 +451,63 @@
                                     <outlet property="wordDescriptionLabel" destination="6UX-of-etj" id="iI0-Id-nRd"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActionsCell" rowHeight="80" id="HZh-bU-rYz" customClass="ActionsCell" customModule="Lexis" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="661" width="375" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HZh-bU-rYz" id="VFg-Eq-lLG">
+                                    <frame key="frameInset" width="375" height="80"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QvT-fB-tRU" userLabel="Card" customClass="LexisView" customModule="Lexis" customModuleProvider="target">
+                                            <subviews>
+                                                <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEa-Zl-plO">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="8E9-Ep-1Re"/>
+                                                    </constraints>
+                                                    <items>
+                                                        <barButtonItem width="15" style="plain" systemItem="fixedSpace" id="RBI-cm-Jo1"/>
+                                                        <barButtonItem systemItem="action" id="NY7-NI-xpM">
+                                                            <connections>
+                                                                <action selector="onShare:" destination="HZh-bU-rYz" id="8Qj-Xd-pTk"/>
+                                                            </connections>
+                                                        </barButtonItem>
+                                                    </items>
+                                                </toolbar>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="bEa-Zl-plO" firstAttribute="centerY" secondItem="QvT-fB-tRU" secondAttribute="centerY" id="31n-rI-anw"/>
+                                                <constraint firstAttribute="trailing" secondItem="bEa-Zl-plO" secondAttribute="trailing" id="Swp-SO-CmV"/>
+                                                <constraint firstItem="bEa-Zl-plO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="QvT-fB-tRU" secondAttribute="top" constant="8" id="Zeb-E6-ePS"/>
+                                                <constraint firstItem="bEa-Zl-plO" firstAttribute="leading" secondItem="QvT-fB-tRU" secondAttribute="leading" id="hmJ-HP-YYp"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bEa-Zl-plO" secondAttribute="bottom" constant="8" id="iBg-eh-ENh"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderThickness">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="QvT-fB-tRU" firstAttribute="leading" secondItem="VFg-Eq-lLG" secondAttribute="leading" constant="8" id="Bin-jV-yjU"/>
+                                        <constraint firstAttribute="bottom" secondItem="QvT-fB-tRU" secondAttribute="bottom" id="I81-XN-Syw"/>
+                                        <constraint firstItem="QvT-fB-tRU" firstAttribute="top" secondItem="VFg-Eq-lLG" secondAttribute="top" constant="2" id="fkw-lX-ne2"/>
+                                        <constraint firstAttribute="trailing" secondItem="QvT-fB-tRU" secondAttribute="trailing" constant="8" id="soU-Zq-DAE"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="cardView" destination="QvT-fB-tRU" id="Dyh-ZH-Iyq"/>
+                                    <outlet property="shareButton" destination="NY7-NI-xpM" id="KMy-TI-ZqJ"/>
+                                    <outlet property="toolbar" destination="bEa-Zl-plO" id="IIw-Ck-7ZF"/>
+                                </connections>
+                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SearchEntryCell" rowHeight="120" id="y98-iL-76Q" customClass="SearchEntryCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="661" width="375" height="120"/>
+                                <rect key="frame" x="0.0" y="741" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y98-iL-76Q" id="Ebc-9P-3PY">
                                     <frame key="frameInset" width="375" height="120"/>
@@ -502,7 +557,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchResultCell" rowHeight="60" id="5dG-AZ-tXl" customClass="SearchResultCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="781" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="861" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5dG-AZ-tXl" id="pUW-DS-8N1">
                                     <frame key="frameInset" width="375" height="60"/>
@@ -558,7 +613,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SearchEmptyCell" rowHeight="500" id="fPX-Dd-cW0" customClass="SearchEmptyCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="841" width="375" height="500"/>
+                                <rect key="frame" x="0.0" y="921" width="375" height="500"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fPX-Dd-cW0" id="W7f-Hg-6c3">
                                     <frame key="frameInset" width="375" height="500"/>

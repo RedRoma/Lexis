@@ -42,7 +42,7 @@ extension WordViewController
             self.clearAllExpandedCells()
             
             let sectionsToReload = IndexSet.init(integersIn: 0...1)
-            let sectionsToRemove = IndexSet.init(integersIn: 2...3)
+            let sectionsToRemove = IndexSet.init(integersIn: 2...4)
             
             self.tableView.beginUpdates()
             self.tableView.deleteSections(sectionsToRemove, with: .bottom)
@@ -52,7 +52,7 @@ extension WordViewController
         else if wasSearching
         {
             let sectionsToReload = IndexSet.init(integersIn: 0...1)
-            let sectionsToAdd = IndexSet.init(integersIn: 2...3)
+            let sectionsToAdd = IndexSet.init(integersIn: 2...4)
             
             self.tableView.beginUpdates()
             self.tableView.insertSections(sectionsToAdd, with: .bottom)
@@ -69,8 +69,10 @@ extension WordViewController
     {
         switch section
         {
-            case 0, 1, 3 : return 1
-            default : break
+            case 0, 1, 3, 4:
+                return 1
+            default:
+                break
         }
         
         let numberOfDefinitions = words.first!.definitions.count

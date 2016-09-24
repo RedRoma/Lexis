@@ -43,7 +43,7 @@ class WordViewController: UITableViewController
     }
     
     internal let numberOfSectionsWhenSearching = 2
-    internal let numberOfSectionsWhenNotSearching = 4
+    internal let numberOfSectionsWhenNotSearching = 5
     
     //ASYNC
     //========================================================================
@@ -71,6 +71,7 @@ class WordViewController: UITableViewController
     func update()
     {
         word = LexisDatabase.instance.anyWord
+        clearAllExpandedCells()
         tableView.reloadData()
         refreshControl?.endRefreshing()
     }
@@ -128,7 +129,8 @@ extension WordViewController
             case 0 : return createHeaderCell(tableView, atIndexPath: indexPath)
             case 1 : return createWordTitleCell(tableView, atIndexPath: indexPath)
             case 2 : return createWordDefinitionCell(tableView, atIndexPath: indexPath)
-            case 3: return createFooterCell(tableView, atIndexPath: indexPath)
+            case 3 : return createWordDescriptionCell(tableView, atIndexPath: indexPath)
+            case 4 : return createActionsCell(tableView, atIndexpath: indexPath)
             default : break
         }
         
@@ -157,13 +159,32 @@ extension WordViewController
     
     
     
-    private func createFooterCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
+    private func createWordDescriptionCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
     {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "WordDescriptionCell", for: indexPath) as? WordDescriptionCell
         else { return emptyCell }
         
         let wordSynopsis = word.supplementalInformation.humanReadableDescription
         cell.wordDescriptionLabel.text = wordSynopsis
+        
+        return cell
+    }
+    
+    private func createActionsCell(_ tableView: UITableView, atIndexpath indexPath: IndexPath) -> UITableViewCell
+    {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ActionsCell", for: indexPath) as? ActionsCell
+        else
+        {
+            return emptyCell
+        }
+        
+        cell.shareCallback = { [word, tableView] cell in
+            
+            let titlePath = IndexPath(row: 0, section: 1)
+            let isExpanded = self.isExpanded(titlePath)
+            
+            self.share(word: word, in: tableView, expanded: isExpanded)
+        }
         
         return cell
     }

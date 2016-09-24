@@ -11,6 +11,11 @@ import Foundation
 
 extension String
 {
+    var firstCharacter: String
+    {
+        return "\(self[startIndex])"
+    }
+    
     var notEmpty: Bool
     {
         return !isEmpty
@@ -35,8 +40,6 @@ extension String
     {
         guard self.notEmpty else { return self }
         
-        let firstCharacter: String = "\(self[startIndex])"
-        
         let isWhitespace = firstCharacter.rangeOfCharacter(from: .whitespaces) != nil
         
         if !isWhitespace
@@ -48,5 +51,15 @@ extension String
             return self.substring(from: self.index(after: self.startIndex))
         }
         
+    }
+    
+    func capitalizingFirstCharacter() -> String
+    {
+        guard notEmpty else { return self }
+        guard characters.count > 1 else { return firstCharacter.capitalized }
+        
+        let restOfString = substring(from: self.index(after: startIndex))
+        
+        return firstCharacter.capitalized + restOfString
     }
 }
