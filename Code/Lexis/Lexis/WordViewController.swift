@@ -13,7 +13,7 @@ import RedRomaColors
 import Sulcus
 import UIKit
 
-class WordOfTheDayViewController: UITableViewController
+class WordViewController: UITableViewController
 {
     
     fileprivate var words: [LexisWord] { return [word] }
@@ -67,7 +67,7 @@ class WordOfTheDayViewController: UITableViewController
 }
 
 //MARK: Table View Data Source Methods
-extension WordOfTheDayViewController
+extension WordViewController
 {
     override func numberOfSections(in tableView: UITableView) -> Int
     {
@@ -197,7 +197,7 @@ extension WordOfTheDayViewController
 }
 
 //MARK: Table View Delegate Methods
-extension WordOfTheDayViewController
+extension WordViewController
 {
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat
     {
@@ -298,7 +298,7 @@ extension WordOfTheDayViewController
 }
 
 //MARK: Word Information
-fileprivate extension WordOfTheDayViewController
+fileprivate extension WordViewController
 {
     
     func wordTypeInfo(for word: LexisWord) -> String
@@ -336,7 +336,7 @@ fileprivate extension WordOfTheDayViewController
 }
 
 //MARK: Search Logic
-extension WordOfTheDayViewController
+extension WordViewController
 {
     
     fileprivate var anySearchResults: Bool
@@ -569,7 +569,7 @@ extension WordOfTheDayViewController
 }
 
 //MARK: TextField Delegate
-extension WordOfTheDayViewController: UITextFieldDelegate
+extension WordViewController: UITextFieldDelegate
 {
 
     func editingDidChange(_ textField: UITextField)
