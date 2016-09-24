@@ -181,9 +181,9 @@ extension WordViewController
         cell.shareCallback = { [word, tableView] cell in
             
             let titlePath = IndexPath(row: 0, section: 1)
-            let isExpanded = self.isExpanded(titlePath)
+            let titleIsExpanded = self.isExpanded(titlePath)
             
-            self.share(word: word, in: tableView, expanded: isExpanded)
+            self.share(word: word, in: self.view, expanded: titleIsExpanded)
         }
         
         return cell

@@ -25,7 +25,7 @@ extension WordViewController
         return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad
     }
     
-    func share(word: LexisWord, in tableView: UITableView, expanded: Bool = false)
+    func share(word: LexisWord, in view: UIView, expanded: Bool = false)
     {
         
         LOG.info("Sharing word: \(word)")
