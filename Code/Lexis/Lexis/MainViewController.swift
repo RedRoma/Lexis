@@ -80,7 +80,7 @@ class MainViewController: UIViewController
             let threshold = 4.0
             
             let message = AromaClient.beginMessage(withTitle: "LexisDatabase Initialized")
-                .addBody("Operation took \(delay) seconds")
+                .addBody("Operation took \(delay.asString(withDecimalPoints: 2)) seconds")
                 .withPriority(.low)
             
             if delay > threshold
