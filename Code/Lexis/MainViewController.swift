@@ -107,7 +107,7 @@ class MainViewController: UIViewController
             }
             else
             {
-                message.withPriority(.medium).send()
+                message.withPriority(.low).send()
             }
             
             self.main.addOperation
