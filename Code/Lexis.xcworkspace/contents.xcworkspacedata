@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "container:Lexis/Lexis.xcodeproj">
+      location = "container:Lexis.xcodeproj">
    </FileRef>
 </Workspace>
