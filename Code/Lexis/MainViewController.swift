@@ -36,8 +36,7 @@ class MainViewController: UIViewController
     
     private func prepareUI()
     {
-        
-        self.messageLabel?.morphingDuration = 3.0
+        self.messageLabel?.morphingDuration = 5.0
         self.messageLabel?.text = nil
     }
     
