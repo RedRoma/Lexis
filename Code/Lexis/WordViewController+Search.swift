@@ -221,7 +221,7 @@ extension WordViewController
         { [weak self, searchTerm] in
             
             //First search words starting with
-            var results = LexisDatabase.instance.seaarchForms(startingWith: searchTerm).first(numberOfElements: 200)
+            var results = LexisDatabase.instance.searchForms(startingWith: searchTerm).first(numberOfElements: 200)
             
             //If no results, search through for words containing the search term.
             //At this point they could be at any position.

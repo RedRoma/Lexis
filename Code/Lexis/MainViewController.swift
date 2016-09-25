@@ -9,12 +9,14 @@
 import AromaSwiftClient
 import Foundation
 import LexisDatabase
+import LTMorphingLabel
 import Sulcus
 import UIKit
 
 class MainViewController: UIViewController
 {
     @IBOutlet weak var progressIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var messageLabel: LTMorphingLabel!
     
     private let main = OperationQueue.main
     private let async: OperationQueue =
@@ -27,6 +29,9 @@ class MainViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        self.messageLabel?.morphingDuration = 3.0
+        self.messageLabel?.text = nil
     }
     
     override func viewDidAppear(_ animated: Bool)
@@ -71,9 +76,10 @@ class MainViewController: UIViewController
         }
     }
     
-    private func initializeDictionary(_ callback: @escaping () -> Void) {
-        
+    private func initializeDictionary(_ callback: @escaping () -> Void)
+    {
         progressIndicator.startAnimating()
+        messageLabel?.text = "Loading Dictionary..."
         
         self.async.addOperation
         {
@@ -100,6 +106,7 @@ class MainViewController: UIViewController
             
             self.main.addOperation
             {
+                self.messageLabel?.text = "Done"
                 self.progressIndicator.stopAnimating()
                 callback()
             }
