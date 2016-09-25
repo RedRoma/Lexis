@@ -336,7 +336,6 @@
 				DE1294EF1D6977F700687CA5 /* Sources */,
 				DE1294F01D6977F700687CA5 /* Frameworks */,
 				DE1294F11D6977F700687CA5 /* Resources */,
-				DE1E7D121D97585000A8AA14 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -451,32 +450,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		DE1E7D121D97585000A8AA14 /* Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/AlchemyGenerator.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/AlchemyUIKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/AromaSwiftClient.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/AromaThrift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/LexisDatabase.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/LTMorphingLabel.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Sulcus.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RedRomaColors.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftExceptionCatcher.framework",
-			);
-			name = "Run Script";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DE1294EF1D6977F700687CA5 /* Sources */ = {
