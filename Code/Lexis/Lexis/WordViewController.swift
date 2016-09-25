@@ -178,12 +178,14 @@ extension WordViewController
         }
         
         cell.toolbar.clipsToBounds = true
-        cell.shareCallback = { [word, tableView] cell in
+        cell.shareCallback = { [word, weak view] cell in
+            
+            guard let `view` = view else { return }
             
             let titlePath = IndexPath(row: 0, section: 1)
             let titleIsExpanded = self.isExpanded(titlePath)
             
-            self.share(word: word, in: self.view, expanded: titleIsExpanded)
+            self.share(word: word, in: view, expanded: titleIsExpanded)
         }
         
         return cell
@@ -222,7 +224,7 @@ extension WordViewController
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat
     {
-        return isSearching ? 0.0001 : 20
+        return isSearching ? 0.0001 : 15
     }
     
     
