@@ -14,6 +14,33 @@
 		DE0E872A1D7FF41D00F42DB3 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE0E87281D7FF41D00F42DB3 /* Welcome.storyboard */; };
 		DE0EFFD61D7E843400B70D62 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0EFFD51D7E843400B70D62 /* WelcomePage.swift */; };
 		DE0EFFD91D7E856500B70D62 /* Strings+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0EFFD81D7E856500B70D62 /* Strings+.swift */; };
+		DE0F83731D9769770069BD1D /* AlchemyGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F836A1D9769770069BD1D /* AlchemyGenerator.framework */; };
+		DE0F83741D9769770069BD1D /* AlchemyUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F836B1D9769770069BD1D /* AlchemyUIKit.framework */; };
+		DE0F83751D9769770069BD1D /* AromaSwiftClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F836C1D9769770069BD1D /* AromaSwiftClient.framework */; };
+		DE0F83761D9769770069BD1D /* AromaThrift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F836D1D9769770069BD1D /* AromaThrift.framework */; };
+		DE0F83771D9769770069BD1D /* LexisDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F836E1D9769770069BD1D /* LexisDatabase.framework */; };
+		DE0F83781D9769770069BD1D /* LTMorphingLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F836F1D9769770069BD1D /* LTMorphingLabel.framework */; };
+		DE0F83791D9769770069BD1D /* RedRomaColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F83701D9769770069BD1D /* RedRomaColors.framework */; };
+		DE0F837A1D9769770069BD1D /* Sulcus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F83711D9769770069BD1D /* Sulcus.framework */; };
+		DE0F837B1D9769770069BD1D /* SwiftExceptionCatcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F83721D9769770069BD1D /* SwiftExceptionCatcher.framework */; };
+		DE0F837C1D9769960069BD1D /* AlchemyGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F836A1D9769770069BD1D /* AlchemyGenerator.framework */; };
+		DE0F837D1D9769960069BD1D /* AlchemyGenerator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F836A1D9769770069BD1D /* AlchemyGenerator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE0F837E1D9769960069BD1D /* AlchemyUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F836B1D9769770069BD1D /* AlchemyUIKit.framework */; };
+		DE0F837F1D9769960069BD1D /* AlchemyUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F836B1D9769770069BD1D /* AlchemyUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE0F83801D9769960069BD1D /* AromaSwiftClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F836C1D9769770069BD1D /* AromaSwiftClient.framework */; };
+		DE0F83811D9769960069BD1D /* AromaSwiftClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F836C1D9769770069BD1D /* AromaSwiftClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE0F83821D9769960069BD1D /* AromaThrift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F836D1D9769770069BD1D /* AromaThrift.framework */; };
+		DE0F83831D9769960069BD1D /* AromaThrift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F836D1D9769770069BD1D /* AromaThrift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE0F83841D9769960069BD1D /* LexisDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F836E1D9769770069BD1D /* LexisDatabase.framework */; };
+		DE0F83851D9769960069BD1D /* LexisDatabase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F836E1D9769770069BD1D /* LexisDatabase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE0F83861D9769960069BD1D /* LTMorphingLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F836F1D9769770069BD1D /* LTMorphingLabel.framework */; };
+		DE0F83871D9769960069BD1D /* LTMorphingLabel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F836F1D9769770069BD1D /* LTMorphingLabel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE0F83881D9769960069BD1D /* RedRomaColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F83701D9769770069BD1D /* RedRomaColors.framework */; };
+		DE0F83891D9769960069BD1D /* RedRomaColors.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F83701D9769770069BD1D /* RedRomaColors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE0F838A1D9769960069BD1D /* Sulcus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F83711D9769770069BD1D /* Sulcus.framework */; };
+		DE0F838B1D9769960069BD1D /* Sulcus.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F83711D9769770069BD1D /* Sulcus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE0F838C1D9769960069BD1D /* SwiftExceptionCatcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F83721D9769770069BD1D /* SwiftExceptionCatcher.framework */; };
+		DE0F838D1D9769960069BD1D /* SwiftExceptionCatcher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F83721D9769770069BD1D /* SwiftExceptionCatcher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DE1294F71D6977F700687CA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1294F61D6977F700687CA5 /* AppDelegate.swift */; };
 		DE1294FC1D6977F700687CA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1294FA1D6977F700687CA5 /* Main.storyboard */; };
 		DE1294FE1D6977F700687CA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE1294FD1D6977F700687CA5 /* Assets.xcassets */; };
@@ -82,6 +109,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		DE0F838E1D9769960069BD1D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DE0F83811D9769960069BD1D /* AromaSwiftClient.framework in Embed Frameworks */,
+				DE0F837D1D9769960069BD1D /* AlchemyGenerator.framework in Embed Frameworks */,
+				DE0F83831D9769960069BD1D /* AromaThrift.framework in Embed Frameworks */,
+				DE0F838B1D9769960069BD1D /* Sulcus.framework in Embed Frameworks */,
+				DE0F83851D9769960069BD1D /* LexisDatabase.framework in Embed Frameworks */,
+				DE0F837F1D9769960069BD1D /* AlchemyUIKit.framework in Embed Frameworks */,
+				DE0F838D1D9769960069BD1D /* SwiftExceptionCatcher.framework in Embed Frameworks */,
+				DE0F83871D9769960069BD1D /* LTMorphingLabel.framework in Embed Frameworks */,
+				DE0F83891D9769960069BD1D /* RedRomaColors.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DE4DA2A71D8DF26F003183F4 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -101,6 +147,15 @@
 		DE0E87291D7FF41D00F42DB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Welcome.storyboard; sourceTree = "<group>"; };
 		DE0EFFD51D7E843400B70D62 /* WelcomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
 		DE0EFFD81D7E856500B70D62 /* Strings+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+.swift"; sourceTree = "<group>"; };
+		DE0F836A1D9769770069BD1D /* AlchemyGenerator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlchemyGenerator.framework; path = Carthage/Build/iOS/AlchemyGenerator.framework; sourceTree = "<group>"; };
+		DE0F836B1D9769770069BD1D /* AlchemyUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlchemyUIKit.framework; path = Carthage/Build/iOS/AlchemyUIKit.framework; sourceTree = "<group>"; };
+		DE0F836C1D9769770069BD1D /* AromaSwiftClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AromaSwiftClient.framework; path = Carthage/Build/iOS/AromaSwiftClient.framework; sourceTree = "<group>"; };
+		DE0F836D1D9769770069BD1D /* AromaThrift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AromaThrift.framework; path = Carthage/Build/iOS/AromaThrift.framework; sourceTree = "<group>"; };
+		DE0F836E1D9769770069BD1D /* LexisDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LexisDatabase.framework; path = Carthage/Build/iOS/LexisDatabase.framework; sourceTree = "<group>"; };
+		DE0F836F1D9769770069BD1D /* LTMorphingLabel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LTMorphingLabel.framework; path = Carthage/Build/iOS/LTMorphingLabel.framework; sourceTree = "<group>"; };
+		DE0F83701D9769770069BD1D /* RedRomaColors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RedRomaColors.framework; path = Carthage/Build/iOS/RedRomaColors.framework; sourceTree = "<group>"; };
+		DE0F83711D9769770069BD1D /* Sulcus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sulcus.framework; path = Carthage/Build/iOS/Sulcus.framework; sourceTree = "<group>"; };
+		DE0F83721D9769770069BD1D /* SwiftExceptionCatcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftExceptionCatcher.framework; path = Carthage/Build/iOS/SwiftExceptionCatcher.framework; sourceTree = "<group>"; };
 		DE1294F31D6977F700687CA5 /* Lexis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lexis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1294F61D6977F700687CA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE1294FB1D6977F700687CA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -160,6 +215,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE0F83751D9769770069BD1D /* AromaSwiftClient.framework in Frameworks */,
+				DE0F83731D9769770069BD1D /* AlchemyGenerator.framework in Frameworks */,
+				DE0F83761D9769770069BD1D /* AromaThrift.framework in Frameworks */,
+				DE0F837A1D9769770069BD1D /* Sulcus.framework in Frameworks */,
+				DE0F83771D9769770069BD1D /* LexisDatabase.framework in Frameworks */,
+				DE0F83821D9769960069BD1D /* AromaThrift.framework in Frameworks */,
+				DE0F83741D9769770069BD1D /* AlchemyUIKit.framework in Frameworks */,
+				DE0F83801D9769960069BD1D /* AromaSwiftClient.framework in Frameworks */,
+				DE0F83861D9769960069BD1D /* LTMorphingLabel.framework in Frameworks */,
+				DE0F837E1D9769960069BD1D /* AlchemyUIKit.framework in Frameworks */,
+				DE0F837B1D9769770069BD1D /* SwiftExceptionCatcher.framework in Frameworks */,
+				DE0F83781D9769770069BD1D /* LTMorphingLabel.framework in Frameworks */,
+				DE0F837C1D9769960069BD1D /* AlchemyGenerator.framework in Frameworks */,
+				DE0F838A1D9769960069BD1D /* Sulcus.framework in Frameworks */,
+				DE0F83791D9769770069BD1D /* RedRomaColors.framework in Frameworks */,
+				DE0F838C1D9769960069BD1D /* SwiftExceptionCatcher.framework in Frameworks */,
+				DE0F83841D9769960069BD1D /* LexisDatabase.framework in Frameworks */,
+				DE0F83881D9769960069BD1D /* RedRomaColors.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +375,15 @@
 		DE60BCC11D7B6ADE00EF15C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DE0F836A1D9769770069BD1D /* AlchemyGenerator.framework */,
+				DE0F836B1D9769770069BD1D /* AlchemyUIKit.framework */,
+				DE0F836C1D9769770069BD1D /* AromaSwiftClient.framework */,
+				DE0F836D1D9769770069BD1D /* AromaThrift.framework */,
+				DE0F836E1D9769770069BD1D /* LexisDatabase.framework */,
+				DE0F836F1D9769770069BD1D /* LTMorphingLabel.framework */,
+				DE0F83701D9769770069BD1D /* RedRomaColors.framework */,
+				DE0F83711D9769770069BD1D /* Sulcus.framework */,
+				DE0F83721D9769770069BD1D /* SwiftExceptionCatcher.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -336,6 +418,8 @@
 				DE1294EF1D6977F700687CA5 /* Sources */,
 				DE1294F01D6977F700687CA5 /* Frameworks */,
 				DE1294F11D6977F700687CA5 /* Resources */,
+				DE0F838E1D9769960069BD1D /* Embed Frameworks */,
+				DE0F838F1D976B3E0069BD1D /* Strip Non-Valid Architectures */,
 			);
 			buildRules = (
 			);
@@ -450,6 +534,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DE0F838F1D976B3E0069BD1D /* Strip Non-Valid Architectures */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Strip Non-Valid Architectures";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Signs a framework with the provided identity\ncode_sign() {\n    # Use the current code_sign_identitiy\n    echo \"Code Signing $1 with Identity ${EXPANDED_CODE_SIGN_IDENTITY_NAME}\"\n    echo \"/usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} --preserve-metadata=identifier,entitlements $1\"\n    /usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} --preserve-metadata=identifier,entitlements \"$1\"\n}\n\necho \"Stripping frameworks\"\ncd \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n\nfor file in $(find . -type f -perm +111); do\n# Skip non-dynamic libraries\nif ! [[ \"$(file \"$file\")\" == *\"dynamically linked shared library\"* ]]; then\ncontinue\nfi\n# Get architectures for current file\narchs=\"$(lipo -info \"${file}\" | rev | cut -d ':' -f1 | rev)\"\nstripped=\"\"\nfor arch in $archs; do\nif ! [[ \"${VALID_ARCHS}\" == *\"$arch\"* ]]; then\n# Strip non-valid architectures in-place\nlipo -remove \"$arch\" -output \"$file\" \"$file\" || exit 1\nstripped=\"$stripped $arch\"\nfi\ndone\nif [[ \"$stripped\" != \"\" ]]; then\necho \"Stripped $file of architectures:$stripped\"\nif [ \"${CODE_SIGNING_REQUIRED}\" == \"YES\" ]; then\ncode_sign \"${file}\"\nfi\nfi\ndone";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DE1294EF1D6977F700687CA5 /* Sources */ = {
