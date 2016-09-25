@@ -24,33 +24,6 @@
 		DE1295121D6982FF00687CA5 /* CinzelDecorative-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE12950C1D6982FF00687CA5 /* CinzelDecorative-Black.otf */; };
 		DE1295131D6982FF00687CA5 /* CinzelDecorative-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE12950D1D6982FF00687CA5 /* CinzelDecorative-Bold.otf */; };
 		DE1295141D6982FF00687CA5 /* CinzelDecorative-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE12950E1D6982FF00687CA5 /* CinzelDecorative-Regular.otf */; };
-		DE1E7CE41D9757FD00A8AA14 /* AlchemyGenerator.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = DE1E7CD21D9757FD00A8AA14 /* AlchemyGenerator.framework.dSYM */; };
-		DE1E7CE51D9757FD00A8AA14 /* AlchemyUIKit.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = DE1E7CD31D9757FD00A8AA14 /* AlchemyUIKit.framework.dSYM */; };
-		DE1E7CE61D9757FD00A8AA14 /* AromaSwiftClient.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = DE1E7CD41D9757FD00A8AA14 /* AromaSwiftClient.framework.dSYM */; };
-		DE1E7CE71D9757FD00A8AA14 /* AromaThrift.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = DE1E7CD51D9757FD00A8AA14 /* AromaThrift.framework.dSYM */; };
-		DE1E7CE81D9757FD00A8AA14 /* LexisDatabase.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = DE1E7CD61D9757FD00A8AA14 /* LexisDatabase.framework.dSYM */; };
-		DE1E7CE91D9757FD00A8AA14 /* LTMorphingLabel.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = DE1E7CD71D9757FD00A8AA14 /* LTMorphingLabel.framework.dSYM */; };
-		DE1E7CEA1D9757FD00A8AA14 /* RedRomaColors.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = DE1E7CD81D9757FD00A8AA14 /* RedRomaColors.framework.dSYM */; };
-		DE1E7CEB1D9757FD00A8AA14 /* Sulcus.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = DE1E7CD91D9757FD00A8AA14 /* Sulcus.framework.dSYM */; };
-		DE1E7CEC1D9757FD00A8AA14 /* SwiftExceptionCatcher.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = DE1E7CDA1D9757FD00A8AA14 /* SwiftExceptionCatcher.framework.dSYM */; };
-		DE1E7CF71D97580700A8AA14 /* AlchemyGenerator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E7CDB1D9757FD00A8AA14 /* AlchemyGenerator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE1E7CF91D97580700A8AA14 /* AlchemyUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E7CDC1D9757FD00A8AA14 /* AlchemyUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE1E7CFB1D97580700A8AA14 /* AromaSwiftClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E7CDD1D9757FD00A8AA14 /* AromaSwiftClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE1E7CFD1D97580700A8AA14 /* AromaThrift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E7CDE1D9757FD00A8AA14 /* AromaThrift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE1E7CFF1D97580700A8AA14 /* LexisDatabase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E7CDF1D9757FD00A8AA14 /* LexisDatabase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE1E7D011D97580700A8AA14 /* LTMorphingLabel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E7CE01D9757FD00A8AA14 /* LTMorphingLabel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE1E7D031D97580700A8AA14 /* RedRomaColors.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E7CE11D9757FD00A8AA14 /* RedRomaColors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE1E7D051D97580700A8AA14 /* Sulcus.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E7CE21D9757FD00A8AA14 /* Sulcus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE1E7D071D97580700A8AA14 /* SwiftExceptionCatcher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E7CE31D9757FD00A8AA14 /* SwiftExceptionCatcher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE1E7D091D97584700A8AA14 /* AlchemyGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E7CDB1D9757FD00A8AA14 /* AlchemyGenerator.framework */; };
-		DE1E7D0A1D97584700A8AA14 /* AlchemyUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E7CDC1D9757FD00A8AA14 /* AlchemyUIKit.framework */; };
-		DE1E7D0B1D97584700A8AA14 /* AromaSwiftClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E7CDD1D9757FD00A8AA14 /* AromaSwiftClient.framework */; };
-		DE1E7D0C1D97584700A8AA14 /* AromaThrift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E7CDE1D9757FD00A8AA14 /* AromaThrift.framework */; };
-		DE1E7D0D1D97584700A8AA14 /* LexisDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E7CDF1D9757FD00A8AA14 /* LexisDatabase.framework */; };
-		DE1E7D0E1D97584700A8AA14 /* LTMorphingLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E7CE01D9757FD00A8AA14 /* LTMorphingLabel.framework */; };
-		DE1E7D0F1D97584700A8AA14 /* RedRomaColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E7CE11D9757FD00A8AA14 /* RedRomaColors.framework */; };
-		DE1E7D101D97584700A8AA14 /* Sulcus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E7CE21D9757FD00A8AA14 /* Sulcus.framework */; };
-		DE1E7D111D97584700A8AA14 /* SwiftExceptionCatcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1E7CE31D9757FD00A8AA14 /* SwiftExceptionCatcher.framework */; };
 		DE24652E1D8D174B00A138EB /* LexisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE24652D1D8D174B00A138EB /* LexisTests.swift */; };
 		DE4DA2C61D8E37A5003183F4 /* SearchEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA2C51D8E37A5003183F4 /* SearchEntryCell.swift */; };
 		DE4DA2C71D8E37A5003183F4 /* SearchEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA2C51D8E37A5003183F4 /* SearchEntryCell.swift */; };
@@ -109,25 +82,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		DE1E7D081D97580700A8AA14 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				DE1E7CFB1D97580700A8AA14 /* AromaSwiftClient.framework in Embed Frameworks */,
-				DE1E7CF71D97580700A8AA14 /* AlchemyGenerator.framework in Embed Frameworks */,
-				DE1E7CFD1D97580700A8AA14 /* AromaThrift.framework in Embed Frameworks */,
-				DE1E7D051D97580700A8AA14 /* Sulcus.framework in Embed Frameworks */,
-				DE1E7CFF1D97580700A8AA14 /* LexisDatabase.framework in Embed Frameworks */,
-				DE1E7CF91D97580700A8AA14 /* AlchemyUIKit.framework in Embed Frameworks */,
-				DE1E7D071D97580700A8AA14 /* SwiftExceptionCatcher.framework in Embed Frameworks */,
-				DE1E7D011D97580700A8AA14 /* LTMorphingLabel.framework in Embed Frameworks */,
-				DE1E7D031D97580700A8AA14 /* RedRomaColors.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DE4DA2A71D8DF26F003183F4 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -159,24 +113,6 @@
 		DE12950C1D6982FF00687CA5 /* CinzelDecorative-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CinzelDecorative-Black.otf"; sourceTree = "<group>"; };
 		DE12950D1D6982FF00687CA5 /* CinzelDecorative-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CinzelDecorative-Bold.otf"; sourceTree = "<group>"; };
 		DE12950E1D6982FF00687CA5 /* CinzelDecorative-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CinzelDecorative-Regular.otf"; sourceTree = "<group>"; };
-		DE1E7CD21D9757FD00A8AA14 /* AlchemyGenerator.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = AlchemyGenerator.framework.dSYM; path = Carthage/Build/iOS/AlchemyGenerator.framework.dSYM; sourceTree = "<group>"; };
-		DE1E7CD31D9757FD00A8AA14 /* AlchemyUIKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = AlchemyUIKit.framework.dSYM; path = Carthage/Build/iOS/AlchemyUIKit.framework.dSYM; sourceTree = "<group>"; };
-		DE1E7CD41D9757FD00A8AA14 /* AromaSwiftClient.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = AromaSwiftClient.framework.dSYM; path = Carthage/Build/iOS/AromaSwiftClient.framework.dSYM; sourceTree = "<group>"; };
-		DE1E7CD51D9757FD00A8AA14 /* AromaThrift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = AromaThrift.framework.dSYM; path = Carthage/Build/iOS/AromaThrift.framework.dSYM; sourceTree = "<group>"; };
-		DE1E7CD61D9757FD00A8AA14 /* LexisDatabase.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = LexisDatabase.framework.dSYM; path = Carthage/Build/iOS/LexisDatabase.framework.dSYM; sourceTree = "<group>"; };
-		DE1E7CD71D9757FD00A8AA14 /* LTMorphingLabel.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = LTMorphingLabel.framework.dSYM; path = Carthage/Build/iOS/LTMorphingLabel.framework.dSYM; sourceTree = "<group>"; };
-		DE1E7CD81D9757FD00A8AA14 /* RedRomaColors.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RedRomaColors.framework.dSYM; path = Carthage/Build/iOS/RedRomaColors.framework.dSYM; sourceTree = "<group>"; };
-		DE1E7CD91D9757FD00A8AA14 /* Sulcus.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Sulcus.framework.dSYM; path = Carthage/Build/iOS/Sulcus.framework.dSYM; sourceTree = "<group>"; };
-		DE1E7CDA1D9757FD00A8AA14 /* SwiftExceptionCatcher.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SwiftExceptionCatcher.framework.dSYM; path = Carthage/Build/iOS/SwiftExceptionCatcher.framework.dSYM; sourceTree = "<group>"; };
-		DE1E7CDB1D9757FD00A8AA14 /* AlchemyGenerator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlchemyGenerator.framework; path = Carthage/Build/iOS/AlchemyGenerator.framework; sourceTree = "<group>"; };
-		DE1E7CDC1D9757FD00A8AA14 /* AlchemyUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlchemyUIKit.framework; path = Carthage/Build/iOS/AlchemyUIKit.framework; sourceTree = "<group>"; };
-		DE1E7CDD1D9757FD00A8AA14 /* AromaSwiftClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AromaSwiftClient.framework; path = Carthage/Build/iOS/AromaSwiftClient.framework; sourceTree = "<group>"; };
-		DE1E7CDE1D9757FD00A8AA14 /* AromaThrift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AromaThrift.framework; path = Carthage/Build/iOS/AromaThrift.framework; sourceTree = "<group>"; };
-		DE1E7CDF1D9757FD00A8AA14 /* LexisDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LexisDatabase.framework; path = Carthage/Build/iOS/LexisDatabase.framework; sourceTree = "<group>"; };
-		DE1E7CE01D9757FD00A8AA14 /* LTMorphingLabel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LTMorphingLabel.framework; path = Carthage/Build/iOS/LTMorphingLabel.framework; sourceTree = "<group>"; };
-		DE1E7CE11D9757FD00A8AA14 /* RedRomaColors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RedRomaColors.framework; path = Carthage/Build/iOS/RedRomaColors.framework; sourceTree = "<group>"; };
-		DE1E7CE21D9757FD00A8AA14 /* Sulcus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sulcus.framework; path = Carthage/Build/iOS/Sulcus.framework; sourceTree = "<group>"; };
-		DE1E7CE31D9757FD00A8AA14 /* SwiftExceptionCatcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftExceptionCatcher.framework; path = Carthage/Build/iOS/SwiftExceptionCatcher.framework; sourceTree = "<group>"; };
 		DE24652B1D8D174B00A138EB /* LexisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LexisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE24652D1D8D174B00A138EB /* LexisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexisTests.swift; sourceTree = "<group>"; };
 		DE24652F1D8D174B00A138EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -224,15 +160,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE1E7D091D97584700A8AA14 /* AlchemyGenerator.framework in Frameworks */,
-				DE1E7D0A1D97584700A8AA14 /* AlchemyUIKit.framework in Frameworks */,
-				DE1E7D0B1D97584700A8AA14 /* AromaSwiftClient.framework in Frameworks */,
-				DE1E7D0C1D97584700A8AA14 /* AromaThrift.framework in Frameworks */,
-				DE1E7D0D1D97584700A8AA14 /* LexisDatabase.framework in Frameworks */,
-				DE1E7D0E1D97584700A8AA14 /* LTMorphingLabel.framework in Frameworks */,
-				DE1E7D0F1D97584700A8AA14 /* RedRomaColors.framework in Frameworks */,
-				DE1E7D101D97584700A8AA14 /* Sulcus.framework in Frameworks */,
-				DE1E7D111D97584700A8AA14 /* SwiftExceptionCatcher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,24 +302,6 @@
 		DE60BCC11D7B6ADE00EF15C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DE1E7CD21D9757FD00A8AA14 /* AlchemyGenerator.framework.dSYM */,
-				DE1E7CD31D9757FD00A8AA14 /* AlchemyUIKit.framework.dSYM */,
-				DE1E7CD41D9757FD00A8AA14 /* AromaSwiftClient.framework.dSYM */,
-				DE1E7CD51D9757FD00A8AA14 /* AromaThrift.framework.dSYM */,
-				DE1E7CD61D9757FD00A8AA14 /* LexisDatabase.framework.dSYM */,
-				DE1E7CD71D9757FD00A8AA14 /* LTMorphingLabel.framework.dSYM */,
-				DE1E7CD81D9757FD00A8AA14 /* RedRomaColors.framework.dSYM */,
-				DE1E7CD91D9757FD00A8AA14 /* Sulcus.framework.dSYM */,
-				DE1E7CDA1D9757FD00A8AA14 /* SwiftExceptionCatcher.framework.dSYM */,
-				DE1E7CDB1D9757FD00A8AA14 /* AlchemyGenerator.framework */,
-				DE1E7CDC1D9757FD00A8AA14 /* AlchemyUIKit.framework */,
-				DE1E7CDD1D9757FD00A8AA14 /* AromaSwiftClient.framework */,
-				DE1E7CDE1D9757FD00A8AA14 /* AromaThrift.framework */,
-				DE1E7CDF1D9757FD00A8AA14 /* LexisDatabase.framework */,
-				DE1E7CE01D9757FD00A8AA14 /* LTMorphingLabel.framework */,
-				DE1E7CE11D9757FD00A8AA14 /* RedRomaColors.framework */,
-				DE1E7CE21D9757FD00A8AA14 /* Sulcus.framework */,
-				DE1E7CE31D9757FD00A8AA14 /* SwiftExceptionCatcher.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -427,8 +336,7 @@
 				DE1294EF1D6977F700687CA5 /* Sources */,
 				DE1294F01D6977F700687CA5 /* Frameworks */,
 				DE1294F11D6977F700687CA5 /* Resources */,
-				DE1E7D081D97580700A8AA14 /* Embed Frameworks */,
-				DE1E7D121D97585000A8AA14 /* ShellScript */,
+				DE1E7D121D97585000A8AA14 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -506,11 +414,9 @@
 			files = (
 				DE5D14211D87CDF800B8B3CC /* Raleway 800.ttf in Resources */,
 				DE5D14241D87CDF800B8B3CC /* Raleway 900italic.ttf in Resources */,
-				DE1E7CE71D9757FD00A8AA14 /* AromaThrift.framework.dSYM in Resources */,
 				DE1295141D6982FF00687CA5 /* CinzelDecorative-Regular.otf in Resources */,
 				DE1295101D6982FF00687CA5 /* Cinzel-Bold.otf in Resources */,
 				DE1295131D6982FF00687CA5 /* CinzelDecorative-Bold.otf in Resources */,
-				DE1E7CE51D9757FD00A8AA14 /* AlchemyUIKit.framework.dSYM in Resources */,
 				DE5D141F1D87CDF800B8B3CC /* Raleway 700.ttf in Resources */,
 				DE1295011D6977F700687CA5 /* LaunchScreen.storyboard in Resources */,
 				DE5D14201D87CDF800B8B3CC /* Raleway 700italic.ttf in Resources */,
@@ -521,22 +427,15 @@
 				DE5D14251D87CDF800B8B3CC /* Raleway italic.ttf in Resources */,
 				DE5D141B1D87CDF800B8B3CC /* Raleway 500.ttf in Resources */,
 				DE5D14261D87CDF800B8B3CC /* Raleway regular.ttf in Resources */,
-				DE1E7CE91D9757FD00A8AA14 /* LTMorphingLabel.framework.dSYM in Resources */,
-				DE1E7CE41D9757FD00A8AA14 /* AlchemyGenerator.framework.dSYM in Resources */,
-				DE1E7CE61D9757FD00A8AA14 /* AromaSwiftClient.framework.dSYM in Resources */,
 				DE0E872A1D7FF41D00F42DB3 /* Welcome.storyboard in Resources */,
 				DE5D141D1D87CDF800B8B3CC /* Raleway 600.ttf in Resources */,
 				DE5D14181D87CDF800B8B3CC /* Raleway 200italic.ttf in Resources */,
 				DE1294FE1D6977F700687CA5 /* Assets.xcassets in Resources */,
 				DE5D141C1D87CDF800B8B3CC /* Raleway 500italic.ttf in Resources */,
-				DE1E7CE81D9757FD00A8AA14 /* LexisDatabase.framework.dSYM in Resources */,
 				DE12950F1D6982FF00687CA5 /* Cinzel-Black.otf in Resources */,
-				DE1E7CEA1D9757FD00A8AA14 /* RedRomaColors.framework.dSYM in Resources */,
 				DE5D14151D87CDF800B8B3CC /* Raleway 100.ttf in Resources */,
 				DE5D14231D87CDF800B8B3CC /* Raleway 900.ttf in Resources */,
 				DE5D14191D87CDF800B8B3CC /* Raleway 300.ttf in Resources */,
-				DE1E7CEB1D9757FD00A8AA14 /* Sulcus.framework.dSYM in Resources */,
-				DE1E7CEC1D9757FD00A8AA14 /* SwiftExceptionCatcher.framework.dSYM in Resources */,
 				DE5D14221D87CDF800B8B3CC /* Raleway 800italic.ttf in Resources */,
 				DE1294FC1D6977F700687CA5 /* Main.storyboard in Resources */,
 				DE1295111D6982FF00687CA5 /* Cinzel-Regular.otf in Resources */,
@@ -554,7 +453,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		DE1E7D121D97585000A8AA14 /* ShellScript */ = {
+		DE1E7D121D97585000A8AA14 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -570,6 +469,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RedRomaColors.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftExceptionCatcher.framework",
 			);
+			name = "Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -763,6 +663,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5JBF7MD4UT;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -781,6 +682,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5JBF7MD4UT;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
