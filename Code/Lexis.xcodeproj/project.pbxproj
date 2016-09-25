@@ -1,0 +1,822 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE0E00081D7E984C00B70D62 /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0E00071D7E984C00B70D62 /* WelcomePageViewController.swift */; };
+		DE0E000A1D7E9A8A00B70D62 /* WelcomePageTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0E00091D7E9A8A00B70D62 /* WelcomePageTemplateViewController.swift */; };
+		DE0E87211D7FEF9900F42DB3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0E87201D7FEF9900F42DB3 /* MainViewController.swift */; };
+		DE0E87241D7FEFC900F42DB3 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0E87231D7FEFC900F42DB3 /* Settings.swift */; };
+		DE0E872A1D7FF41D00F42DB3 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE0E87281D7FF41D00F42DB3 /* Welcome.storyboard */; };
+		DE0EFFD61D7E843400B70D62 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0EFFD51D7E843400B70D62 /* WelcomePage.swift */; };
+		DE0EFFD91D7E856500B70D62 /* Strings+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0EFFD81D7E856500B70D62 /* Strings+.swift */; };
+		DE0F837D1D9769960069BD1D /* AlchemyGenerator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F836A1D9769770069BD1D /* AlchemyGenerator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE0F837F1D9769960069BD1D /* AlchemyUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F836B1D9769770069BD1D /* AlchemyUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE0F83811D9769960069BD1D /* AromaSwiftClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F836C1D9769770069BD1D /* AromaSwiftClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE0F83831D9769960069BD1D /* AromaThrift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F836D1D9769770069BD1D /* AromaThrift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE0F83851D9769960069BD1D /* LexisDatabase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F836E1D9769770069BD1D /* LexisDatabase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE0F83871D9769960069BD1D /* LTMorphingLabel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F836F1D9769770069BD1D /* LTMorphingLabel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE0F83891D9769960069BD1D /* RedRomaColors.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F83701D9769770069BD1D /* RedRomaColors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE0F838B1D9769960069BD1D /* Sulcus.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F83711D9769770069BD1D /* Sulcus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE0F838D1D9769960069BD1D /* SwiftExceptionCatcher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F83721D9769770069BD1D /* SwiftExceptionCatcher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE1294F71D6977F700687CA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1294F61D6977F700687CA5 /* AppDelegate.swift */; };
+		DE1294FC1D6977F700687CA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1294FA1D6977F700687CA5 /* Main.storyboard */; };
+		DE1294FE1D6977F700687CA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE1294FD1D6977F700687CA5 /* Assets.xcassets */; };
+		DE1295011D6977F700687CA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1294FF1D6977F700687CA5 /* LaunchScreen.storyboard */; };
+		DE12950F1D6982FF00687CA5 /* Cinzel-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE1295091D6982FF00687CA5 /* Cinzel-Black.otf */; };
+		DE1295101D6982FF00687CA5 /* Cinzel-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE12950A1D6982FF00687CA5 /* Cinzel-Bold.otf */; };
+		DE1295111D6982FF00687CA5 /* Cinzel-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE12950B1D6982FF00687CA5 /* Cinzel-Regular.otf */; };
+		DE1295121D6982FF00687CA5 /* CinzelDecorative-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE12950C1D6982FF00687CA5 /* CinzelDecorative-Black.otf */; };
+		DE1295131D6982FF00687CA5 /* CinzelDecorative-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE12950D1D6982FF00687CA5 /* CinzelDecorative-Bold.otf */; };
+		DE1295141D6982FF00687CA5 /* CinzelDecorative-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE12950E1D6982FF00687CA5 /* CinzelDecorative-Regular.otf */; };
+		DE24652E1D8D174B00A138EB /* LexisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE24652D1D8D174B00A138EB /* LexisTests.swift */; };
+		DE49A21D1D97957A00620411 /* AlchemyGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F836A1D9769770069BD1D /* AlchemyGenerator.framework */; };
+		DE49A21E1D97957A00620411 /* AlchemyUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F836B1D9769770069BD1D /* AlchemyUIKit.framework */; };
+		DE49A21F1D97957A00620411 /* AromaSwiftClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F836C1D9769770069BD1D /* AromaSwiftClient.framework */; };
+		DE49A2201D97957A00620411 /* AromaThrift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F836D1D9769770069BD1D /* AromaThrift.framework */; };
+		DE49A2211D97957A00620411 /* LexisDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F836E1D9769770069BD1D /* LexisDatabase.framework */; };
+		DE49A2221D97957A00620411 /* LTMorphingLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F836F1D9769770069BD1D /* LTMorphingLabel.framework */; };
+		DE49A2231D97957A00620411 /* RedRomaColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F83701D9769770069BD1D /* RedRomaColors.framework */; };
+		DE49A2241D97957A00620411 /* Sulcus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F83711D9769770069BD1D /* Sulcus.framework */; };
+		DE49A2251D97957A00620411 /* SwiftExceptionCatcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F83721D9769770069BD1D /* SwiftExceptionCatcher.framework */; };
+		DE4DA2C61D8E37A5003183F4 /* SearchEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA2C51D8E37A5003183F4 /* SearchEntryCell.swift */; };
+		DE4DA2C71D8E37A5003183F4 /* SearchEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA2C51D8E37A5003183F4 /* SearchEntryCell.swift */; };
+		DE4DA2C91D8E37AD003183F4 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA2C81D8E37AD003183F4 /* SearchResultCell.swift */; };
+		DE4DA2CA1D8E37AD003183F4 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA2C81D8E37AD003183F4 /* SearchResultCell.swift */; };
+		DE4DA2CC1D8E37B8003183F4 /* SearchEmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA2CB1D8E37B8003183F4 /* SearchEmptyCell.swift */; };
+		DE4DA2CD1D8E37B8003183F4 /* SearchEmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA2CB1D8E37B8003183F4 /* SearchEmptyCell.swift */; };
+		DE4DA2CF1D8E3C5D003183F4 /* Arrays+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA2CE1D8E3C5D003183F4 /* Arrays+.swift */; };
+		DE4DA2D01D8E3C5D003183F4 /* Arrays+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA2CE1D8E3C5D003183F4 /* Arrays+.swift */; };
+		DE4DA2D21D8E3F5C003183F4 /* LexisWord+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA2D11D8E3F5C003183F4 /* LexisWord+.swift */; };
+		DE4DA2D31D8E3F5C003183F4 /* LexisWord+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA2D11D8E3F5C003183F4 /* LexisWord+.swift */; };
+		DE4DA2D81D8E667E003183F4 /* ViewControllers+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA2D71D8E667E003183F4 /* ViewControllers+.swift */; };
+		DE4DA2D91D8E667E003183F4 /* ViewControllers+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA2D71D8E667E003183F4 /* ViewControllers+.swift */; };
+		DE5D14151D87CDF800B8B3CC /* Raleway 100.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D14031D87CDF800B8B3CC /* Raleway 100.ttf */; };
+		DE5D14161D87CDF800B8B3CC /* Raleway 100italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D14041D87CDF800B8B3CC /* Raleway 100italic.ttf */; };
+		DE5D14171D87CDF800B8B3CC /* Raleway 200.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D14051D87CDF800B8B3CC /* Raleway 200.ttf */; };
+		DE5D14181D87CDF800B8B3CC /* Raleway 200italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D14061D87CDF800B8B3CC /* Raleway 200italic.ttf */; };
+		DE5D14191D87CDF800B8B3CC /* Raleway 300.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D14071D87CDF800B8B3CC /* Raleway 300.ttf */; };
+		DE5D141A1D87CDF800B8B3CC /* Raleway 300italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D14081D87CDF800B8B3CC /* Raleway 300italic.ttf */; };
+		DE5D141B1D87CDF800B8B3CC /* Raleway 500.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D14091D87CDF800B8B3CC /* Raleway 500.ttf */; };
+		DE5D141C1D87CDF800B8B3CC /* Raleway 500italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D140A1D87CDF800B8B3CC /* Raleway 500italic.ttf */; };
+		DE5D141D1D87CDF800B8B3CC /* Raleway 600.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D140B1D87CDF800B8B3CC /* Raleway 600.ttf */; };
+		DE5D141E1D87CDF800B8B3CC /* Raleway 600italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D140C1D87CDF800B8B3CC /* Raleway 600italic.ttf */; };
+		DE5D141F1D87CDF800B8B3CC /* Raleway 700.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D140D1D87CDF800B8B3CC /* Raleway 700.ttf */; };
+		DE5D14201D87CDF800B8B3CC /* Raleway 700italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D140E1D87CDF800B8B3CC /* Raleway 700italic.ttf */; };
+		DE5D14211D87CDF800B8B3CC /* Raleway 800.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D140F1D87CDF800B8B3CC /* Raleway 800.ttf */; };
+		DE5D14221D87CDF800B8B3CC /* Raleway 800italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D14101D87CDF800B8B3CC /* Raleway 800italic.ttf */; };
+		DE5D14231D87CDF800B8B3CC /* Raleway 900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D14111D87CDF800B8B3CC /* Raleway 900.ttf */; };
+		DE5D14241D87CDF800B8B3CC /* Raleway 900italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D14121D87CDF800B8B3CC /* Raleway 900italic.ttf */; };
+		DE5D14251D87CDF800B8B3CC /* Raleway italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D14131D87CDF800B8B3CC /* Raleway italic.ttf */; };
+		DE5D14261D87CDF800B8B3CC /* Raleway regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D14141D87CDF800B8B3CC /* Raleway regular.ttf */; };
+		DE5D14291D87E15B00B8B3CC /* WordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D14281D87E15B00B8B3CC /* WordViewController.swift */; };
+		DE5D14391D88474400B8B3CC /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D14381D88474400B8B3CC /* HeaderCell.swift */; };
+		DE5D143B1D8847BD00B8B3CC /* WordNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D143A1D8847BD00B8B3CC /* WordNameCell.swift */; };
+		DE5D143D1D8847D100B8B3CC /* WordDefinitionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D143C1D8847D100B8B3CC /* WordDefinitionCell.swift */; };
+		DE5D143F1D8847E600B8B3CC /* WordDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5D143E1D8847E600B8B3CC /* WordDescriptionCell.swift */; };
+		DE6C286C1D96FA3000BB1D33 /* ExpandedDefinitionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6C286B1D96FA3000BB1D33 /* ExpandedDefinitionCell.swift */; };
+		DE6C286E1D96FE1900BB1D33 /* WordViewController+ExpandingCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6C286D1D96FE1900BB1D33 /* WordViewController+ExpandingCells.swift */; };
+		DE6C28701D96FEB100BB1D33 /* WordViewController+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6C286F1D96FEB100BB1D33 /* WordViewController+Search.swift */; };
+		DE6C28721D97022600BB1D33 /* ExpandedWordNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6C28711D97022600BB1D33 /* ExpandedWordNameCell.swift */; };
+		DE6C28741D97071E00BB1D33 /* ActionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6C28731D97071E00BB1D33 /* ActionsCell.swift */; };
+		DE6C28761D9708BC00BB1D33 /* WordViewController+Sharing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6C28751D9708BC00BB1D33 /* WordViewController+Sharing.swift */; };
+		DE6C28781D97178000BB1D33 /* Doubles+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6C28771D97178000BB1D33 /* Doubles+.swift */; };
+		DEDB439C1D925F5700BF092E /* LexisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDB439B1D925F5700BF092E /* LexisView.swift */; };
+		DEDB439D1D925F5700BF092E /* LexisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDB439B1D925F5700BF092E /* LexisView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE2465301D8D174B00A138EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE1294EB1D6977F700687CA5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE1294F21D6977F700687CA5;
+			remoteInfo = Lexis;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DE0F838E1D9769960069BD1D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DE0F83811D9769960069BD1D /* AromaSwiftClient.framework in Embed Frameworks */,
+				DE0F837D1D9769960069BD1D /* AlchemyGenerator.framework in Embed Frameworks */,
+				DE0F83831D9769960069BD1D /* AromaThrift.framework in Embed Frameworks */,
+				DE0F838B1D9769960069BD1D /* Sulcus.framework in Embed Frameworks */,
+				DE0F83851D9769960069BD1D /* LexisDatabase.framework in Embed Frameworks */,
+				DE0F837F1D9769960069BD1D /* AlchemyUIKit.framework in Embed Frameworks */,
+				DE0F838D1D9769960069BD1D /* SwiftExceptionCatcher.framework in Embed Frameworks */,
+				DE0F83871D9769960069BD1D /* LTMorphingLabel.framework in Embed Frameworks */,
+				DE0F83891D9769960069BD1D /* RedRomaColors.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE4DA2A71D8DF26F003183F4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DE0E00071D7E984C00B70D62 /* WelcomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePageViewController.swift; sourceTree = "<group>"; };
+		DE0E00091D7E9A8A00B70D62 /* WelcomePageTemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePageTemplateViewController.swift; sourceTree = "<group>"; };
+		DE0E87201D7FEF9900F42DB3 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DE0E87231D7FEFC900F42DB3 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		DE0E87291D7FF41D00F42DB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Welcome.storyboard; sourceTree = "<group>"; };
+		DE0EFFD51D7E843400B70D62 /* WelcomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
+		DE0EFFD81D7E856500B70D62 /* Strings+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+.swift"; sourceTree = "<group>"; };
+		DE0F836A1D9769770069BD1D /* AlchemyGenerator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlchemyGenerator.framework; path = Carthage/Build/iOS/AlchemyGenerator.framework; sourceTree = "<group>"; };
+		DE0F836B1D9769770069BD1D /* AlchemyUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlchemyUIKit.framework; path = Carthage/Build/iOS/AlchemyUIKit.framework; sourceTree = "<group>"; };
+		DE0F836C1D9769770069BD1D /* AromaSwiftClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AromaSwiftClient.framework; path = Carthage/Build/iOS/AromaSwiftClient.framework; sourceTree = "<group>"; };
+		DE0F836D1D9769770069BD1D /* AromaThrift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AromaThrift.framework; path = Carthage/Build/iOS/AromaThrift.framework; sourceTree = "<group>"; };
+		DE0F836E1D9769770069BD1D /* LexisDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LexisDatabase.framework; path = Carthage/Build/iOS/LexisDatabase.framework; sourceTree = "<group>"; };
+		DE0F836F1D9769770069BD1D /* LTMorphingLabel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LTMorphingLabel.framework; path = Carthage/Build/iOS/LTMorphingLabel.framework; sourceTree = "<group>"; };
+		DE0F83701D9769770069BD1D /* RedRomaColors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RedRomaColors.framework; path = Carthage/Build/iOS/RedRomaColors.framework; sourceTree = "<group>"; };
+		DE0F83711D9769770069BD1D /* Sulcus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sulcus.framework; path = Carthage/Build/iOS/Sulcus.framework; sourceTree = "<group>"; };
+		DE0F83721D9769770069BD1D /* SwiftExceptionCatcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftExceptionCatcher.framework; path = Carthage/Build/iOS/SwiftExceptionCatcher.framework; sourceTree = "<group>"; };
+		DE1294F31D6977F700687CA5 /* Lexis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lexis.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE1294F61D6977F700687CA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DE1294FB1D6977F700687CA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DE1294FD1D6977F700687CA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE1295001D6977F700687CA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DE1295021D6977F700687CA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE1295091D6982FF00687CA5 /* Cinzel-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cinzel-Black.otf"; sourceTree = "<group>"; };
+		DE12950A1D6982FF00687CA5 /* Cinzel-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cinzel-Bold.otf"; sourceTree = "<group>"; };
+		DE12950B1D6982FF00687CA5 /* Cinzel-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cinzel-Regular.otf"; sourceTree = "<group>"; };
+		DE12950C1D6982FF00687CA5 /* CinzelDecorative-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CinzelDecorative-Black.otf"; sourceTree = "<group>"; };
+		DE12950D1D6982FF00687CA5 /* CinzelDecorative-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CinzelDecorative-Bold.otf"; sourceTree = "<group>"; };
+		DE12950E1D6982FF00687CA5 /* CinzelDecorative-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CinzelDecorative-Regular.otf"; sourceTree = "<group>"; };
+		DE24652B1D8D174B00A138EB /* LexisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LexisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE24652D1D8D174B00A138EB /* LexisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexisTests.swift; sourceTree = "<group>"; };
+		DE24652F1D8D174B00A138EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE4DA2C51D8E37A5003183F4 /* SearchEntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchEntryCell.swift; sourceTree = "<group>"; };
+		DE4DA2C81D8E37AD003183F4 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		DE4DA2CB1D8E37B8003183F4 /* SearchEmptyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchEmptyCell.swift; sourceTree = "<group>"; };
+		DE4DA2CE1D8E3C5D003183F4 /* Arrays+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Arrays+.swift"; sourceTree = "<group>"; };
+		DE4DA2D11D8E3F5C003183F4 /* LexisWord+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LexisWord+.swift"; sourceTree = "<group>"; };
+		DE4DA2D71D8E667E003183F4 /* ViewControllers+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewControllers+.swift"; sourceTree = "<group>"; };
+		DE5D14031D87CDF800B8B3CC /* Raleway 100.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 100.ttf"; sourceTree = "<group>"; };
+		DE5D14041D87CDF800B8B3CC /* Raleway 100italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 100italic.ttf"; sourceTree = "<group>"; };
+		DE5D14051D87CDF800B8B3CC /* Raleway 200.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 200.ttf"; sourceTree = "<group>"; };
+		DE5D14061D87CDF800B8B3CC /* Raleway 200italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 200italic.ttf"; sourceTree = "<group>"; };
+		DE5D14071D87CDF800B8B3CC /* Raleway 300.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 300.ttf"; sourceTree = "<group>"; };
+		DE5D14081D87CDF800B8B3CC /* Raleway 300italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 300italic.ttf"; sourceTree = "<group>"; };
+		DE5D14091D87CDF800B8B3CC /* Raleway 500.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 500.ttf"; sourceTree = "<group>"; };
+		DE5D140A1D87CDF800B8B3CC /* Raleway 500italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 500italic.ttf"; sourceTree = "<group>"; };
+		DE5D140B1D87CDF800B8B3CC /* Raleway 600.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 600.ttf"; sourceTree = "<group>"; };
+		DE5D140C1D87CDF800B8B3CC /* Raleway 600italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 600italic.ttf"; sourceTree = "<group>"; };
+		DE5D140D1D87CDF800B8B3CC /* Raleway 700.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 700.ttf"; sourceTree = "<group>"; };
+		DE5D140E1D87CDF800B8B3CC /* Raleway 700italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 700italic.ttf"; sourceTree = "<group>"; };
+		DE5D140F1D87CDF800B8B3CC /* Raleway 800.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 800.ttf"; sourceTree = "<group>"; };
+		DE5D14101D87CDF800B8B3CC /* Raleway 800italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 800italic.ttf"; sourceTree = "<group>"; };
+		DE5D14111D87CDF800B8B3CC /* Raleway 900.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 900.ttf"; sourceTree = "<group>"; };
+		DE5D14121D87CDF800B8B3CC /* Raleway 900italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 900italic.ttf"; sourceTree = "<group>"; };
+		DE5D14131D87CDF800B8B3CC /* Raleway italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway italic.ttf"; sourceTree = "<group>"; };
+		DE5D14141D87CDF800B8B3CC /* Raleway regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway regular.ttf"; sourceTree = "<group>"; };
+		DE5D14281D87E15B00B8B3CC /* WordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordViewController.swift; sourceTree = "<group>"; };
+		DE5D14381D88474400B8B3CC /* HeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		DE5D143A1D8847BD00B8B3CC /* WordNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordNameCell.swift; sourceTree = "<group>"; };
+		DE5D143C1D8847D100B8B3CC /* WordDefinitionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordDefinitionCell.swift; sourceTree = "<group>"; };
+		DE5D143E1D8847E600B8B3CC /* WordDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordDescriptionCell.swift; sourceTree = "<group>"; };
+		DE6C286B1D96FA3000BB1D33 /* ExpandedDefinitionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandedDefinitionCell.swift; sourceTree = "<group>"; };
+		DE6C286D1D96FE1900BB1D33 /* WordViewController+ExpandingCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WordViewController+ExpandingCells.swift"; sourceTree = "<group>"; };
+		DE6C286F1D96FEB100BB1D33 /* WordViewController+Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WordViewController+Search.swift"; sourceTree = "<group>"; };
+		DE6C28711D97022600BB1D33 /* ExpandedWordNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandedWordNameCell.swift; sourceTree = "<group>"; };
+		DE6C28731D97071E00BB1D33 /* ActionsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionsCell.swift; sourceTree = "<group>"; };
+		DE6C28751D9708BC00BB1D33 /* WordViewController+Sharing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WordViewController+Sharing.swift"; sourceTree = "<group>"; };
+		DE6C28771D97178000BB1D33 /* Doubles+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Doubles+.swift"; sourceTree = "<group>"; };
+		DEDB439B1D925F5700BF092E /* LexisView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LexisView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE1294F01D6977F700687CA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE49A21D1D97957A00620411 /* AlchemyGenerator.framework in Frameworks */,
+				DE49A21E1D97957A00620411 /* AlchemyUIKit.framework in Frameworks */,
+				DE49A21F1D97957A00620411 /* AromaSwiftClient.framework in Frameworks */,
+				DE49A2201D97957A00620411 /* AromaThrift.framework in Frameworks */,
+				DE49A2211D97957A00620411 /* LexisDatabase.framework in Frameworks */,
+				DE49A2221D97957A00620411 /* LTMorphingLabel.framework in Frameworks */,
+				DE49A2231D97957A00620411 /* RedRomaColors.framework in Frameworks */,
+				DE49A2241D97957A00620411 /* Sulcus.framework in Frameworks */,
+				DE49A2251D97957A00620411 /* SwiftExceptionCatcher.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE2465281D8D174B00A138EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE0E87221D7FEFBE00F42DB3 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DE0E87231D7FEFC900F42DB3 /* Settings.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		DE0EFFD41D7E813100B70D62 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				DE0EFFD51D7E843400B70D62 /* WelcomePage.swift */,
+				DE0E00071D7E984C00B70D62 /* WelcomePageViewController.swift */,
+				DE0E00091D7E9A8A00B70D62 /* WelcomePageTemplateViewController.swift */,
+			);
+			name = Welcome;
+			sourceTree = "<group>";
+		};
+		DE1294EA1D6977F700687CA5 = {
+			isa = PBXGroup;
+			children = (
+				DE1294F51D6977F700687CA5 /* Lexis */,
+				DE24652C1D8D174B00A138EB /* LexisTests */,
+				DE1294F41D6977F700687CA5 /* Products */,
+				DE60BCC11D7B6ADE00EF15C6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DE1294F41D6977F700687CA5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE1294F31D6977F700687CA5 /* Lexis.app */,
+				DE24652B1D8D174B00A138EB /* LexisTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE1294F51D6977F700687CA5 /* Lexis */ = {
+			isa = PBXGroup;
+			children = (
+				DEDB439A1D925F4400BF092E /* UI */,
+				DE7B309D1D8D2C4A00AD44C1 /* Extensions */,
+				DE5D14371D88471000B8B3CC /* Cells */,
+				DE5D14271D87E14400B8B3CC /* ViewControllers */,
+				DE0E87221D7FEFBE00F42DB3 /* Settings */,
+				DE1295081D6982D100687CA5 /* Fonts */,
+				DE0EFFD41D7E813100B70D62 /* Welcome */,
+				DE1294F61D6977F700687CA5 /* AppDelegate.swift */,
+				DE0E87201D7FEF9900F42DB3 /* MainViewController.swift */,
+				DE1294FA1D6977F700687CA5 /* Main.storyboard */,
+				DE0E87281D7FF41D00F42DB3 /* Welcome.storyboard */,
+				DE1294FD1D6977F700687CA5 /* Assets.xcassets */,
+				DE1294FF1D6977F700687CA5 /* LaunchScreen.storyboard */,
+				DE1295021D6977F700687CA5 /* Info.plist */,
+			);
+			path = Lexis;
+			sourceTree = "<group>";
+		};
+		DE1295081D6982D100687CA5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DE1295091D6982FF00687CA5 /* Cinzel-Black.otf */,
+				DE12950A1D6982FF00687CA5 /* Cinzel-Bold.otf */,
+				DE12950B1D6982FF00687CA5 /* Cinzel-Regular.otf */,
+				DE12950C1D6982FF00687CA5 /* CinzelDecorative-Black.otf */,
+				DE12950D1D6982FF00687CA5 /* CinzelDecorative-Bold.otf */,
+				DE12950E1D6982FF00687CA5 /* CinzelDecorative-Regular.otf */,
+				DE5D14031D87CDF800B8B3CC /* Raleway 100.ttf */,
+				DE5D14041D87CDF800B8B3CC /* Raleway 100italic.ttf */,
+				DE5D14051D87CDF800B8B3CC /* Raleway 200.ttf */,
+				DE5D14061D87CDF800B8B3CC /* Raleway 200italic.ttf */,
+				DE5D14071D87CDF800B8B3CC /* Raleway 300.ttf */,
+				DE5D14081D87CDF800B8B3CC /* Raleway 300italic.ttf */,
+				DE5D14091D87CDF800B8B3CC /* Raleway 500.ttf */,
+				DE5D140A1D87CDF800B8B3CC /* Raleway 500italic.ttf */,
+				DE5D140B1D87CDF800B8B3CC /* Raleway 600.ttf */,
+				DE5D140C1D87CDF800B8B3CC /* Raleway 600italic.ttf */,
+				DE5D140D1D87CDF800B8B3CC /* Raleway 700.ttf */,
+				DE5D140E1D87CDF800B8B3CC /* Raleway 700italic.ttf */,
+				DE5D140F1D87CDF800B8B3CC /* Raleway 800.ttf */,
+				DE5D14101D87CDF800B8B3CC /* Raleway 800italic.ttf */,
+				DE5D14111D87CDF800B8B3CC /* Raleway 900.ttf */,
+				DE5D14121D87CDF800B8B3CC /* Raleway 900italic.ttf */,
+				DE5D14131D87CDF800B8B3CC /* Raleway italic.ttf */,
+				DE5D14141D87CDF800B8B3CC /* Raleway regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		DE24652C1D8D174B00A138EB /* LexisTests */ = {
+			isa = PBXGroup;
+			children = (
+				DE24652D1D8D174B00A138EB /* LexisTests.swift */,
+				DE24652F1D8D174B00A138EB /* Info.plist */,
+			);
+			path = LexisTests;
+			sourceTree = "<group>";
+		};
+		DE5D14271D87E14400B8B3CC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DE5D14281D87E15B00B8B3CC /* WordViewController.swift */,
+				DE6C286D1D96FE1900BB1D33 /* WordViewController+ExpandingCells.swift */,
+				DE6C286F1D96FEB100BB1D33 /* WordViewController+Search.swift */,
+				DE6C28751D9708BC00BB1D33 /* WordViewController+Sharing.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DE5D14371D88471000B8B3CC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DE5D14381D88474400B8B3CC /* HeaderCell.swift */,
+				DE5D143A1D8847BD00B8B3CC /* WordNameCell.swift */,
+				DE5D143C1D8847D100B8B3CC /* WordDefinitionCell.swift */,
+				DE5D143E1D8847E600B8B3CC /* WordDescriptionCell.swift */,
+				DE4DA2C51D8E37A5003183F4 /* SearchEntryCell.swift */,
+				DE4DA2C81D8E37AD003183F4 /* SearchResultCell.swift */,
+				DE4DA2CB1D8E37B8003183F4 /* SearchEmptyCell.swift */,
+				DE6C286B1D96FA3000BB1D33 /* ExpandedDefinitionCell.swift */,
+				DE6C28711D97022600BB1D33 /* ExpandedWordNameCell.swift */,
+				DE6C28731D97071E00BB1D33 /* ActionsCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		DE60BCC11D7B6ADE00EF15C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE0F836A1D9769770069BD1D /* AlchemyGenerator.framework */,
+				DE0F836B1D9769770069BD1D /* AlchemyUIKit.framework */,
+				DE0F836C1D9769770069BD1D /* AromaSwiftClient.framework */,
+				DE0F836D1D9769770069BD1D /* AromaThrift.framework */,
+				DE0F836E1D9769770069BD1D /* LexisDatabase.framework */,
+				DE0F836F1D9769770069BD1D /* LTMorphingLabel.framework */,
+				DE0F83701D9769770069BD1D /* RedRomaColors.framework */,
+				DE0F83711D9769770069BD1D /* Sulcus.framework */,
+				DE0F83721D9769770069BD1D /* SwiftExceptionCatcher.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE7B309D1D8D2C4A00AD44C1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DE4DA2CE1D8E3C5D003183F4 /* Arrays+.swift */,
+				DE4DA2D11D8E3F5C003183F4 /* LexisWord+.swift */,
+				DE0EFFD81D7E856500B70D62 /* Strings+.swift */,
+				DE4DA2D71D8E667E003183F4 /* ViewControllers+.swift */,
+				DE6C28771D97178000BB1D33 /* Doubles+.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		DEDB439A1D925F4400BF092E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				DEDB439B1D925F5700BF092E /* LexisView.swift */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE1294F21D6977F700687CA5 /* Lexis */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE1295051D6977F700687CA5 /* Build configuration list for PBXNativeTarget "Lexis" */;
+			buildPhases = (
+				DE1294EF1D6977F700687CA5 /* Sources */,
+				DE1294F01D6977F700687CA5 /* Frameworks */,
+				DE1294F11D6977F700687CA5 /* Resources */,
+				DE0F838E1D9769960069BD1D /* Embed Frameworks */,
+				DE0F838F1D976B3E0069BD1D /* Strip Non-Valid Architectures */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lexis;
+			productName = Lexis;
+			productReference = DE1294F31D6977F700687CA5 /* Lexis.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE24652A1D8D174B00A138EB /* LexisTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE2465341D8D174B00A138EB /* Build configuration list for PBXNativeTarget "LexisTests" */;
+			buildPhases = (
+				DE2465271D8D174B00A138EB /* Sources */,
+				DE2465281D8D174B00A138EB /* Frameworks */,
+				DE2465291D8D174B00A138EB /* Resources */,
+				DE4DA2A71D8DF26F003183F4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE2465311D8D174B00A138EB /* PBXTargetDependency */,
+			);
+			name = LexisTests;
+			productName = LexisTests;
+			productReference = DE24652B1D8D174B00A138EB /* LexisTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE1294EB1D6977F700687CA5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "RedRoma, Inc.";
+				TargetAttributes = {
+					DE1294F21D6977F700687CA5 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 5JBF7MD4UT;
+						ProvisioningStyle = Automatic;
+					};
+					DE24652A1D8D174B00A138EB = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DE1294F21D6977F700687CA5;
+					};
+				};
+			};
+			buildConfigurationList = DE1294EE1D6977F700687CA5 /* Build configuration list for PBXProject "Lexis" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE1294EA1D6977F700687CA5;
+			productRefGroup = DE1294F41D6977F700687CA5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE1294F21D6977F700687CA5 /* Lexis */,
+				DE24652A1D8D174B00A138EB /* LexisTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE1294F11D6977F700687CA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE5D14211D87CDF800B8B3CC /* Raleway 800.ttf in Resources */,
+				DE5D14241D87CDF800B8B3CC /* Raleway 900italic.ttf in Resources */,
+				DE1295141D6982FF00687CA5 /* CinzelDecorative-Regular.otf in Resources */,
+				DE1295101D6982FF00687CA5 /* Cinzel-Bold.otf in Resources */,
+				DE1295131D6982FF00687CA5 /* CinzelDecorative-Bold.otf in Resources */,
+				DE5D141F1D87CDF800B8B3CC /* Raleway 700.ttf in Resources */,
+				DE1295011D6977F700687CA5 /* LaunchScreen.storyboard in Resources */,
+				DE5D14201D87CDF800B8B3CC /* Raleway 700italic.ttf in Resources */,
+				DE1295121D6982FF00687CA5 /* CinzelDecorative-Black.otf in Resources */,
+				DE5D14171D87CDF800B8B3CC /* Raleway 200.ttf in Resources */,
+				DE5D141E1D87CDF800B8B3CC /* Raleway 600italic.ttf in Resources */,
+				DE5D14161D87CDF800B8B3CC /* Raleway 100italic.ttf in Resources */,
+				DE5D14251D87CDF800B8B3CC /* Raleway italic.ttf in Resources */,
+				DE5D141B1D87CDF800B8B3CC /* Raleway 500.ttf in Resources */,
+				DE5D14261D87CDF800B8B3CC /* Raleway regular.ttf in Resources */,
+				DE0E872A1D7FF41D00F42DB3 /* Welcome.storyboard in Resources */,
+				DE5D141D1D87CDF800B8B3CC /* Raleway 600.ttf in Resources */,
+				DE5D14181D87CDF800B8B3CC /* Raleway 200italic.ttf in Resources */,
+				DE1294FE1D6977F700687CA5 /* Assets.xcassets in Resources */,
+				DE5D141C1D87CDF800B8B3CC /* Raleway 500italic.ttf in Resources */,
+				DE12950F1D6982FF00687CA5 /* Cinzel-Black.otf in Resources */,
+				DE5D14151D87CDF800B8B3CC /* Raleway 100.ttf in Resources */,
+				DE5D14231D87CDF800B8B3CC /* Raleway 900.ttf in Resources */,
+				DE5D14191D87CDF800B8B3CC /* Raleway 300.ttf in Resources */,
+				DE5D14221D87CDF800B8B3CC /* Raleway 800italic.ttf in Resources */,
+				DE1294FC1D6977F700687CA5 /* Main.storyboard in Resources */,
+				DE1295111D6982FF00687CA5 /* Cinzel-Regular.otf in Resources */,
+				DE5D141A1D87CDF800B8B3CC /* Raleway 300italic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE2465291D8D174B00A138EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DE0F838F1D976B3E0069BD1D /* Strip Non-Valid Architectures */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Strip Non-Valid Architectures";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Signs a framework with the provided identity\ncode_sign() {\n    # Use the current code_sign_identitiy\n    echo \"Code Signing $1 with Identity ${EXPANDED_CODE_SIGN_IDENTITY_NAME}\"\n    echo \"/usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} --preserve-metadata=identifier,entitlements $1\"\n    /usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} --preserve-metadata=identifier,entitlements \"$1\"\n}\n\necho \"Stripping frameworks\"\ncd \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n\nfor file in $(find . -type f -perm +111); do\n# Skip non-dynamic libraries\nif ! [[ \"$(file \"$file\")\" == *\"dynamically linked shared library\"* ]]; then\ncontinue\nfi\n# Get architectures for current file\narchs=\"$(lipo -info \"${file}\" | rev | cut -d ':' -f1 | rev)\"\nstripped=\"\"\nfor arch in $archs; do\nif ! [[ \"${VALID_ARCHS}\" == *\"$arch\"* ]]; then\n# Strip non-valid architectures in-place\nlipo -remove \"$arch\" -output \"$file\" \"$file\" || exit 1\nstripped=\"$stripped $arch\"\nfi\ndone\nif [[ \"$stripped\" != \"\" ]]; then\necho \"Stripped $file of architectures:$stripped\"\nif [ \"${CODE_SIGNING_REQUIRED}\" == \"YES\" ]; then\ncode_sign \"${file}\"\nfi\nfi\ndone";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE1294EF1D6977F700687CA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE4DA2C91D8E37AD003183F4 /* SearchResultCell.swift in Sources */,
+				DE0EFFD61D7E843400B70D62 /* WelcomePage.swift in Sources */,
+				DE6C286E1D96FE1900BB1D33 /* WordViewController+ExpandingCells.swift in Sources */,
+				DE0E000A1D7E9A8A00B70D62 /* WelcomePageTemplateViewController.swift in Sources */,
+				DE6C28721D97022600BB1D33 /* ExpandedWordNameCell.swift in Sources */,
+				DE6C28741D97071E00BB1D33 /* ActionsCell.swift in Sources */,
+				DE0EFFD91D7E856500B70D62 /* Strings+.swift in Sources */,
+				DE5D143D1D8847D100B8B3CC /* WordDefinitionCell.swift in Sources */,
+				DE6C28781D97178000BB1D33 /* Doubles+.swift in Sources */,
+				DE4DA2D21D8E3F5C003183F4 /* LexisWord+.swift in Sources */,
+				DE4DA2CF1D8E3C5D003183F4 /* Arrays+.swift in Sources */,
+				DE0E87211D7FEF9900F42DB3 /* MainViewController.swift in Sources */,
+				DE5D14391D88474400B8B3CC /* HeaderCell.swift in Sources */,
+				DE6C286C1D96FA3000BB1D33 /* ExpandedDefinitionCell.swift in Sources */,
+				DE5D14291D87E15B00B8B3CC /* WordViewController.swift in Sources */,
+				DE5D143B1D8847BD00B8B3CC /* WordNameCell.swift in Sources */,
+				DE4DA2C61D8E37A5003183F4 /* SearchEntryCell.swift in Sources */,
+				DE6C28701D96FEB100BB1D33 /* WordViewController+Search.swift in Sources */,
+				DE6C28761D9708BC00BB1D33 /* WordViewController+Sharing.swift in Sources */,
+				DE4DA2D81D8E667E003183F4 /* ViewControllers+.swift in Sources */,
+				DE5D143F1D8847E600B8B3CC /* WordDescriptionCell.swift in Sources */,
+				DEDB439C1D925F5700BF092E /* LexisView.swift in Sources */,
+				DE0E87241D7FEFC900F42DB3 /* Settings.swift in Sources */,
+				DE1294F71D6977F700687CA5 /* AppDelegate.swift in Sources */,
+				DE0E00081D7E984C00B70D62 /* WelcomePageViewController.swift in Sources */,
+				DE4DA2CC1D8E37B8003183F4 /* SearchEmptyCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE2465271D8D174B00A138EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE4DA2C71D8E37A5003183F4 /* SearchEntryCell.swift in Sources */,
+				DE4DA2D01D8E3C5D003183F4 /* Arrays+.swift in Sources */,
+				DEDB439D1D925F5700BF092E /* LexisView.swift in Sources */,
+				DE4DA2CD1D8E37B8003183F4 /* SearchEmptyCell.swift in Sources */,
+				DE4DA2D91D8E667E003183F4 /* ViewControllers+.swift in Sources */,
+				DE4DA2D31D8E3F5C003183F4 /* LexisWord+.swift in Sources */,
+				DE4DA2CA1D8E37AD003183F4 /* SearchResultCell.swift in Sources */,
+				DE24652E1D8D174B00A138EB /* LexisTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE2465311D8D174B00A138EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE1294F21D6977F700687CA5 /* Lexis */;
+			targetProxy = DE2465301D8D174B00A138EB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DE0E87281D7FF41D00F42DB3 /* Welcome.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE0E87291D7FF41D00F42DB3 /* Base */,
+			);
+			name = Welcome.storyboard;
+			sourceTree = "<group>";
+		};
+		DE1294FA1D6977F700687CA5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE1294FB1D6977F700687CA5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DE1294FF1D6977F700687CA5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE1295001D6977F700687CA5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE1295031D6977F700687CA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE1295041D6977F700687CA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE1295061D6977F700687CA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5JBF7MD4UT;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Lexis/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tech.redroma.Lexis;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DE1295071D6977F700687CA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5JBF7MD4UT;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Lexis/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tech.redroma.Lexis;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		DE2465321D8D174B00A138EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = LexisTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ly.generalassemb.LexisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lexis.app/Lexis";
+			};
+			name = Debug;
+		};
+		DE2465331D8D174B00A138EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = LexisTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ly.generalassemb.LexisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lexis.app/Lexis";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE1294EE1D6977F700687CA5 /* Build configuration list for PBXProject "Lexis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE1295031D6977F700687CA5 /* Debug */,
+				DE1295041D6977F700687CA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE1295051D6977F700687CA5 /* Build configuration list for PBXNativeTarget "Lexis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE1295061D6977F700687CA5 /* Debug */,
+				DE1295071D6977F700687CA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE2465341D8D174B00A138EB /* Build configuration list for PBXNativeTarget "LexisTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE2465321D8D174B00A138EB /* Debug */,
+				DE2465331D8D174B00A138EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE1294EB1D6977F700687CA5 /* Project object */;
+}
