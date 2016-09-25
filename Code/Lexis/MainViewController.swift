@@ -10,6 +10,8 @@ import AromaSwiftClient
 import Foundation
 import LexisDatabase
 import LTMorphingLabel
+import PCAngularActivityIndicatorView
+import RedRomaColors
 import Sulcus
 import UIKit
 
@@ -29,6 +31,11 @@ class MainViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        prepareUI()
+    }
+    
+    private func prepareUI()
+    {
         
         self.messageLabel?.morphingDuration = 3.0
         self.messageLabel?.text = nil
