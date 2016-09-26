@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
     {
-        LOG.level = .info
+        LOG.level = .debug
         LOG.enable()
         
         AromaClient.TOKEN_ID = "655e0541-b719-47af-9c9e-53e161d26e53"
