@@ -49,19 +49,19 @@ class MainViewController: UIViewController
         if Settings.instance.isFirstTime
         {
             LOG.info("First time running this App.")
+            Settings.instance.isFirstTime = false
             
             AromaClient.beginMessage(withTitle: "First Time User")
                 .addBody("Showing them the welcome screen")
                 .withPriority(.medium)
                 .send()
             
-            goToWelcomeScreen()
-            
             self.initializeDictionary {
                 
             }
             
-            Settings.instance.isFirstTime = false
+            goToWelcomeScreen()
+           
         }
         else
         {

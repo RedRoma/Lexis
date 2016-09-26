@@ -34,7 +34,10 @@ class Settings
         
     }
     
-    
+    func clear()
+    {
+        userDefaults.removeObject(forKey: Keys.isFirstTime)
+    }
     
 }
 
