@@ -202,7 +202,13 @@ extension WordViewController
         }
         else if section == .ImageHeader
         {
-            cell.headerTitleLabel.text = "IMAGES"
+            var header = "IMAGES"
+            if let form = word.forms.first
+            {
+                header += " OF \(form.uppercased())"
+            }
+                
+            cell.headerTitleLabel.text = header
             cell.highlightLine.backgroundColor = RedRomaColors.lightBlue
         }
         

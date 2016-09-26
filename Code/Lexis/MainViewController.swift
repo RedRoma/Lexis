@@ -34,15 +34,11 @@ class MainViewController: UIViewController
     {
         super.viewDidLoad()
         prepareUI()
-        
-        initializeDictionary {
-            
-        }
     }
     
     private func prepareUI()
     {
-        self.messageLabel?.morphingDuration = 5.0
+        self.messageLabel?.morphingDuration = 4.0
         self.messageLabel?.text = nil
     }
     
@@ -61,12 +57,19 @@ class MainViewController: UIViewController
             
             goToWelcomeScreen()
             
+            self.initializeDictionary {
+                
+            }
+            
             Settings.instance.isFirstTime = false
         }
         else
         {
             LOG.info("This is not the first time this app has run.")
-            goToWordOfTheDay()
+            
+            self.initializeDictionary {
+                self.goToWordOfTheDay()
+            }
         }
     }
     
@@ -92,8 +95,6 @@ class MainViewController: UIViewController
         {
             let begin = Date()
             LOG.info("Initializing")
-            
-            self.main.addOperation { self.messageLabel?.text = "Loading Dictionary..." }
             
             LexisDatabase.instance.initialize()
             
