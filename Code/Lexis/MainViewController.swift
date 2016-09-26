@@ -28,7 +28,7 @@ class MainViewController: UIViewController
         return queue
     }()
     
-    fileprivate var alreadyInitialized = false
+    fileprivate var alreadyInitializing = false
     
     override func viewDidLoad()
     {
@@ -38,7 +38,7 @@ class MainViewController: UIViewController
     
     private func prepareUI()
     {
-        self.messageLabel?.morphingDuration = 5.0
+        self.messageLabel?.morphingDuration = 4.0
         self.messageLabel?.text = nil
     }
     
@@ -57,37 +57,36 @@ class MainViewController: UIViewController
             
             goToWelcomeScreen()
             
+            self.initializeDictionary {
+                
+            }
+            
             Settings.instance.isFirstTime = false
         }
         else
         {
             LOG.info("This is not the first time this app has run.")
-            goToWordOfTheDay()
+            
+            self.initializeDictionary {
+                self.goToWordOfTheDay()
+            }
         }
     }
     
     private func goToWelcomeScreen()
     {
         self.performSegue(withIdentifier: "ToWelcome", sender: self)
-        
-        initializeDictionary()
-        {
-            
-        }
     }
     
     private func goToWordOfTheDay()
     {
-        initializeDictionary()
-        {
-            self.performSegue(withIdentifier: "ToWordOfTheDay", sender: nil)
-        }
+        self.performSegue(withIdentifier: "ToWordOfTheDay", sender: nil)
     }
     
     private func initializeDictionary(_ callback: @escaping () -> Void)
     {
-        guard !alreadyInitialized else { callback() ; return }
-        alreadyInitialized = true
+        guard !alreadyInitializing else { callback() ; return }
+        alreadyInitializing = true
         
         progressIndicator.startAnimating()
         messageLabel?.text = "Loading Dictionary..."
@@ -96,6 +95,7 @@ class MainViewController: UIViewController
         {
             let begin = Date()
             LOG.info("Initializing")
+            
             LexisDatabase.instance.initialize()
             
             let delay = abs(begin.timeIntervalSinceNow)
@@ -117,7 +117,7 @@ class MainViewController: UIViewController
             
             self.main.addOperation
             {
-                self.messageLabel?.text = "Done"
+                self.messageLabel?.text = "Ready."
                 self.progressIndicator.stopAnimating()
                 callback()
             }

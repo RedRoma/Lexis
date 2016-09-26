@@ -41,22 +41,28 @@ extension WordViewController
             
             self.clearAllExpandedCells()
             
-            let sectionsToReload = IndexSet.init(integersIn: 0...1)
-            let sectionsToRemove = IndexSet.init(integersIn: 2...4)
+            let sectionsToReload: [SectionsWhenNotSearching] = [ .WordHeader, .WordTitle ]
+            let sectionsToRemove: [SectionsWhenNotSearching] = [.WordDefinitions, .WordDescription, .Action, .ImageHeader, .Images]
+            
+            let reload = IndexSet.init(sectionsToReload.map() { $0.rawValue })
+            let delete = IndexSet.init(sectionsToRemove.map() { $0.rawValue })
             
             self.tableView.beginUpdates()
-            self.tableView.deleteSections(sectionsToRemove, with: .bottom)
-            self.tableView.reloadSections(sectionsToReload, with: .automatic)
+            self.tableView.deleteSections(delete, with: .bottom)
+            self.tableView.reloadSections(reload, with: .automatic)
             self.tableView.endUpdates()
         }
         else if wasSearching
         {
-            let sectionsToReload = IndexSet.init(integersIn: 0...1)
-            let sectionsToAdd = IndexSet.init(integersIn: 2...4)
+            let sectionsToReload: [SectionsWhenNotSearching] = [ .WordHeader, .WordTitle ]
+            let sectionsToAdd: [SectionsWhenNotSearching] = [.WordDefinitions, .WordDescription, .Action, .ImageHeader, .Images]
+            
+            let reload = IndexSet.init(sectionsToReload.map() { $0.rawValue })
+            let add = IndexSet.init(sectionsToAdd.map() { $0.rawValue })
             
             self.tableView.beginUpdates()
-            self.tableView.insertSections(sectionsToAdd, with: .bottom)
-            self.tableView.reloadSections(sectionsToReload, with: .automatic)
+            self.tableView.insertSections(add, with: .bottom)
+            self.tableView.reloadSections(reload, with: .automatic)
             self.tableView.endUpdates()
         }
         else
@@ -67,16 +73,18 @@ extension WordViewController
     
     internal func numberOfRowsWhenNotSearching(atSection section: Int) -> Int
     {
+        guard let `section` = SectionsWhenNotSearching.forSection(section) else { return 0 }
+        
         switch section
         {
-            case 0, 1, 3, 4:
+            case .WordHeader, .WordTitle, .WordDescription, .Action, .ImageHeader:
                 return 1
-            default:
-                break
+            case .WordDefinitions:
+                return word.definitions.count
+            case .Images:
+                return images.notEmpty ? images.count : 1 //Include an image when no results are found
         }
         
-        let numberOfDefinitions = words.first!.definitions.count
-        return numberOfDefinitions
     }
     
     internal func numberOfRowsWhenSearching(atSection section: Int) -> Int

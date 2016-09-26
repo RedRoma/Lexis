@@ -32,6 +32,9 @@ Embellished, but not overdone.
 Clean, but not sterile.  
 
 
+<img src="Demo-1.gif" width="300"></img>
+
+---
 
 # Features
 
@@ -43,6 +46,8 @@ We not only want to know what a word's definition is, but we also want to know:
 + If the word is being used by a company. You probably wouldn't want to use it for a Business Name.
 + If the word is used in popular culture (Movies, Music, etc)  
 
+<img src="Demo-2.gif" width="300"></img>
+<img src="Demo-3.gif" width="300"></img>
 
 # Poetry
 

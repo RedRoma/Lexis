@@ -55,6 +55,23 @@
 		DE49A28B1D98841700620411 /* Sulcus.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26E1D98841300620411 /* Sulcus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DE49A28C1D98841700620411 /* SwiftExceptionCatcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26F1D98841300620411 /* SwiftExceptionCatcher.framework */; };
 		DE49A28D1D98841700620411 /* SwiftExceptionCatcher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26F1D98841300620411 /* SwiftExceptionCatcher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE49A2A51D98C08500620411 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE49A2A41D98C08500620411 /* ImageProvider.swift */; };
+		DE49A2A81D98C46F00620411 /* ImageProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE49A2A71D98C46F00620411 /* ImageProviderTests.swift */; };
+		DE49A2A91D98C4F800620411 /* AlchemyGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A2661D98841300620411 /* AlchemyGenerator.framework */; };
+		DE49A2AA1D98C4F800620411 /* AlchemyUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A2671D98841300620411 /* AlchemyUIKit.framework */; };
+		DE49A2AB1D98C4F800620411 /* AromaSwiftClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A2681D98841300620411 /* AromaSwiftClient.framework */; };
+		DE49A2AC1D98C4F800620411 /* AromaThrift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A2691D98841300620411 /* AromaThrift.framework */; };
+		DE49A2AD1D98C4F800620411 /* LexisDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26A1D98841300620411 /* LexisDatabase.framework */; };
+		DE49A2AE1D98C4F800620411 /* LTMorphingLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26B1D98841300620411 /* LTMorphingLabel.framework */; };
+		DE49A2AF1D98C4F800620411 /* PCAngularActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26C1D98841300620411 /* PCAngularActivityIndicatorView.framework */; };
+		DE49A2B01D98C4F800620411 /* RedRomaColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26D1D98841300620411 /* RedRomaColors.framework */; };
+		DE49A2B11D98C4F800620411 /* Sulcus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26E1D98841300620411 /* Sulcus.framework */; };
+		DE49A2B21D98C4F800620411 /* SwiftExceptionCatcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26F1D98841300620411 /* SwiftExceptionCatcher.framework */; };
+		DE49A2B41D98C55B00620411 /* FlickrImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE49A2B31D98C55B00620411 /* FlickrImageProvider.swift */; };
+		DE49A2B61D98D10600620411 /* URLs+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE49A2B51D98D10600620411 /* URLs+.swift */; };
+		DE49A2B81D98D39100620411 /* FlickrImageProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE49A2B71D98D39100620411 /* FlickrImageProviderTests.swift */; };
+		DE49A2BA1D98E96800620411 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE49A2B91D98E96800620411 /* ImageCell.swift */; };
+		DE49A2BC1D98EC0200620411 /* WordViewControllers+Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE49A2BB1D98EC0200620411 /* WordViewControllers+Images.swift */; };
 		DE4DA2C61D8E37A5003183F4 /* SearchEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA2C51D8E37A5003183F4 /* SearchEntryCell.swift */; };
 		DE4DA2C71D8E37A5003183F4 /* SearchEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA2C51D8E37A5003183F4 /* SearchEntryCell.swift */; };
 		DE4DA2C91D8E37AD003183F4 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA2C81D8E37AD003183F4 /* SearchResultCell.swift */; };
@@ -176,6 +193,13 @@
 		DE49A26D1D98841300620411 /* RedRomaColors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RedRomaColors.framework; path = Carthage/Build/iOS/RedRomaColors.framework; sourceTree = "<group>"; };
 		DE49A26E1D98841300620411 /* Sulcus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sulcus.framework; path = Carthage/Build/iOS/Sulcus.framework; sourceTree = "<group>"; };
 		DE49A26F1D98841300620411 /* SwiftExceptionCatcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftExceptionCatcher.framework; path = Carthage/Build/iOS/SwiftExceptionCatcher.framework; sourceTree = "<group>"; };
+		DE49A2A41D98C08500620411 /* ImageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
+		DE49A2A71D98C46F00620411 /* ImageProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProviderTests.swift; sourceTree = "<group>"; };
+		DE49A2B31D98C55B00620411 /* FlickrImageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrImageProvider.swift; sourceTree = "<group>"; };
+		DE49A2B51D98D10600620411 /* URLs+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLs+.swift"; sourceTree = "<group>"; };
+		DE49A2B71D98D39100620411 /* FlickrImageProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrImageProviderTests.swift; sourceTree = "<group>"; };
+		DE49A2B91D98E96800620411 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		DE49A2BB1D98EC0200620411 /* WordViewControllers+Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WordViewControllers+Images.swift"; sourceTree = "<group>"; };
 		DE4DA2C51D8E37A5003183F4 /* SearchEntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchEntryCell.swift; sourceTree = "<group>"; };
 		DE4DA2C81D8E37AD003183F4 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		DE4DA2CB1D8E37B8003183F4 /* SearchEmptyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchEmptyCell.swift; sourceTree = "<group>"; };
@@ -247,6 +271,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE49A2B11D98C4F800620411 /* Sulcus.framework in Frameworks */,
+				DE49A2AB1D98C4F800620411 /* AromaSwiftClient.framework in Frameworks */,
+				DE49A2A91D98C4F800620411 /* AlchemyGenerator.framework in Frameworks */,
+				DE49A2AC1D98C4F800620411 /* AromaThrift.framework in Frameworks */,
+				DE49A2AD1D98C4F800620411 /* LexisDatabase.framework in Frameworks */,
+				DE49A2B21D98C4F800620411 /* SwiftExceptionCatcher.framework in Frameworks */,
+				DE49A2AF1D98C4F800620411 /* PCAngularActivityIndicatorView.framework in Frameworks */,
+				DE49A2AA1D98C4F800620411 /* AlchemyUIKit.framework in Frameworks */,
+				DE49A2AE1D98C4F800620411 /* LTMorphingLabel.framework in Frameworks */,
+				DE49A2B01D98C4F800620411 /* RedRomaColors.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +327,7 @@
 		DE1294F51D6977F700687CA5 /* Lexis */ = {
 			isa = PBXGroup;
 			children = (
+				DE49A2A31D98C07B00620411 /* Images */,
 				DEDB439A1D925F4400BF092E /* UI */,
 				DE7B309D1D8D2C4A00AD44C1 /* Extensions */,
 				DE5D14371D88471000B8B3CC /* Cells */,
@@ -345,10 +380,29 @@
 		DE24652C1D8D174B00A138EB /* LexisTests */ = {
 			isa = PBXGroup;
 			children = (
+				DE49A2A61D98C46700620411 /* Images */,
 				DE24652D1D8D174B00A138EB /* LexisTests.swift */,
 				DE24652F1D8D174B00A138EB /* Info.plist */,
 			);
 			path = LexisTests;
+			sourceTree = "<group>";
+		};
+		DE49A2A31D98C07B00620411 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DE49A2A41D98C08500620411 /* ImageProvider.swift */,
+				DE49A2B31D98C55B00620411 /* FlickrImageProvider.swift */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		DE49A2A61D98C46700620411 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DE49A2A71D98C46F00620411 /* ImageProviderTests.swift */,
+				DE49A2B71D98D39100620411 /* FlickrImageProviderTests.swift */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		DE5D14271D87E14400B8B3CC /* ViewControllers */ = {
@@ -358,6 +412,7 @@
 				DE6C286D1D96FE1900BB1D33 /* WordViewController+ExpandingCells.swift */,
 				DE6C286F1D96FEB100BB1D33 /* WordViewController+Search.swift */,
 				DE6C28751D9708BC00BB1D33 /* WordViewController+Sharing.swift */,
+				DE49A2BB1D98EC0200620411 /* WordViewControllers+Images.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -374,6 +429,7 @@
 				DE4DA2CB1D8E37B8003183F4 /* SearchEmptyCell.swift */,
 				DE6C286B1D96FA3000BB1D33 /* ExpandedDefinitionCell.swift */,
 				DE6C28711D97022600BB1D33 /* ExpandedWordNameCell.swift */,
+				DE49A2B91D98E96800620411 /* ImageCell.swift */,
 				DE6C28731D97071E00BB1D33 /* ActionsCell.swift */,
 			);
 			path = Cells;
@@ -404,6 +460,7 @@
 				DE0EFFD81D7E856500B70D62 /* Strings+.swift */,
 				DE4DA2D71D8E667E003183F4 /* ViewControllers+.swift */,
 				DE6C28771D97178000BB1D33 /* Doubles+.swift */,
+				DE49A2B51D98D10600620411 /* URLs+.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -588,9 +645,14 @@
 				DE5D143F1D8847E600B8B3CC /* WordDescriptionCell.swift in Sources */,
 				DEDB439C1D925F5700BF092E /* LexisView.swift in Sources */,
 				DE0E87241D7FEFC900F42DB3 /* Settings.swift in Sources */,
+				DE49A2B41D98C55B00620411 /* FlickrImageProvider.swift in Sources */,
 				DE1294F71D6977F700687CA5 /* AppDelegate.swift in Sources */,
+				DE49A2B61D98D10600620411 /* URLs+.swift in Sources */,
 				DE0E00081D7E984C00B70D62 /* WelcomePageViewController.swift in Sources */,
 				DE4DA2CC1D8E37B8003183F4 /* SearchEmptyCell.swift in Sources */,
+				DE49A2BC1D98EC0200620411 /* WordViewControllers+Images.swift in Sources */,
+				DE49A2A51D98C08500620411 /* ImageProvider.swift in Sources */,
+				DE49A2BA1D98E96800620411 /* ImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,9 +665,11 @@
 				DEDB439D1D925F5700BF092E /* LexisView.swift in Sources */,
 				DE4DA2CD1D8E37B8003183F4 /* SearchEmptyCell.swift in Sources */,
 				DE4DA2D91D8E667E003183F4 /* ViewControllers+.swift in Sources */,
+				DE49A2B81D98D39100620411 /* FlickrImageProviderTests.swift in Sources */,
 				DE4DA2D31D8E3F5C003183F4 /* LexisWord+.swift in Sources */,
 				DE4DA2CA1D8E37AD003183F4 /* SearchResultCell.swift in Sources */,
 				DE24652E1D8D174B00A138EB /* LexisTests.swift in Sources */,
+				DE49A2A81D98C46F00620411 /* ImageProviderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -785,6 +849,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = LexisTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -802,6 +867,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = LexisTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
