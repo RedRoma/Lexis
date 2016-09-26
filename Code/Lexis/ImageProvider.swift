@@ -14,51 +14,31 @@ import UIKit
 
 protocol ImageProvider
 {
-    func searchForImage(withWord word: LexisWord) -> URL?
+    func searchForImages(withTerm searchTerm: String) -> [URL]
 }
 
 extension ImageProvider
 {
-    func searchForImages(withWord word: LexisWord, numberOfImages number: Int) -> [URL]
+    
+    func searchForImages(withWord word: LexisWord, limitTo limit: Int = 0) -> [URL]
     {
-        guard number > 0 else { return [] }
+        guard limit >= 0 else { return [] }
+        guard let searchTerm = word.forms.first else { return [] }
         
-        let urls = number.times() {
-            return self.searchForImage(withWord: word)
-        }.flatMap() { return $0 }
+        let urls = self.searchForImages(withTerm: searchTerm)
         
         LOG.info("Loaded \(urls.count) URLs for word \(word.forms)")
-        return urls
-    }
-    
-}
-
-extension UIImage
-{
-    static func fromURL(url: URL) -> UIImage?
-    {
         
-        let data: Data
-        do
+        if limit == 0 || urls.count <= limit
         {
-            data = try Data(contentsOf: url)
+            return urls
         }
-        catch
-        {
-            LOG.error("Failed to download Data at \(url): \(error)")
-            return nil
-        }
-        
-        guard let image = UIImage(data: data)
         else
         {
-            LOG.warn("Failed to convert data at URL \(url) into an Image")
-            return nil
+            return Array(urls[0..<limit])
         }
-        LOG.debug("Successfully downloaded image at \(url)")
-        
-        return image
     }
+    
 }
 
 extension Int

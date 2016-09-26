@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import Sulcus
 
 extension String
 {
@@ -61,5 +61,44 @@ extension String
         let restOfString = substring(from: self.index(after: startIndex))
         
         return firstCharacter.capitalized + restOfString
+    }
+    
+}
+
+
+//MARK: JSON Conversion
+extension String
+{
+    func asJSONDictionary() -> NSDictionary?
+    {
+        do
+        {
+            guard let data = self.data(using: .utf8) else { return nil }
+            
+            let json = try JSONSerialization.jsonObject(with: data, options: [])
+            
+            return json as? NSDictionary
+        }
+        catch
+        {
+            LOG.error("Failed to convert JSON String to dictionary: \(self): \(error)")
+            return nil
+        }
+    }
+    
+    func asJSONArray() -> NSArray?
+    {
+        do
+        {
+            guard let data = self.data(using: .utf8) else { return nil }
+            
+            let json = try JSONSerialization.jsonObject(with: data, options: [])
+            return json as? NSArray
+        }
+        catch
+        {
+            LOG.error("Failed to convert JSON String to array: \(self) : \(error)")
+            return nil
+        }
     }
 }
