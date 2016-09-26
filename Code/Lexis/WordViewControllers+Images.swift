@@ -7,6 +7,7 @@
 //
 
 import AromaSwiftClient
+import AlchemyGenerator
 import Foundation
 import LexisDatabase
 import Sulcus
@@ -25,6 +26,8 @@ fileprivate let asyncImageLoads: OperationQueue =
 }()
 
 fileprivate let main = OperationQueue.main
+
+fileprivate let samplePhotos = [ #imageLiteral(resourceName: "Sample-1"), #imageLiteral(resourceName: "Sample-2"), #imageLiteral(resourceName: "Sample-3") ]
 
 /**
     This File adds support for Images in the Lexis Dictionary.
@@ -68,7 +71,7 @@ extension WordViewController
         
         if images.isEmpty
         {
-            cell.photoImageView?.image = #imageLiteral(resourceName: "Sample-1")
+            cell.photoImageView?.image = AlchemyGenerator.anyOf(samplePhotos)
         }
         else
         {
