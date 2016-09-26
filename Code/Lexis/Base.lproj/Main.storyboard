@@ -514,8 +514,49 @@
                                     <outlet property="toolbar" destination="bEa-Zl-plO" id="IIw-Ck-7ZF"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="200" id="NW5-W2-qQO" customClass="ImageCell" customModule="Lexis" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="740.33333333333337" width="375" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NW5-W2-qQO" id="pho-kp-fLa">
+                                    <frame key="frameInset" width="375" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sgp-B3-Wnu" userLabel="Card" customClass="LexisView" customModule="Lexis" customModuleProvider="target">
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="753" image="Sample-3" translatesAutoresizingMaskIntoConstraints="NO" id="N29-fH-SJX"/>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="N29-fH-SJX" firstAttribute="leading" secondItem="Sgp-B3-Wnu" secondAttribute="leading" constant="2" id="MLY-IY-6ZJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="N29-fH-SJX" secondAttribute="bottom" constant="2" id="Nod-sx-EfF"/>
+                                                <constraint firstAttribute="trailing" secondItem="N29-fH-SJX" secondAttribute="trailing" constant="2" id="Ope-21-cmd"/>
+                                                <constraint firstItem="N29-fH-SJX" firstAttribute="top" secondItem="Sgp-B3-Wnu" secondAttribute="top" constant="2" id="U0n-Wg-YSx"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderThickness">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Sgp-B3-Wnu" firstAttribute="top" secondItem="pho-kp-fLa" secondAttribute="top" constant="2" id="0HC-cO-P1J"/>
+                                        <constraint firstItem="Sgp-B3-Wnu" firstAttribute="leading" secondItem="pho-kp-fLa" secondAttribute="leading" constant="8" id="Gxg-Bf-uIa"/>
+                                        <constraint firstAttribute="trailing" secondItem="Sgp-B3-Wnu" secondAttribute="trailing" constant="8" id="iof-7n-5DD"/>
+                                        <constraint firstAttribute="bottom" secondItem="Sgp-B3-Wnu" secondAttribute="bottom" constant="2" id="rqN-dV-zz3"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="cardView" destination="Sgp-B3-Wnu" id="B43-c2-k59"/>
+                                    <outlet property="photoImageView" destination="N29-fH-SJX" id="Sux-aF-E4C"/>
+                                </connections>
+                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SearchEntryCell" rowHeight="120" id="y98-iL-76Q" customClass="SearchEntryCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="740.33333333333337" width="375" height="120"/>
+                                <rect key="frame" x="0.0" y="940.33333333333337" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y98-iL-76Q" id="Ebc-9P-3PY">
                                     <frame key="frameInset" width="375" height="120"/>
@@ -565,7 +606,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchResultCell" rowHeight="60" id="5dG-AZ-tXl" customClass="SearchResultCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="860.33333333333337" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="1060.3333333333335" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5dG-AZ-tXl" id="pUW-DS-8N1">
                                     <frame key="frameInset" width="375" height="60"/>
@@ -621,7 +662,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SearchEmptyCell" rowHeight="500" id="fPX-Dd-cW0" customClass="SearchEmptyCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="920.33333333333337" width="375" height="500"/>
+                                <rect key="frame" x="0.0" y="1120.3333333333335" width="375" height="500"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fPX-Dd-cW0" id="W7f-Hg-6c3">
                                     <frame key="frameInset" width="375" height="500"/>
@@ -709,7 +750,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LSR-3L-20H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1957.5999999999999" y="33.283358320839582"/>
+            <point key="canvasLocation" x="1957.2463768115942" y="32.608695652173914"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AcH-VC-WgK">
@@ -741,5 +782,6 @@
         <image name="Art-Open-Book" width="360" height="500"/>
         <image name="Book-Red" width="400" height="400"/>
         <image name="Disclosure" width="14" height="26"/>
+        <image name="Sample-3" width="900" height="600"/>
     </resources>
 </document>
