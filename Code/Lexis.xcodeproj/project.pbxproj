@@ -55,6 +55,7 @@
 		DE49A28B1D98841700620411 /* Sulcus.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26E1D98841300620411 /* Sulcus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DE49A28C1D98841700620411 /* SwiftExceptionCatcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26F1D98841300620411 /* SwiftExceptionCatcher.framework */; };
 		DE49A28D1D98841700620411 /* SwiftExceptionCatcher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26F1D98841300620411 /* SwiftExceptionCatcher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE49A2A51D98C08500620411 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE49A2A41D98C08500620411 /* ImageProvider.swift */; };
 		DE4DA2C61D8E37A5003183F4 /* SearchEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA2C51D8E37A5003183F4 /* SearchEntryCell.swift */; };
 		DE4DA2C71D8E37A5003183F4 /* SearchEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA2C51D8E37A5003183F4 /* SearchEntryCell.swift */; };
 		DE4DA2C91D8E37AD003183F4 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA2C81D8E37AD003183F4 /* SearchResultCell.swift */; };
@@ -176,6 +177,7 @@
 		DE49A26D1D98841300620411 /* RedRomaColors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RedRomaColors.framework; path = Carthage/Build/iOS/RedRomaColors.framework; sourceTree = "<group>"; };
 		DE49A26E1D98841300620411 /* Sulcus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sulcus.framework; path = Carthage/Build/iOS/Sulcus.framework; sourceTree = "<group>"; };
 		DE49A26F1D98841300620411 /* SwiftExceptionCatcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftExceptionCatcher.framework; path = Carthage/Build/iOS/SwiftExceptionCatcher.framework; sourceTree = "<group>"; };
+		DE49A2A41D98C08500620411 /* ImageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
 		DE4DA2C51D8E37A5003183F4 /* SearchEntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchEntryCell.swift; sourceTree = "<group>"; };
 		DE4DA2C81D8E37AD003183F4 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		DE4DA2CB1D8E37B8003183F4 /* SearchEmptyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchEmptyCell.swift; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 		DE1294F51D6977F700687CA5 /* Lexis */ = {
 			isa = PBXGroup;
 			children = (
+				DE49A2A31D98C07B00620411 /* Images */,
 				DEDB439A1D925F4400BF092E /* UI */,
 				DE7B309D1D8D2C4A00AD44C1 /* Extensions */,
 				DE5D14371D88471000B8B3CC /* Cells */,
@@ -349,6 +352,14 @@
 				DE24652F1D8D174B00A138EB /* Info.plist */,
 			);
 			path = LexisTests;
+			sourceTree = "<group>";
+		};
+		DE49A2A31D98C07B00620411 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DE49A2A41D98C08500620411 /* ImageProvider.swift */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		DE5D14271D87E14400B8B3CC /* ViewControllers */ = {
@@ -591,6 +602,7 @@
 				DE1294F71D6977F700687CA5 /* AppDelegate.swift in Sources */,
 				DE0E00081D7E984C00B70D62 /* WelcomePageViewController.swift in Sources */,
 				DE4DA2CC1D8E37B8003183F4 /* SearchEmptyCell.swift in Sources */,
+				DE49A2A51D98C08500620411 /* ImageProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
