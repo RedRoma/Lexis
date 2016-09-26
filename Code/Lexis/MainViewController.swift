@@ -28,12 +28,16 @@ class MainViewController: UIViewController
         return queue
     }()
     
-    fileprivate var alreadyInitialized = false
+    fileprivate var alreadyInitializing = false
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         prepareUI()
+        
+        initializeDictionary {
+            
+        }
     }
     
     private func prepareUI()
@@ -69,25 +73,17 @@ class MainViewController: UIViewController
     private func goToWelcomeScreen()
     {
         self.performSegue(withIdentifier: "ToWelcome", sender: self)
-        
-        initializeDictionary()
-        {
-            
-        }
     }
     
     private func goToWordOfTheDay()
     {
-        initializeDictionary()
-        {
-            self.performSegue(withIdentifier: "ToWordOfTheDay", sender: nil)
-        }
+        self.performSegue(withIdentifier: "ToWordOfTheDay", sender: nil)
     }
     
     private func initializeDictionary(_ callback: @escaping () -> Void)
     {
-        guard !alreadyInitialized else { callback() ; return }
-        alreadyInitialized = true
+        guard !alreadyInitializing else { callback() ; return }
+        alreadyInitializing = true
         
         progressIndicator.startAnimating()
         messageLabel?.text = "Loading Dictionary..."
@@ -117,7 +113,7 @@ class MainViewController: UIViewController
             
             self.main.addOperation
             {
-                self.messageLabel?.text = "Done"
+                self.messageLabel?.text = "Ready."
                 self.progressIndicator.stopAnimating()
                 callback()
             }
