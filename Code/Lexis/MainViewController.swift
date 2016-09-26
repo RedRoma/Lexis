@@ -28,6 +28,8 @@ class MainViewController: UIViewController
         return queue
     }()
     
+    fileprivate var alreadyInitialized = false
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -84,6 +86,9 @@ class MainViewController: UIViewController
     
     private func initializeDictionary(_ callback: @escaping () -> Void)
     {
+        guard !alreadyInitialized else { callback() ; return }
+        alreadyInitialized = true
+        
         progressIndicator.startAnimating()
         messageLabel?.text = "Loading Dictionary..."
         

@@ -41,6 +41,12 @@ class WelcomePageTemplateViewController : UIViewController
         self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
+    private func clearInfo()
+    {
+        titleLabel.text = nil
+        subtitleLabel.text = nil
+    }
+    
     private func setInfo()
     {
         titleLabel.text = pageInfo.title
