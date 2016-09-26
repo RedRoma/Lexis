@@ -92,6 +92,9 @@ class MainViewController: UIViewController
         {
             let begin = Date()
             LOG.info("Initializing")
+            
+            self.main.addOperation { self.messageLabel?.text = "Loading Dictionary..." }
+            
             LexisDatabase.instance.initialize()
             
             let delay = abs(begin.timeIntervalSinceNow)

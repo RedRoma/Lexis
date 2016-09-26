@@ -13,16 +13,66 @@ import RedRomaColors
 import Sulcus
 import UIKit
 
+
 class WordViewController: UITableViewController
 {
     
     //WORDS
     //========================================================================
-    internal var words: [LexisWord] { return [word] }
+//    internal var words: [LexisWord] { return [word] }
     internal var word: LexisWord = LexisDatabase.instance.anyWord
+    {
+        didSet
+        {
+            self.loadImagesForWord()
+        }
+    }
+    
+    //SECTIONS
+    //========================================================================
+    
+    enum SectionsWhenNotSearching: Int
+    {
+        case WordHeader
+        case WordTitle
+        case WordDefinitions
+        case WordDescription
+        case Action
+        case ImageHeader
+        case Images
+        
+        var section: Int { return rawValue }
+        
+        static let sections: [SectionsWhenNotSearching] =
+        [
+            .WordHeader,
+            .WordTitle,
+            .WordDefinitions,
+            .WordDescription,
+            .Action,
+            .ImageHeader,
+            .Images
+        ]
+        
+        static func forSection(_ section: Int) -> SectionsWhenNotSearching?
+        {
+            guard section >= 0 && section < sections.count else { return nil }
+            
+            return sections[section]
+        }
+    }
+    
+    internal let numberOfSectionsWhenSearching = 2
+    /** Header, Title, Definitions, Description, Action, Header, Images */
+    internal let numberOfSectionsWhenNotSearching = SectionsWhenNotSearching.sections.count
+    
+    
+    //IMAGES
+    //========================================================================
+    var images: [URL] = []
     
     //SEARCH
-     //========================================================================
+    //========================================================================
     internal var searchResults: [LexisWord] = []
     internal var searchTerm = ""
     {
@@ -41,10 +91,8 @@ class WordViewController: UITableViewController
     {
         return !isSearching
     }
-    
-    internal let numberOfSectionsWhenSearching = 2
-    internal let numberOfSectionsWhenNotSearching = 5
-    
+ 
+
     //ASYNC
     //========================================================================
     internal let main = OperationQueue.main
@@ -61,8 +109,7 @@ class WordViewController: UITableViewController
     {
         super.viewDidLoad()
         
-        LOG.info("Loaded W.O.D. View Controller")
-        
+        loadImagesForWord()
         refreshControl = UIRefreshControl()
         refreshControl?.backgroundColor = UIColor.clear
         refreshControl?.addTarget(self, action: #selector(self.update), for: .valueChanged)
@@ -122,16 +169,16 @@ extension WordViewController
     
     private func createCellWhenNotSearching(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
     {
-        let section = indexPath.section
+        guard let section = SectionsWhenNotSearching.forSection(indexPath.section) else { return emptyCell }
         
         switch section
         {
-            case 0 : return createHeaderCell(tableView, atIndexPath: indexPath)
-            case 1 : return createWordTitleCell(tableView, atIndexPath: indexPath)
-            case 2 : return createWordDefinitionCell(tableView, atIndexPath: indexPath)
-            case 3 : return createWordDescriptionCell(tableView, atIndexPath: indexPath)
-            case 4 : return createActionsCell(tableView, atIndexpath: indexPath)
-            default : break
+            case .WordHeader, .ImageHeader : return createHeaderCell(tableView, atIndexPath: indexPath)
+            case .WordTitle         : return createWordTitleCell(tableView, atIndexPath: indexPath)
+            case .WordDefinitions   : return createWordDefinitionCell(tableView, atIndexPath: indexPath)
+            case .WordDescription   : return createWordDescriptionCell(tableView, atIndexPath: indexPath)
+            case .Action            : return createActionsCell(tableView, atIndexPath: indexPath)
+            case .Images            : return createImageCell(tableView, atIndexPath: indexPath)
         }
         
         return emptyCell
@@ -140,7 +187,25 @@ extension WordViewController
     
     private func createHeaderCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell", for: indexPath) as? HeaderCell
+        else
+        {
+            return emptyCell
+        }
+        
+        guard let section = SectionsWhenNotSearching.forSection(indexPath.section) else { return cell }
+        
+        if section == .WordHeader
+        {
+            cell.headerTitleLabel.text = "WORD OF THE MOMENT"
+            cell.highlightLine.backgroundColor = RedRomaColors.lightPurple
+        }
+        else if section == .ImageHeader
+        {
+            cell.headerTitleLabel.text = "IMAGES"
+            cell.highlightLine.backgroundColor = RedRomaColors.lightBlue
+        }
+        
         return cell
     }
     
@@ -169,7 +234,7 @@ extension WordViewController
         return cell
     }
     
-    private func createActionsCell(_ tableView: UITableView, atIndexpath indexPath: IndexPath) -> UITableViewCell
+    private func createActionsCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
     {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ActionsCell", for: indexPath) as? ActionsCell
         else

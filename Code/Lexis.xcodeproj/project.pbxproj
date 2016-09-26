@@ -71,6 +71,7 @@
 		DE49A2B61D98D10600620411 /* URLs+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE49A2B51D98D10600620411 /* URLs+.swift */; };
 		DE49A2B81D98D39100620411 /* FlickrImageProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE49A2B71D98D39100620411 /* FlickrImageProviderTests.swift */; };
 		DE49A2BA1D98E96800620411 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE49A2B91D98E96800620411 /* ImageCell.swift */; };
+		DE49A2BC1D98EC0200620411 /* WordViewControllers+Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE49A2BB1D98EC0200620411 /* WordViewControllers+Images.swift */; };
 		DE4DA2C61D8E37A5003183F4 /* SearchEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA2C51D8E37A5003183F4 /* SearchEntryCell.swift */; };
 		DE4DA2C71D8E37A5003183F4 /* SearchEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA2C51D8E37A5003183F4 /* SearchEntryCell.swift */; };
 		DE4DA2C91D8E37AD003183F4 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA2C81D8E37AD003183F4 /* SearchResultCell.swift */; };
@@ -198,6 +199,7 @@
 		DE49A2B51D98D10600620411 /* URLs+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLs+.swift"; sourceTree = "<group>"; };
 		DE49A2B71D98D39100620411 /* FlickrImageProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrImageProviderTests.swift; sourceTree = "<group>"; };
 		DE49A2B91D98E96800620411 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		DE49A2BB1D98EC0200620411 /* WordViewControllers+Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WordViewControllers+Images.swift"; sourceTree = "<group>"; };
 		DE4DA2C51D8E37A5003183F4 /* SearchEntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchEntryCell.swift; sourceTree = "<group>"; };
 		DE4DA2C81D8E37AD003183F4 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		DE4DA2CB1D8E37B8003183F4 /* SearchEmptyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchEmptyCell.swift; sourceTree = "<group>"; };
@@ -410,6 +412,7 @@
 				DE6C286D1D96FE1900BB1D33 /* WordViewController+ExpandingCells.swift */,
 				DE6C286F1D96FEB100BB1D33 /* WordViewController+Search.swift */,
 				DE6C28751D9708BC00BB1D33 /* WordViewController+Sharing.swift */,
+				DE49A2BB1D98EC0200620411 /* WordViewControllers+Images.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -647,6 +650,7 @@
 				DE49A2B61D98D10600620411 /* URLs+.swift in Sources */,
 				DE0E00081D7E984C00B70D62 /* WelcomePageViewController.swift in Sources */,
 				DE4DA2CC1D8E37B8003183F4 /* SearchEmptyCell.swift in Sources */,
+				DE49A2BC1D98EC0200620411 /* WordViewControllers+Images.swift in Sources */,
 				DE49A2A51D98C08500620411 /* ImageProvider.swift in Sources */,
 				DE49A2BA1D98E96800620411 /* ImageCell.swift in Sources */,
 			);

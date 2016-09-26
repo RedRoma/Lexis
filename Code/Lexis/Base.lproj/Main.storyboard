@@ -514,16 +514,20 @@
                                     <outlet property="toolbar" destination="bEa-Zl-plO" id="IIw-Ck-7ZF"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="200" id="NW5-W2-qQO" customClass="ImageCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="740.33333333333337" width="375" height="200"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="208" id="NW5-W2-qQO" customClass="ImageCell" customModule="Lexis" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="740.33333333333337" width="375" height="208"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NW5-W2-qQO" id="pho-kp-fLa">
-                                    <frame key="frameInset" width="375" height="200"/>
+                                    <frame key="frameInset" width="375" height="208"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sgp-B3-Wnu" userLabel="Card" customClass="LexisView" customModule="Lexis" customModuleProvider="target">
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="753" image="Sample-3" translatesAutoresizingMaskIntoConstraints="NO" id="N29-fH-SJX"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="753" image="Sample-3" translatesAutoresizingMaskIntoConstraints="NO" id="N29-fH-SJX">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="200" id="jsA-7g-m1W"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -556,7 +560,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SearchEntryCell" rowHeight="120" id="y98-iL-76Q" customClass="SearchEntryCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="940.33333333333337" width="375" height="120"/>
+                                <rect key="frame" x="0.0" y="948.33333333333337" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y98-iL-76Q" id="Ebc-9P-3PY">
                                     <frame key="frameInset" width="375" height="120"/>
@@ -606,7 +610,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchResultCell" rowHeight="60" id="5dG-AZ-tXl" customClass="SearchResultCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="1060.3333333333335" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="1068.3333333333335" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5dG-AZ-tXl" id="pUW-DS-8N1">
                                     <frame key="frameInset" width="375" height="60"/>
@@ -662,7 +666,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SearchEmptyCell" rowHeight="500" id="fPX-Dd-cW0" customClass="SearchEmptyCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="1120.3333333333335" width="375" height="500"/>
+                                <rect key="frame" x="0.0" y="1128.3333333333335" width="375" height="500"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fPX-Dd-cW0" id="W7f-Hg-6c3">
                                     <frame key="frameInset" width="375" height="500"/>
