@@ -29,6 +29,8 @@ fileprivate let main = OperationQueue.main
 
 fileprivate let samplePhotos = [ #imageLiteral(resourceName: "Sample-1"), #imageLiteral(resourceName: "Sample-2"), #imageLiteral(resourceName: "Sample-3") ]
 
+fileprivate let maxImages = 50
+
 /**
     This File adds support for Images in the Lexis Dictionary.
  */
@@ -40,7 +42,7 @@ extension WordViewController
         asyncImageLoads.addOperation
         { [word] in
             
-            let urls = imageProvider.searchForImages(withWord: word, limitTo: 25)
+            let urls = imageProvider.searchForImages(withWord: word, limitTo: maxImages)
             
             
             self.main.addOperation
