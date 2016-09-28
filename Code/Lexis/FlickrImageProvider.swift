@@ -15,7 +15,7 @@ import Sulcus
 fileprivate class Flickr
 {
     static let api = "https://api.flickr.com/services/rest/"
-    static let apiKey = "8494ee93cb9dd1c9c8cb9d74a400e44a"
+    static let apiKey = "e904f6fd166f683b7e41a95949d9fc42"
     static let apiSignature = ""
     
     static let searchAPI = api + "?method=flickr.photos.search&format=json&nojsoncallback=1&api_key=\(apiKey)&sort=interestingness-desc&media=photos"
