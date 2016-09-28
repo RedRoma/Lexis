@@ -215,7 +215,7 @@ extension WordViewController
         return cell
     }
     
-    
+    //MARK: Create Word Definition Cell
     private func createWordDefinitionCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
     {
         if isExpanded(indexPath)
@@ -228,7 +228,7 @@ extension WordViewController
         }
     }
     
-    
+    //MARK: Create Word Description Cell
     private func createWordDescriptionCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
     {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "WordDescriptionCell", for: indexPath) as? WordDescriptionCell
@@ -240,6 +240,7 @@ extension WordViewController
         return cell
     }
     
+    //MARK: Create Actions Cell
     private func createActionsCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
     {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ActionsCell", for: indexPath) as? ActionsCell
@@ -327,6 +328,11 @@ extension WordViewController
                 {
                     expand(atIndexPath: indexPath)
                 }
+            }
+            
+            if isImageCell(indexPath: indexPath)
+            {
+                shareImage(atIndexPath: indexPath)
             }
         }
         

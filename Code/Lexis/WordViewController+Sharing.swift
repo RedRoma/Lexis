@@ -15,12 +15,12 @@ import UIKit
 extension WordViewController
 {
     
-    private var isPhone: Bool
+    var isPhone: Bool
     {
         return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone
     }
     
-    private var isPad: Bool
+    var isPad: Bool
     {
         return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad
     }

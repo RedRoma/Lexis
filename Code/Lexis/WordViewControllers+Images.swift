@@ -107,6 +107,117 @@ extension WordViewController
     }
 }
 
+extension WordViewController
+{
+    
+    func isImageCell(indexPath: IndexPath) -> Bool
+    {
+        guard images.notEmpty else { return false }
+        guard let section = SectionsWhenNotSearching.forSection(indexPath.section) else { return false }
+        
+        return section == .Images
+    }
+    
+    func shareImage(atIndexPath indexPath: IndexPath)
+    {
+        guard images.notEmpty else { return }
+        
+        let row = indexPath.row
+        guard row >= 0 && row < images.count else { return }
+        let url = images[row]
+        
+        showNetworkIndicator()
+        asyncImageLoads.addOperation
+        {
+            
+            guard let image = url.downloadToImage()
+            else
+            {
+                LOG.error("Failed to download image at \(url)")
+                return
+            }
+            
+            self.main.addOperation
+            {
+                self.share(image: image, fromURL: url)
+                self.hideNetworkIndicator()
+            }
+        }
+    }
+    
+    private func share(image: UIImage, fromURL url: URL)
+    {
+        LOG.info("Sharing image")
+        
+        AromaClient.beginMessage(withTitle: "Sharing Image")
+            .addBody("\(url)")
+            .withPriority(.medium)
+            .send()
+        
+        
+        guard let controller = createShareController(forImage: image, atURL: url) else { return }
+        
+        if isPhone
+        {
+            self.navigationController?.present(controller, animated: true, completion: nil)
+        }
+        else if isPad
+        {
+            // Change Rect to position Popover
+            controller.modalPresentationStyle = .popover
+            
+            guard let popover = controller.popoverPresentationController else { return }
+            popover.permittedArrowDirections = .any
+            
+            self.navigationController?.present(controller, animated: true, completion: nil)
+        }
+        
+    }
+    
+    private func createShareController(forImage image: UIImage, atURL url: URL) -> UIActivityViewController?
+    {
+        let activityViewController = UIActivityViewController(
+            activityItems: [image],
+            applicationActivities: nil)
+        
+        activityViewController.completionWithItemsHandler = { (activity, success, items, error) in
+            
+            let activity =  activity?.rawValue ?? ""
+            
+            if success
+            {
+                AromaClient.beginMessage(withTitle:"Image Shared")
+                    .withPriority(.high)
+                    .addBody("At").addLine()
+                    .addBody("\(url)").addLine(2)
+                    .addBody("To Activity: ").addLine()
+                    .addBody("\(activity)")
+                    .send()
+            }
+            else if let error = error
+            {
+                AromaClient.beginMessage(withTitle:"Image Share Failed")
+                    .withPriority(.high)
+                    .addBody("At").addLine()
+                    .addBody("\(url)").addLine(2)
+                    .addBody("\(error)")
+                    .send()
+            }
+            else
+            {
+                AromaClient.beginMessage(withTitle:"Image Share Canceled")
+                    .withPriority(.low)
+                    .addBody("At").addLine()
+                    .addBody("\(url)").addLine(2)
+                    .addBody("\(error)")
+                    .send()
+            }
+        }
+        
+        return activityViewController
+    }
+}
+
 fileprivate extension UITableView
 {
     func isVisible(indexPath: IndexPath) -> Bool
