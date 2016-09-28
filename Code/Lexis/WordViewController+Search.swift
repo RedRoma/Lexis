@@ -51,6 +51,8 @@ extension WordViewController
             self.tableView.deleteSections(delete, with: .bottom)
             self.tableView.reloadSections(reload, with: .automatic)
             self.tableView.endUpdates()
+            
+            self.scrollToTheTop()
         }
         else if wasSearching
         {
@@ -254,5 +256,11 @@ extension WordViewController
                 self.tableView?.reloadSections(searchResultsSection, with: .automatic)
             }
         }
+    }
+    
+    internal func scrollToTheTop()
+    {
+        let beginning = IndexPath(row: 0, section: 0)
+        self.tableView.scrollToRow(at: beginning, at: .top, animated: true)
     }
 }
