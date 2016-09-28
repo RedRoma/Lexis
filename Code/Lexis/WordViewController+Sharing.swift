@@ -58,6 +58,7 @@ extension WordViewController
             
             guard let popover = controller.popoverPresentationController else { return }
             popover.permittedArrowDirections = .any
+            popover.sourceView = view
             
             self.navigationController?.present(controller, animated: true, completion: nil)
         }

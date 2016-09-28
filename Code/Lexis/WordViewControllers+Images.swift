@@ -122,34 +122,28 @@ extension WordViewController
     {
         guard images.notEmpty else { return }
         
-        let row = indexPath.row
-        guard row >= 0 && row < images.count else { return }
-        let url = images[row]
-        
-        showNetworkIndicator()
-        asyncImageLoads.addOperation
+        guard let imageCell = self.tableView.cellForRow(at: indexPath) as? ImageCell
+        else
         {
-            
-            guard let image = url.downloadToImage()
-            else
-            {
-                LOG.error("Failed to download image at \(url)")
-                return
-            }
-            
-            self.main.addOperation
-            {
-                self.share(image: image, fromURL: url)
-                self.hideNetworkIndicator()
-            }
+            return
         }
+        
+        shareImage(atCell: imageCell, indexPath: indexPath)
     }
     
-    private func share(image: UIImage, fromURL url: URL)
+    private func shareImage(atCell cell: ImageCell, indexPath: IndexPath)
     {
-        LOG.info("Sharing image")
+        guard let image = cell.photoImageView.image else { return }
+        
+        let row = indexPath.row
+        guard row >= 0 && row < images.count else { return }
+        
+        let url = images[row]
+        LOG.info("Sharing image: \(url)")
         
         AromaClient.beginMessage(withTitle: "Sharing Image")
+            .addBody("For word:").addLine()
+            .addBody("\(word.description)").addLine(2)
             .addBody("\(url)")
             .withPriority(.medium)
             .send()
@@ -168,6 +162,7 @@ extension WordViewController
             
             guard let popover = controller.popoverPresentationController else { return }
             popover.permittedArrowDirections = .any
+            popover.sourceView = cell.photoImageView
             
             self.navigationController?.present(controller, animated: true, completion: nil)
         }
