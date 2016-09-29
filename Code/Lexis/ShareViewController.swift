@@ -46,31 +46,49 @@ extension ShareViewController
     
     override func numberOfSections(in tableView: UITableView) -> Int
     {
-        return 1
+        return 4
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         guard word != nil else { return 0 }
         
-        var rows = 1 //For the header
-        rows += 1 //For the word title
-        rows += word.definitions.count //For the number of definitions
-        rows += 1 //For the word description
-        
-        return rows
+        switch section
+        {
+            case 0, 1, 3: return 1
+            case 2: return word.definitions.count
+            default: return 0
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let row = indexPath.row
+        let section = indexPath.section
+    
+        let isHeaderRow = section == 0
+        let isWordNameRow = section == 1
+        let isDefinitionRow = section == 2
+        let isWordDescriptionRow = section == 3
         
-        switch row
+        if isHeaderRow
         {
-            case 0 : return createHeaderCell(tableView, atIndexPath: indexPath)
-            case 1 : return createWordNameCell(tableView, atIndexPath: indexPath)
-            case 2...(2 + word.definitions.count) : return createWordDefinitionCell(tableView, atIndexPath: indexPath)
-            default : return createWordDescriptionCell(tableView, atIndexPath: indexPath)
+            return createHeaderCell(tableView, atIndexPath: indexPath)
+        }
+        else if isWordNameRow
+        {
+            return createWordNameCell(tableView, atIndexPath: indexPath)
+        }
+        else if isDefinitionRow
+        {
+            return createWordDefinitionCell(tableView, atIndexPath: indexPath)
+        }
+        else if isWordDescriptionRow
+        {
+            return createWordDescriptionCell(tableView, atIndexPath: indexPath)
+        }
+        else
+        {
+            return emptyCell
         }
     }
     
@@ -115,12 +133,13 @@ extension ShareViewController
         }
         
         let row = indexPath.row
-        let index = row - 2
+        let index = row
         
         guard index >= 0 && index < word.definitions.count else { return emptyCell }
     
         let definition = word.definitions[index]
         cell.definitionLabel.text = definition.terms.joined(separator: ", ")
+        cell.styleDefinitionCell(forWord: word, for: indexPath)
         
         return cell
     }

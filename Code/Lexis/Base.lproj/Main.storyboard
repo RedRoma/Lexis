@@ -1019,24 +1019,15 @@
                                                         <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="24"/>
                                                     </variation>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Disclosure" translatesAutoresizingMaskIntoConstraints="NO" id="h7m-Fg-DuH">
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="h7m-Fg-DuH" secondAttribute="height" multiplier="1:1" id="W3G-iz-dgy"/>
-                                                        <constraint firstAttribute="height" constant="20" id="wtI-2e-30B"/>
-                                                    </constraints>
-                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="Pma-MQ-sZq" secondAttribute="bottom" id="0Zu-qI-BJD"/>
                                                 <constraint firstItem="6RX-R5-11r" firstAttribute="top" secondItem="sFc-nF-3bE" secondAttribute="top" id="1yz-5g-FRq"/>
-                                                <constraint firstItem="Pma-MQ-sZq" firstAttribute="leading" secondItem="h7m-Fg-DuH" secondAttribute="trailing" constant="8" id="5rC-nd-AMQ"/>
-                                                <constraint firstItem="h7m-Fg-DuH" firstAttribute="centerY" secondItem="sFc-nF-3bE" secondAttribute="centerY" id="7Q4-M3-XQw"/>
                                                 <constraint firstItem="6RX-R5-11r" firstAttribute="leading" secondItem="sFc-nF-3bE" secondAttribute="leading" id="7c7-VG-Rcm"/>
                                                 <constraint firstAttribute="trailing" secondItem="6RX-R5-11r" secondAttribute="trailing" id="GJT-qr-LGm"/>
                                                 <constraint firstItem="BqF-xf-VCq" firstAttribute="leading" secondItem="sFc-nF-3bE" secondAttribute="leadingMargin" constant="8" id="H3o-aQ-eTl"/>
                                                 <constraint firstItem="rSO-Qs-5oR" firstAttribute="leading" secondItem="sFc-nF-3bE" secondAttribute="leading" id="QnI-sY-0p0"/>
-                                                <constraint firstItem="h7m-Fg-DuH" firstAttribute="leading" secondItem="BqF-xf-VCq" secondAttribute="trailing" constant="8" id="U8e-uS-zsY"/>
                                                 <constraint firstAttribute="trailing" secondItem="rSO-Qs-5oR" secondAttribute="trailing" id="UE4-1E-2Ts"/>
                                                 <constraint firstAttribute="bottom" secondItem="Bmb-46-tA4" secondAttribute="bottom" id="YZT-7A-9jc"/>
                                                 <constraint firstAttribute="trailing" secondItem="Pma-MQ-sZq" secondAttribute="trailing" id="dRD-rm-74a"/>

@@ -69,8 +69,7 @@ extension WordViewController
         definitionText =  "‣  " + definitionText
         
         cell.definitionLabel.text = definitionText
-        
-        styleDefinitionCell(cell, for: indexPath)
+        cell.styleDefinitionCell(forWord: word, for: indexPath)
         
         return cell
     }
@@ -95,26 +94,7 @@ extension WordViewController
         return cell
     }
     
-    func styleDefinitionCell(_ cell: WordDefinitionCell, for indexPath: IndexPath)
-    {
-        let row = indexPath.row
-        let isFirst = row == 0
-        let isLast = row == self.word.definitions.count - 1
-        
-        cell.bottomLine.isHidden = true
-        cell.topLine.isHidden = true
-        
-        if isFirst
-        {
-            cell.topLine.isHidden = false
-        }
-        
-        if isLast
-        {
-            cell.bottomLine.isHidden = false
-        }
-        
-    }
+    
     
     func isExpandable(indexPath: IndexPath) -> Bool
     {
