@@ -36,22 +36,39 @@ extension WordViewController
             .withPriority(.medium)
             .send()
         
-        guard let image = tableView.screenshot()
+        guard let shareViewController = self.storyboard?.instantiateViewController(withIdentifier: "SimpleShareViewController")
         else
         {
-            LOG.error("Failed to take screenshot of UITableView")
-            AromaClient.sendHighPriorityMessage(withTitle: "Screenshot Failed", withBody: "Could not take screenshot of Table View")
+            LOG.warn("Could not instantiate ShareViewController")
             return
         }
         
+        guard let viewToAdd = shareViewController.view else { return }
         
-        guard let controller = createShareController(word: word, andImage: image, expanded: expanded) else { return }
+        self.view.addSubview(viewToAdd)
         
-        if isPhone
+        self.view.layoutIfNeeded()
+        viewToAdd.setNeedsDisplay()
+        viewToAdd.layoutIfNeeded()
+        
+//        shareViewController.word = word
+        
+        let image: UIImage! = viewToAdd.screenshot()
+        
+        viewToAdd.removeFromSuperview()
+        
+        guard image != nil else { return }
+        
+        
+        viewToAdd.removeFromSuperview()
+        
+        guard let controller = self.createShareController(word: word, andImage: image, expanded: expanded) else { return }
+        
+        if self.isPhone
         {
             self.navigationController?.present(controller, animated: true, completion: nil)
         }
-        else if isPad
+        else if self.isPad
         {
             // Change Rect to position Popover
             controller.modalPresentationStyle = .popover
@@ -62,6 +79,7 @@ extension WordViewController
             
             self.navigationController?.present(controller, animated: true, completion: nil)
         }
+       
     }
     
     private func createShareController(word: LexisWord, andImage image: UIImage, expanded: Bool) -> UIActivityViewController?
