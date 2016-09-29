@@ -74,13 +74,13 @@
             <objects>
                 <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="2j9-lJ-S9d" customClass="WordViewController" customModule="Lexis" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="80" sectionHeaderHeight="18" sectionFooterHeight="18" id="Po1-wa-b3g">
-                        <rect key="frame" x="0.0" y="64" width="375" height="1436"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.72549019609999998" green="0.050980392159999999" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="80" id="lov-X9-60s" customClass="HeaderCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lov-X9-60s" id="Hpk-15-DIY">
                                     <frame key="frameInset" width="375" height="80"/>
@@ -117,7 +117,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordNameCell" rowHeight="120" id="rZq-bg-NmT" customClass="WordNameCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="135.5" width="375" height="120"/>
+                                <rect key="frame" x="0.0" y="136" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rZq-bg-NmT" id="AVI-8j-Fve">
                                     <frame key="frameInset" width="375" height="120"/>
@@ -182,7 +182,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExpandedWordNameCell" rowHeight="120" id="U7X-Ug-2Hd" customClass="ExpandedWordNameCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="255.5" width="375" height="120"/>
+                                <rect key="frame" x="0.0" y="256" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U7X-Ug-2Hd" id="NlA-OJ-uLu">
                                     <frame key="frameInset" width="375" height="120"/>
@@ -247,7 +247,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DefinitionCell" rowHeight="50" id="BBa-83-aoe" customClass="WordDefinitionCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="375.5" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="376" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BBa-83-aoe" id="8qX-bT-sJV">
                                     <frame key="frameInset" width="375" height="50"/>
@@ -335,7 +335,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExpandedDefinitionCell" rowHeight="155" id="27m-a5-S7c" customClass="ExpandedDefinitionCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="425.5" width="375" height="155"/>
+                                <rect key="frame" x="0.0" y="426" width="375" height="155"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="27m-a5-S7c" id="No4-Q6-m9r">
                                     <frame key="frameInset" width="375" height="155"/>
@@ -417,7 +417,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordDescriptionCell" rowHeight="80" id="z8S-lO-xO6" customClass="WordDescriptionCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="580.5" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="581" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z8S-lO-xO6" id="Ts9-J8-yR0">
                                     <frame key="frameInset" width="375" height="80"/>
@@ -466,7 +466,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActionsCell" rowHeight="80" id="HZh-bU-rYz" customClass="ActionsCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="660.5" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="661" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HZh-bU-rYz" id="VFg-Eq-lLG">
                                     <frame key="frameInset" width="375" height="80"/>
@@ -523,7 +523,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="400" id="NW5-W2-qQO" customClass="ImageCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="740.5" width="375" height="400"/>
+                                <rect key="frame" x="0.0" y="741" width="375" height="400"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NW5-W2-qQO" id="pho-kp-fLa">
                                     <frame key="frameInset" width="375" height="400"/>
@@ -572,7 +572,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SearchEntryCell" rowHeight="120" id="y98-iL-76Q" customClass="SearchEntryCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="1140.5" width="375" height="120"/>
+                                <rect key="frame" x="0.0" y="1141" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y98-iL-76Q" id="Ebc-9P-3PY">
                                     <frame key="frameInset" width="375" height="120"/>
@@ -622,7 +622,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchResultCell" rowHeight="60" id="5dG-AZ-tXl" customClass="SearchResultCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="1260.5" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="1261" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5dG-AZ-tXl" id="pUW-DS-8N1">
                                     <frame key="frameInset" width="375" height="60"/>
@@ -681,7 +681,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SearchEmptyCell" rowHeight="500" id="fPX-Dd-cW0" customClass="SearchEmptyCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="1320.5" width="375" height="500"/>
+                                <rect key="frame" x="0.0" y="1321" width="375" height="500"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fPX-Dd-cW0" id="W7f-Hg-6c3">
                                     <frame key="frameInset" width="375" height="500"/>
@@ -769,13 +769,45 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="1500"/>
+                    <connections>
+                        <segue destination="oEX-tV-ucK" kind="show" identifier="ToWebView" id="YRL-bj-p4i"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LSR-3L-20H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1957.2463768115942" y="32.608695652173914"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="wF1-Jg-EKn">
+            <objects>
+                <viewController id="oEX-tV-ucK" customClass="WebViewController" customModule="Lexis" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xPd-Mz-eLI"/>
+                        <viewControllerLayoutGuide type="bottom" id="XtY-Pg-Zf2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NDt-Ao-Goq">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OKI-ie-qk0">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="OKI-ie-qk0" secondAttribute="trailing" id="5O8-IZ-u5s"/>
+                            <constraint firstItem="OKI-ie-qk0" firstAttribute="top" secondItem="xPd-Mz-eLI" secondAttribute="bottom" id="W52-cq-ks1"/>
+                            <constraint firstItem="XtY-Pg-Zf2" firstAttribute="top" secondItem="OKI-ie-qk0" secondAttribute="bottom" id="erN-To-xKD"/>
+                            <constraint firstItem="OKI-ie-qk0" firstAttribute="leading" secondItem="NDt-Ao-Goq" secondAttribute="leading" id="gts-Uw-L0W"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="OKI-ie-qk0" id="4ix-VZ-Yzh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8t0-gQ-r68" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2906" y="32"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AcH-VC-WgK">
@@ -784,6 +816,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" id="enL-zh-NGv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.95686274509803915" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>

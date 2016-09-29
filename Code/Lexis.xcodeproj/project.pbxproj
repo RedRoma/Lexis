@@ -84,6 +84,8 @@
 		DE4DA2D31D8E3F5C003183F4 /* LexisWord+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA2D11D8E3F5C003183F4 /* LexisWord+.swift */; };
 		DE4DA2D81D8E667E003183F4 /* ViewControllers+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA2D71D8E667E003183F4 /* ViewControllers+.swift */; };
 		DE4DA2D91D8E667E003183F4 /* ViewControllers+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA2D71D8E667E003183F4 /* ViewControllers+.swift */; };
+		DE528EED1D9D67730080D973 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE528EEC1D9D67730080D973 /* WebViewController.swift */; };
+		DE528EEF1D9D7FF00080D973 /* Integers+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE528EEE1D9D7FF00080D973 /* Integers+.swift */; };
 		DE5D14151D87CDF800B8B3CC /* Raleway 100.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D14031D87CDF800B8B3CC /* Raleway 100.ttf */; };
 		DE5D14161D87CDF800B8B3CC /* Raleway 100italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D14041D87CDF800B8B3CC /* Raleway 100italic.ttf */; };
 		DE5D14171D87CDF800B8B3CC /* Raleway 200.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D14051D87CDF800B8B3CC /* Raleway 200.ttf */; };
@@ -206,6 +208,8 @@
 		DE4DA2CE1D8E3C5D003183F4 /* Arrays+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Arrays+.swift"; sourceTree = "<group>"; };
 		DE4DA2D11D8E3F5C003183F4 /* LexisWord+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LexisWord+.swift"; sourceTree = "<group>"; };
 		DE4DA2D71D8E667E003183F4 /* ViewControllers+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewControllers+.swift"; sourceTree = "<group>"; };
+		DE528EEC1D9D67730080D973 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		DE528EEE1D9D7FF00080D973 /* Integers+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Integers+.swift"; sourceTree = "<group>"; };
 		DE5D14031D87CDF800B8B3CC /* Raleway 100.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 100.ttf"; sourceTree = "<group>"; };
 		DE5D14041D87CDF800B8B3CC /* Raleway 100italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 100italic.ttf"; sourceTree = "<group>"; };
 		DE5D14051D87CDF800B8B3CC /* Raleway 200.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 200.ttf"; sourceTree = "<group>"; };
@@ -413,6 +417,7 @@
 				DE6C286F1D96FEB100BB1D33 /* WordViewController+Search.swift */,
 				DE6C28751D9708BC00BB1D33 /* WordViewController+Sharing.swift */,
 				DE49A2BB1D98EC0200620411 /* WordViewControllers+Images.swift */,
+				DE528EEC1D9D67730080D973 /* WebViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -461,6 +466,7 @@
 				DE4DA2D71D8E667E003183F4 /* ViewControllers+.swift */,
 				DE6C28771D97178000BB1D33 /* Doubles+.swift */,
 				DE49A2B51D98D10600620411 /* URLs+.swift */,
+				DE528EEE1D9D7FF00080D973 /* Integers+.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -637,6 +643,7 @@
 				DE5D14391D88474400B8B3CC /* HeaderCell.swift in Sources */,
 				DE6C286C1D96FA3000BB1D33 /* ExpandedDefinitionCell.swift in Sources */,
 				DE5D14291D87E15B00B8B3CC /* WordViewController.swift in Sources */,
+				DE528EED1D9D67730080D973 /* WebViewController.swift in Sources */,
 				DE5D143B1D8847BD00B8B3CC /* WordNameCell.swift in Sources */,
 				DE4DA2C61D8E37A5003183F4 /* SearchEntryCell.swift in Sources */,
 				DE6C28701D96FEB100BB1D33 /* WordViewController+Search.swift in Sources */,
@@ -648,6 +655,7 @@
 				DE49A2B41D98C55B00620411 /* FlickrImageProvider.swift in Sources */,
 				DE1294F71D6977F700687CA5 /* AppDelegate.swift in Sources */,
 				DE49A2B61D98D10600620411 /* URLs+.swift in Sources */,
+				DE528EEF1D9D7FF00080D973 /* Integers+.swift in Sources */,
 				DE0E00081D7E984C00B70D62 /* WelcomePageViewController.swift in Sources */,
 				DE4DA2CC1D8E37B8003183F4 /* SearchEmptyCell.swift in Sources */,
 				DE49A2BC1D98EC0200620411 /* WordViewControllers+Images.swift in Sources */,

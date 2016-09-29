@@ -42,14 +42,13 @@ extension WordViewController
         asyncImageLoads.addOperation
         { [word] in
             
-            let urls = imageProvider.searchForImages(withWord: word, limitTo: maxImages)
-            
+            let images: [FlickrImage] = imageProvider.searchFlickrForImages(withWord: word)
             
             self.main.addOperation
             {
                 defer { self.hideNetworkIndicator() }
                 
-                self.images = urls
+                self.images = images
                 let sectionToReload = SectionsWhenNotSearching.Images.section
                 
                 if self.notSearching
@@ -77,7 +76,10 @@ extension WordViewController
         }
         else
         {
-            let url = images[indexPath.row]
+            let row = indexPath.row
+            
+            guard row >= 0 && row < images.count else { return emptyCell }
+            guard let url = images[row].imageURL else { return emptyCell }
             
             loadImage(fromURL: url, intoCell: cell, in: tableView, atIndexPath: indexPath)
         }
@@ -133,6 +135,19 @@ extension WordViewController
         shareImage(atCell: imageCell, indexPath: indexPath)
     }
     
+    func showImage(atIndexPath indexPath: IndexPath)
+    {
+        guard images.notEmpty else { return }
+        
+        let row = indexPath.row
+        
+        if row.isValidIndexFor(array: images)
+        {
+            let image = images[row]
+            goToImage(image)
+        }
+    }
+    
     private func shareImage(atCell cell: ImageCell, indexPath: IndexPath)
     {
         guard let image = cell.photoImageView.image else { return }
@@ -140,7 +155,8 @@ extension WordViewController
         let row = indexPath.row
         guard row >= 0 && row < images.count else { return }
         
-        let url = images[row]
+        guard let url = images[row].imageURL else { return }
+        
         LOG.info("Sharing image: \(url)")
         
         AromaClient.beginMessage(withTitle: "Sharing Image")
@@ -212,6 +228,15 @@ extension WordViewController
         }
         
         return activityViewController
+    }
+}
+
+//MARK: Segues
+fileprivate extension WordViewController
+{
+    func goToImage(_ flickerImage: FlickrImage)
+    {
+        self.performSegue(withIdentifier: "ToWebView", sender: flickerImage)
     }
 }
 

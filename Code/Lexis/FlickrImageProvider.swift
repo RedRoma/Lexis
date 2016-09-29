@@ -30,9 +30,19 @@ fileprivate class Flickr
 
 class FlickrImageProvider: ImageProvider
 {
-    
-    
     func searchForImages(withTerm searchTerm: String) -> [URL]
+    {
+        return searchFlickrForImages(withTerm: searchTerm).flatMap() { $0.imageURL }
+    }
+    
+    func searchFlickrForImages(withWord word: LexisWord) -> [FlickrImage]
+    {
+        guard let wordName = word.forms.first else { return [] }
+        
+        return searchFlickrForImages(withTerm: wordName)
+    }
+    
+    func searchFlickrForImages(withTerm searchTerm: String) -> [FlickrImage]
     {
         guard searchTerm.notEmpty else { return [] }
         
@@ -50,15 +60,13 @@ class FlickrImageProvider: ImageProvider
         
         LOG.info("Found \(searchResults.totalImages) images searching for \(searchTerm)")
         
-        return searchResults.photos.flatMap() { photo in
-            return photo.asURL
-        }
+        return searchResults.photos
     }
 }
 
 
 
-fileprivate class SearchResult
+class FlickrImage
 {
     let id: String
     let owner: String
@@ -101,9 +109,16 @@ fileprivate class SearchResult
         self.init(id: id, owner: owner, secret: secret, server: server, farm: farm, title: title, isPublic: isPublic)
     }
     
-    var asURL: URL?
+    var imageURL: URL?
     {
         let link = "https://farm\(farm).staticflickr.com/\(server)/\(id)_\(secret).jpg"
+        
+        return link.asUrl
+    }
+    
+    var webURL: URL?
+    {
+        let link = "https://www.flickr.com/photos/\(owner)/\(id)"
         
         return link.asUrl
     }
@@ -121,16 +136,16 @@ fileprivate class SearchResult
     
 }
 
-fileprivate class SearchResults
+class SearchResults
 {
     let status: String
     let page: Int
     let totalPages: Int
     let imagesPerPage: Int
     let totalImages: Int
-    let photos: [SearchResult]
+    let photos: [FlickrImage]
     
-    init(status: String, page: Int, totalPages: Int, imagesPerPage: Int, totalImages: Int, photos: [SearchResult])
+    init(status: String, page: Int, totalPages: Int, imagesPerPage: Int, totalImages: Int, photos: [FlickrImage])
     {
         self.status = status
         self.page = page
@@ -159,7 +174,7 @@ fileprivate class SearchResults
         
         let photos = photosArray
             .flatMap() { $0 as? NSDictionary }
-            .flatMap(SearchResult.init)
+            .flatMap(FlickrImage.init)
         
         LOG.info("Parsed \(photos.count) images")
         
