@@ -51,6 +51,8 @@ extension ShareViewController
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
+        guard word != nil else { return 0 }
+        
         var rows = 1 //For the header
         rows += 1 //For the word title
         rows += word.definitions.count //For the number of definitions
@@ -134,5 +136,19 @@ extension ShareViewController
         cell.wordDescriptionLabel.text = description
         
         return cell
+    }
+}
+
+//MARK: Table View Delegate Methods
+extension ShareViewController
+{
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 100
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return UITableViewAutomaticDimension
     }
 }

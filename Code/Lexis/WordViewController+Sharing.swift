@@ -36,31 +36,31 @@ extension WordViewController
             .withPriority(.medium)
             .send()
         
-        guard let shareViewController = self.storyboard?.instantiateViewController(withIdentifier: "SimpleShareViewController")
+        guard let shareViewController = self.storyboard?.instantiateViewController(withIdentifier: "ShareViewController") as? ShareViewController
         else
         {
             LOG.warn("Could not instantiate ShareViewController")
             return
         }
         
-        guard let viewToAdd = shareViewController.view else { return }
+        shareViewController.word = word
+        shareViewController.view.setNeedsDisplay()
+        shareViewController.view.layoutIfNeeded()
         
-        self.view.addSubview(viewToAdd)
+//        guard let viewToAdd = shareViewController.view else { return }
+//
+//        self.view.addSubview(viewToAdd)
+//        
+//        self.view.layoutIfNeeded()
+//        viewToAdd.setNeedsDisplay()
+//        viewToAdd.layoutIfNeeded()
         
-        self.view.layoutIfNeeded()
-        viewToAdd.setNeedsDisplay()
-        viewToAdd.layoutIfNeeded()
+      
         
-//        shareViewController.word = word
+        guard let image = shareViewController.view.screenshot() else { return }
         
-        let image: UIImage! = viewToAdd.screenshot()
+//        viewToAdd.removeFromSuperview()
         
-        viewToAdd.removeFromSuperview()
-        
-        guard image != nil else { return }
-        
-        
-        viewToAdd.removeFromSuperview()
         
         guard let controller = self.createShareController(word: word, andImage: image, expanded: expanded) else { return }
         
@@ -145,9 +145,10 @@ fileprivate extension UIView
     {
         UIGraphicsBeginImageContextWithOptions(self.frame.size, self.isOpaque, 0.0)
         
-        self.drawHierarchy(in: self.frame, afterScreenUpdates: false)
-//        guard let context = UIGraphicsGetCurrentContext() else { return nil }
-//        layer.render(in: context)
+//        self.drawHierarchy(in: self.frame, afterScreenUpdates: false)
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+        layer.render(in: context)
+        
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
