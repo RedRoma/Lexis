@@ -36,7 +36,7 @@ extension WordViewController
             .withPriority(.medium)
             .send()
         
-        guard let shareViewController = self.storyboard?.instantiateViewController(withIdentifier: "ShareViewController") as? ShareViewController
+        guard let shareViewController = self.storyboard?.instantiateViewController(withIdentifier: "SimpleShareViewController") as? SimpleShareViewController
         else
         {
             LOG.warn("Could not instantiate ShareViewController")
@@ -44,24 +44,12 @@ extension WordViewController
         }
         
         shareViewController.word = word
+        shareViewController.view.frame = CGRect(x: 0, y: 0, width: 500, height: 500)
         shareViewController.view.setNeedsDisplay()
         shareViewController.view.layoutIfNeeded()
         
-//        guard let viewToAdd = shareViewController.view else { return }
-//
-//        self.view.addSubview(viewToAdd)
-//        
-//        self.view.layoutIfNeeded()
-//        viewToAdd.setNeedsDisplay()
-//        viewToAdd.layoutIfNeeded()
-        
-      
-        
         guard let image = shareViewController.view.screenshot() else { return }
-        
-//        viewToAdd.removeFromSuperview()
-        
-        
+ 
         guard let controller = self.createShareController(word: word, andImage: image, expanded: expanded) else { return }
         
         if self.isPhone

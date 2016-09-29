@@ -806,7 +806,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="ShareViewController" automaticallyAdjustsScrollViewInsets="NO" id="L1V-Jc-QfY" customClass="ShareViewController" customModule="Lexis" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="4Ne-Yq-JJI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.92932397127151489" green="0.92945772409439087" blue="0.92929333448410034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.72549019609999998" green="0.050980392159999999" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -1294,39 +1294,150 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="1500"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UOS-vm-fKf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2809" y="32"/>
+            <point key="canvasLocation" x="1956" y="-1061"/>
         </scene>
-        <!--View Controller-->
+        <!--Simple Share View Controller-->
         <scene sceneID="GDx-hU-6If">
             <objects>
-                <viewController storyboardIdentifier="SimpleShareViewController" id="R3a-fg-ALH" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O4r-5o-473" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="SimpleShareViewController" id="R3a-fg-ALH" customClass="SimpleShareViewController" customModule="Lexis" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RmF-8h-BXs"/>
                         <viewControllerLayoutGuide type="bottom" id="bzu-we-EOI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BzC-Qq-Md8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRY-ow-Vg5">
-                                <frame key="frameInset" minX="166" minY="323" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gM6-qK-l3B" userLabel="Card" customClass="LexisView" customModule="Lexis" customModuleProvider="target">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACCIPIO, ACCIPERE, ACCEPI, ACCEPTUS" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VK8-V8-nA3">
+                                        <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="30"/>
+                                        <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        <variation key="widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="40"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verb, 3rd declension" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5E-fL-muW">
+                                        <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="14"/>
+                                        <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="18"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="VK8-V8-nA3" secondAttribute="trailing" id="7SE-Bx-sDk"/>
+                                    <constraint firstItem="VK8-V8-nA3" firstAttribute="leading" secondItem="gM6-qK-l3B" secondAttribute="leadingMargin" constant="8" id="G9t-71-UHz"/>
+                                    <constraint firstItem="VK8-V8-nA3" firstAttribute="top" secondItem="gM6-qK-l3B" secondAttribute="topMargin" constant="8" id="YZC-nK-jqa">
+                                        <variation key="widthClass=regular" constant="16"/>
+                                    </constraint>
+                                    <constraint firstItem="C5E-fL-muW" firstAttribute="leading" secondItem="gM6-qK-l3B" secondAttribute="leadingMargin" constant="8" id="fsH-CS-BnU"/>
+                                    <constraint firstAttribute="height" secondItem="VK8-V8-nA3" secondAttribute="height" multiplier="2" id="i8Z-Sc-xaP"/>
+                                    <constraint firstItem="C5E-fL-muW" firstAttribute="top" secondItem="VK8-V8-nA3" secondAttribute="bottom" constant="16" id="md4-50-vSi"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="C5E-fL-muW" secondAttribute="trailing" id="rQN-0x-BB4"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderThickness">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6x2-4M-Oxm" userLabel="Card" customClass="LexisView" customModule="Lexis" customModuleProvider="target">
+                                <subviews>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wu7-D4-dOm" userLabel="Top Line">
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="yO5-1X-aWg"/>
+                                        </constraints>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nzt-bl-bzJ" userLabel="Right Line">
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1" id="Rx9-M8-rAG"/>
+                                        </constraints>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cd7-2f-pBU" userLabel="Left Line">
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1" id="xEx-br-KGX"/>
+                                        </constraints>
+                                    </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lio-sP-BD9" userLabel="Bottom Line">
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="u6D-x7-bfV"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="752" text="‣ Admit, Let in, Hear, Learn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYv-B5-OZm">
+                                        <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="18"/>
+                                        <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=regular">
+                                            <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="24"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="nzt-bl-bzJ" firstAttribute="top" secondItem="6x2-4M-Oxm" secondAttribute="top" id="1gc-bY-Eyd"/>
+                                    <constraint firstItem="Lio-sP-BD9" firstAttribute="leading" secondItem="6x2-4M-Oxm" secondAttribute="leading" id="3bq-P8-NVU"/>
+                                    <constraint firstItem="fYv-B5-OZm" firstAttribute="leading" secondItem="6x2-4M-Oxm" secondAttribute="leadingMargin" constant="8" id="3j1-L9-b6X"/>
+                                    <constraint firstAttribute="trailing" secondItem="wu7-D4-dOm" secondAttribute="trailing" id="9df-Cd-RDJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Lio-sP-BD9" secondAttribute="bottom" id="B7o-Tr-3iB"/>
+                                    <constraint firstItem="cd7-2f-pBU" firstAttribute="leading" secondItem="6x2-4M-Oxm" secondAttribute="leading" id="CB9-cW-k2V"/>
+                                    <constraint firstAttribute="bottom" secondItem="nzt-bl-bzJ" secondAttribute="bottom" id="GvS-nh-AOx"/>
+                                    <constraint firstAttribute="trailing" secondItem="nzt-bl-bzJ" secondAttribute="trailing" id="IBQ-Rb-vhz"/>
+                                    <constraint firstItem="wu7-D4-dOm" firstAttribute="top" secondItem="6x2-4M-Oxm" secondAttribute="top" id="L78-ID-zwt"/>
+                                    <constraint firstItem="fYv-B5-OZm" firstAttribute="centerY" secondItem="6x2-4M-Oxm" secondAttribute="centerY" id="VWP-qh-a1p"/>
+                                    <constraint firstAttribute="bottom" secondItem="cd7-2f-pBU" secondAttribute="bottom" id="am1-Ww-0V8"/>
+                                    <constraint firstItem="wu7-D4-dOm" firstAttribute="leading" secondItem="6x2-4M-Oxm" secondAttribute="leading" id="g4E-95-zHi"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lio-sP-BD9" secondAttribute="trailing" id="hNT-S5-hw8"/>
+                                    <constraint firstItem="cd7-2f-pBU" firstAttribute="top" secondItem="6x2-4M-Oxm" secondAttribute="top" id="vGB-8C-1cO"/>
+                                    <constraint firstAttribute="height" secondItem="fYv-B5-OZm" secondAttribute="height" multiplier="2.5" id="yLd-LV-hbH"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circular" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderThickness">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.95686274510000002" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.92932397127151489" green="0.92945772409439087" blue="0.92929333448410034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6x2-4M-Oxm" firstAttribute="top" secondItem="gM6-qK-l3B" secondAttribute="bottom" constant="24" id="2P4-jG-Jhi"/>
+                            <constraint firstItem="6x2-4M-Oxm" firstAttribute="centerX" secondItem="gM6-qK-l3B" secondAttribute="centerX" id="3s4-Le-KaQ"/>
+                            <constraint firstItem="gM6-qK-l3B" firstAttribute="centerX" secondItem="BzC-Qq-Md8" secondAttribute="centerX" id="9BX-Mf-JXk"/>
+                            <constraint firstItem="6x2-4M-Oxm" firstAttribute="width" secondItem="gM6-qK-l3B" secondAttribute="width" id="Clu-cR-o6T"/>
+                            <constraint firstItem="gM6-qK-l3B" firstAttribute="leading" secondItem="BzC-Qq-Md8" secondAttribute="leadingMargin" constant="8" id="CsC-WU-aAW"/>
+                            <constraint firstItem="gM6-qK-l3B" firstAttribute="top" secondItem="RmF-8h-BXs" secondAttribute="bottom" constant="24" id="eNs-8t-uPe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gM6-qK-l3B" secondAttribute="trailing" constant="8" id="wi3-Aa-6ud"/>
+                        </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="500" height="500"/>
+                    <connections>
+                        <outlet property="wordDefinitionsLabel" destination="fYv-B5-OZm" id="kKY-Ft-fQd"/>
+                        <outlet property="wordNameLabel" destination="VK8-V8-nA3" id="21d-BF-ZoH"/>
+                        <outlet property="wordTypeLabel" destination="C5E-fL-muW" id="PuL-lr-gA8"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="O4r-5o-473" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1956" y="-1048"/>
+            <point key="canvasLocation" x="2945.5999999999999" y="-305.84707646176912"/>
         </scene>
     </scenes>
     <resources>
