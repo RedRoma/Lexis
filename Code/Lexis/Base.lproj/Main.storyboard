@@ -854,8 +854,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9UW-gg-3er" userLabel="Border" customClass="LexisView" customModule="Lexis" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9UW-gg-3er" userLabel="Frame" customClass="LexisView" customModule="Lexis" customModuleProvider="target">
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kSA-By-L4e" userLabel="Line">
+                                        <color key="backgroundColor" red="0.95686274510000002" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="gZy-QD-zQ3"/>
+                                        </constraints>
+                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEXIS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVh-f0-jpn">
                                         <fontDescription key="fontDescription" name="CinzelDecorative-Regular" family="Cinzel Decorative" pointSize="14"/>
                                         <color key="textColor" red="0.22352941179999999" green="0.23137254900000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -867,11 +873,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailingMargin" secondItem="wVh-f0-jpn" secondAttribute="trailing" constant="8" id="I9Z-7q-foO"/>
+                                    <constraint firstItem="kSA-By-L4e" firstAttribute="width" secondItem="wVh-f0-jpn" secondAttribute="width" id="ISy-ZQ-RzG"/>
+                                    <constraint firstItem="wVh-f0-jpn" firstAttribute="centerX" secondItem="9UW-gg-3er" secondAttribute="centerX" id="uz3-ZV-fRS"/>
+                                    <constraint firstItem="wVh-f0-jpn" firstAttribute="top" secondItem="kSA-By-L4e" secondAttribute="bottom" constant="4" id="w2k-eN-zda"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="wVh-f0-jpn" secondAttribute="bottom" constant="8" id="xMN-k4-LLM"/>
+                                    <constraint firstItem="kSA-By-L4e" firstAttribute="centerX" secondItem="wVh-f0-jpn" secondAttribute="centerX" id="yGU-ks-HUp"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderThickness">
@@ -920,7 +929,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.92932397127151489" green="0.92945772409439087" blue="0.92929333448410034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qT3-Eq-Srb" firstAttribute="top" secondItem="C5E-fL-muW" secondAttribute="bottom" constant="24" id="1Jk-gh-a7n"/>
                             <constraint firstItem="qT3-Eq-Srb" firstAttribute="leading" secondItem="VK8-V8-nA3" secondAttribute="leading" id="1aI-aY-vmk"/>
@@ -966,7 +975,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O4r-5o-473" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1972" y="-542.87856071964018"/>
+            <point key="canvasLocation" x="1955" y="-618"/>
         </scene>
     </scenes>
     <resources>
