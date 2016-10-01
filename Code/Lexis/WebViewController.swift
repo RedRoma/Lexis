@@ -24,18 +24,31 @@ class WebViewController: UIViewController
     {
         guard link != nil else { return }
         
+        webView.delegate = self
         loadLink()
     }
     
     private func loadLink()
     {
         LOG.info("Loading \(link)")
+        showNetworkIndicator()
         
         let request = URLRequest(url: link)
         webView.loadRequest(request)
         
         AromaClient.sendMediumPriorityMessage(withTitle: "Opened Link", withBody: link.absoluteString)
+    }
+    
+    @IBAction func onOpenLink(_ sender: AnyObject)
+    {
+        guard let link = link else { return }
         
+        let app = UIApplication.shared
+        app.open(link, options: [:], completionHandler: nil)
+        
+        AromaClient.sendMediumPriorityMessage(withTitle: "Link Opened In Safari", withBody: "\(link)")
+        
+        LOG.info("Opening Link in Safari: \(link)")
     }
 }
 

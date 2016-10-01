@@ -777,7 +777,7 @@
             </objects>
             <point key="canvasLocation" x="1957.2463768115942" y="32.608695652173914"/>
         </scene>
-        <!--Web View Controller-->
+        <!-- -->
         <scene sceneID="wF1-Jg-EKn">
             <objects>
                 <viewController id="oEX-tV-ucK" customClass="WebViewController" customModule="Lexis" customModuleProvider="target" sceneMemberID="viewController">
@@ -801,6 +801,13 @@
                             <constraint firstItem="OKI-ie-qk0" firstAttribute="leading" secondItem="NDt-Ao-Goq" secondAttribute="leading" id="gts-Uw-L0W"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title=" " id="vhr-Gy-hcU">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="4IA-bP-lK4">
+                            <connections>
+                                <action selector="onOpenLink:" destination="oEX-tV-ucK" id="b1q-KF-NJy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="webView" destination="OKI-ie-qk0" id="4ix-VZ-Yzh"/>
                     </connections>
