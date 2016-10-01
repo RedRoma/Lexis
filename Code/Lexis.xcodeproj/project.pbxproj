@@ -118,6 +118,7 @@
 		DE6C28741D97071E00BB1D33 /* ActionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6C28731D97071E00BB1D33 /* ActionsCell.swift */; };
 		DE6C28761D9708BC00BB1D33 /* WordViewController+Sharing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6C28751D9708BC00BB1D33 /* WordViewController+Sharing.swift */; };
 		DE6C28781D97178000BB1D33 /* Doubles+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6C28771D97178000BB1D33 /* Doubles+.swift */; };
+		DE825F961D9F8A6300433184 /* LexisImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE825F951D9F8A6300433184 /* LexisImageView.swift */; };
 		DEDB439C1D925F5700BF092E /* LexisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDB439B1D925F5700BF092E /* LexisView.swift */; };
 		DEDB439D1D925F5700BF092E /* LexisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDB439B1D925F5700BF092E /* LexisView.swift */; };
 /* End PBXBuildFile section */
@@ -244,6 +245,7 @@
 		DE6C28731D97071E00BB1D33 /* ActionsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionsCell.swift; sourceTree = "<group>"; };
 		DE6C28751D9708BC00BB1D33 /* WordViewController+Sharing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WordViewController+Sharing.swift"; sourceTree = "<group>"; };
 		DE6C28771D97178000BB1D33 /* Doubles+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Doubles+.swift"; sourceTree = "<group>"; };
+		DE825F951D9F8A6300433184 /* LexisImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LexisImageView.swift; sourceTree = "<group>"; };
 		DEDB439B1D925F5700BF092E /* LexisView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LexisView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -481,6 +483,7 @@
 			isa = PBXGroup;
 			children = (
 				DEDB439B1D925F5700BF092E /* LexisView.swift */,
+				DE825F951D9F8A6300433184 /* LexisImageView.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -656,6 +659,7 @@
 				DE4DA2C61D8E37A5003183F4 /* SearchEntryCell.swift in Sources */,
 				DE6C28701D96FEB100BB1D33 /* WordViewController+Search.swift in Sources */,
 				DE6C28761D9708BC00BB1D33 /* WordViewController+Sharing.swift in Sources */,
+				DE825F961D9F8A6300433184 /* LexisImageView.swift in Sources */,
 				DE4DA2D81D8E667E003183F4 /* ViewControllers+.swift in Sources */,
 				DE5D143F1D8847E600B8B3CC /* WordDescriptionCell.swift in Sources */,
 				DEDB439C1D925F5700BF092E /* LexisView.swift in Sources */,
