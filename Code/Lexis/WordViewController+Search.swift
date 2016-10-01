@@ -227,6 +227,7 @@ extension WordViewController
             return
         }
         
+        
         self.async.addOperation
         { [weak self, searchTerm] in
             
@@ -258,9 +259,32 @@ extension WordViewController
         }
     }
     
-    internal func scrollToTheTop()
+    internal func scrollToTheTop(animated: Bool = true)
     {
         let beginning = IndexPath(row: 0, section: 0)
-        self.tableView.scrollToRow(at: beginning, at: .top, animated: true)
+        self.tableView.scrollToRow(at: beginning, at: .top, animated: animated )
     }
+    
+    internal func enableScrolling()
+    {
+        tableView?.isScrollEnabled = true
+    }
+    
+    internal func disableScrolling()
+    {
+        tableView.isScrollEnabled = false
+    }
+}
+
+
+//MARK: TextField Delegate
+extension WordViewController: UITextFieldDelegate
+{
+    
+    func editingDidChange(_ textField: UITextField)
+    {
+        let text = textField.text ?? ""
+        self.searchTerm = text
+    }
+    
 }

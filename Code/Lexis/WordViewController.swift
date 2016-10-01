@@ -401,14 +401,3 @@ extension WordViewController
 }
 
 
-//MARK: TextField Delegate
-extension WordViewController: UITextFieldDelegate
-{
-
-    func editingDidChange(_ textField: UITextField)
-    {
-        let text = textField.text ?? ""
-        self.searchTerm = text
-    }
-    
-}
