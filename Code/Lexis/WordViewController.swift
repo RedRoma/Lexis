@@ -256,9 +256,8 @@ extension WordViewController
             guard let `view` = view else { return }
             
             let titlePath = IndexPath(row: 0, section: 1)
-            let titleIsExpanded = self.isExpanded(titlePath)
             
-            self.share(word: word, in: view, expanded: titleIsExpanded)
+            self.share(word: word, in: view, expanded: true)
         }
         
         return cell
