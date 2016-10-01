@@ -19,7 +19,6 @@ class WordViewController: UITableViewController
     
     //WORDS
     //========================================================================
-//    internal var words: [LexisWord] { return [word] }
     internal var word: LexisWord = LexisDatabase.instance.anyWord
     {
         didSet
