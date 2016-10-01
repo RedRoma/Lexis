@@ -58,3 +58,39 @@ extension VerbType
         return shorts[self] ?? ""
     }
 }
+
+
+extension LexisWord
+{
+    var wordTypeInfo: String
+    {
+        let type = self.wordType
+        
+        switch type
+        {
+            case .Adjective :
+                return "Adjective"
+            case .Adverb:
+                return "Adverb"
+            case .Conjunction:
+                return "Conjunction"
+            case .Interjection:
+                return "Conjunction"
+            case let .Noun(declension, gender):
+                return "\(declension.name) Noun, (\(gender.name))"
+            case .Numeral:
+                return "Numeral"
+            case .PersonalPronoun:
+                return "Personal Pronoun"
+            case let .Preposition(declension):
+                return "Preposition \(declension.name)"
+            case let .Verb(conjugation, verbType):
+                return "Verb \(conjugation.shortNumber) \(verbType.name)"
+            default:
+                break
+        }
+        
+        
+        return ""
+    }
+}

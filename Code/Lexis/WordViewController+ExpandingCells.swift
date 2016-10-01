@@ -36,7 +36,7 @@ extension WordViewController
         
         let title = word.forms.first ?? "Accipio"
         cell.wordNameLabel.text = title
-        cell.wordInformationLabel.text = wordTypeInfo(for: word)
+        cell.wordInformationLabel.text = word.wordTypeInfo
         
         return cell
         
@@ -49,7 +49,7 @@ extension WordViewController
         
         let names = word.forms.joined(separator: ", ")
         cell.wordNameLabel.text = names
-        cell.wordDescriptionLabel.text = wordTypeInfo(for: word)
+        cell.wordDescriptionLabel.text = word.wordTypeInfo
         
         return cell
     }
@@ -69,8 +69,7 @@ extension WordViewController
         definitionText =  "‣  " + definitionText
         
         cell.definitionLabel.text = definitionText
-        
-        styleDefinitionCell(cell, for: indexPath)
+        cell.styleDefinitionCell(forWord: word, for: indexPath)
         
         return cell
     }
@@ -95,26 +94,7 @@ extension WordViewController
         return cell
     }
     
-    func styleDefinitionCell(_ cell: WordDefinitionCell, for indexPath: IndexPath)
-    {
-        let row = indexPath.row
-        let isFirst = row == 0
-        let isLast = row == self.word.definitions.count - 1
-        
-        cell.bottomLine.isHidden = true
-        cell.topLine.isHidden = true
-        
-        if isFirst
-        {
-            cell.topLine.isHidden = false
-        }
-        
-        if isLast
-        {
-            cell.bottomLine.isHidden = false
-        }
-        
-    }
+    
     
     func isExpandable(indexPath: IndexPath) -> Bool
     {
@@ -153,36 +133,6 @@ extension WordViewController
 fileprivate extension WordViewController
 {
     
-    func wordTypeInfo(for word: LexisWord) -> String
-    {
-        let type = word.wordType
-        
-        switch type
-        {
-            case .Adjective :
-                return "Adjective"
-            case .Adverb:
-                return "Adverb"
-            case .Conjunction:
-                return "Conjunction"
-            case .Interjection:
-                return "Conjunction"
-            case let .Noun(declension, gender):
-                return "\(declension.name) Noun, (\(gender.name))"
-            case .Numeral:
-                return "Numeral"
-            case .PersonalPronoun:
-                return "Personal Pronoun"
-            case let .Preposition(declension):
-                return "Preposition \(declension.name)"
-            case let .Verb(conjugation, verbType):
-                return "Verb \(conjugation.shortNumber) \(verbType.name)"
-            default:
-                break
-        }
-        
-        
-        return ""
-    }
+    
     
 }

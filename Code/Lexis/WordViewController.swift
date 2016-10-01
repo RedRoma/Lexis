@@ -185,6 +185,7 @@ extension WordViewController
     }
     
     
+    //MARK: Create Header Cell
     private func createHeaderCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
     {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell", for: indexPath) as? HeaderCell

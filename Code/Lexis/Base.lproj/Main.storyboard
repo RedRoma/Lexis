@@ -842,6 +842,141 @@
             </objects>
             <point key="canvasLocation" x="-686" y="37"/>
         </scene>
+        <!--Simple Share View Controller-->
+        <scene sceneID="GDx-hU-6If">
+            <objects>
+                <viewController storyboardIdentifier="SimpleShareViewController" id="R3a-fg-ALH" customClass="SimpleShareViewController" customModule="Lexis" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RmF-8h-BXs"/>
+                        <viewControllerLayoutGuide type="bottom" id="bzu-we-EOI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BzC-Qq-Md8">
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9UW-gg-3er" userLabel="Frame" customClass="LexisView" customModule="Lexis" customModuleProvider="target">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kSA-By-L4e" userLabel="Line">
+                                        <color key="backgroundColor" red="0.95686274510000002" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="gZy-QD-zQ3"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEXIS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVh-f0-jpn">
+                                        <fontDescription key="fontDescription" name="CinzelDecorative-Regular" family="Cinzel Decorative" pointSize="14"/>
+                                        <color key="textColor" red="0.22352941179999999" green="0.23137254900000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="752" text="‣ Hear" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYN-Od-TMb">
+                                        <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="21"/>
+                                        <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="kSA-By-L4e" firstAttribute="width" secondItem="wVh-f0-jpn" secondAttribute="width" id="ISy-ZQ-RzG"/>
+                                    <constraint firstItem="wVh-f0-jpn" firstAttribute="centerX" secondItem="9UW-gg-3er" secondAttribute="centerX" id="uz3-ZV-fRS"/>
+                                    <constraint firstItem="wVh-f0-jpn" firstAttribute="top" secondItem="kSA-By-L4e" secondAttribute="bottom" constant="4" id="w2k-eN-zda"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="wVh-f0-jpn" secondAttribute="bottom" constant="8" id="xMN-k4-LLM"/>
+                                    <constraint firstItem="kSA-By-L4e" firstAttribute="centerX" secondItem="wVh-f0-jpn" secondAttribute="centerX" id="yGU-ks-HUp"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderThickness">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.52941176469999995" green="0.52941176469999995" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qT3-Eq-Srb" userLabel="Line">
+                                <color key="backgroundColor" red="0.52941176469999995" green="0.52941176469999995" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="pf0-dz-Rpq"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACCIPIO, ACCIPERE, ACCEPI, ACCEPTUS" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VK8-V8-nA3">
+                                <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="40"/>
+                                <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verb, 3rd declension" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5E-fL-muW">
+                                <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="14"/>
+                                <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="752" text="‣ Admit, Let in, Hear, Learn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYv-B5-OZm">
+                                <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="21"/>
+                                <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="752" text="‣ Obey" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8RB-vW-p6X">
+                                <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="21"/>
+                                <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="752" text="‣ Accept" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JA-dS-HFn">
+                                <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="21"/>
+                                <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="752" text="‣ Grasp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gy-WZ-N9d">
+                                <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="21"/>
+                                <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92932397127151489" green="0.92945772409439087" blue="0.92929333448410034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qT3-Eq-Srb" firstAttribute="top" secondItem="C5E-fL-muW" secondAttribute="bottom" constant="24" id="1Jk-gh-a7n"/>
+                            <constraint firstItem="qT3-Eq-Srb" firstAttribute="leading" secondItem="VK8-V8-nA3" secondAttribute="leading" id="1aI-aY-vmk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VK8-V8-nA3" secondAttribute="trailing" constant="8" id="2nA-qw-K7G"/>
+                            <constraint firstItem="DYN-Od-TMb" firstAttribute="leading" secondItem="7gy-WZ-N9d" secondAttribute="leading" id="2qL-k3-bbm"/>
+                            <constraint firstItem="1JA-dS-HFn" firstAttribute="leading" secondItem="8RB-vW-p6X" secondAttribute="leading" id="4K8-c5-ZLv"/>
+                            <constraint firstItem="7gy-WZ-N9d" firstAttribute="width" secondItem="1JA-dS-HFn" secondAttribute="width" id="4m3-ua-CxJ"/>
+                            <constraint firstItem="1JA-dS-HFn" firstAttribute="top" secondItem="8RB-vW-p6X" secondAttribute="bottom" constant="24" id="65X-3B-VLU"/>
+                            <constraint firstItem="DYN-Od-TMb" firstAttribute="width" secondItem="7gy-WZ-N9d" secondAttribute="width" id="9Jv-we-xLI"/>
+                            <constraint firstItem="VK8-V8-nA3" firstAttribute="top" secondItem="RmF-8h-BXs" secondAttribute="bottom" constant="24" id="9uw-p8-5Kf"/>
+                            <constraint firstItem="9UW-gg-3er" firstAttribute="leading" secondItem="BzC-Qq-Md8" secondAttribute="leading" id="Qnw-YN-Rhr"/>
+                            <constraint firstItem="9UW-gg-3er" firstAttribute="centerY" secondItem="BzC-Qq-Md8" secondAttribute="centerY" id="RXK-ab-lFi"/>
+                            <constraint firstItem="1JA-dS-HFn" firstAttribute="width" secondItem="8RB-vW-p6X" secondAttribute="width" id="UNN-9k-Bvs"/>
+                            <constraint firstItem="7gy-WZ-N9d" firstAttribute="leading" secondItem="1JA-dS-HFn" secondAttribute="leading" id="VAK-KZ-LoW"/>
+                            <constraint firstItem="fYv-B5-OZm" firstAttribute="top" secondItem="qT3-Eq-Srb" secondAttribute="bottom" constant="32" id="WBr-7q-t4g"/>
+                            <constraint firstItem="9UW-gg-3er" firstAttribute="height" secondItem="BzC-Qq-Md8" secondAttribute="height" id="XXw-AN-uS4"/>
+                            <constraint firstAttribute="trailing" secondItem="9UW-gg-3er" secondAttribute="trailing" id="YkE-Y4-HmQ"/>
+                            <constraint firstItem="qT3-Eq-Srb" firstAttribute="trailing" secondItem="VK8-V8-nA3" secondAttribute="trailing" id="ZFh-Vz-ZOB"/>
+                            <constraint firstItem="VK8-V8-nA3" firstAttribute="leading" secondItem="BzC-Qq-Md8" secondAttribute="leadingMargin" constant="16" id="b2N-7v-hgD"/>
+                            <constraint firstItem="8RB-vW-p6X" firstAttribute="leading" secondItem="fYv-B5-OZm" secondAttribute="leading" id="cXC-UM-Xxb"/>
+                            <constraint firstItem="7gy-WZ-N9d" firstAttribute="top" secondItem="1JA-dS-HFn" secondAttribute="bottom" constant="24" id="fnu-2f-hQ4"/>
+                            <constraint firstItem="fYv-B5-OZm" firstAttribute="leading" secondItem="VK8-V8-nA3" secondAttribute="leading" constant="8" id="kkt-AW-IlQ"/>
+                            <constraint firstItem="DYN-Od-TMb" firstAttribute="top" secondItem="7gy-WZ-N9d" secondAttribute="bottom" constant="24" id="o83-4D-XUC"/>
+                            <constraint firstItem="C5E-fL-muW" firstAttribute="top" secondItem="VK8-V8-nA3" secondAttribute="bottom" constant="8" id="p2M-nf-Sz0"/>
+                            <constraint firstItem="8RB-vW-p6X" firstAttribute="width" secondItem="fYv-B5-OZm" secondAttribute="width" id="vg9-fL-Iil"/>
+                            <constraint firstItem="C5E-fL-muW" firstAttribute="leading" secondItem="VK8-V8-nA3" secondAttribute="leading" constant="2" id="w6e-Qt-pcf"/>
+                            <constraint firstItem="9UW-gg-3er" firstAttribute="centerX" secondItem="BzC-Qq-Md8" secondAttribute="centerX" id="xQg-AD-4fj"/>
+                            <constraint firstItem="fYv-B5-OZm" firstAttribute="width" secondItem="VK8-V8-nA3" secondAttribute="width" multiplier="0.8" id="yHu-ud-hzK"/>
+                            <constraint firstItem="8RB-vW-p6X" firstAttribute="top" secondItem="fYv-B5-OZm" secondAttribute="bottom" constant="24" id="zNI-3Q-4yE"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="500" height="500"/>
+                    <connections>
+                        <outlet property="definitionLabel1" destination="fYv-B5-OZm" id="6GM-ey-VDl"/>
+                        <outlet property="definitionLabel2" destination="8RB-vW-p6X" id="tu9-fB-e7J"/>
+                        <outlet property="definitionLabel3" destination="1JA-dS-HFn" id="ear-qu-g5d"/>
+                        <outlet property="definitionLabel4" destination="7gy-WZ-N9d" id="rfO-CT-dw6"/>
+                        <outlet property="definitionLabel5" destination="DYN-Od-TMb" id="j0b-EG-MAc"/>
+                        <outlet property="wordNameLabel" destination="VK8-V8-nA3" id="21d-BF-ZoH"/>
+                        <outlet property="wordTypeLabel" destination="C5E-fL-muW" id="PuL-lr-gA8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O4r-5o-473" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1955" y="-618"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Art-Open-Book" width="360" height="500"/>

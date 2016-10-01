@@ -12,6 +12,10 @@ import LexisDatabase
 import Sulcus
 import UIKit
 
+
+/** Determines the size of the card created and shared. */
+private let shareSize = CGSize(width: 500, height: 500)
+
 extension WordViewController
 {
     
@@ -36,22 +40,27 @@ extension WordViewController
             .withPriority(.medium)
             .send()
         
-        guard let image = tableView.screenshot()
+        guard let shareViewController = self.storyboard?.instantiateViewController(withIdentifier: "SimpleShareViewController") as? SimpleShareViewController
         else
         {
-            LOG.error("Failed to take screenshot of UITableView")
-            AromaClient.sendHighPriorityMessage(withTitle: "Screenshot Failed", withBody: "Could not take screenshot of Table View")
+            LOG.warn("Could not instantiate ShareViewController")
             return
         }
         
+        shareViewController.word = word
+        shareViewController.view.frame = CGRect(origin: CGPoint.zero, size: shareSize)
+        shareViewController.view.setNeedsDisplay()
+        shareViewController.view.layoutIfNeeded()
         
-        guard let controller = createShareController(word: word, andImage: image, expanded: expanded) else { return }
+        guard let image = shareViewController.view.screenshot() else { return }
+ 
+        guard let controller = self.createShareController(word: word, andImage: image, expanded: expanded) else { return }
         
-        if isPhone
+        if self.isPhone
         {
             self.navigationController?.present(controller, animated: true, completion: nil)
         }
-        else if isPad
+        else if self.isPad
         {
             // Change Rect to position Popover
             controller.modalPresentationStyle = .popover
@@ -62,6 +71,7 @@ extension WordViewController
             
             self.navigationController?.present(controller, animated: true, completion: nil)
         }
+       
     }
     
     private func createShareController(word: LexisWord, andImage image: UIImage, expanded: Bool) -> UIActivityViewController?
@@ -127,9 +137,10 @@ fileprivate extension UIView
     {
         UIGraphicsBeginImageContextWithOptions(self.frame.size, self.isOpaque, 0.0)
         
-        self.drawHierarchy(in: self.frame, afterScreenUpdates: false)
-//        guard let context = UIGraphicsGetCurrentContext() else { return nil }
-//        layer.render(in: context)
+//        self.drawHierarchy(in: self.frame, afterScreenUpdates: false)
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+        layer.render(in: context)
+        
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
