@@ -12,6 +12,10 @@ import LexisDatabase
 import Sulcus
 import UIKit
 
+
+/** Determines the size of the card created and shared. */
+private let shareSize = CGSize(width: 500, height: 500)
+
 extension WordViewController
 {
     
@@ -44,7 +48,7 @@ extension WordViewController
         }
         
         shareViewController.word = word
-        shareViewController.view.frame = CGRect(x: 0, y: 0, width: 500, height: 500)
+        shareViewController.view.frame = CGRect(origin: CGPoint.zero, size: shareSize)
         shareViewController.view.setNeedsDisplay()
         shareViewController.view.layoutIfNeeded()
         

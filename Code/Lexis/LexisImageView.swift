@@ -10,7 +10,7 @@ import Foundation
 import RedRomaColors
 import UIKit
 
-class LexisImageView: UIImageView
+@IBDesignable class LexisImageView: UIImageView
 {
     override init(frame: CGRect)
     {
