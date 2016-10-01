@@ -871,11 +871,6 @@
                                         <color key="textColor" red="0.22352941179999999" green="0.23137254900000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="752" text="‣ Hear" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYN-Od-TMb">
-                                        <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="21"/>
-                                        <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -912,22 +907,27 @@
                                 <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="752" text="‣ Admit, Let in, Hear, Learn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYv-B5-OZm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="752" text="‣ Admit, Let in, Hear, Learn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="fYv-B5-OZm">
                                 <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="21"/>
                                 <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="752" text="‣ Obey" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8RB-vW-p6X">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="752" text="‣ Obey" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="8RB-vW-p6X">
                                 <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="21"/>
                                 <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="752" text="‣ Accept" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JA-dS-HFn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="752" text="‣ Accept" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="1JA-dS-HFn">
                                 <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="21"/>
                                 <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="752" text="‣ Grasp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gy-WZ-N9d">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="752" text="‣ Grasp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="7gy-WZ-N9d">
+                                <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="21"/>
+                                <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="752" text="‣ Hear" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="DYN-Od-TMb">
                                 <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="21"/>
                                 <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -938,25 +938,25 @@
                             <constraint firstItem="qT3-Eq-Srb" firstAttribute="top" secondItem="C5E-fL-muW" secondAttribute="bottom" constant="24" id="1Jk-gh-a7n"/>
                             <constraint firstItem="qT3-Eq-Srb" firstAttribute="leading" secondItem="VK8-V8-nA3" secondAttribute="leading" id="1aI-aY-vmk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VK8-V8-nA3" secondAttribute="trailing" constant="8" id="2nA-qw-K7G"/>
-                            <constraint firstItem="DYN-Od-TMb" firstAttribute="leading" secondItem="7gy-WZ-N9d" secondAttribute="leading" id="2qL-k3-bbm"/>
                             <constraint firstItem="1JA-dS-HFn" firstAttribute="leading" secondItem="8RB-vW-p6X" secondAttribute="leading" id="4K8-c5-ZLv"/>
                             <constraint firstItem="7gy-WZ-N9d" firstAttribute="width" secondItem="1JA-dS-HFn" secondAttribute="width" id="4m3-ua-CxJ"/>
                             <constraint firstItem="1JA-dS-HFn" firstAttribute="top" secondItem="8RB-vW-p6X" secondAttribute="bottom" constant="24" id="65X-3B-VLU"/>
-                            <constraint firstItem="DYN-Od-TMb" firstAttribute="width" secondItem="7gy-WZ-N9d" secondAttribute="width" id="9Jv-we-xLI"/>
                             <constraint firstItem="VK8-V8-nA3" firstAttribute="top" secondItem="RmF-8h-BXs" secondAttribute="bottom" constant="24" id="9uw-p8-5Kf"/>
                             <constraint firstItem="9UW-gg-3er" firstAttribute="leading" secondItem="BzC-Qq-Md8" secondAttribute="leading" id="Qnw-YN-Rhr"/>
                             <constraint firstItem="9UW-gg-3er" firstAttribute="centerY" secondItem="BzC-Qq-Md8" secondAttribute="centerY" id="RXK-ab-lFi"/>
                             <constraint firstItem="1JA-dS-HFn" firstAttribute="width" secondItem="8RB-vW-p6X" secondAttribute="width" id="UNN-9k-Bvs"/>
                             <constraint firstItem="7gy-WZ-N9d" firstAttribute="leading" secondItem="1JA-dS-HFn" secondAttribute="leading" id="VAK-KZ-LoW"/>
                             <constraint firstItem="fYv-B5-OZm" firstAttribute="top" secondItem="qT3-Eq-Srb" secondAttribute="bottom" constant="32" id="WBr-7q-t4g"/>
+                            <constraint firstItem="DYN-Od-TMb" firstAttribute="width" secondItem="7gy-WZ-N9d" secondAttribute="width" id="WUw-Mb-Dn0"/>
                             <constraint firstItem="9UW-gg-3er" firstAttribute="height" secondItem="BzC-Qq-Md8" secondAttribute="height" id="XXw-AN-uS4"/>
                             <constraint firstAttribute="trailing" secondItem="9UW-gg-3er" secondAttribute="trailing" id="YkE-Y4-HmQ"/>
                             <constraint firstItem="qT3-Eq-Srb" firstAttribute="trailing" secondItem="VK8-V8-nA3" secondAttribute="trailing" id="ZFh-Vz-ZOB"/>
+                            <constraint firstItem="DYN-Od-TMb" firstAttribute="top" secondItem="7gy-WZ-N9d" secondAttribute="bottom" constant="24" id="Zw1-ev-7EK"/>
                             <constraint firstItem="VK8-V8-nA3" firstAttribute="leading" secondItem="BzC-Qq-Md8" secondAttribute="leadingMargin" constant="16" id="b2N-7v-hgD"/>
                             <constraint firstItem="8RB-vW-p6X" firstAttribute="leading" secondItem="fYv-B5-OZm" secondAttribute="leading" id="cXC-UM-Xxb"/>
                             <constraint firstItem="7gy-WZ-N9d" firstAttribute="top" secondItem="1JA-dS-HFn" secondAttribute="bottom" constant="24" id="fnu-2f-hQ4"/>
                             <constraint firstItem="fYv-B5-OZm" firstAttribute="leading" secondItem="VK8-V8-nA3" secondAttribute="leading" constant="8" id="kkt-AW-IlQ"/>
-                            <constraint firstItem="DYN-Od-TMb" firstAttribute="top" secondItem="7gy-WZ-N9d" secondAttribute="bottom" constant="24" id="o83-4D-XUC"/>
+                            <constraint firstItem="DYN-Od-TMb" firstAttribute="leading" secondItem="7gy-WZ-N9d" secondAttribute="leading" id="laj-Qc-gDE"/>
                             <constraint firstItem="C5E-fL-muW" firstAttribute="top" secondItem="VK8-V8-nA3" secondAttribute="bottom" constant="8" id="p2M-nf-Sz0"/>
                             <constraint firstItem="8RB-vW-p6X" firstAttribute="width" secondItem="fYv-B5-OZm" secondAttribute="width" id="vg9-fL-Iil"/>
                             <constraint firstItem="C5E-fL-muW" firstAttribute="leading" secondItem="VK8-V8-nA3" secondAttribute="leading" constant="2" id="w6e-Qt-pcf"/>
