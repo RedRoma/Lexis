@@ -118,6 +118,9 @@
 		DE6C28761D9708BC00BB1D33 /* WordViewController+Sharing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6C28751D9708BC00BB1D33 /* WordViewController+Sharing.swift */; };
 		DE6C28781D97178000BB1D33 /* Doubles+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6C28771D97178000BB1D33 /* Doubles+.swift */; };
 		DE825F961D9F8A6300433184 /* LexisImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE825F951D9F8A6300433184 /* LexisImageView.swift */; };
+		DE825F981D9FA2ED00433184 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE825F971D9FA2ED00433184 /* NVActivityIndicatorView.framework */; };
+		DE825F991D9FA2F900433184 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE825F971D9FA2ED00433184 /* NVActivityIndicatorView.framework */; };
+		DE825F9A1D9FA2F900433184 /* NVActivityIndicatorView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE825F971D9FA2ED00433184 /* NVActivityIndicatorView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DEDB439C1D925F5700BF092E /* LexisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDB439B1D925F5700BF092E /* LexisView.swift */; };
 		DEDB439D1D925F5700BF092E /* LexisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDB439B1D925F5700BF092E /* LexisView.swift */; };
 /* End PBXBuildFile section */
@@ -145,6 +148,7 @@
 				DE49A2811D98841700620411 /* AromaThrift.framework in Embed Frameworks */,
 				DE49A2831D98841700620411 /* LexisDatabase.framework in Embed Frameworks */,
 				DE49A28D1D98841700620411 /* SwiftExceptionCatcher.framework in Embed Frameworks */,
+				DE825F9A1D9FA2F900433184 /* NVActivityIndicatorView.framework in Embed Frameworks */,
 				DE49A2871D98841700620411 /* PCAngularActivityIndicatorView.framework in Embed Frameworks */,
 				DE49A27D1D98841700620411 /* AlchemyUIKit.framework in Embed Frameworks */,
 				DE49A2851D98841700620411 /* LTMorphingLabel.framework in Embed Frameworks */,
@@ -244,6 +248,7 @@
 		DE6C28751D9708BC00BB1D33 /* WordViewController+Sharing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WordViewController+Sharing.swift"; sourceTree = "<group>"; };
 		DE6C28771D97178000BB1D33 /* Doubles+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Doubles+.swift"; sourceTree = "<group>"; };
 		DE825F951D9F8A6300433184 /* LexisImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LexisImageView.swift; sourceTree = "<group>"; };
+		DE825F971D9FA2ED00433184 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = Carthage/Build/iOS/NVActivityIndicatorView.framework; sourceTree = "<group>"; };
 		DEDB439B1D925F5700BF092E /* LexisView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LexisView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -258,8 +263,10 @@
 				DE49A2701D98841300620411 /* AlchemyGenerator.framework in Frameworks */,
 				DE49A2731D98841300620411 /* AromaThrift.framework in Frameworks */,
 				DE49A28C1D98841700620411 /* SwiftExceptionCatcher.framework in Frameworks */,
+				DE825F991D9FA2F900433184 /* NVActivityIndicatorView.framework in Frameworks */,
 				DE49A2881D98841700620411 /* RedRomaColors.framework in Frameworks */,
 				DE49A2741D98841300620411 /* LexisDatabase.framework in Frameworks */,
+				DE825F981D9FA2ED00433184 /* NVActivityIndicatorView.framework in Frameworks */,
 				DE49A2861D98841700620411 /* PCAngularActivityIndicatorView.framework in Frameworks */,
 				DE49A2791D98841300620411 /* SwiftExceptionCatcher.framework in Frameworks */,
 				DE49A27A1D98841700620411 /* AlchemyGenerator.framework in Frameworks */,
@@ -448,6 +455,7 @@
 		DE60BCC11D7B6ADE00EF15C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DE825F971D9FA2ED00433184 /* NVActivityIndicatorView.framework */,
 				DE49A2661D98841300620411 /* AlchemyGenerator.framework */,
 				DE49A2671D98841300620411 /* AlchemyUIKit.framework */,
 				DE49A2681D98841300620411 /* AromaSwiftClient.framework */,

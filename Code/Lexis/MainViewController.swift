@@ -6,10 +6,12 @@
 //  Copyright © 2016 RedRoma, Inc. All rights reserved.
 //
 
+import AlchemyGenerator
 import AromaSwiftClient
 import Foundation
 import LexisDatabase
 import LTMorphingLabel
+import NVActivityIndicatorView
 import PCAngularActivityIndicatorView
 import RedRomaColors
 import Sulcus
@@ -17,7 +19,8 @@ import UIKit
 
 class MainViewController: UIViewController
 {
-    @IBOutlet weak var progressIndicator: UIActivityIndicatorView!
+    
+    @IBOutlet weak var progressIndicator: NVActivityIndicatorView!
     @IBOutlet weak var messageLabel: LTMorphingLabel!
     
     private let main = OperationQueue.main
@@ -40,6 +43,18 @@ class MainViewController: UIViewController
     {
         self.messageLabel?.morphingDuration = 4.0
         self.messageLabel?.text = nil
+        
+        let animations: [NVActivityIndicatorType] =
+        [
+            .ballScale,
+            .ballScaleMultiple,
+            .ballScaleRippleMultiple,
+            .ballClipRotate,
+            .ballClipRotatePulse,
+            .ballClipRotateMultiple
+        ]
+        
+        self.progressIndicator.type = AlchemyGenerator.anyOf(animations) ?? .ballScaleRippleMultiple
     }
     
     override func viewDidAppear(_ animated: Bool)

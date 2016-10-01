@@ -357,11 +357,15 @@ extension WordViewController
         }
         else
         {
-            let highlightedSection = indexPath.section
-            let headerSection = 0
-            let wordDescriptionSection = 3
+            guard let section = SectionsWhenNotSearching.forSection(indexPath.section) else { return false }
             
-            return highlightedSection != headerSection && highlightedSection != wordDescriptionSection
+            switch section
+            {
+                case .WordTitle, .WordDefinitions, .Images:
+                    return true
+                default :
+                    return false
+            }
         }
     }
     

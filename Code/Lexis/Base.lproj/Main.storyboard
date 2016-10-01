@@ -37,37 +37,41 @@
                                     <constraint firstAttribute="width" secondItem="TuH-0h-kB7" secondAttribute="height" multiplier="1:1" id="vVK-UQ-h7p"/>
                                 </constraints>
                             </imageView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="XGE-nh-aDC">
-                                <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Dictionary..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMn-O9-zfd" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                 <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hUE-Fe-Vtn" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="euG-9q-iUK"/>
+                                    <constraint firstAttribute="height" constant="37" id="oqA-lb-Dx8"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.10084318369626999" green="0.12614241242408752" blue="0.12999480962753296" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="hUE-Fe-Vtn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="37U-UL-cAC"/>
+                            <constraint firstItem="eMn-O9-zfd" firstAttribute="centerX" secondItem="hUE-Fe-Vtn" secondAttribute="centerX" id="Eme-oM-FGM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hUE-Fe-Vtn" secondAttribute="bottom" constant="24" id="IrQ-KV-3Dt"/>
+                            <constraint firstItem="hUE-Fe-Vtn" firstAttribute="top" secondItem="eMn-O9-zfd" secondAttribute="bottom" constant="24" id="c85-ZJ-MtK"/>
                             <constraint firstItem="TuH-0h-kB7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cMl-RO-SOA"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XGE-nh-aDC" secondAttribute="bottom" constant="50" id="gs4-Uz-o2x"/>
-                            <constraint firstItem="eMn-O9-zfd" firstAttribute="centerX" secondItem="XGE-nh-aDC" secondAttribute="centerX" id="jX8-w6-Par"/>
                             <constraint firstItem="TuH-0h-kB7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qOw-Db-1k8"/>
-                            <constraint firstItem="XGE-nh-aDC" firstAttribute="top" secondItem="eMn-O9-zfd" secondAttribute="bottom" constant="28" id="wyX-Fh-DSK"/>
-                            <constraint firstItem="XGE-nh-aDC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xn0-lK-6r6"/>
                             <constraint firstItem="TuH-0h-kB7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="yPN-aA-Gfv"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="messageLabel" destination="eMn-O9-zfd" id="vNi-I3-IvR"/>
-                        <outlet property="progressIndicator" destination="XGE-nh-aDC" id="9Hh-Re-Qfz"/>
+                        <outlet property="progressIndicator" destination="hUE-Fe-Vtn" id="T3h-D2-0R3"/>
                         <segue destination="pRC-NC-gtv" kind="show" identifier="ToWelcome" id="j8m-8y-UjF"/>
                         <segue destination="5DF-8E-0sR" kind="show" identifier="ToWordOfTheDay" id="a8f-Ma-jrQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-39" y="36"/>
+            <point key="canvasLocation" x="-39.200000000000003" y="35.532233883058474"/>
         </scene>
         <!--Word View Controller-->
         <scene sceneID="IIM-m0-fFD">
