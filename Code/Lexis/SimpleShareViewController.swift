@@ -19,6 +19,12 @@ class SimpleShareViewController: UIViewController
     @IBOutlet weak var definitionLabel2: UILabel!
     @IBOutlet weak var definitionLabel3: UILabel!
     @IBOutlet weak var definitionLabel4: UILabel!
+    @IBOutlet weak var definitionLabel5: UILabel!
+    
+    private var definitionLabels: [UILabel]
+    {
+        return [definitionLabel1, definitionLabel2, definitionLabel3, definitionLabel4, definitionLabel5]
+    }
     
     var word: LexisWord!
     
@@ -43,7 +49,7 @@ class SimpleShareViewController: UIViewController
     
     private func hideDefinitionLabels()
     {
-        [definitionLabel1, definitionLabel2, definitionLabel3, definitionLabel4].forEach() { $0?.isHidden = true }
+        definitionLabels.forEach() { $0.isHidden = true }
     }
     
     private func show(_ view: UIView)
@@ -57,32 +63,15 @@ class SimpleShareViewController: UIViewController
         
         guard amount > 0 else { return }
         
-        if amount >= 1
+        for (index, definition) in definitions.enumerated()
         {
-            let first = definitions[0]
-            show(definitionLabel1)
-            definitionLabel1.text = "‣  \(first)"
-        }
-        
-        if amount >= 2
-        {
-            let second = definitions[1]
-            show(definitionLabel2)
-            definitionLabel2.text = "‣ \(second)"
-        }
-        
-        if amount >= 3
-        {
-            let third = definitions[2]
-            show(definitionLabel3)
-            definitionLabel3.text = "‣ \(third)"
-        }
-        
-        if amount >= 4
-        {
-            let fourth = definitions[3]
-            show(definitionLabel4)
-            definitionLabel4.text = "‣ \(fourth)"
+            guard index.isValidIndexFor(array: definitionLabels) else { continue }
+            
+            let text = definition.removingFirstCharacterIfWhitespace()
+            
+            let label = definitionLabels[index]
+            show(label)
+            label.text = "‣  \(text)"
         }
     }
 }
