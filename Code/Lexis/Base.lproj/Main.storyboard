@@ -74,7 +74,7 @@
             <objects>
                 <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="2j9-lJ-S9d" customClass="WordViewController" customModule="Lexis" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="80" sectionHeaderHeight="18" sectionFooterHeight="18" id="Po1-wa-b3g">
-                        <rect key="frame" x="0.0" y="64" width="375" height="1436"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.72549019609999998" green="0.050980392159999999" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -769,12 +769,52 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="1500"/>
+                    <connections>
+                        <segue destination="oEX-tV-ucK" kind="show" identifier="ToWebView" id="YRL-bj-p4i"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LSR-3L-20H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1957.2463768115942" y="32.608695652173914"/>
+        </scene>
+        <!-- -->
+        <scene sceneID="wF1-Jg-EKn">
+            <objects>
+                <viewController id="oEX-tV-ucK" customClass="WebViewController" customModule="Lexis" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xPd-Mz-eLI"/>
+                        <viewControllerLayoutGuide type="bottom" id="XtY-Pg-Zf2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NDt-Ao-Goq">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OKI-ie-qk0">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="OKI-ie-qk0" secondAttribute="trailing" id="5O8-IZ-u5s"/>
+                            <constraint firstItem="OKI-ie-qk0" firstAttribute="top" secondItem="xPd-Mz-eLI" secondAttribute="bottom" id="W52-cq-ks1"/>
+                            <constraint firstItem="XtY-Pg-Zf2" firstAttribute="top" secondItem="OKI-ie-qk0" secondAttribute="bottom" id="erN-To-xKD"/>
+                            <constraint firstItem="OKI-ie-qk0" firstAttribute="leading" secondItem="NDt-Ao-Goq" secondAttribute="leading" id="gts-Uw-L0W"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title=" " id="vhr-Gy-hcU">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="4IA-bP-lK4">
+                            <connections>
+                                <action selector="onOpenLink:" destination="oEX-tV-ucK" id="b1q-KF-NJy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="webView" destination="OKI-ie-qk0" id="4ix-VZ-Yzh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8t0-gQ-r68" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2906" y="32"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AcH-VC-WgK">
@@ -783,6 +823,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" id="enL-zh-NGv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.95686274509803915" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>

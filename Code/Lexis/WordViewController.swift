@@ -69,7 +69,7 @@ class WordViewController: UITableViewController
     
     //IMAGES
     //========================================================================
-    var images: [URL] = []
+    var images: [FlickrImage] = []
     
     //SEARCH
     //========================================================================
@@ -333,7 +333,7 @@ extension WordViewController
             
             if isImageCell(indexPath: indexPath)
             {
-                shareImage(atIndexPath: indexPath)
+                showImage(atIndexPath: indexPath)
             }
         }
         
@@ -381,6 +381,21 @@ extension WordViewController
                 .addBody("\(word.description)")
                 .withPriority(.low)
                 .send()
+        }
+    }
+}
+
+//MARK: Segues
+extension WordViewController
+{
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if let destination = segue.destination as? WebViewController
+        {
+            if let image = sender as? FlickrImage, let link = image.webURL
+            {
+                destination.link = link
+            }
         }
     }
 }

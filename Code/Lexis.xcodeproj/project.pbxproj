@@ -86,6 +86,8 @@
 		DE4DA2D91D8E667E003183F4 /* ViewControllers+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA2D71D8E667E003183F4 /* ViewControllers+.swift */; };
 		DE528EE91D9CCA940080D973 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE528EE81D9CCA940080D973 /* ShareViewController.swift */; };
 		DE528EEB1D9CE55A0080D973 /* SimpleShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE528EEA1D9CE55A0080D973 /* SimpleShareViewController.swift */; };
+		DE528EED1D9D67730080D973 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE528EEC1D9D67730080D973 /* WebViewController.swift */; };
+		DE528EEF1D9D7FF00080D973 /* Integers+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE528EEE1D9D7FF00080D973 /* Integers+.swift */; };
 		DE5D14151D87CDF800B8B3CC /* Raleway 100.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D14031D87CDF800B8B3CC /* Raleway 100.ttf */; };
 		DE5D14161D87CDF800B8B3CC /* Raleway 100italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D14041D87CDF800B8B3CC /* Raleway 100italic.ttf */; };
 		DE5D14171D87CDF800B8B3CC /* Raleway 200.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE5D14051D87CDF800B8B3CC /* Raleway 200.ttf */; };
@@ -210,6 +212,8 @@
 		DE4DA2D71D8E667E003183F4 /* ViewControllers+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewControllers+.swift"; sourceTree = "<group>"; };
 		DE528EE81D9CCA940080D973 /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		DE528EEA1D9CE55A0080D973 /* SimpleShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleShareViewController.swift; sourceTree = "<group>"; };
+		DE528EEC1D9D67730080D973 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		DE528EEE1D9D7FF00080D973 /* Integers+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Integers+.swift"; sourceTree = "<group>"; };
 		DE5D14031D87CDF800B8B3CC /* Raleway 100.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 100.ttf"; sourceTree = "<group>"; };
 		DE5D14041D87CDF800B8B3CC /* Raleway 100italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 100italic.ttf"; sourceTree = "<group>"; };
 		DE5D14051D87CDF800B8B3CC /* Raleway 200.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway 200.ttf"; sourceTree = "<group>"; };
@@ -412,13 +416,14 @@
 		DE5D14271D87E14400B8B3CC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				DE528EEA1D9CE55A0080D973 /* SimpleShareViewController.swift */,
+				DE528EE81D9CCA940080D973 /* ShareViewController.swift */,
 				DE5D14281D87E15B00B8B3CC /* WordViewController.swift */,
 				DE6C286D1D96FE1900BB1D33 /* WordViewController+ExpandingCells.swift */,
 				DE6C286F1D96FEB100BB1D33 /* WordViewController+Search.swift */,
 				DE6C28751D9708BC00BB1D33 /* WordViewController+Sharing.swift */,
 				DE49A2BB1D98EC0200620411 /* WordViewControllers+Images.swift */,
-				DE528EE81D9CCA940080D973 /* ShareViewController.swift */,
-				DE528EEA1D9CE55A0080D973 /* SimpleShareViewController.swift */,
+				DE528EEC1D9D67730080D973 /* WebViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -467,6 +472,7 @@
 				DE4DA2D71D8E667E003183F4 /* ViewControllers+.swift */,
 				DE6C28771D97178000BB1D33 /* Doubles+.swift */,
 				DE49A2B51D98D10600620411 /* URLs+.swift */,
+				DE528EEE1D9D7FF00080D973 /* Integers+.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -645,6 +651,7 @@
 				DE5D14391D88474400B8B3CC /* HeaderCell.swift in Sources */,
 				DE6C286C1D96FA3000BB1D33 /* ExpandedDefinitionCell.swift in Sources */,
 				DE5D14291D87E15B00B8B3CC /* WordViewController.swift in Sources */,
+				DE528EED1D9D67730080D973 /* WebViewController.swift in Sources */,
 				DE5D143B1D8847BD00B8B3CC /* WordNameCell.swift in Sources */,
 				DE4DA2C61D8E37A5003183F4 /* SearchEntryCell.swift in Sources */,
 				DE6C28701D96FEB100BB1D33 /* WordViewController+Search.swift in Sources */,
@@ -656,6 +663,7 @@
 				DE49A2B41D98C55B00620411 /* FlickrImageProvider.swift in Sources */,
 				DE1294F71D6977F700687CA5 /* AppDelegate.swift in Sources */,
 				DE49A2B61D98D10600620411 /* URLs+.swift in Sources */,
+				DE528EEF1D9D7FF00080D973 /* Integers+.swift in Sources */,
 				DE0E00081D7E984C00B70D62 /* WelcomePageViewController.swift in Sources */,
 				DE4DA2CC1D8E37B8003183F4 /* SearchEmptyCell.swift in Sources */,
 				DE49A2BC1D98EC0200620411 /* WordViewControllers+Images.swift in Sources */,
