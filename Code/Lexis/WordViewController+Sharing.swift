@@ -137,7 +137,6 @@ fileprivate extension UIView
     {
         UIGraphicsBeginImageContextWithOptions(self.frame.size, self.isOpaque, 0.0)
         
-//        self.drawHierarchy(in: self.frame, afterScreenUpdates: false)
         guard let context = UIGraphicsGetCurrentContext() else { return nil }
         layer.render(in: context)
         
