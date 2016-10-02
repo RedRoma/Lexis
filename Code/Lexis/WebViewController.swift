@@ -61,9 +61,9 @@ extension WebViewController: UIWebViewDelegate
     
     func webView(_ webView: UIWebView, didFailLoadWithError error: Error)
     {
-        LOG.error("Failed to load: \(link)")
+        LOG.error("Failed to load: \(link), \(error)")
         
-        AromaClient.sendHighPriorityMessage(withTitle: "Failed To Load Link", withBody: "\(link)")
+        AromaClient.sendHighPriorityMessage(withTitle: "Failed To Load Link", withBody: "\(link)\n\n\(error)")
         
         hideNetworkIndicator()
     }
