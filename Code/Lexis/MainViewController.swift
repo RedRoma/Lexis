@@ -48,8 +48,8 @@ class MainViewController: UIViewController
         [
             .ballScale,
             .ballScaleMultiple,
+            .ballScaleRipple,
             .ballScaleRippleMultiple,
-            .ballClipRotate,
             .ballClipRotatePulse,
             .ballClipRotateMultiple
         ]
