@@ -352,10 +352,9 @@
 				DE0E87221D7FEFBE00F42DB3 /* Settings */,
 				DE1295081D6982D100687CA5 /* Fonts */,
 				DE0EFFD41D7E813100B70D62 /* Welcome */,
+				DEB274321DA15D800061D052 /* Storyboards */,
 				DE1294F61D6977F700687CA5 /* AppDelegate.swift */,
 				DE0E87201D7FEF9900F42DB3 /* MainViewController.swift */,
-				DE1294FA1D6977F700687CA5 /* Main.storyboard */,
-				DE0E87281D7FF41D00F42DB3 /* Welcome.storyboard */,
 				DE1294FD1D6977F700687CA5 /* Assets.xcassets */,
 				DE1294FF1D6977F700687CA5 /* LaunchScreen.storyboard */,
 				DE1295021D6977F700687CA5 /* Info.plist */,
@@ -485,6 +484,15 @@
 				DEA255DD1DA0BAFF009F9F3E /* UILabels+.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		DEB274321DA15D800061D052 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				DE1294FA1D6977F700687CA5 /* Main.storyboard */,
+				DE0E87281D7FF41D00F42DB3 /* Welcome.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 		DEDB439A1D925F4400BF092E /* UI */ = {
