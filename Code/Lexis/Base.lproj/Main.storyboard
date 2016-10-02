@@ -746,12 +746,11 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="hsK-fu-Eti"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="Pum-0d-A7o">
-                        <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="ohq-IW-8qj">
                             <rect key="frame" x="124" y="6" width="128" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEXIS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="22C-oG-JeO">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEXIS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="22C-oG-JeO" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                     <fontDescription key="fontDescription" name="CinzelDecorative-Regular" family="Cinzel Decorative" pointSize="30"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
@@ -774,6 +773,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="navBarTitleLabel" destination="22C-oG-JeO" id="hW0-Ip-zKP"/>
                         <segue destination="oEX-tV-ucK" kind="show" identifier="ToWebView" id="YRL-bj-p4i"/>
                     </connections>
                 </tableViewController>

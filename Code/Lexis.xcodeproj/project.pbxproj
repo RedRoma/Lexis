@@ -121,6 +121,7 @@
 		DE825F981D9FA2ED00433184 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE825F971D9FA2ED00433184 /* NVActivityIndicatorView.framework */; };
 		DE825F991D9FA2F900433184 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE825F971D9FA2ED00433184 /* NVActivityIndicatorView.framework */; };
 		DE825F9A1D9FA2F900433184 /* NVActivityIndicatorView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE825F971D9FA2ED00433184 /* NVActivityIndicatorView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DEA255DE1DA0BAFF009F9F3E /* UILabels+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA255DD1DA0BAFF009F9F3E /* UILabels+.swift */; };
 		DEDB439C1D925F5700BF092E /* LexisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDB439B1D925F5700BF092E /* LexisView.swift */; };
 		DEDB439D1D925F5700BF092E /* LexisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDB439B1D925F5700BF092E /* LexisView.swift */; };
 /* End PBXBuildFile section */
@@ -249,6 +250,7 @@
 		DE6C28771D97178000BB1D33 /* Doubles+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Doubles+.swift"; sourceTree = "<group>"; };
 		DE825F951D9F8A6300433184 /* LexisImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LexisImageView.swift; sourceTree = "<group>"; };
 		DE825F971D9FA2ED00433184 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = Carthage/Build/iOS/NVActivityIndicatorView.framework; sourceTree = "<group>"; };
+		DEA255DD1DA0BAFF009F9F3E /* UILabels+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabels+.swift"; sourceTree = "<group>"; };
 		DEDB439B1D925F5700BF092E /* LexisView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LexisView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -480,6 +482,7 @@
 				DE6C28771D97178000BB1D33 /* Doubles+.swift */,
 				DE49A2B51D98D10600620411 /* URLs+.swift */,
 				DE528EEE1D9D7FF00080D973 /* Integers+.swift */,
+				DEA255DD1DA0BAFF009F9F3E /* UILabels+.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -676,6 +679,7 @@
 				DE4DA2CC1D8E37B8003183F4 /* SearchEmptyCell.swift in Sources */,
 				DE49A2BC1D98EC0200620411 /* WordViewControllers+Images.swift in Sources */,
 				DE49A2A51D98C08500620411 /* ImageProvider.swift in Sources */,
+				DEA255DE1DA0BAFF009F9F3E /* UILabels+.swift in Sources */,
 				DE49A2BA1D98E96800620411 /* ImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

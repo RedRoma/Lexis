@@ -12,7 +12,6 @@ import Foundation
 import LexisDatabase
 import LTMorphingLabel
 import NVActivityIndicatorView
-import PCAngularActivityIndicatorView
 import RedRomaColors
 import Sulcus
 import UIKit

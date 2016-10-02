@@ -9,6 +9,7 @@
 import AromaSwiftClient
 import Foundation
 import LexisDatabase
+import LTMorphingLabel
 import RedRomaColors
 import Sulcus
 import UIKit
@@ -16,6 +17,12 @@ import UIKit
 
 class WordViewController: UITableViewController
 {
+    //MARK: Variables
+    
+    //OUTLETS
+    //========================================================================
+    @IBOutlet weak var navBarTitleLabel: LTMorphingLabel!
+    
     
     //WORDS
     //========================================================================
@@ -109,9 +116,15 @@ class WordViewController: UITableViewController
         super.viewDidLoad()
         
         loadImagesForWord()
+        prepareUI()
+    }
+    
+    private func prepareUI()
+    {
         refreshControl = UIRefreshControl()
         refreshControl?.backgroundColor = UIColor.clear
         refreshControl?.addTarget(self, action: #selector(self.update), for: .valueChanged)
+        
     }
     
     func update()
@@ -368,6 +381,7 @@ extension WordViewController
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
     {
+        
         if let searchEntryCell = cell as? SearchEntryCell
         {
             searchEntryCell.searchTextField.text = nil
@@ -382,6 +396,29 @@ extension WordViewController
                 .withPriority(.low)
                 .send()
         }
+        
+        if notSearching
+        {
+            guard let section = SectionsWhenNotSearching.forSection(indexPath.section),
+                  let wordName = word.forms.first
+            else { return }
+            
+            if section == .Images && indexPath.row > 3
+            {
+                navBarTitleLabel.setTextAndAdjustSize(newText: wordName)
+            }
+            
+            if section == .WordTitle
+            {
+                navBarTitleLabel.setTextAndAdjustIfNotEqualTo(newText: "LEXIS")
+            }
+        }
+        
+        if isSearching
+        {
+            navBarTitleLabel.setTextAndAdjustIfNotEqualTo(newText: "LEXIS")
+        }
+        
     }
 }
 
