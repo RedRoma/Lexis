@@ -88,7 +88,7 @@ class FlickrImage
         self.isPublic = isPublic
     }
     
-    convenience init?(fromJSON json: NSDictionary)
+    init?(fromJSON json: NSDictionary)
     {
         guard
         let id = json[Keys.id] as? String,
@@ -106,7 +106,13 @@ class FlickrImage
         
         let isPublic = isPublicNumber == 1
         
-        self.init(id: id, owner: owner, secret: secret, server: server, farm: farm, title: title, isPublic: isPublic)
+        self.id = id
+        self.owner = owner
+        self.secret = secret
+        self.server = server
+        self.farm = farm
+        self.title = title
+        self.isPublic = isPublic
     }
     
     var imageURL: URL?
@@ -155,7 +161,7 @@ class SearchResults
         self.photos = photos
     }
     
-    convenience init?(fromJSON json: NSDictionary)
+    init?(fromJSON json: NSDictionary)
     {
         guard let status = json[Keys.status] as? String else { return nil }
         guard let results = json[Keys.innerResults] as? NSDictionary else { return nil }
@@ -178,7 +184,12 @@ class SearchResults
         
         LOG.info("Parsed \(photos.count) images")
         
-        self.init(status: status, page: page, totalPages: totalPages, imagesPerPage: imagesPerPage, totalImages: totalImages, photos: photos)
+        self.status = status
+        self.page = page
+        self.totalPages = totalPages
+        self.imagesPerPage = imagesPerPage
+        self.totalImages = totalImages
+        self.photos = photos
     }
     
     private class Keys
