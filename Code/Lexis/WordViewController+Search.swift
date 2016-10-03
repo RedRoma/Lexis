@@ -6,15 +6,25 @@
 //  Copyright © 2016 RedRoma, Inc. All rights reserved.
 //
 
+import AlchemyGenerator
 import AromaSwiftClient
 import Foundation
 import LexisDatabase
 import Sulcus
 import UIKit
 
+
 //MARK: Search Logic
 extension WordViewController
 {
+
+    private var bookArt: [UIImage] {
+        return [#imageLiteral(resourceName: "Book-On-Floor-Open-1"), #imageLiteral(resourceName: "Book-On-Floor-Open-3"), #imageLiteral(resourceName: "Book-Black-Open"), #imageLiteral(resourceName: "Books-On-Shelf")]
+    }
+    
+    private var emptyBookArt: UIImage? {
+        return AlchemyGenerator.anyOf(bookArt)
+    }
     
     internal var anySearchResults: Bool
     {
@@ -171,6 +181,12 @@ extension WordViewController
             LOG.error("Failed to load SearchEmptyCell")
             return emptyCell
         }
+        
+        let animations = {
+            emptySearchCell.artImageView.image = self.emptyBookArt
+        }
+        
+        UIView.transition(with: emptySearchCell.artImageView, duration: 0.6, options: .transitionCrossDissolve, animations: animations, completion: nil)
         
         return emptySearchCell
     }
