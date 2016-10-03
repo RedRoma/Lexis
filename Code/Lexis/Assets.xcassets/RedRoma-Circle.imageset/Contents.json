@@ -2,6 +2,10 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "RedRoma Logo@1x.pdf"
+    },
+    {
+      "idiom" : "universal",
       "filename" : "RedRoma Logo@1x.png",
       "scale" : "1x"
     },
