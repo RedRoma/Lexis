@@ -82,7 +82,7 @@ class MainViewController: UIViewController
             LOG.info("This is not the first time this app has run.")
             
             self.initializeDictionary {
-                self.goToWordOfTheDay()
+                self.goToApp()
             }
         }
     }
@@ -92,9 +92,9 @@ class MainViewController: UIViewController
         self.performSegue(withIdentifier: "ToWelcome", sender: self)
     }
     
-    private func goToWordOfTheDay()
+    private func goToApp()
     {
-        self.performSegue(withIdentifier: "ToWordOfTheDay", sender: nil)
+        self.performSegue(withIdentifier: "ToApp", sender: nil)
     }
     
     private func initializeDictionary(_ callback: @escaping () -> Void)

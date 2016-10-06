@@ -400,7 +400,7 @@ extension WordViewController
         if notSearching
         {
             guard let section = SectionsWhenNotSearching.forSection(indexPath.section),
-                  let wordName = word.forms.first
+                  let wordName = word.forms.first?.capitalized
             else { return }
             
             if section == .Images && indexPath.row > 3

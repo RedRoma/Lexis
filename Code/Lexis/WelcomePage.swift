@@ -110,7 +110,7 @@ extension WelcomePage
     static let first = WelcomePage.Builder.new()
         .with(title: "CLASSIC")
         .with(subtitle: "WITH A MODERN FEEL")
-        .with(image: #imageLiteral(resourceName: "Art-Open-Book"))
+        .with(image: #imageLiteral(resourceName: "Book-On-Floor-Open-3"))
         .with(lineColor: RedRomaColors.blackPrimary)
         .build()
     
@@ -118,7 +118,7 @@ extension WelcomePage
     static let second = WelcomePage.Builder.new()
         .with(title: "REDISCOVER")
         .with(subtitle: "THE LANGUAGE OF MEANING")
-        .with(image: #imageLiteral(resourceName: "Art-Books-On-Shelf"))
+        .with(image: #imageLiteral(resourceName: "Books-On-Shelf"))
         .with(lineColor: Colors.from(hexString: "990808")!)
         .build()
     
