@@ -73,6 +73,11 @@ class Settings
         self.favoriteWords = words
     }
     
+    func isFavorite(word: LexisWord) -> Bool
+    {
+        return favoriteWords.contains(word)
+    }
+    
     private init()
     {
         

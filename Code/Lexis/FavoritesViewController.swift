@@ -20,6 +20,13 @@ class FavoritesViewController: UITableViewController
     
     override func viewDidLoad()
     {
+        super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool)
+    {
+        super.viewDidAppear(animated)
+        
         LOG.debug("Loading favorite words...")
         loadFavorites()
         LOG.debug("Loaded favorite words.")
@@ -78,6 +85,16 @@ extension FavoritesViewController
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return noFavoriteWords ? 300 : 100
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return UITableViewAutomaticDimension
+    }
 }
 
 //MARK: Table View Delegate Methods
@@ -128,5 +145,32 @@ extension FavoritesViewController
         {
             self.tableView.deleteRows(at: [path], with: .automatic)
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        let row = indexPath.row
+        guard row >= 0 && row < favoriteWords.count else { return }
+        let word = favoriteWords[row]
+        
+        guard let tabBar = self.tabBarController else { return }
+        guard let tabViews = tabBar.viewControllers, tabViews.count >= 1 else { return }
+        
+        let wordViewControllerIndex = 0
+        
+        guard let wordViewNavController = tabViews[wordViewControllerIndex] as? UINavigationController,
+              wordViewNavController.viewControllers.notEmpty
+        else { return }
+        
+        guard let wordViewController = wordViewNavController.viewControllers.first(where: { $0 is WordViewController } ) as? WordViewController
+        else
+        {
+            return
+        }
+        
+        wordViewController.word = word
+        wordViewController.tableView.reloadData()
+
+        tabBar.selectedIndex = wordViewControllerIndex
     }
 }

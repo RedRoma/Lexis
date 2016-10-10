@@ -6,11 +6,12 @@
 //  Copyright © 2016 RedRoma, Inc. All rights reserved.
 //
 
+import Archeota
 import AromaSwiftClient
 import AlchemyGenerator
 import Foundation
 import LexisDatabase
-import Archeota
+import SafariServices
 
 
 /** Used for searching for images */
@@ -236,7 +237,19 @@ fileprivate extension WordViewController
 {
     func goToImage(_ flickerImage: FlickrImage)
     {
-        self.performSegue(withIdentifier: "ToWebView", sender: flickerImage)
+//        self.performSegue(withIdentifier: "ToWebView", sender: flickerImage)
+        guard let url = flickerImage.webURL else { return }
+        openSafari(at: url)
+    }
+    
+    private func openSafari(at url: URL)
+    {
+        let safari = SFSafariViewController(url: url)
+        
+        if let navController = self.navigationController
+        {
+            navController.pushViewController(safari, animated: true)
+        }
     }
 }
 

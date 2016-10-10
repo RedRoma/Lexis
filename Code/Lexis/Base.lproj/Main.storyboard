@@ -81,7 +81,7 @@
             <objects>
                 <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="2j9-lJ-S9d" customClass="WordViewController" customModule="Lexis" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="80" sectionHeaderHeight="18" sectionFooterHeight="18" id="Po1-wa-b3g">
-                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="1387"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.72549019609999998" green="0.050980392159999999" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -493,7 +493,11 @@
                                                             </connections>
                                                         </barButtonItem>
                                                         <barButtonItem width="15" style="plain" systemItem="fixedSpace" id="TPL-3C-65W"/>
-                                                        <barButtonItem systemItem="bookmarks" id="qO8-Wd-WQ4"/>
+                                                        <barButtonItem systemItem="bookmarks" id="qO8-Wd-WQ4">
+                                                            <connections>
+                                                                <action selector="onBookmark:" destination="HZh-bU-rYz" id="16g-Vq-1GB"/>
+                                                            </connections>
+                                                        </barButtonItem>
                                                     </items>
                                                 </toolbar>
                                             </subviews>
@@ -524,6 +528,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
+                                    <outlet property="bookmarkButton" destination="qO8-Wd-WQ4" id="GGj-Gb-fTj"/>
                                     <outlet property="cardView" destination="QvT-fB-tRU" id="Dyh-ZH-Iyq"/>
                                     <outlet property="shareButton" destination="NY7-NI-xpM" id="KMy-TI-ZqJ"/>
                                     <outlet property="toolbar" destination="bEa-Zl-plO" id="IIw-Ck-7ZF"/>
@@ -772,6 +777,8 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1500"/>
                     <connections>
                         <outlet property="navBarTitleLabel" destination="22C-oG-JeO" id="hW0-Ip-zKP"/>
                         <segue destination="oEX-tV-ucK" kind="show" identifier="ToWebView" id="tNH-XJ-0oP"/>
@@ -890,9 +897,6 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="headingLabel" destination="Qah-yc-Uc2" id="v21-CW-q0c"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -953,7 +957,7 @@
                         <viewControllerLayoutGuide type="bottom" id="XtY-Pg-Zf2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="NDt-Ao-Goq">
-                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="1387"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OKI-ie-qk0">

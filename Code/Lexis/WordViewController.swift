@@ -270,7 +270,34 @@ extension WordViewController
             self.share(word: word, in: view, expanded: true)
         }
         
+        if Settings.instance.isFavorite(word: word)
+        {
+            hideBarButton(item: cell.bookmarkButton)
+            return cell
+        }
+        
+        showBarButton(item: cell.bookmarkButton)
+        
+        cell.favoriteCallback = { [word] cell in
+            Settings.instance.addFavoriteWord(word)
+            
+            let animations = { self.hideBarButton(item: cell.bookmarkButton) }
+            UIView.transition(with: cell, duration: 0.5, options: .transitionCrossDissolve, animations: animations, completion: nil)
+        }
+        
         return cell
+    }
+    
+    private func hideBarButton(item: UIBarButtonItem)
+    {
+        item.tintColor = UIColor.clear
+        item.isEnabled = false
+    }
+    
+    private func showBarButton(item: UIBarButtonItem)
+    {
+        item.tintColor = RedRomaColors.lightPurple
+        item.isEnabled = true
     }
     
 }
