@@ -12,7 +12,7 @@ import XCTest
 
 class ImageProviderTests: XCTestCase
 {
-    let link = "http://static1.comicvine.com/uploads/original/8/81965/1753719-kingdomcomehd.jpg".asUrl!
+    let link = "http://static1.comicvine.com/uploads/original/8/81965/1753719-kingdomcomehd.jpg".asURL!
     
     override func setUp()
     {

@@ -14,7 +14,7 @@ import XCTest
 
 class FlickrImageProviderTests: XCTestCase
 {
-    let link = "http://static1.comicvine.com/uploads/original/8/81965/1753719-kingdomcomehd.jpg".asUrl!
+    let link = "http://static1.comicvine.com/uploads/original/8/81965/1753719-kingdomcomehd.jpg".asURL!
     
     let instance = FlickrImageProvider()
     var word: LexisWord = LexisDatabase.instance.anyWord
