@@ -1,3 +1,4 @@
+
 //
 //  Arrays+.swift
 //  Lexis
@@ -29,7 +30,7 @@ extension Array
 
 extension Array where Element: Equatable
 {
-    func removeObject(_ object: Element)
+   mutating  func removeObject(_ object: Element)
     {
         if let index = self.index(of: object)
         {
