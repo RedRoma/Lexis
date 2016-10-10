@@ -47,8 +47,9 @@ class Settings
         }
         set(favorites)
         {
-            let favoritesArray = favorites.flatMap() { $0.json }
-            userDefaults.set(favoritesArray, forKey: Keys.favoriteWords)
+            let favoritesArray: [NSDictionary] = favorites.flatMap() { $0.json }
+            let favoritesNSArray = NSArray(array: favoritesArray)
+            userDefaults.set(favoritesNSArray, forKey: Keys.favoriteWords)
         }
     }
     
