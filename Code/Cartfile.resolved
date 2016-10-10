@@ -1,7 +1,7 @@
 github "SirWellington/AlchemyGenerator" "v1.0.1"
 github "SirWellington/AlchemyUIKit" "c63faad02e6765bf77530de095e1144ef75299ad"
 github "RedRoma/Archeota" "v1.2"
-github "RedRoma/AromaThrift" "95f99d0bb68e57677d4c5a39094da96183df13f5"
+github "RedRoma/AromaThrift" "15d73ab342a497d795444fe61c73463b400d53e8"
 github "lexrus/LTMorphingLabel" "93c60bb1626aa96dbd5e899c82e280d7a785315d"
 github "ninjaprox/NVActivityIndicatorView" "v3.0"
 github "RedRoma/RedRomaColors" "v1.0.1"
