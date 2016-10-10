@@ -24,8 +24,8 @@ class SettingsViewController: UITableViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
     }
+    
 }
 
 //MARK: Delegate methods

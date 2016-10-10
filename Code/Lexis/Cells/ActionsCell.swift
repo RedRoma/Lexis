@@ -16,6 +16,7 @@ class ActionsCell: UITableViewCell
     @IBOutlet weak var shareButton: UIBarButtonItem!
     
     var shareCallback: ((ActionsCell) -> Void)?
+    var favoriteCallback: ((ActionsCell) -> Void)?
     
     @IBAction func onShare(_ sender: AnyObject) {
         shareCallback?(self)

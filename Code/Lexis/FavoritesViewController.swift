@@ -20,7 +20,15 @@ class FavoritesViewController: UITableViewController
     
     override func viewDidLoad()
     {
-        
+        LOG.debug("Loading favorite words...")
+        loadFavorites()
+        LOG.debug("Loaded favorite words.")
+    }
+    
+    func loadFavorites()
+    {
+        self.favoriteWords = Settings.instance.favoriteWords
+        self.reloadSection(0)
     }
 }
 
@@ -53,7 +61,7 @@ extension FavoritesViewController
             return tableView.dequeueReusableCell(withIdentifier: "NoFavoritesCell", for: indexPath)
         }
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteWordsCell") as? FavoriteWordCell else
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteCell") as? FavoriteWordCell else
         {
             LOG.error("Failed to dequeue FavoriteWordsCell")
             return emptyCell
@@ -62,8 +70,63 @@ extension FavoritesViewController
         let row = indexPath.row
         guard row >= 0 && row < favoriteWords.count else { return emptyCell }
         
+        let word = favoriteWords[row]
+        guard let firstForm = word.forms.first else { return emptyCell }
         
+        cell.wordLabel.text = firstForm
+        cell.wordInformationLabel.text = word.wordTypeInfo
         
         return cell
+    }
+}
+
+//MARK: Table View Delegate Methods
+extension FavoritesViewController
+{
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+    {
+        if noFavoriteWords
+        {
+            return false
+        }
+        else
+        {
+            return true
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    {
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]?
+    {
+    
+        let delete = UITableViewRowAction(style: .destructive, title: "Remove", handler: self.removeWord)
+        
+        return [delete]
+        
+    }
+    
+    private func removeWord(action: UITableViewRowAction, path: IndexPath)
+    {
+        let row = path.row
+        guard row >= 0 && row < favoriteWords.count else { return }
+        
+        let wordToRemove = favoriteWords[row]
+        Settings.instance.removeFavoriteWord(wordToRemove)
+        
+        self.favoriteWords.removeObject(wordToRemove)
+        
+        if noFavoriteWords
+        {
+            self.tableView.reloadRows(at: [path], with: .automatic)
+        }
+        else
+        {
+            self.tableView.deleteRows(at: [path], with: .automatic)
+        }
     }
 }

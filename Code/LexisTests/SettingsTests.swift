@@ -45,7 +45,6 @@ class SettingsTests: XCTestCase
         Settings.instance.favoriteWords = randomWords
         
         XCTAssertTrue(Settings.instance.favoriteWords == randomWords)
-        
     }
     
     func testAddWord()
