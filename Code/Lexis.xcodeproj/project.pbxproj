@@ -78,6 +78,8 @@
 		DE4DA2D91D8E667E003183F4 /* ViewControllers+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4DA2D71D8E667E003183F4 /* ViewControllers+.swift */; };
 		DE50D8061DA640C8004552C3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE50D8051DA640C8004552C3 /* SettingsViewController.swift */; };
 		DE5137C71DAB080700408650 /* Archeota.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE5137C61DAB080700408650 /* Archeota.framework */; };
+		DE5137EF1DAB1C5200408650 /* FavoriteWordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5137EE1DAB1C5200408650 /* FavoriteWordCell.swift */; };
+		DE5137F11DAB1D0C00408650 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5137F01DAB1D0C00408650 /* FavoritesViewController.swift */; };
 		DE528EEB1D9CE55A0080D973 /* SimpleShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE528EEA1D9CE55A0080D973 /* SimpleShareViewController.swift */; };
 		DE528EED1D9D67730080D973 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE528EEC1D9D67730080D973 /* WebViewController.swift */; };
 		DE528EEF1D9D7FF00080D973 /* Integers+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE528EEE1D9D7FF00080D973 /* Integers+.swift */; };
@@ -111,6 +113,18 @@
 		DE6C28741D97071E00BB1D33 /* ActionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6C28731D97071E00BB1D33 /* ActionsCell.swift */; };
 		DE6C28761D9708BC00BB1D33 /* WordViewController+Sharing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6C28751D9708BC00BB1D33 /* WordViewController+Sharing.swift */; };
 		DE6C28781D97178000BB1D33 /* Doubles+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6C28771D97178000BB1D33 /* Doubles+.swift */; };
+		DE7191B51DAB2A9E00CBE500 /* SettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7191B41DAB2A9E00CBE500 /* SettingsTests.swift */; };
+		DE7191B61DAB2F6E00CBE500 /* Archeota.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = DE5137C61DAB080700408650 /* Archeota.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE7191B71DAB2F6E00CBE500 /* NVActivityIndicatorView.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = DE825F971D9FA2ED00433184 /* NVActivityIndicatorView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE7191B81DAB2F6E00CBE500 /* AlchemyGenerator.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A2661D98841300620411 /* AlchemyGenerator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE7191B91DAB2F6E00CBE500 /* AlchemyUIKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A2671D98841300620411 /* AlchemyUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE7191BA1DAB2F6E00CBE500 /* AromaSwiftClient.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A2681D98841300620411 /* AromaSwiftClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE7191BB1DAB2F6E00CBE500 /* AromaThrift.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A2691D98841300620411 /* AromaThrift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE7191BC1DAB2F6E00CBE500 /* LexisDatabase.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26A1D98841300620411 /* LexisDatabase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE7191BD1DAB2F6E00CBE500 /* LTMorphingLabel.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26B1D98841300620411 /* LTMorphingLabel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE7191BE1DAB2F6E00CBE500 /* RedRomaColors.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26D1D98841300620411 /* RedRomaColors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE7191BF1DAB2F6E00CBE500 /* SwiftExceptionCatcher.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26F1D98841300620411 /* SwiftExceptionCatcher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE7191C01DAB2FAF00CBE500 /* Archeota.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE5137C61DAB080700408650 /* Archeota.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DE825F961D9F8A6300433184 /* LexisImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE825F951D9F8A6300433184 /* LexisImageView.swift */; };
 		DE825F981D9FA2ED00433184 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE825F971D9FA2ED00433184 /* NVActivityIndicatorView.framework */; };
 		DE825F991D9FA2F900433184 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE825F971D9FA2ED00433184 /* NVActivityIndicatorView.framework */; };
@@ -137,6 +151,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				DE7191C01DAB2FAF00CBE500 /* Archeota.framework in Embed Frameworks */,
 				DE49A27F1D98841700620411 /* AromaSwiftClient.framework in Embed Frameworks */,
 				DE49A27B1D98841700620411 /* AlchemyGenerator.framework in Embed Frameworks */,
 				DE49A2811D98841700620411 /* AromaThrift.framework in Embed Frameworks */,
@@ -150,13 +165,24 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DE4DA2A71D8DF26F003183F4 /* CopyFiles */ = {
+		DE4DA2A71D8DF26F003183F4 /* Copy Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				DE7191B61DAB2F6E00CBE500 /* Archeota.framework in Copy Frameworks */,
+				DE7191B71DAB2F6E00CBE500 /* NVActivityIndicatorView.framework in Copy Frameworks */,
+				DE7191B81DAB2F6E00CBE500 /* AlchemyGenerator.framework in Copy Frameworks */,
+				DE7191B91DAB2F6E00CBE500 /* AlchemyUIKit.framework in Copy Frameworks */,
+				DE7191BA1DAB2F6E00CBE500 /* AromaSwiftClient.framework in Copy Frameworks */,
+				DE7191BB1DAB2F6E00CBE500 /* AromaThrift.framework in Copy Frameworks */,
+				DE7191BC1DAB2F6E00CBE500 /* LexisDatabase.framework in Copy Frameworks */,
+				DE7191BD1DAB2F6E00CBE500 /* LTMorphingLabel.framework in Copy Frameworks */,
+				DE7191BE1DAB2F6E00CBE500 /* RedRomaColors.framework in Copy Frameworks */,
+				DE7191BF1DAB2F6E00CBE500 /* SwiftExceptionCatcher.framework in Copy Frameworks */,
 			);
+			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -207,6 +233,8 @@
 		DE4DA2D71D8E667E003183F4 /* ViewControllers+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewControllers+.swift"; sourceTree = "<group>"; };
 		DE50D8051DA640C8004552C3 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DE5137C61DAB080700408650 /* Archeota.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Archeota.framework; path = Carthage/Build/iOS/Archeota.framework; sourceTree = "<group>"; };
+		DE5137EE1DAB1C5200408650 /* FavoriteWordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteWordCell.swift; sourceTree = "<group>"; };
+		DE5137F01DAB1D0C00408650 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		DE528EEA1D9CE55A0080D973 /* SimpleShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleShareViewController.swift; sourceTree = "<group>"; };
 		DE528EEC1D9D67730080D973 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		DE528EEE1D9D7FF00080D973 /* Integers+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Integers+.swift"; sourceTree = "<group>"; };
@@ -240,6 +268,7 @@
 		DE6C28731D97071E00BB1D33 /* ActionsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionsCell.swift; sourceTree = "<group>"; };
 		DE6C28751D9708BC00BB1D33 /* WordViewController+Sharing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WordViewController+Sharing.swift"; sourceTree = "<group>"; };
 		DE6C28771D97178000BB1D33 /* Doubles+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Doubles+.swift"; sourceTree = "<group>"; };
+		DE7191B41DAB2A9E00CBE500 /* SettingsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTests.swift; sourceTree = "<group>"; };
 		DE825F951D9F8A6300433184 /* LexisImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LexisImageView.swift; sourceTree = "<group>"; };
 		DE825F971D9FA2ED00433184 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = Carthage/Build/iOS/NVActivityIndicatorView.framework; sourceTree = "<group>"; };
 		DEA255DD1DA0BAFF009F9F3E /* UILabels+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabels+.swift"; sourceTree = "<group>"; };
@@ -383,6 +412,7 @@
 		DE24652C1D8D174B00A138EB /* LexisTests */ = {
 			isa = PBXGroup;
 			children = (
+				DE7191B31DAB2A9000CBE500 /* Settings */,
 				DE49A2A61D98C46700620411 /* Images */,
 				DE24652D1D8D174B00A138EB /* LexisTests.swift */,
 				DE24652F1D8D174B00A138EB /* Info.plist */,
@@ -418,6 +448,7 @@
 				DE6C28751D9708BC00BB1D33 /* WordViewController+Sharing.swift */,
 				DE49A2BB1D98EC0200620411 /* WordViewControllers+Images.swift */,
 				DE528EEC1D9D67730080D973 /* WebViewController.swift */,
+				DE5137F01DAB1D0C00408650 /* FavoritesViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -425,17 +456,18 @@
 		DE5D14371D88471000B8B3CC /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				DE5D14381D88474400B8B3CC /* HeaderCell.swift */,
-				DE5D143A1D8847BD00B8B3CC /* WordNameCell.swift */,
-				DE5D143C1D8847D100B8B3CC /* WordDefinitionCell.swift */,
-				DE5D143E1D8847E600B8B3CC /* WordDescriptionCell.swift */,
-				DE4DA2C51D8E37A5003183F4 /* SearchEntryCell.swift */,
-				DE4DA2C81D8E37AD003183F4 /* SearchResultCell.swift */,
-				DE4DA2CB1D8E37B8003183F4 /* SearchEmptyCell.swift */,
+				DE6C28731D97071E00BB1D33 /* ActionsCell.swift */,
 				DE6C286B1D96FA3000BB1D33 /* ExpandedDefinitionCell.swift */,
 				DE6C28711D97022600BB1D33 /* ExpandedWordNameCell.swift */,
+				DE5137EE1DAB1C5200408650 /* FavoriteWordCell.swift */,
+				DE5D14381D88474400B8B3CC /* HeaderCell.swift */,
 				DE49A2B91D98E96800620411 /* ImageCell.swift */,
-				DE6C28731D97071E00BB1D33 /* ActionsCell.swift */,
+				DE4DA2CB1D8E37B8003183F4 /* SearchEmptyCell.swift */,
+				DE4DA2C51D8E37A5003183F4 /* SearchEntryCell.swift */,
+				DE4DA2C81D8E37AD003183F4 /* SearchResultCell.swift */,
+				DE5D143C1D8847D100B8B3CC /* WordDefinitionCell.swift */,
+				DE5D143E1D8847E600B8B3CC /* WordDescriptionCell.swift */,
+				DE5D143A1D8847BD00B8B3CC /* WordNameCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -455,6 +487,14 @@
 				DE49A26F1D98841300620411 /* SwiftExceptionCatcher.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE7191B31DAB2A9000CBE500 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DE7191B41DAB2A9E00CBE500 /* SettingsTests.swift */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 		DE7B309D1D8D2C4A00AD44C1 /* Extensions */ = {
@@ -520,7 +560,7 @@
 				DE2465271D8D174B00A138EB /* Sources */,
 				DE2465281D8D174B00A138EB /* Frameworks */,
 				DE2465291D8D174B00A138EB /* Resources */,
-				DE4DA2A71D8DF26F003183F4 /* CopyFiles */,
+				DE4DA2A71D8DF26F003183F4 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -645,6 +685,7 @@
 				DE6C286E1D96FE1900BB1D33 /* WordViewController+ExpandingCells.swift in Sources */,
 				DE0E000A1D7E9A8A00B70D62 /* WelcomePageTemplateViewController.swift in Sources */,
 				DE6C28721D97022600BB1D33 /* ExpandedWordNameCell.swift in Sources */,
+				DE5137EF1DAB1C5200408650 /* FavoriteWordCell.swift in Sources */,
 				DE6C28741D97071E00BB1D33 /* ActionsCell.swift in Sources */,
 				DE0EFFD91D7E856500B70D62 /* Strings+.swift in Sources */,
 				DE5D143D1D8847D100B8B3CC /* WordDefinitionCell.swift in Sources */,
@@ -661,6 +702,7 @@
 				DE4DA2C61D8E37A5003183F4 /* SearchEntryCell.swift in Sources */,
 				DE6C28701D96FEB100BB1D33 /* WordViewController+Search.swift in Sources */,
 				DE6C28761D9708BC00BB1D33 /* WordViewController+Sharing.swift in Sources */,
+				DE5137F11DAB1D0C00408650 /* FavoritesViewController.swift in Sources */,
 				DE825F961D9F8A6300433184 /* LexisImageView.swift in Sources */,
 				DE4DA2D81D8E667E003183F4 /* ViewControllers+.swift in Sources */,
 				DE5D143F1D8847E600B8B3CC /* WordDescriptionCell.swift in Sources */,
@@ -687,6 +729,7 @@
 				DE4DA2C71D8E37A5003183F4 /* SearchEntryCell.swift in Sources */,
 				DE4DA2D01D8E3C5D003183F4 /* Arrays+.swift in Sources */,
 				DEDB439D1D925F5700BF092E /* LexisView.swift in Sources */,
+				DE7191B51DAB2A9E00CBE500 /* SettingsTests.swift in Sources */,
 				DE4DA2CD1D8E37B8003183F4 /* SearchEmptyCell.swift in Sources */,
 				DE4DA2D91D8E667E003183F4 /* ViewControllers+.swift in Sources */,
 				DE49A2B81D98D39100620411 /* FlickrImageProviderTests.swift in Sources */,
