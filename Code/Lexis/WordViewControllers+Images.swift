@@ -28,7 +28,7 @@ fileprivate let asyncImageLoads: OperationQueue =
 
 fileprivate let main = OperationQueue.main
 
-fileprivate let samplePhotos = [ #imageLiteral(resourceName: "Sample-1"), #imageLiteral(resourceName: "Sample-2"), #imageLiteral(resourceName: "Sample-3") ]
+fileprivate let samplePhotos = [ #imageLiteral(resourceName: "Art-Mural"), #imageLiteral(resourceName: "Art-Cicero"), #imageLiteral(resourceName: "Art-Vase"), #imageLiteral(resourceName: "Books-On-Shelf") ]
 
 fileprivate let maxImages = 50
 
@@ -237,19 +237,23 @@ fileprivate extension WordViewController
 {
     func goToImage(_ flickerImage: FlickrImage)
     {
-//        self.performSegue(withIdentifier: "ToWebView", sender: flickerImage)
-        guard let url = flickerImage.webURL else { return }
-        openSafari(at: url)
+        self.performSegue(withIdentifier: "ToWebView", sender: flickerImage)
     }
     
     private func openSafari(at url: URL)
     {
         let safari = SFSafariViewController(url: url)
-        
-        if let navController = self.navigationController
-        {
-            navController.pushViewController(safari, animated: true)
-        }
+        safari.delegate = self
+
+        self.present(safari, animated: true, completion: nil)
+    }
+}
+
+extension WordViewController: SFSafariViewControllerDelegate
+{
+    func safariViewController(_ controller: SFSafariViewController, didCompleteInitialLoad didLoadSuccessfully: Bool)
+    {
+        LOG.info("Completed initializtion of Image")
     }
 }
 
