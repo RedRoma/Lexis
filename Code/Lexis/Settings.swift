@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import LexisDatabase
 import UIKit
 
 
@@ -29,6 +30,54 @@ class Settings
         }
     }
     
+    var favoriteWords: [LexisWord]
+    {
+        get
+        {
+            guard let favoritesArray = userDefaults.array(forKey: Keys.favoriteWords) as? NSArray
+            else
+            {
+                return []
+            }
+            
+            return favoritesArray
+                .flatMap() { $0 as? NSDictionary }
+                .flatMap() { LexisWord(json: $0) }
+            
+        }
+        set(favorites)
+        {
+            let favoritesArray: [NSDictionary] = favorites.flatMap() { $0.json }
+            let favoritesNSArray = NSArray(array: favoritesArray)
+            userDefaults.set(favoritesNSArray, forKey: Keys.favoriteWords)
+        }
+    }
+    
+    func addFavoriteWord(_ word: LexisWord)
+    {
+        var words = favoriteWords
+        words.append(word)
+        
+        self.favoriteWords = words
+    }
+    
+    func removeFavoriteWord(_ word: LexisWord)
+    {
+        var words = favoriteWords
+        
+        if let index = words.index(of: word)
+        {
+            words.remove(at: index)
+        }
+        
+        self.favoriteWords = words
+    }
+    
+    func isFavorite(word: LexisWord) -> Bool
+    {
+        return favoriteWords.contains(word)
+    }
+    
     private init()
     {
         
@@ -37,6 +86,7 @@ class Settings
     func clear()
     {
         userDefaults.removeObject(forKey: Keys.isFirstTime)
+        userDefaults.removeObject(forKey: Keys.favoriteWords)
     }
     
 }
@@ -47,5 +97,7 @@ private class Keys
     static let domain = "tech.redroma.Lexis"
     
     static let isFirstTime = domain + ".firstTime"
+    
+    static let favoriteWords = domain + ".favoriteWords"
 
 }

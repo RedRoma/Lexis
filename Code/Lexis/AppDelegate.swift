@@ -7,7 +7,7 @@
 //
 
 import AromaSwiftClient
-import Sulcus
+import Archeota
 import UIKit
 
 @UIApplicationMain
@@ -32,14 +32,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         
         NSSetUncaughtExceptionHandler() { error in
             
-            LOG.error("Uncaught Exception: \(error)")
-            
             AromaClient.beginMessage(withTitle: "App Crashed")
                 .addBody("On Device: \(UIDevice.current.name)")
                 .addLine(2)
                 .addBody("\(error)")
-                .withPriority(.medium)
+                .withPriority(.high)
                 .send()
+            
+            LOG.error("Uncaught Exception: \(error)")
         }
         
         return true

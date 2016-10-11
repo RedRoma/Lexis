@@ -6,10 +6,10 @@
 //  Copyright © 2016 RedRoma, Inc. All rights reserved.
 //
 
+import Archeota
 import AromaSwiftClient
 import Foundation
 import LexisDatabase
-import Sulcus
 import UIKit
 
 protocol ImageProvider

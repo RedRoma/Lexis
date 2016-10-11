@@ -1,10 +1,9 @@
-github "RedRoma/Sulcus"
-github "RedRoma/Lexis-Database" "develop"
+github "RedRoma/Archeota"
+github "RedRoma/Lexis-Database"
 github "RedRoma/RedRomaColors"
 github "RedRoma/AromaSwiftClient"
 
 github "SirWellington/AlchemyGenerator"
 github "SirWellington/AlchemyUIKit" "develop"
 github "lexrus/LTMorphingLabel" "swift3"
-github "SirWellington/PCAngularActivityIndicatorView" "master"
 github "ninjaprox/NVActivityIndicatorView"

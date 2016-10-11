@@ -6,11 +6,12 @@
 //  Copyright © 2016 RedRoma, Inc. All rights reserved.
 //
 
+import Archeota
 import AromaSwiftClient
 import AlchemyGenerator
 import Foundation
 import LexisDatabase
-import Sulcus
+import SafariServices
 
 
 /** Used for searching for images */
@@ -27,7 +28,7 @@ fileprivate let asyncImageLoads: OperationQueue =
 
 fileprivate let main = OperationQueue.main
 
-fileprivate let samplePhotos = [ #imageLiteral(resourceName: "Sample-1"), #imageLiteral(resourceName: "Sample-2"), #imageLiteral(resourceName: "Sample-3") ]
+fileprivate let samplePhotos = [ #imageLiteral(resourceName: "Art-Mural"), #imageLiteral(resourceName: "Art-Cicero"), #imageLiteral(resourceName: "Art-Vase"), #imageLiteral(resourceName: "Books-On-Shelf") ]
 
 fileprivate let maxImages = 50
 
@@ -73,6 +74,7 @@ extension WordViewController
         if images.isEmpty
         {
             cell.photoImageView?.image = AlchemyGenerator.anyOf(samplePhotos)
+            cell.photoImageView.contentMode = .scaleAspectFit
         }
         else
         {
@@ -81,7 +83,9 @@ extension WordViewController
             guard row >= 0 && row < images.count else { return emptyCell }
             guard let url = images[row].imageURL else { return emptyCell }
             
+            cell.photoImageView.contentMode = .scaleAspectFill
             loadImage(fromURL: url, intoCell: cell, in: tableView, atIndexPath: indexPath)
+            
         }
         
         return cell
@@ -237,6 +241,22 @@ fileprivate extension WordViewController
     func goToImage(_ flickerImage: FlickrImage)
     {
         self.performSegue(withIdentifier: "ToWebView", sender: flickerImage)
+    }
+    
+    private func openSafari(at url: URL)
+    {
+        let safari = SFSafariViewController(url: url)
+        safari.delegate = self
+
+        self.present(safari, animated: true, completion: nil)
+    }
+}
+
+extension WordViewController: SFSafariViewControllerDelegate
+{
+    func safariViewController(_ controller: SFSafariViewController, didCompleteInitialLoad didLoadSuccessfully: Bool)
+    {
+        LOG.info("Completed initializtion of Image")
     }
 }
 

@@ -14,10 +14,16 @@ class ActionsCell: UITableViewCell
     @IBOutlet weak var cardView: LexisView!
     @IBOutlet weak var toolbar: UIToolbar!
     @IBOutlet weak var shareButton: UIBarButtonItem!
+    @IBOutlet weak var bookmarkButton: UIBarButtonItem!
     
     var shareCallback: ((ActionsCell) -> Void)?
+    var favoriteCallback: ((ActionsCell) -> Void)?
     
     @IBAction func onShare(_ sender: AnyObject) {
         shareCallback?(self)
+    }
+    
+    @IBAction func onBookmark(_ sender: AnyObject) {
+        favoriteCallback?(self)
     }
 }

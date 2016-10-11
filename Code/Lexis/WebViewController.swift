@@ -8,7 +8,7 @@
 
 import AromaSwiftClient
 import Foundation
-import Sulcus
+import Archeota
 import UIKit
 
 class WebViewController: UIViewController
@@ -20,11 +20,14 @@ class WebViewController: UIViewController
     private let main = OperationQueue.main
     private let async = OperationQueue()
     
+    
     override func viewDidLoad()
     {
         guard link != nil else { return }
         
         webView.delegate = self
+        webView.allowsLinkPreview = true
+        
         loadLink()
     }
     

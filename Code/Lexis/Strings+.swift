@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Sulcus
+import Archeota
 
 extension String
 {
@@ -26,14 +26,14 @@ extension String
         return notEmpty
     }
     
-    var asUrl: URL?
+    var asURL: URL?
     {
         return URL(string: self)
     }
     
     func toURL() -> URL?
     {
-        return self.asUrl
+        return self.asURL
     }
     
     func removingFirstCharacterIfWhitespace() -> String

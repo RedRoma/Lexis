@@ -6,10 +6,11 @@
 //  Copyright © 2016 RedRoma, Inc. All rights reserved.
 //
 
+import Archeota
 import AromaSwiftClient
 import Foundation
 import LexisDatabase
-import Sulcus
+
 
 
 fileprivate class Flickr
@@ -24,7 +25,7 @@ fileprivate class Flickr
     {
         let link = searchAPI + "&text=\(text)"
         
-        return link.asUrl
+        return link.asURL
     }
 }
 
@@ -119,14 +120,14 @@ class FlickrImage
     {
         let link = "https://farm\(farm).staticflickr.com/\(server)/\(id)_\(secret).jpg"
         
-        return link.asUrl
+        return link.asURL
     }
     
     var webURL: URL?
     {
         let link = "https://www.flickr.com/photos/\(owner)/\(id)"
         
-        return link.asUrl
+        return link.asURL
     }
  
     private class Keys

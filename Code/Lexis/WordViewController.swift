@@ -11,7 +11,7 @@ import Foundation
 import LexisDatabase
 import LTMorphingLabel
 import RedRomaColors
-import Sulcus
+import Archeota
 import UIKit
 
 
@@ -219,7 +219,13 @@ extension WordViewController
             if let form = word.forms.first
             {
                 header += " OF \(form.uppercased())"
+                
+                if images.isEmpty
+                {
+                    header = "no images found for \(form.lowercased())"
+                }
             }
+            
                 
             cell.headerTitleLabel.text = header
             cell.highlightLine.backgroundColor = RedRomaColors.lightBlue
@@ -270,7 +276,56 @@ extension WordViewController
             self.share(word: word, in: view, expanded: true)
         }
         
+        let settings = Settings.instance
+        let pinUpImage = #imageLiteral(resourceName: "Pin-Up")
+        let pinDownImage = #imageLiteral(resourceName: "Pin-Down")
+        
+        if settings.isFavorite(word: word)
+        {
+            cell.bookmarkButton.image = pinDownImage
+        }
+        else
+        {
+            cell.bookmarkButton.image = pinUpImage
+        }
+        
+        
+        cell.favoriteCallback = { [word] cell in
+            
+            let animations: () -> ()
+            
+            if settings.isFavorite(word: word)
+            {
+                settings.removeFavoriteWord(word)
+                animations = { cell.bookmarkButton.image = pinUpImage }
+                AromaClient.sendMediumPriorityMessage(withTitle: "Word Unfavorited", withBody: "\(word)")
+            }
+            else
+            {
+                settings.addFavoriteWord(word)
+                animations = { cell.bookmarkButton.image = pinDownImage }
+                AromaClient.sendMediumPriorityMessage(withTitle: "Word Favorited", withBody: "\(word)")
+            }
+            
+            
+            UIView.transition(with: cell, duration: 0.5, options: .transitionCrossDissolve, animations: animations, completion: nil)
+            
+           
+        }
+        
         return cell
+    }
+    
+    private func hideBarButton(item: UIBarButtonItem)
+    {
+        item.tintColor = UIColor.clear
+        item.isEnabled = false
+    }
+    
+    private func showBarButton(item: UIBarButtonItem)
+    {
+        item.tintColor = RedRomaColors.lightPurple
+        item.isEnabled = true
     }
     
 }
