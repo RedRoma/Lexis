@@ -8,6 +8,8 @@
 
 import AromaSwiftClient
 import Archeota
+import Crashlytics
+import Fabric
 import UIKit
 
 @UIApplicationMain
@@ -29,6 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate
             .addBody("Build #\(buildNumber)")
             .withPriority(.medium)
             .send()
+        
+        Fabric.with([Crashlytics.self])
         
         NSSetUncaughtExceptionHandler() { error in
             

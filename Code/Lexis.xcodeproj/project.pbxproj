@@ -133,6 +133,8 @@
 		DEDAB6461DADA012006FA10C /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDAB6441DADA012006FA10C /* Settings.storyboard */; };
 		DEDAB6491DADA054006FA10C /* Pinned.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDAB6471DADA054006FA10C /* Pinned.storyboard */; };
 		DEDAB64C1DADA0FC006FA10C /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDAB64A1DADA0FC006FA10C /* Search.storyboard */; };
+		DEDAB6501DADA3AE006FA10C /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDAB64E1DADA3AE006FA10C /* Fabric.framework */; };
+		DEDAB6511DADA3AE006FA10C /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDAB64F1DADA3AE006FA10C /* Crashlytics.framework */; };
 		DEDB439C1D925F5700BF092E /* LexisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDB439B1D925F5700BF092E /* LexisView.swift */; };
 		DEDB439D1D925F5700BF092E /* LexisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDB439B1D925F5700BF092E /* LexisView.swift */; };
 /* End PBXBuildFile section */
@@ -278,6 +280,8 @@
 		DEDAB6451DADA012006FA10C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
 		DEDAB6481DADA054006FA10C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Pinned.storyboard; sourceTree = "<group>"; };
 		DEDAB64B1DADA0FC006FA10C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Search.storyboard; sourceTree = "<group>"; };
+		DEDAB64E1DADA3AE006FA10C /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		DEDAB64F1DADA3AE006FA10C /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		DEDB439B1D925F5700BF092E /* LexisView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LexisView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -297,7 +301,9 @@
 				DE49A2741D98841300620411 /* LexisDatabase.framework in Frameworks */,
 				DE825F981D9FA2ED00433184 /* NVActivityIndicatorView.framework in Frameworks */,
 				DE49A2791D98841300620411 /* SwiftExceptionCatcher.framework in Frameworks */,
+				DEDAB6501DADA3AE006FA10C /* Fabric.framework in Frameworks */,
 				DE49A27A1D98841700620411 /* AlchemyGenerator.framework in Frameworks */,
+				DEDAB6511DADA3AE006FA10C /* Crashlytics.framework in Frameworks */,
 				DE49A27C1D98841700620411 /* AlchemyUIKit.framework in Frameworks */,
 				DE49A2841D98841700620411 /* LTMorphingLabel.framework in Frameworks */,
 				DE49A27E1D98841700620411 /* AromaSwiftClient.framework in Frameworks */,
@@ -481,6 +487,8 @@
 		DE60BCC11D7B6ADE00EF15C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DEDAB64E1DADA3AE006FA10C /* Fabric.framework */,
+				DEDAB64F1DADA3AE006FA10C /* Crashlytics.framework */,
 				DE5137C61DAB080700408650 /* Archeota.framework */,
 				DE825F971D9FA2ED00433184 /* NVActivityIndicatorView.framework */,
 				DE49A2661D98841300620411 /* AlchemyGenerator.framework */,
@@ -552,6 +560,7 @@
 				DE1294F11D6977F700687CA5 /* Resources */,
 				DE0F838F1D976B3E0069BD1D /* Strip Non-Valid Architectures */,
 				DE49A28E1D98841700620411 /* Embed Frameworks */,
+				DEDAB64D1DADA38D006FA10C /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -684,6 +693,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "";
+		};
+		DEDAB64D1DADA38D006FA10C /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Fabric;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run aebdafe4f4ec5471e11ecbe7fb4f824691671341 c3928b71ebb7e29e486aeee2597766f6668d3b1cba590616d1822497e2707543";
 		};
 /* End PBXShellScriptBuildPhase section */
 
