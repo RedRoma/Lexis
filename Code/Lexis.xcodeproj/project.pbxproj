@@ -131,6 +131,7 @@
 		DE825F9A1D9FA2F900433184 /* NVActivityIndicatorView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE825F971D9FA2ED00433184 /* NVActivityIndicatorView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DEA255DE1DA0BAFF009F9F3E /* UILabels+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA255DD1DA0BAFF009F9F3E /* UILabels+.swift */; };
 		DEDAB6461DADA012006FA10C /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDAB6441DADA012006FA10C /* Settings.storyboard */; };
+		DEDAB6491DADA054006FA10C /* Pinned.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDAB6471DADA054006FA10C /* Pinned.storyboard */; };
 		DEDB439C1D925F5700BF092E /* LexisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDB439B1D925F5700BF092E /* LexisView.swift */; };
 		DEDB439D1D925F5700BF092E /* LexisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDB439B1D925F5700BF092E /* LexisView.swift */; };
 /* End PBXBuildFile section */
@@ -274,6 +275,7 @@
 		DE825F971D9FA2ED00433184 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = Carthage/Build/iOS/NVActivityIndicatorView.framework; sourceTree = "<group>"; };
 		DEA255DD1DA0BAFF009F9F3E /* UILabels+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabels+.swift"; sourceTree = "<group>"; };
 		DEDAB6451DADA012006FA10C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
+		DEDAB6481DADA054006FA10C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Pinned.storyboard; sourceTree = "<group>"; };
 		DEDB439B1D925F5700BF092E /* LexisView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LexisView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -519,6 +521,7 @@
 			children = (
 				DE1294FF1D6977F700687CA5 /* LaunchScreen.storyboard */,
 				DE1294FA1D6977F700687CA5 /* Main.storyboard */,
+				DEDAB6471DADA054006FA10C /* Pinned.storyboard */,
 				DEDAB6441DADA012006FA10C /* Settings.storyboard */,
 				DE0E87281D7FF41D00F42DB3 /* Welcome.storyboard */,
 			);
@@ -631,6 +634,7 @@
 				DE1295011D6977F700687CA5 /* LaunchScreen.storyboard in Resources */,
 				DE5D14201D87CDF800B8B3CC /* Raleway 700italic.ttf in Resources */,
 				DE1295121D6982FF00687CA5 /* CinzelDecorative-Black.otf in Resources */,
+				DEDAB6491DADA054006FA10C /* Pinned.storyboard in Resources */,
 				DE5D14171D87CDF800B8B3CC /* Raleway 200.ttf in Resources */,
 				DE5D141E1D87CDF800B8B3CC /* Raleway 600italic.ttf in Resources */,
 				DE5D14161D87CDF800B8B3CC /* Raleway 100italic.ttf in Resources */,
@@ -785,6 +789,14 @@
 				DEDAB6451DADA012006FA10C /* Base */,
 			);
 			name = Settings.storyboard;
+			sourceTree = "<group>";
+		};
+		DEDAB6471DADA054006FA10C /* Pinned.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DEDAB6481DADA054006FA10C /* Base */,
+			);
+			name = Pinned.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
