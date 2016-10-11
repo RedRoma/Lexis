@@ -74,6 +74,7 @@ extension WordViewController
         if images.isEmpty
         {
             cell.photoImageView?.image = AlchemyGenerator.anyOf(samplePhotos)
+            cell.photoImageView.contentMode = .scaleAspectFit
         }
         else
         {
@@ -82,7 +83,9 @@ extension WordViewController
             guard row >= 0 && row < images.count else { return emptyCell }
             guard let url = images[row].imageURL else { return emptyCell }
             
+            cell.photoImageView.contentMode = .scaleAspectFill
             loadImage(fromURL: url, intoCell: cell, in: tableView, atIndexPath: indexPath)
+            
         }
         
         return cell
