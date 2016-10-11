@@ -20,6 +20,7 @@ class WebViewController: UIViewController
     private let main = OperationQueue.main
     private let async = OperationQueue()
     
+    
     override func viewDidLoad()
     {
         guard link != nil else { return }
