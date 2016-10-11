@@ -25,6 +25,8 @@ class WebViewController: UIViewController
         guard link != nil else { return }
         
         webView.delegate = self
+        webView.allowsLinkPreview = true
+        
         loadLink()
     }
     
