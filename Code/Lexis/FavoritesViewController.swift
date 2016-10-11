@@ -82,7 +82,7 @@ extension FavoritesViewController
         guard let firstForm = word.forms.first else { return emptyCell }
         
         cell.wordLabel.text = firstForm
-        cell.wordInformationLabel.text = word.wordTypeInfo
+        cell.wordInformationLabel.text = word.wordTypeInfo.lowercased()
         
         return cell
     }

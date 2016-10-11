@@ -492,12 +492,13 @@
                                                                 <action selector="onShare:" destination="HZh-bU-rYz" id="8Qj-Xd-pTk"/>
                                                             </connections>
                                                         </barButtonItem>
-                                                        <barButtonItem width="15" style="plain" systemItem="fixedSpace" id="TPL-3C-65W"/>
-                                                        <barButtonItem image="Pin" id="qO8-Wd-WQ4">
+                                                        <barButtonItem width="30" style="plain" systemItem="fixedSpace" id="TPL-3C-65W"/>
+                                                        <barButtonItem image="Pin-Up" id="qO8-Wd-WQ4">
                                                             <connections>
                                                                 <action selector="onBookmark:" destination="HZh-bU-rYz" id="16g-Vq-1GB"/>
                                                             </connections>
                                                         </barButtonItem>
+                                                        <barButtonItem width="15" style="plain" systemItem="fixedSpace" id="IBe-Z0-Cht"/>
                                                     </items>
                                                 </toolbar>
                                             </subviews>
@@ -816,18 +817,18 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(V) (2ND)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFL-4X-xJL">
-                                                    <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="12"/>
                                                     <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="widthClass=regular">
-                                                        <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="16"/>
+                                                        <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="15"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="CcZ-FL-eX8" firstAttribute="centerY" secondItem="TIS-lu-f0t" secondAttribute="centerY" id="2rg-nS-7Xd"/>
-                                                <constraint firstItem="lFL-4X-xJL" firstAttribute="leading" secondItem="CcZ-FL-eX8" secondAttribute="trailing" constant="16" id="EIO-hR-3i5"/>
+                                                <constraint firstItem="lFL-4X-xJL" firstAttribute="leading" secondItem="CcZ-FL-eX8" secondAttribute="trailing" constant="8" id="EIO-hR-3i5"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lFL-4X-xJL" secondAttribute="trailing" constant="8" id="Fl2-p6-P2j"/>
                                                 <constraint firstItem="CcZ-FL-eX8" firstAttribute="top" secondItem="TIS-lu-f0t" secondAttribute="topMargin" constant="8" id="NbS-RW-rAe"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="CcZ-FL-eX8" secondAttribute="bottom" constant="8" id="a8D-1h-4a6"/>
@@ -912,7 +913,7 @@
                             <rect key="frame" x="123.5" y="5.5" width="128" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PINNED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9uJ-P0-z0U" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pinned" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9uJ-P0-z0U" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                     <fontDescription key="fontDescription" name="CinzelDecorative-Regular" family="Cinzel Decorative" pointSize="30"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
@@ -1526,7 +1527,6 @@
         <image name="Book-Black-Open" width="500" height="500"/>
         <image name="Book-Red" width="400" height="400"/>
         <image name="Disclosure" width="14" height="26"/>
-        <image name="Pin" width="30" height="30"/>
         <image name="Pin-Up" width="35" height="35"/>
         <image name="RedRoma-Circle" width="478" height="478"/>
         <image name="Tab-Settings" width="30" height="30"/>
