@@ -81,7 +81,7 @@
             <objects>
                 <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="2j9-lJ-S9d" customClass="WordViewController" customModule="Lexis" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="80" sectionHeaderHeight="18" sectionFooterHeight="18" id="Po1-wa-b3g">
-                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="1387"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.72549019609999998" green="0.050980392159999999" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -493,7 +493,7 @@
                                                             </connections>
                                                         </barButtonItem>
                                                         <barButtonItem width="15" style="plain" systemItem="fixedSpace" id="TPL-3C-65W"/>
-                                                        <barButtonItem systemItem="bookmarks" id="qO8-Wd-WQ4">
+                                                        <barButtonItem image="Pin" id="qO8-Wd-WQ4">
                                                             <connections>
                                                                 <action selector="onBookmark:" destination="HZh-bU-rYz" id="16g-Vq-1GB"/>
                                                             </connections>
@@ -543,7 +543,8 @@
                                     <subviews>
                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sgp-B3-Wnu" userLabel="Card" customClass="LexisView" customModule="Lexis" customModuleProvider="target">
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="753" image="Sample-3" translatesAutoresizingMaskIntoConstraints="NO" id="N29-fH-SJX">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="753" image="Art-Cicero" translatesAutoresizingMaskIntoConstraints="NO" id="N29-fH-SJX">
+                                                    <color key="tintColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="230" id="jsA-7g-m1W">
                                                             <variation key="heightClass=compact" constant="250"/>
@@ -777,6 +778,8 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1500"/>
                     <connections>
                         <outlet property="navBarTitleLabel" destination="22C-oG-JeO" id="hW0-Ip-zKP"/>
                         <segue destination="oEX-tV-ucK" kind="show" identifier="ToWebView" id="tNH-XJ-0oP"/>
@@ -826,6 +829,8 @@
                                                 <constraint firstItem="CcZ-FL-eX8" firstAttribute="centerY" secondItem="TIS-lu-f0t" secondAttribute="centerY" id="2rg-nS-7Xd"/>
                                                 <constraint firstItem="lFL-4X-xJL" firstAttribute="leading" secondItem="CcZ-FL-eX8" secondAttribute="trailing" constant="16" id="EIO-hR-3i5"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lFL-4X-xJL" secondAttribute="trailing" constant="8" id="Fl2-p6-P2j"/>
+                                                <constraint firstItem="CcZ-FL-eX8" firstAttribute="top" secondItem="TIS-lu-f0t" secondAttribute="topMargin" constant="8" id="NbS-RW-rAe"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="CcZ-FL-eX8" secondAttribute="bottom" constant="8" id="a8D-1h-4a6"/>
                                                 <constraint firstItem="lFL-4X-xJL" firstAttribute="bottom" secondItem="CcZ-FL-eX8" secondAttribute="bottom" constant="-2" id="u0e-qU-WLy"/>
                                                 <constraint firstItem="CcZ-FL-eX8" firstAttribute="leading" secondItem="TIS-lu-f0t" secondAttribute="leadingMargin" constant="16" id="wGU-5m-1Cp"/>
                                             </constraints>
@@ -862,7 +867,7 @@
                                     <frame key="frameInset" width="375" height="300"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Books-On-Shelf" translatesAutoresizingMaskIntoConstraints="NO" id="KoX-HJ-uPm">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Art-Vase" translatesAutoresizingMaskIntoConstraints="NO" id="KoX-HJ-uPm">
                                             <color key="tintColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tTC-tL-UZ3" userLabel="Highlight Line">
@@ -871,7 +876,7 @@
                                                 <constraint firstAttribute="height" constant="2" id="Je4-zE-GuR"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="753" text="NO FAVORITES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qah-yc-Uc2">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="753" text="nothing pinned" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Qah-yc-Uc2">
                                             <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="36"/>
                                             <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -907,7 +912,7 @@
                             <rect key="frame" x="123.5" y="5.5" width="128" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="favorites" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9uJ-P0-z0U" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PINNED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9uJ-P0-z0U" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                                     <fontDescription key="fontDescription" name="CinzelDecorative-Regular" family="Cinzel Decorative" pointSize="30"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
@@ -928,11 +933,11 @@
             </objects>
             <point key="canvasLocation" x="3812" y="833"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Pinned-->
         <scene sceneID="Owm-ga-6HQ">
             <objects>
                 <navigationController id="2Ap-lV-TgH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="Ny9-UW-TLV"/>
+                    <tabBarItem key="tabBarItem" title="Pinned" image="Pin-Up" id="Ny9-UW-TLV"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" id="ggd-IR-LES">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -955,7 +960,7 @@
                         <viewControllerLayoutGuide type="bottom" id="XtY-Pg-Zf2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="NDt-Ao-Goq">
-                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="1387"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OKI-ie-qk0">
@@ -1175,7 +1180,7 @@
             <objects>
                 <navigationController id="S4u-FV-3QW" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" image="Tab-Settings" id="HWu-uz-lmK"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="6JM-ko-dZG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" id="6JM-ko-dZG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1516,12 +1521,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Art-Cicero" width="391" height="500"/>
+        <image name="Art-Vase" width="200" height="200"/>
         <image name="Book-Black-Open" width="500" height="500"/>
         <image name="Book-Red" width="400" height="400"/>
-        <image name="Books-On-Shelf" width="375" height="500"/>
         <image name="Disclosure" width="14" height="26"/>
+        <image name="Pin" width="30" height="30"/>
+        <image name="Pin-Up" width="35" height="35"/>
         <image name="RedRoma-Circle" width="478" height="478"/>
-        <image name="Sample-3" width="900" height="600"/>
         <image name="Tab-Settings" width="30" height="30"/>
     </resources>
 </document>
