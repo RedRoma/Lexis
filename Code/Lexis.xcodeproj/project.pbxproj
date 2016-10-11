@@ -132,6 +132,7 @@
 		DEA255DE1DA0BAFF009F9F3E /* UILabels+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA255DD1DA0BAFF009F9F3E /* UILabels+.swift */; };
 		DEDAB6461DADA012006FA10C /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDAB6441DADA012006FA10C /* Settings.storyboard */; };
 		DEDAB6491DADA054006FA10C /* Pinned.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDAB6471DADA054006FA10C /* Pinned.storyboard */; };
+		DEDAB64C1DADA0FC006FA10C /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDAB64A1DADA0FC006FA10C /* Search.storyboard */; };
 		DEDB439C1D925F5700BF092E /* LexisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDB439B1D925F5700BF092E /* LexisView.swift */; };
 		DEDB439D1D925F5700BF092E /* LexisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDB439B1D925F5700BF092E /* LexisView.swift */; };
 /* End PBXBuildFile section */
@@ -276,6 +277,7 @@
 		DEA255DD1DA0BAFF009F9F3E /* UILabels+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabels+.swift"; sourceTree = "<group>"; };
 		DEDAB6451DADA012006FA10C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
 		DEDAB6481DADA054006FA10C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Pinned.storyboard; sourceTree = "<group>"; };
+		DEDAB64B1DADA0FC006FA10C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Search.storyboard; sourceTree = "<group>"; };
 		DEDB439B1D925F5700BF092E /* LexisView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LexisView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -521,6 +523,7 @@
 			children = (
 				DE1294FF1D6977F700687CA5 /* LaunchScreen.storyboard */,
 				DE1294FA1D6977F700687CA5 /* Main.storyboard */,
+				DEDAB64A1DADA0FC006FA10C /* Search.storyboard */,
 				DEDAB6471DADA054006FA10C /* Pinned.storyboard */,
 				DEDAB6441DADA012006FA10C /* Settings.storyboard */,
 				DE0E87281D7FF41D00F42DB3 /* Welcome.storyboard */,
@@ -636,6 +639,7 @@
 				DE1295121D6982FF00687CA5 /* CinzelDecorative-Black.otf in Resources */,
 				DEDAB6491DADA054006FA10C /* Pinned.storyboard in Resources */,
 				DE5D14171D87CDF800B8B3CC /* Raleway 200.ttf in Resources */,
+				DEDAB64C1DADA0FC006FA10C /* Search.storyboard in Resources */,
 				DE5D141E1D87CDF800B8B3CC /* Raleway 600italic.ttf in Resources */,
 				DE5D14161D87CDF800B8B3CC /* Raleway 100italic.ttf in Resources */,
 				DE5D14251D87CDF800B8B3CC /* Raleway italic.ttf in Resources */,
@@ -797,6 +801,14 @@
 				DEDAB6481DADA054006FA10C /* Base */,
 			);
 			name = Pinned.storyboard;
+			sourceTree = "<group>";
+		};
+		DEDAB64A1DADA0FC006FA10C /* Search.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DEDAB64B1DADA0FC006FA10C /* Base */,
+			);
+			name = Search.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
