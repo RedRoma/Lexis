@@ -283,6 +283,8 @@ extension WordViewController
             
             let animations = { self.hideBarButton(item: cell.bookmarkButton) }
             UIView.transition(with: cell, duration: 0.5, options: .transitionCrossDissolve, animations: animations, completion: nil)
+            
+            AromaClient.sendMediumPriorityMessage(withTitle: "Word Favorited", withBody: "\(word)")
         }
         
         return cell
