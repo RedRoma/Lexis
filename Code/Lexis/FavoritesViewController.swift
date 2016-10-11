@@ -7,6 +7,7 @@
 //
 
 import Archeota
+import AromaSwiftClient
 import Foundation
 import LexisDatabase
 import UIKit
@@ -145,6 +146,8 @@ extension FavoritesViewController
         {
             self.tableView.deleteRows(at: [path], with: .automatic)
         }
+        
+        AromaClient.sendMediumPriorityMessage(withTitle: "Favorite Removed", withBody: "\(wordToRemove)")
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
