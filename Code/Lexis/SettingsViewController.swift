@@ -6,9 +6,11 @@
 //  Copyright © 2016 RedRoma, Inc. All rights reserved.
 //
 
+import Archeota
 import AromaSwiftClient
 import Foundation
-import Archeota
+import RedRomaColors
+import SafariServices
 import UIKit
 
 class SettingsViewController: UITableViewController
@@ -41,6 +43,22 @@ extension SettingsViewController
     }
     
     private func openLink(at url: URL)
+    {
+        openInternally(url: url)
+    }
+    
+    private func openInternally(url: URL)
+    {
+        let safari = SFSafariViewController(url: url)
+        safari.preferredBarTintColor = RedRomaColors.redPrimary
+        safari.preferredControlTintColor = RedRomaColors.white
+        safari.tabBarController?.tabBar.isTranslucent = false
+        safari.navigationController?.navigationBar.isTranslucent = false
+        
+        present(safari, animated: true, completion: nil)
+    }
+    
+    private func openExternally(url: URL)
     {
         let app = UIApplication.shared
         LOG.info("Opening URL at \(url)")
