@@ -79,7 +79,7 @@
 		DE50D8061DA640C8004552C3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE50D8051DA640C8004552C3 /* SettingsViewController.swift */; };
 		DE5137C71DAB080700408650 /* Archeota.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE5137C61DAB080700408650 /* Archeota.framework */; };
 		DE5137EF1DAB1C5200408650 /* FavoriteWordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5137EE1DAB1C5200408650 /* FavoriteWordCell.swift */; };
-		DE5137F11DAB1D0C00408650 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5137F01DAB1D0C00408650 /* FavoritesViewController.swift */; };
+		DE5137F11DAB1D0C00408650 /* PinnedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5137F01DAB1D0C00408650 /* PinnedViewController.swift */; };
 		DE528EEB1D9CE55A0080D973 /* SimpleShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE528EEA1D9CE55A0080D973 /* SimpleShareViewController.swift */; };
 		DE528EED1D9D67730080D973 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE528EEC1D9D67730080D973 /* WebViewController.swift */; };
 		DE528EEF1D9D7FF00080D973 /* Integers+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE528EEE1D9D7FF00080D973 /* Integers+.swift */; };
@@ -239,7 +239,7 @@
 		DE50D8051DA640C8004552C3 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DE5137C61DAB080700408650 /* Archeota.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Archeota.framework; path = Carthage/Build/iOS/Archeota.framework; sourceTree = "<group>"; };
 		DE5137EE1DAB1C5200408650 /* FavoriteWordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteWordCell.swift; sourceTree = "<group>"; };
-		DE5137F01DAB1D0C00408650 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		DE5137F01DAB1D0C00408650 /* PinnedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinnedViewController.swift; sourceTree = "<group>"; };
 		DE528EEA1D9CE55A0080D973 /* SimpleShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleShareViewController.swift; sourceTree = "<group>"; };
 		DE528EEC1D9D67730080D973 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		DE528EEE1D9D7FF00080D973 /* Integers+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Integers+.swift"; sourceTree = "<group>"; };
@@ -453,6 +453,7 @@
 		DE5D14271D87E14400B8B3CC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				DE5137F01DAB1D0C00408650 /* PinnedViewController.swift */,
 				DE528EEA1D9CE55A0080D973 /* SimpleShareViewController.swift */,
 				DE5D14281D87E15B00B8B3CC /* WordViewController.swift */,
 				DE6C286D1D96FE1900BB1D33 /* WordViewController+ExpandingCells.swift */,
@@ -460,7 +461,6 @@
 				DE6C28751D9708BC00BB1D33 /* WordViewController+Sharing.swift */,
 				DE49A2BB1D98EC0200620411 /* WordViewControllers+Images.swift */,
 				DE528EEC1D9D67730080D973 /* WebViewController.swift */,
-				DE5137F01DAB1D0C00408650 /* FavoritesViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -737,7 +737,7 @@
 				DE4DA2C61D8E37A5003183F4 /* SearchEntryCell.swift in Sources */,
 				DE6C28701D96FEB100BB1D33 /* WordViewController+Search.swift in Sources */,
 				DE6C28761D9708BC00BB1D33 /* WordViewController+Sharing.swift in Sources */,
-				DE5137F11DAB1D0C00408650 /* FavoritesViewController.swift in Sources */,
+				DE5137F11DAB1D0C00408650 /* PinnedViewController.swift in Sources */,
 				DE825F961D9F8A6300433184 /* LexisImageView.swift in Sources */,
 				DE4DA2D81D8E667E003183F4 /* ViewControllers+.swift in Sources */,
 				DE5D143F1D8847E600B8B3CC /* WordDescriptionCell.swift in Sources */,

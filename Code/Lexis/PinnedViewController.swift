@@ -1,8 +1,8 @@
 //
-//  FavoriteViewController.swift
+//  PinnedViewController.swift
 //  Lexis
 //
-//  Created by Wellington Moreno on 10/9/16.
+//  Created by Wellington Moreno on 10/12/16.
 //  Copyright © 2016 RedRoma, Inc. All rights reserved.
 //
 
@@ -12,7 +12,7 @@ import Foundation
 import LexisDatabase
 import UIKit
 
-class FavoritesViewController: UITableViewController
+class PinnedViewController: UITableViewController
 {
     
     fileprivate var favoriteWords: [LexisWord] = []
@@ -41,7 +41,7 @@ class FavoritesViewController: UITableViewController
 }
 
 //MARK: Table View Data Source Methods
-extension FavoritesViewController
+extension PinnedViewController
 {
     override func numberOfSections(in tableView: UITableView) -> Int
     {
@@ -99,7 +99,7 @@ extension FavoritesViewController
 }
 
 //MARK: Table View Delegate Methods
-extension FavoritesViewController
+extension PinnedViewController
 {
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
