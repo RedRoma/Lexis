@@ -70,9 +70,7 @@ class MainViewController: UIViewController
                 .withPriority(.medium)
                 .send()
             
-            self.initializeDictionary {
-                
-            }
+            self.initializeDictionary { }
             
             goToWelcomeScreen()
            
@@ -114,7 +112,7 @@ class MainViewController: UIViewController
             
             let delay = abs(begin.timeIntervalSinceNow)
             LOG.info("Database initialization took \(delay) seconds")
-            let threshold = 4.0
+            let threshold = 6.0
             
             let message = AromaClient.beginMessage(withTitle: "LexisDatabase Initialized")
                 .addBody("Operation took \(delay.asString(withDecimalPoints: 2)) seconds")
