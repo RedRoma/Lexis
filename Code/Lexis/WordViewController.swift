@@ -461,6 +461,12 @@ extension WordViewController
             if section == .Images && indexPath.row > 3
             {
                 navBarTitleLabel.setTextAndAdjustSize(newText: wordName)
+                
+                AromaClient.beginMessage(withTitle: "Images Viewed")
+                    .addBody("For Word:").addLine()
+                    .addBody("\(word.description)")
+                    .withPriority(.low)
+                    .send()
             }
             
             if section == .WordTitle

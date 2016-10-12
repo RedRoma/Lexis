@@ -18,11 +18,13 @@ import UIKit
 extension WordViewController
 {
 
-    private var bookArt: [UIImage] {
+    private var bookArt: [UIImage]
+    {
         return [#imageLiteral(resourceName: "Book-On-Floor-Open-1"), #imageLiteral(resourceName: "Book-On-Floor-Open-3"), #imageLiteral(resourceName: "Book-Black-Open"), #imageLiteral(resourceName: "Books-On-Shelf")]
     }
     
-    private var emptyBookArt: UIImage? {
+    private var emptyBookArt: UIImage?
+    {
         return AlchemyGenerator.anyOf(bookArt)
     }
     
@@ -273,6 +275,12 @@ extension WordViewController
                 self.tableView?.reloadSections(searchResultsSection, with: .automatic)
             }
         }
+        
+        AromaClient.beginMessage(withTitle: "Searched")
+            .withPriority(.low)
+            .addBody("User searched for:").addLine()
+            .addBody(searchTerm)
+            .send()
     }
     
     internal func scrollToTheTop(animated: Bool = true)
