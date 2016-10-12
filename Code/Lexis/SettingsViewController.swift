@@ -28,6 +28,13 @@ class SettingsViewController: UITableViewController
         super.viewDidLoad()
     }
     
+    override func viewDidAppear(_ animated: Bool)
+    {
+        super.viewDidAppear(animated)
+        
+        AromaClient.sendLowPriorityMessage(withTitle: "Settings Viewed")
+    }
+    
 }
 
 //MARK: Delegate methods

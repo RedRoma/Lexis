@@ -28,15 +28,20 @@ class PinnedViewController: UITableViewController
     {
         super.viewDidAppear(animated)
         
-        LOG.debug("Loading favorite words...")
         loadFavorites()
-        LOG.debug("Loaded favorite words.")
+        
+        AromaClient.sendLowPriorityMessage(withTitle: "Pinned Items Viewed")
     }
     
     func loadFavorites()
     {
         self.favoriteWords = Settings.instance.favoriteWords
         self.reloadSection(0)
+        
+        AromaClient.beginMessage(withTitle: "Pinned Words Loaded")
+            .addBody("\(self.favoriteWords.count) pinned words loaded")
+            .withPriority(.low)
+            .send()
     }
 }
 
