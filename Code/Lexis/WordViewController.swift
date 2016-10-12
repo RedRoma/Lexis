@@ -77,6 +77,24 @@ class WordViewController: UITableViewController
     //========================================================================
     var images: [FlickrImage] = []
     
+    fileprivate var isViewingImages: Bool = false
+    {
+        didSet(wasViewingImages)
+        {
+            if wasViewingImages != isViewingImages //Execute only if the switch changed
+            {
+                if isViewingImages
+                {
+                    AromaClient.beginMessage(withTitle: "Images Viewed")
+                        .addBody("For Word:").addLine()
+                        .addBody("\(word.description)")
+                        .withPriority(.low)
+                        .send()
+                }
+            }
+        }
+    }
+    
     //SEARCH
     //========================================================================
     internal var searchResults: [LexisWord] = []
@@ -462,11 +480,11 @@ extension WordViewController
             {
                 navBarTitleLabel.setTextAndAdjustSize(newText: wordName)
                 
-                AromaClient.beginMessage(withTitle: "Images Viewed")
-                    .addBody("For Word:").addLine()
-                    .addBody("\(word.description)")
-                    .withPriority(.low)
-                    .send()
+                self.isViewingImages = true
+            }
+            else
+            {
+                self.isViewingImages = false
             }
             
             if section == .WordTitle
@@ -478,6 +496,7 @@ extension WordViewController
         if isSearching
         {
             navBarTitleLabel.setTextAndAdjustIfNotEqualTo(newText: "LEXIS")
+            isViewingImages = false
         }
         
     }
