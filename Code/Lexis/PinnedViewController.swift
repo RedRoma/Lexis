@@ -18,6 +18,8 @@ class PinnedViewController: UITableViewController
     fileprivate var favoriteWords: [LexisWord] = []
     
     fileprivate var noFavoriteWords: Bool { return favoriteWords.isEmpty }
+    private let async = OperationQueue()
+    private let main = OperationQueue.main
     
     override func viewDidLoad()
     {
@@ -35,13 +37,25 @@ class PinnedViewController: UITableViewController
     
     func loadFavorites()
     {
-        self.favoriteWords = Settings.instance.favoriteWords
-        self.reloadSection(0)
+        showNetworkIndicator()
         
-        AromaClient.beginMessage(withTitle: "Pinned Words Loaded")
-            .addBody("\(self.favoriteWords.count) pinned words loaded")
-            .withPriority(.low)
-            .send()
+        async.addOperation {
+            
+            self.favoriteWords = Settings.instance.favoriteWords
+            
+            AromaClient.beginMessage(withTitle: "Pinned Words Loaded")
+                .addBody("\(self.favoriteWords.count) pinned words loaded")
+                .withPriority(.low)
+                .send()
+            
+            self.main.addOperation {
+                self.reloadSection(0)
+                self.hideNetworkIndicator()
+            }
+        }
+        
+        
+        
     }
 }
 

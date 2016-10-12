@@ -63,6 +63,8 @@ extension SettingsViewController
         safari.navigationController?.navigationBar.isTranslucent = false
         
         present(safari, animated: true, completion: nil)
+        
+        AromaClient.sendMediumPriorityMessage(withTitle: "Settings Link Clicked", withBody: "\(url)")
     }
     
     private func openExternally(url: URL)
