@@ -336,7 +336,6 @@
 			isa = PBXGroup;
 			children = (
 				DE0E87231D7FEFC900F42DB3 /* Settings.swift */,
-				DE50D8051DA640C8004552C3 /* SettingsViewController.swift */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -454,6 +453,7 @@
 			isa = PBXGroup;
 			children = (
 				DE5137F01DAB1D0C00408650 /* PinnedViewController.swift */,
+				DE50D8051DA640C8004552C3 /* SettingsViewController.swift */,
 				DE528EEA1D9CE55A0080D973 /* SimpleShareViewController.swift */,
 				DE5D14281D87E15B00B8B3CC /* WordViewController.swift */,
 				DE6C286D1D96FE1900BB1D33 /* WordViewController+ExpandingCells.swift */,
