@@ -77,7 +77,7 @@ extension LexisWord
             case .Interjection:
                 return "Conjunction"
             case let .Noun(declension, gender):
-                return "\(declension.name) Noun, (\(gender.name))"
+                return "Noun, \(declension.shortForm) (\(gender.name))"
             case .Numeral:
                 return "Numeral"
             case .PersonalPronoun:

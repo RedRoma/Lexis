@@ -36,7 +36,7 @@ extension WordViewController
         
         let title = word.forms.first ?? "Accipio"
         cell.wordNameLabel.text = title
-        cell.wordInformationLabel.text = word.wordTypeInfo
+        cell.wordInformationLabel.text = word.wordTypeInfo.lowercased()
         
         return cell
         
@@ -49,7 +49,7 @@ extension WordViewController
         
         let names = word.forms.joined(separator: ", ")
         cell.wordNameLabel.text = names
-        cell.wordDescriptionLabel.text = word.wordTypeInfo
+        cell.wordDescriptionLabel.text = word.wordTypeInfo.lowercased()
         
         return cell
     }
