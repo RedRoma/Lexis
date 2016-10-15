@@ -95,6 +95,8 @@ class WordViewController: UITableViewController
         }
     }
     
+    fileprivate var originalFontSize: CGFloat = 0
+    
     //SEARCH
     //========================================================================
     internal var searchResults: [LexisWord] = []
@@ -143,6 +145,7 @@ class WordViewController: UITableViewController
         refreshControl?.backgroundColor = UIColor.clear
         refreshControl?.addTarget(self, action: #selector(self.update), for: .valueChanged)
         
+        originalFontSize = navBarTitleLabel.font?.pointSize ?? 0
     }
     
     func update()
@@ -490,6 +493,11 @@ extension WordViewController
             if section == .WordTitle
             {
                 navBarTitleLabel.setTextAndAdjustIfNotEqualTo(newText: "LEXIS")
+                
+                if let font = navBarTitleLabel.font
+                {
+                    navBarTitleLabel.font = font.withSize(originalFontSize)
+                }
             }
         }
         
@@ -509,10 +517,13 @@ extension WordViewController
     {
         if let destination = segue.destination as? WebViewController
         {
+            destination.word = self.word
+            
             if let image = sender as? FlickrImage, let link = image.webURL
             {
                 destination.link = link
             }
+            
         }
     }
 }

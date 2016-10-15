@@ -6,16 +6,18 @@
 //  Copyright © 2016 RedRoma, Inc. All rights reserved.
 //
 
+import Archeota
 import AromaSwiftClient
 import Foundation
-import Archeota
+import LexisDatabase
 import UIKit
 
 class WebViewController: UIViewController
 {
-    
+    @IBOutlet weak var navBarTitleLabel: UILabel!
     @IBOutlet weak var webView: UIWebView!
     var link: URL!
+    var word: LexisWord!
     
     private let main = OperationQueue.main
     private let async = OperationQueue()
@@ -27,6 +29,9 @@ class WebViewController: UIViewController
         
         webView.delegate = self
         webView.allowsLinkPreview = true
+        
+        let wordName = word?.forms.first ?? ""
+        navBarTitleLabel.text = wordName
         
         loadLink()
     }
