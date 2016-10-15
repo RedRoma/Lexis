@@ -515,13 +515,13 @@
 			isa = PBXGroup;
 			children = (
 				DE4DA2CE1D8E3C5D003183F4 /* Arrays+.swift */,
+				DE6C28771D97178000BB1D33 /* Doubles+.swift */,
+				DE528EEE1D9D7FF00080D973 /* Integers+.swift */,
 				DE4DA2D11D8E3F5C003183F4 /* LexisWord+.swift */,
 				DE0EFFD81D7E856500B70D62 /* Strings+.swift */,
-				DE4DA2D71D8E667E003183F4 /* ViewControllers+.swift */,
-				DE6C28771D97178000BB1D33 /* Doubles+.swift */,
-				DE49A2B51D98D10600620411 /* URLs+.swift */,
-				DE528EEE1D9D7FF00080D973 /* Integers+.swift */,
 				DEA255DD1DA0BAFF009F9F3E /* UILabels+.swift */,
+				DE49A2B51D98D10600620411 /* URLs+.swift */,
+				DE4DA2D71D8E667E003183F4 /* ViewControllers+.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
