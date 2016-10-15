@@ -52,7 +52,7 @@ extension VerbType
             .PerfectDefinite: "Perf. Defin",
             .SemiDeponent: "Semi Dep",
             .Transitive: "Trans",
-            .Uknown: "Unkwn"
+            .Unknown: "Unkwn"
         ]
         
         return shorts[self] ?? ""
