@@ -26,6 +26,10 @@ extension Array
         return subArray
     }
     
+    mutating func prepend(_ element: Element)
+    {
+        self.insert(element, at: 0)
+    }
 }
 
 extension Array where Element: Equatable

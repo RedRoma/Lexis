@@ -56,7 +56,7 @@ class Settings
     func addFavoriteWord(_ word: LexisWord)
     {
         var words = favoriteWords
-        words.append(word)
+        words.prepend(word)
         
         self.favoriteWords = words
     }
