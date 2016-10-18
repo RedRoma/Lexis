@@ -249,6 +249,7 @@ fileprivate extension WordViewController
         safari.delegate = self
 
         self.present(safari, animated: true, completion: nil)
+        AromaClient.sendMediumPriorityMessage(withTitle: "Opened Image Link", withBody: url.absoluteString)
     }
 }
 
