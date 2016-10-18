@@ -11,6 +11,7 @@ import AromaSwiftClient
 import AlchemyGenerator
 import Foundation
 import LexisDatabase
+import RedRomaColors
 import SafariServices
 
 
@@ -251,6 +252,8 @@ fileprivate extension WordViewController
     {
         let safari = SFSafariViewController(url: url)
         safari.delegate = self
+        safari.preferredBarTintColor = RedRomaColors.redPrimary
+        safari.preferredControlTintColor = UIColor.white
 
         self.present(safari, animated: true, completion: nil)
         AromaClient.sendMediumPriorityMessage(withTitle: "Opened Image Link", withBody: url.absoluteString)
