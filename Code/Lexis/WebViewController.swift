@@ -67,6 +67,24 @@ extension WebViewController: UIWebViewDelegate
         hideNetworkIndicator()
     }
     
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool
+    {
+        
+        guard let link = request.url, let scheme = link.scheme else { return true }
+        
+        let app = UIApplication.shared
+        
+        let isFlickerLink = link.absoluteString.hasPrefix("https://m.flickr.com") || scheme.hasPrefix("flickr")
+        
+        if isFlickerLink
+        {
+            app.open(link)
+            return false
+        }
+        
+        return true
+    }
+    
     func webView(_ webView: UIWebView, didFailLoadWithError error: Error)
     {
         LOG.error("Failed to load: \(link), \(error)")
