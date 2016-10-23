@@ -31,6 +31,11 @@ extension String
         return URL(string: self)
     }
     
+    var urlEncoded: String?
+    {
+        return self.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlPathAllowed.union(CharacterSet.urlQueryAllowed))
+    }
+    
     func toURL() -> URL?
     {
         return self.asURL
