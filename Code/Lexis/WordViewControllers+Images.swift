@@ -241,11 +241,7 @@ fileprivate extension WordViewController
 {
     func goToImage(_ flickerImage: FlickrImage)
     {
-//        self.performSegue(withIdentifier: "ToWebView", sender: flickerImage)
-        if let url = flickerImage.webURL
-        {
-            openSafari(at: url)
-        }
+        self.performSegue(withIdentifier: "ToWebView", sender: flickerImage)
     }
     
     private func openSafari(at url: URL)
