@@ -1,5 +1,5 @@
 github "RedRoma/Archeota"
-github "RedRoma/Lexis-Database"
+github "RedRoma/Lexis-Database" "develop"
 github "RedRoma/RedRomaColors"
 github "RedRoma/AromaSwiftClient"
 
