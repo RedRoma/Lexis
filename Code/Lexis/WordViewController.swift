@@ -26,11 +26,13 @@ class WordViewController: UITableViewController
     
     //WORDS
     //========================================================================
-    internal var word: LexisWord = LexisDatabase.instance.anyWord
+    internal var word: LexisWord = LexisWord.emptyWord
     {
         didSet
         {
+            self.clearAllExpandedCells()
             self.loadImagesForWord()
+            self.scrollToTheTop()
         }
     }
     
@@ -134,9 +136,11 @@ class WordViewController: UITableViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
+
+        async.maxConcurrentOperationCount = 1
         loadImagesForWord()
         prepareUI()
+        update()
     }
     
     private func prepareUI()
@@ -150,10 +154,16 @@ class WordViewController: UITableViewController
     
     func update()
     {
-        word = LexisDatabase.instance.anyWord
-        clearAllExpandedCells()
-        tableView.reloadData()
-        refreshControl?.endRefreshing()
+        async.addOperation {
+            let word = LexisDatabase.instance.anyWord
+            
+            self.main.addOperation {
+                self.word = word
+                self.tableView.reloadData()
+                self.refreshControl?.endRefreshing()
+            }
+        }
+        
     }
  
 }
@@ -467,7 +477,7 @@ extension WordViewController
         if notSearching && cell is WordNameCell
         {
             AromaClient.beginMessage(withTitle: "Word Viewed")
-                .addBody("\(word.forms.first!)").addLine(2)
+                .addBody("\(word.forms.first)").addLine(2)
                 .addBody("\(word.description)")
                 .withPriority(.low)
                 .send()

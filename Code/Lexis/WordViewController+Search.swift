@@ -245,7 +245,6 @@ extension WordViewController
             return
         }
         
-        
         self.async.addOperation
         { [weak self, searchTerm] in
             
@@ -256,14 +255,14 @@ extension WordViewController
             //At this point they could be at any position.
             if results.isEmpty
             {
-                results = LexisDatabase.instance.searchForms(withTerm: searchTerm).first(numberOfElements: 100)
+                results = LexisDatabase.instance.searchForms(withTerm: searchTerm).first(numberOfElements: 200)
             }
             
             //If still no results, search through the word's definition.
             //This might happen, for example, if the user enters an English word
             if results.isEmpty
             {
-                results = LexisDatabase.instance.searchDefinitions(withTerm: searchTerm).first(numberOfElements: 50)
+                results = LexisDatabase.instance.searchDefinitions(withTerm: searchTerm).first(numberOfElements: 100)
             }
             
             guard let `self` = self else { return }

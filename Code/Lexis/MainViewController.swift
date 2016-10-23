@@ -80,20 +80,11 @@ class MainViewController: UIViewController
             LOG.info("This is not the first time this app has run.")
             
             self.initializeDictionary {
-                self.goToApp()
+               self.goToApp()
             }
         }
     }
-    
-    private func goToWelcomeScreen()
-    {
-        self.performSegue(withIdentifier: "ToWelcome", sender: self)
-    }
-    
-    private func goToApp()
-    {
-        self.performSegue(withIdentifier: "ToApp", sender: nil)
-    }
+ 
     
     private func initializeDictionary(_ callback: @escaping () -> Void)
     {
@@ -137,4 +128,26 @@ class MainViewController: UIViewController
 
     }
     
+}
+
+//MARK: Segues
+extension MainViewController
+{
+    fileprivate func goToWelcomeScreen()
+    {
+        self.performSegue(withIdentifier: "ToWelcome", sender: self)
+    }
+    
+    fileprivate func goToApp()
+    {
+        self.performSegue(withIdentifier: "ToApp", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if let wordVC = segue.destination as? WordViewController, let word = sender as? LexisWord
+        {
+            wordVC.word = word
+        }
+    }
 }
