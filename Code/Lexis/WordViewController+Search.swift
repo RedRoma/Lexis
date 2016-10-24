@@ -277,8 +277,7 @@ extension WordViewController
         
         AromaClient.beginMessage(withTitle: "Searched")
             .withPriority(.low)
-            .addBody("User searched for:").addLine()
-            .addBody(searchTerm)
+            .addBody("User searched for: ").addBody(searchTerm)
             .send()
     }
     

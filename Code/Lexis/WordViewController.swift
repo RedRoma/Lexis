@@ -476,8 +476,9 @@ extension WordViewController
         
         if notSearching && cell is WordNameCell
         {
+            let firstWord = word.forms.first ?? ""
             AromaClient.beginMessage(withTitle: "Word Viewed")
-                .addBody("\(word.forms.first)").addLine(2)
+                .addBody("\(firstWord)").addLine(2)
                 .addBody("\(word.description)")
                 .withPriority(.low)
                 .send()
