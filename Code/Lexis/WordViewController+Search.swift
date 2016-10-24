@@ -245,8 +245,12 @@ extension WordViewController
             return
         }
         
+        self.async.cancelAllOperations()
+        self.showNetworkIndicator()
         self.async.addOperation
         { [weak self, searchTerm] in
+            
+            defer { self?.hideNetworkIndicator() }
             
             //First search words starting with
             var results = LexisDatabase.instance.searchForms(startingWith: searchTerm).first(numberOfElements: 200)
