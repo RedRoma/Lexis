@@ -30,8 +30,6 @@ class MainViewController: UIViewController
         return queue
     }()
     
-    fileprivate var alreadyInitializing = false
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -70,45 +68,42 @@ class MainViewController: UIViewController
                 .withPriority(.medium)
                 .send()
             
-            self.initializeDictionary { }
+            self.startInitializingDictionary { _ in }
             
             goToWelcomeScreen()
-           
-        }
-        else
-        {
-            LOG.info("This is not the first time this app has run.")
             
-            self.initializeDictionary {
-               self.goToApp()
-            }
+           return
         }
+        
+        self.startInitializingDictionary
+        { word in
+            self.goToApp(with: word)
+        }
+    
     }
  
     
-    private func initializeDictionary(_ callback: @escaping () -> Void)
+    private func startInitializingDictionary(_ callback: @escaping (LexisWord) -> Void)
     {
-        guard !alreadyInitializing else { callback() ; return }
-        alreadyInitializing = true
-        
         progressIndicator.startAnimating()
         messageLabel?.text = "Loading Dictionary..."
         
         self.async.addOperation
         {
             let begin = Date()
-            LOG.info("Initializing")
+            LOG.info("Initializing Dictionary")
             
             LexisDatabase.instance.initialize()
+            let word = LexisDatabase.instance.anyWord
             
             let delay = abs(begin.timeIntervalSinceNow)
             LOG.info("Database initialization took \(delay) seconds")
-            let threshold = 6.0
             
             let message = AromaClient.beginMessage(withTitle: "LexisDatabase Initialized")
                 .addBody("Operation took \(delay.asString(withDecimalPoints: 2)) seconds")
                 .withPriority(.low)
             
+            let threshold = 3.0
             if delay > threshold
             {
                 message.withPriority(.high).send()
@@ -122,12 +117,11 @@ class MainViewController: UIViewController
             {
                 self.messageLabel?.text = "Ready."
                 self.progressIndicator.stopAnimating()
-                callback()
+                callback(word)
             }
         }
 
     }
-    
 }
 
 //MARK: Segues
@@ -138,14 +132,17 @@ extension MainViewController
         self.performSegue(withIdentifier: "ToWelcome", sender: self)
     }
     
-    fileprivate func goToApp()
+    fileprivate func goToApp(with word: LexisWord)
     {
-        self.performSegue(withIdentifier: "ToApp", sender: self)
+        self.performSegue(withIdentifier: "ToApp", sender: word)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if let wordVC = segue.destination as? WordViewController, let word = sender as? LexisWord
+        if let tabBar = segue.destination as? UITabBarController,
+           let navBar = tabBar.viewControllers?.first as? UINavigationController,
+           let wordVC = navBar.topViewController as? WordViewController,
+           let word = sender as? LexisWord
         {
             wordVC.word = word
         }
