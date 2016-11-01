@@ -124,6 +124,8 @@ extension WordViewController
         adjustStyle(for: cell, at: indexPath)
         refreshTable()
         self.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+        
+        notifyImageClicked(at: indexPath, expanded: true)
     }
     
     func collapseImageCell(_ tableView: UITableView, at indexPath: IndexPath)
@@ -133,6 +135,31 @@ extension WordViewController
         adjustStyle(for: cell, at: indexPath)
         refreshTable()
         self.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+        notifyImageClicked(at: indexPath, expanded: false)
+    }
+      
+    private func loadImage(fromURL url: URL, intoCell cell: ImageCell, in tableView: UITableView, atIndexPath indexPath: IndexPath)
+    {
+        cell.photoImageView.image = nil
+        
+        asyncImageLoads.addOperation
+        {
+            guard let image = url.downloadToImage() else { return }
+            
+            self.main.addOperation
+            {
+                if tableView.isVisible(indexPath: indexPath)
+                {
+                    let animations =
+                    {
+                        cell.photoImageView?.image = image
+                        return
+                    }
+                    
+                    UIView.transition(with: cell.photoImageView, duration: 0.6, options: .transitionCrossDissolve, animations: animations, completion: nil)
+                }
+            }
+        }
     }
     
     private func adjustStyle(for cell: ImageCell, at indexPath: IndexPath)
@@ -184,29 +211,22 @@ extension WordViewController
         tableView.endUpdates()
     }
     
-    private func loadImage(fromURL url: URL, intoCell cell: ImageCell, in tableView: UITableView, atIndexPath indexPath: IndexPath)
+    private func notifyImageClicked(at indexPath: IndexPath, expanded: Bool)
     {
-        cell.photoImageView.image = nil
+        let row = indexPath.row
+        guard row.isValidIndexFor(array: images) else { return }
         
-        asyncImageLoads.addOperation
-        {
-            guard let image = url.downloadToImage() else { return }
-            
-            self.main.addOperation
-            {
-                if tableView.isVisible(indexPath: indexPath)
-                {
-                    let animations =
-                    {
-                        cell.photoImageView?.image = image
-                        return
-                    }
-                    
-                    UIView.transition(with: cell.photoImageView, duration: 0.6, options: .transitionCrossDissolve, animations: animations, completion: nil)
-                }
-            }
-        }
+        let title = expanded ? "Image Expanded" : "Image Collapsed"
+        
+        let image = images[row]
+        
+        AromaClient.beginMessage(withTitle: title)
+            .addBody("For:\n \(word)").addLine(2)
+            .addBody("\(image)")
+            .withPriority(.low)
+            .send()
     }
+    
 }
 
 extension WordViewController
