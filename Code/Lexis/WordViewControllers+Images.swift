@@ -130,7 +130,8 @@ extension WordViewController
     private func loadImage(fromURL url: URL, intoCell cell: ImageCell, in tableView: UITableView, atIndexPath indexPath: IndexPath)
     {
         let fade = KingfisherOptionsInfoItem.transition(.fade(0.6))
-        let options: KingfisherOptionsInfo = [fade]
+        let scale = KingfisherOptionsInfoItem.scaleFactor(UIScreen.main.scale * 2)
+        let options: KingfisherOptionsInfo = [fade, scale]
         
         cell.photoImageView.kf.setImage(with: url, placeholder: nil, options: options, progressBlock: nil, completionHandler: nil)
     }
@@ -140,12 +141,12 @@ extension WordViewController
         guard let cell = tableView.cellForRow(at: indexPath) as? ImageCell else { return }
         
         self.adjustStyle(for: cell, at: indexPath, animated: false)
+        
+        self.refreshTable()
         UIView.animate(withDuration: 0.6)
         {
-            self.refreshTable()
+            self.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
         }
-        
-        self.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
         
         notifyImageClicked(at: indexPath)
     }
