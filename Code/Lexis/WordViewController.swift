@@ -88,8 +88,7 @@ class WordViewController: UITableViewController
                 if isViewingImages
                 {
                     AromaClient.beginMessage(withTitle: "Images Viewed")
-                        .addBody("For Word:").addLine()
-                        .addBody("\(word.description)")
+                        .addBody("For Word: ").addBody("\(word.description)")
                         .withPriority(.low)
                         .send()
                 }
