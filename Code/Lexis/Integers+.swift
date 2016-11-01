@@ -20,3 +20,12 @@ extension Int
         return index >= 0 && index < array.count
     }
 }
+
+
+//MARK: Byte measurements
+extension Int
+{
+    var bytes: Int { return self }
+    var kb: Int { return bytes * 1024 }
+    var mb: Int { return kb * 1024 }
+}

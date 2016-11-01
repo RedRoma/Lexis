@@ -6,10 +6,11 @@
 //  Copyright © 2016 RedRoma, Inc. All rights reserved.
 //
 
-import AromaSwiftClient
 import Archeota
+import AromaSwiftClient
 import Crashlytics
 import Fabric
+import Kingfisher
 import UIKit
 
 @UIApplicationMain
@@ -45,6 +46,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate
             
             LOG.error("Uncaught Exception: \(error)")
         }
+        
+        ImageCache.default.maxDiskCacheSize = UInt(75.mb)
         
         return true
     }
