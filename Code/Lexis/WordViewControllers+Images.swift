@@ -33,9 +33,13 @@ fileprivate let samplePhotos = [ #imageLiteral(resourceName: "Art-Mural"), #imag
 
 fileprivate let maxImages = 50
 
+fileprivate var collapsedImageHeight: CGFloat = 5000
+
 /**
     This File adds support for Images in the Lexis Dictionary.
  */
+
+//MARK: Loads Images from Flickr for a word
 extension WordViewController
 {
     func loadImagesForWord()
@@ -63,35 +67,77 @@ extension WordViewController
             }
         }
     }
-    
+}
+
+//MARK: Handles creation of Image Cells
+extension WordViewController
+{
     func createImageCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
     {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImageCell", for: indexPath) as? ImageCell
-        else
-        {
-            return emptyCell
-        }
-        
         if images.isEmpty
         {
-            cell.photoImageView?.image = AlchemyGenerator.anyOf(samplePhotos)
-            cell.photoImageView.contentMode = .scaleAspectFit
+            return createEmptyImageCell(tableView, at: indexPath)
         }
-        else
-        {
-            let row = indexPath.row
-            
-            guard row >= 0 && row < images.count else { return emptyCell }
-            guard let url = images[row].imageURL else { return emptyCell }
-            
-            cell.photoImageView.contentMode = .scaleAspectFill
-            loadImage(fromURL: url, intoCell: cell, in: tableView, atIndexPath: indexPath)
-            
+        
+        return createImageCell(tableView, at: indexPath)
+    }
+    
+    private func createEmptyImageCell(_ tableView: UITableView, at indexPath: IndexPath) -> UITableViewCell
+    {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImageCell", for: indexPath) as? ImageCell else {
+            return emptyCell
         }
+    
+        cell.photoImageView?.image = AlchemyGenerator.anyOf(samplePhotos)
+        cell.photoImageView.contentMode = .scaleAspectFit
         
         return cell
     }
     
+    private func createImageCell(_ tableView: UITableView, at indexPath: IndexPath) -> UITableViewCell
+    {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImageCell", for: indexPath) as? ImageCell else {
+            return emptyCell
+        }
+     
+        let row = indexPath.row
+        
+        guard row >= 0 && row < images.count else { return emptyCell }
+        guard let url = images[row].imageURL else { return emptyCell }
+        
+        cell.photoImageView.contentMode = .scaleAspectFill
+        loadImage(fromURL: url, intoCell: cell, in: tableView, atIndexPath: indexPath)
+        
+        //Adjust the collapse ImageHeight & remember it
+        collapsedImageHeight = min(collapsedImageHeight, cell.photoHeightConstraint.constant)
+        
+        adjustStyle(for: cell, at: indexPath)
+    
+        return cell
+    }
+    
+    func expandImageCell(_ tableView: UITableView, at indexPath: IndexPath, refreshTable refresh: Bool = true)
+    {
+        guard let cell = tableView.cellForRow(at: indexPath) as? ImageCell else { return }
+        
+        adjustStyle(for: cell, at: indexPath)
+        refreshTable()
+        self.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+        
+        notifyImageClicked(at: indexPath, expanded: true)
+    }
+    
+    func collapseImageCell(_ tableView: UITableView, at indexPath: IndexPath)
+    {
+        guard let cell = tableView.cellForRow(at: indexPath) as? ImageCell else { return }
+        
+        adjustStyle(for: cell, at: indexPath)
+        refreshTable()
+        self.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+        notifyImageClicked(at: indexPath, expanded: false)
+    }
+      
     private func loadImage(fromURL url: URL, intoCell cell: ImageCell, in tableView: UITableView, atIndexPath indexPath: IndexPath)
     {
         cell.photoImageView.image = nil
@@ -104,7 +150,8 @@ extension WordViewController
             {
                 if tableView.isVisible(indexPath: indexPath)
                 {
-                    let animations = {
+                    let animations =
+                    {
                         cell.photoImageView?.image = image
                         return
                     }
@@ -114,6 +161,72 @@ extension WordViewController
             }
         }
     }
+    
+    private func adjustStyle(for cell: ImageCell, at indexPath: IndexPath)
+    {
+        let isExpanded = self.isExpanded(indexPath)
+        
+        adjustHeight(for: cell, isExpanded: isExpanded)
+        adjustColors(for: cell, isExpanded: isExpanded)
+        adjustContentMode(for: cell, isExpanded: isExpanded)
+        adjustGestures(for: cell, isExpanded: isExpanded)
+    }
+    
+    private func adjustHeight(for cell: ImageCell, isExpanded: Bool)
+    {
+        let tableHeight = tableView?.frame.height ?? collapsedImageHeight
+        var expandedHeight = tableHeight
+        
+        let height = isExpanded ? expandedHeight : collapsedImageHeight
+        cell.photoHeightConstraint.constant = height
+    }
+    
+    private func adjustColors(for cell: ImageCell, isExpanded: Bool)
+    {
+        let color = isExpanded ? RedRomaColors.fullyBlack :  RedRomaColors.white
+        cell.cardView.backgroundColor = color
+    }
+    
+    private func adjustContentMode(for cell: ImageCell, isExpanded: Bool)
+    {
+        let contentMode: UIViewContentMode = isExpanded ? .scaleAspectFit : .scaleAspectFill
+        cell.photoImageView.contentMode = contentMode
+    }
+    
+    private func adjustGestures(for cell: ImageCell, isExpanded: Bool)
+    {
+        cell.setupLongPressGesture() { [weak self] cell in
+            
+            guard let `self` = self else { return }
+            guard let path = self.tableView?.indexPath(for: cell) else { return }
+            guard let controller = self.createActionSheetFor(cell: cell, at: path) else { return }
+            
+            self.present(controller, animated: true, completion: nil)
+        }
+    }
+
+    private func refreshTable()
+    {
+        tableView.beginUpdates()
+        tableView.endUpdates()
+    }
+    
+    private func notifyImageClicked(at indexPath: IndexPath, expanded: Bool)
+    {
+        let row = indexPath.row
+        guard row.isValidIndexFor(array: images) else { return }
+        
+        let title = expanded ? "Image Expanded" : "Image Collapsed"
+        
+        let image = images[row]
+        
+        AromaClient.beginMessage(withTitle: title)
+            .addBody("For: \(word)").addLine(2)
+            .addBody("\(image)")
+            .withPriority(.low)
+            .send()
+    }
+    
 }
 
 extension WordViewController
@@ -152,8 +265,89 @@ extension WordViewController
             goToImage(image)
         }
     }
+        
+}
+
+//MARK: Action Sheet
+fileprivate extension WordViewController
+{
+    func createActionSheetFor(cell: ImageCell, at indexPath: IndexPath) -> UIAlertController?
+    {
+        let row = indexPath.row
+        guard row.isValidIndexFor(array: images) else { return nil }
+        
+        let image = images[row]
+        
+        let sheet = UIAlertController(title: "Actions", message: nil, preferredStyle: .actionSheet)
+        
+        let download = UIAlertAction(title: "Download", style: .default) { [path = indexPath, images, word, weak cell] action in
+            
+            guard let `cell` = cell else { return }
+            
+            cell.photoImageView.image?.saveImage()
+            
+            let row = path.row
+            guard row.isValidIndexFor(array: images) else { return }
+            
+            let flickrImage = images[row]
+            
+            AromaClient.beginMessage(withTitle: "Image Downloaded")
+                .addBody("For Word:").addLine()
+                .addBody("\(word)").addLine(2)
+                .addBody("\(flickrImage)")
+                .send()
+        }
+        
+        let openInSafari = UIAlertAction(title: "View", style: .default) { [weak self] action in
+            
+            guard let `self` = self else { return }
+            
+            self.showImage(atIndexPath: indexPath)
+        }
+        
+        let shareImage = UIAlertAction(title: "Share", style: .default) { [weak self] action in
+            guard let `self` = self else { return }
+            
+            self.shareImage(atIndexPath: indexPath)
+        }
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        sheet.addAction(download)
+        sheet.addAction(openInSafari)
+        sheet.addAction(shareImage)
+        sheet.addAction(cancel)
+        
+        AromaClient.sendLowPriorityMessage(withTitle: "Action Sheet Created", withBody: "For: \(image)")
+        
+        return sheet
+    }
+}
+
+//MARK: Segues
+fileprivate extension WordViewController
+{
+    func goToImage(_ flickerImage: FlickrImage)
+    {
+        self.performSegue(withIdentifier: "ToWebView", sender: flickerImage)
+    }
     
-    private func shareImage(atCell cell: ImageCell, indexPath: IndexPath)
+    private func openSafari(at url: URL)
+    {
+        let safari = SFSafariViewController(url: url)
+        safari.delegate = self
+        safari.preferredBarTintColor = RedRomaColors.redPrimary
+        safari.preferredControlTintColor = UIColor.white
+
+        self.present(safari, animated: true, completion: nil)
+        AromaClient.sendMediumPriorityMessage(withTitle: "Opened Image Link", withBody: url.absoluteString)
+    }
+}
+
+//MARK: Sharing Images
+fileprivate extension WordViewController
+{
+    func shareImage(atCell cell: ImageCell, indexPath: IndexPath)
     {
         guard let image = cell.photoImageView.image else { return }
         
@@ -192,7 +386,7 @@ extension WordViewController
         
     }
     
-    private func createShareController(forImage image: UIImage, atURL url: URL) -> UIActivityViewController?
+    func createShareController(forImage image: UIImage, atURL url: URL) -> UIActivityViewController?
     {
         let activityViewController = UIActivityViewController(
             activityItems: [image],
@@ -234,26 +428,7 @@ extension WordViewController
         
         return activityViewController
     }
-}
 
-//MARK: Segues
-fileprivate extension WordViewController
-{
-    func goToImage(_ flickerImage: FlickrImage)
-    {
-        self.performSegue(withIdentifier: "ToWebView", sender: flickerImage)
-    }
-    
-    private func openSafari(at url: URL)
-    {
-        let safari = SFSafariViewController(url: url)
-        safari.delegate = self
-        safari.preferredBarTintColor = RedRomaColors.redPrimary
-        safari.preferredControlTintColor = UIColor.white
-
-        self.present(safari, animated: true, completion: nil)
-        AromaClient.sendMediumPriorityMessage(withTitle: "Opened Image Link", withBody: url.absoluteString)
-    }
 }
 
 extension WordViewController: SFSafariViewControllerDelegate
