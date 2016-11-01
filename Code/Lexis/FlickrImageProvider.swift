@@ -67,7 +67,7 @@ class FlickrImageProvider: ImageProvider
 
 
 
-class FlickrImage
+class FlickrImage: CustomStringConvertible
 {
     let id: String
     let owner: String
@@ -128,6 +128,14 @@ class FlickrImage
         let link = "https://www.flickr.com/photos/\(owner)/\(id)"
         
         return link.asURL
+    }
+    
+    var description: String
+    {
+        let dictionary = NSMutableDictionary()
+        dictionary["imageUrl"] = imageURL?.absoluteString ?? ""
+        dictionary["webUrl"] = webURL?.absoluteString ?? ""
+        return dictionary.description
     }
  
     private class Keys
