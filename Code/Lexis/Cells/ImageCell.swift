@@ -15,4 +15,29 @@ class ImageCell: UITableViewCell
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var photoHeightConstraint: NSLayoutConstraint!
     
+    private var pressGesture: UILongPressGestureRecognizer! = nil
+    private var onLongPress: ((ImageCell) -> Void)?
+
+    func setupLongPressGesture(callback: @escaping (ImageCell) -> Void)
+    {
+        removeLongPressGesture()
+        
+        self.onLongPress = callback
+        self.pressGesture = UILongPressGestureRecognizer(target: self, action: #selector(self.onLongPressGesture(gesture:)))
+        self.photoImageView?.addGestureRecognizer(pressGesture)
+    }
+    
+    func removeLongPressGesture()
+    {
+        if let existingGesture = pressGesture
+        {
+            self.photoImageView.removeGestureRecognizer(existingGesture)
+        }
+        onLongPress = nil
+    }
+    
+    func onLongPressGesture(gesture: UIGestureRecognizer)
+    {
+        onLongPress?(self)
+    }
 }

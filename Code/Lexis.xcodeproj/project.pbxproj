@@ -25,6 +25,7 @@
 		DE1295131D6982FF00687CA5 /* CinzelDecorative-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE12950D1D6982FF00687CA5 /* CinzelDecorative-Bold.otf */; };
 		DE1295141D6982FF00687CA5 /* CinzelDecorative-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE12950E1D6982FF00687CA5 /* CinzelDecorative-Regular.otf */; };
 		DE24652E1D8D174B00A138EB /* LexisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE24652D1D8D174B00A138EB /* LexisTests.swift */; };
+		DE3DD8641DC861D60032B42A /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3DD8631DC861D60032B42A /* UIImage+.swift */; };
 		DE49A2701D98841300620411 /* AlchemyGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A2661D98841300620411 /* AlchemyGenerator.framework */; };
 		DE49A2711D98841300620411 /* AlchemyUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A2671D98841300620411 /* AlchemyUIKit.framework */; };
 		DE49A2721D98841300620411 /* AromaSwiftClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A2681D98841300620411 /* AromaSwiftClient.framework */; };
@@ -215,6 +216,7 @@
 		DE24652B1D8D174B00A138EB /* LexisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LexisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE24652D1D8D174B00A138EB /* LexisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexisTests.swift; sourceTree = "<group>"; };
 		DE24652F1D8D174B00A138EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE3DD8631DC861D60032B42A /* UIImage+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		DE49A2661D98841300620411 /* AlchemyGenerator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlchemyGenerator.framework; path = Carthage/Build/iOS/AlchemyGenerator.framework; sourceTree = "<group>"; };
 		DE49A2671D98841300620411 /* AlchemyUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlchemyUIKit.framework; path = Carthage/Build/iOS/AlchemyUIKit.framework; sourceTree = "<group>"; };
 		DE49A2681D98841300620411 /* AromaSwiftClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AromaSwiftClient.framework; path = Carthage/Build/iOS/AromaSwiftClient.framework; sourceTree = "<group>"; };
@@ -522,6 +524,7 @@
 				DEA255DD1DA0BAFF009F9F3E /* UILabels+.swift */,
 				DE49A2B51D98D10600620411 /* URLs+.swift */,
 				DE4DA2D71D8E667E003183F4 /* ViewControllers+.swift */,
+				DE3DD8631DC861D60032B42A /* UIImage+.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -752,6 +755,7 @@
 				DE4DA2CC1D8E37B8003183F4 /* SearchEmptyCell.swift in Sources */,
 				DE49A2BC1D98EC0200620411 /* WordViewControllers+Images.swift in Sources */,
 				DE49A2A51D98C08500620411 /* ImageProvider.swift in Sources */,
+				DE3DD8641DC861D60032B42A /* UIImage+.swift in Sources */,
 				DEA255DE1DA0BAFF009F9F3E /* UILabels+.swift in Sources */,
 				DE49A2BA1D98E96800620411 /* ImageCell.swift in Sources */,
 			);
