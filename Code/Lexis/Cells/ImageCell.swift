@@ -24,14 +24,14 @@ class ImageCell: UITableViewCell
         
         self.onLongPress = callback
         self.pressGesture = UILongPressGestureRecognizer(target: self, action: #selector(self.onLongPressGesture(gesture:)))
-        self.photoImageView?.addGestureRecognizer(pressGesture)
+        self.addGestureRecognizer(pressGesture)
     }
     
     func removeLongPressGesture()
     {
         if let existingGesture = pressGesture
         {
-            self.photoImageView.removeGestureRecognizer(existingGesture)
+            self.removeGestureRecognizer(existingGesture)
         }
         onLongPress = nil
     }
