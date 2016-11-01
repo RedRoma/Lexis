@@ -221,7 +221,7 @@ extension WordViewController
         let image = images[row]
         
         AromaClient.beginMessage(withTitle: title)
-            .addBody("For:\n \(word)").addLine(2)
+            .addBody("For: \(word)").addLine(2)
             .addBody("\(image)")
             .withPriority(.low)
             .send()
@@ -318,7 +318,7 @@ fileprivate extension WordViewController
         sheet.addAction(shareImage)
         sheet.addAction(cancel)
         
-        AromaClient.sendMediumPriorityMessage(withTitle: "Action Sheet Created", withBody: "For: \(image)")
+        AromaClient.sendLowPriorityMessage(withTitle: "Action Sheet Created", withBody: "For: \(image)")
         
         return sheet
     }
