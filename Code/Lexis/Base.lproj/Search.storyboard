@@ -28,7 +28,7 @@
             <objects>
                 <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="2j9-lJ-S9d" customClass="WordViewController" customModule="Lexis" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="80" sectionHeaderHeight="18" sectionFooterHeight="18" id="Po1-wa-b3g">
-                        <rect key="frame" x="0.0" y="64" width="375" height="2387"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.72549019609999998" green="0.050980392159999999" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -83,7 +83,7 @@
                                             <rect key="frame" x="8" y="8" width="359" height="104"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACCIPIO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJ9-6J-3IY">
-                                                    <rect key="frame" x="16" y="16" width="335" height="36"/>
+                                                    <rect key="frame" x="16" y="16" width="335" height="35"/>
                                                     <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="30"/>
                                                     <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -92,7 +92,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verb, 3rd declension" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYr-4M-SqR">
-                                                    <rect key="frame" x="16" y="60" width="335" height="14"/>
+                                                    <rect key="frame" x="16" y="59" width="335" height="14"/>
                                                     <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="12"/>
                                                     <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -151,7 +151,7 @@
                                             <rect key="frame" x="8" y="8" width="359" height="104"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACCIPIO" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="JIR-1R-9hb">
-                                                    <rect key="frame" x="16" y="16" width="335" height="36"/>
+                                                    <rect key="frame" x="16" y="16" width="335" height="35"/>
                                                     <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="30"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -160,7 +160,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verb, 3rd declension" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWP-WM-fUO">
-                                                    <rect key="frame" x="16" y="60" width="335" height="14"/>
+                                                    <rect key="frame" x="16" y="59" width="335" height="14"/>
                                                     <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="12"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -219,35 +219,35 @@
                                             <rect key="frame" x="8" y="0.0" width="359" height="50"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DmG-we-Ud4" userLabel="Top Line">
-                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="0.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="1"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="0.5" id="PM5-ne-aoy"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h9x-zy-pO6" userLabel="Right Line">
-                                                    <rect key="frame" x="358.5" y="0.0" width="0.5" height="50"/>
+                                                    <rect key="frame" x="359" y="0.0" width="0.0" height="50"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="0.5" id="vMq-VU-SJp"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O6R-vn-aNV" userLabel="Left Line">
-                                                    <rect key="frame" x="0.0" y="0.0" width="0.5" height="50"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="1" height="50"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="0.5" id="JdE-V2-fDb"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zc9-me-fGN" userLabel="Bottom Line">
-                                                    <rect key="frame" x="0.0" y="49.5" width="359" height="0.5"/>
+                                                    <rect key="frame" x="0.0" y="50" width="359" height="0.0"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="0.5" id="vln-p9-0Aw"/>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="752" text="‣ Admit, Let in, Hear, Learn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRQ-aW-0s4">
-                                                    <rect key="frame" x="16" y="15" width="306.5" height="20"/>
+                                                    <rect key="frame" x="16" y="15" width="307" height="20"/>
                                                     <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="18"/>
                                                     <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -256,7 +256,7 @@
                                                     </variation>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Disclosure" translatesAutoresizingMaskIntoConstraints="NO" id="wqL-XY-EoM">
-                                                    <rect key="frame" x="330.5" y="15" width="20" height="20"/>
+                                                    <rect key="frame" x="331" y="15" width="20" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="wqL-XY-EoM" secondAttribute="height" multiplier="1:1" id="nfF-xt-eOS"/>
                                                         <constraint firstAttribute="height" constant="20" id="t5G-iU-vJG"/>
@@ -555,6 +555,8 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
+                                    <outlet property="cardLeadingConstraint" destination="Gxg-Bf-uIa" id="N1z-mL-e9G"/>
+                                    <outlet property="cardTrailingConstraint" destination="iof-7n-5DD" id="AXf-Ro-Tsc"/>
                                     <outlet property="cardView" destination="Sgp-B3-Wnu" id="B43-c2-k59"/>
                                     <outlet property="photoHeightConstraint" destination="jsA-7g-m1W" id="1Uo-Su-fS2"/>
                                     <outlet property="photoImageView" destination="N29-fH-SJX" id="Sux-aF-E4C"/>
@@ -765,8 +767,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="2500"/>
                     <connections>
                         <outlet property="navBarTitleLabel" destination="22C-oG-JeO" id="hW0-Ip-zKP"/>
                         <segue destination="oEX-tV-ucK" kind="show" identifier="ToWebView" id="tNH-XJ-0oP"/>
@@ -785,11 +785,11 @@
                         <viewControllerLayoutGuide type="bottom" id="XtY-Pg-Zf2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="NDt-Ao-Goq">
-                        <rect key="frame" x="0.0" y="64" width="375" height="2387"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OKI-ie-qk0">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="2387"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                 <color key="backgroundColor" red="0.44313725490196076" green="0.058823529411764705" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <dataDetectorType key="dataDetectorTypes"/>
                             </webView>
@@ -871,14 +871,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kSA-By-L4e" userLabel="Line">
-                                        <rect key="frame" x="229" y="462.5" width="42" height="2"/>
+                                        <rect key="frame" x="229" y="463" width="43" height="2"/>
                                         <color key="backgroundColor" red="0.95686274510000002" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="2" id="gZy-QD-zQ3"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEXIS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVh-f0-jpn">
-                                        <rect key="frame" x="229" y="468.5" width="42" height="19.5"/>
+                                        <rect key="frame" x="229" y="469" width="43" height="19"/>
                                         <fontDescription key="fontDescription" name="CinzelDecorative-Regular" family="Cinzel Decorative" pointSize="16"/>
                                         <color key="textColor" red="0.22352941179999999" green="0.23137254900000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -903,51 +903,51 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qT3-Eq-Srb" userLabel="Line">
-                                <rect key="frame" x="36" y="189" width="436" height="0.5"/>
+                                <rect key="frame" x="36" y="186.5" width="436" height="1"/>
                                 <color key="backgroundColor" red="0.52941176469999995" green="0.52941176469999995" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="0.5" id="pf0-dz-Rpq"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACCIPIO, ACCIPERE, ACCEPI, ACCEPTUS" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VK8-V8-nA3">
-                                <rect key="frame" x="36" y="44" width="436" height="96"/>
+                                <rect key="frame" x="36" y="44" width="436" height="93.5"/>
                                 <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="40"/>
                                 <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verb, 3rd declension" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5E-fL-muW">
-                                <rect key="frame" x="38" y="148" width="157" height="17"/>
+                                <rect key="frame" x="38" y="145.5" width="128.5" height="17"/>
                                 <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="14"/>
                                 <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="752" text="‣ Admit, Let in, Hear, Learn" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="fYv-B5-OZm">
-                                <rect key="frame" x="44" y="221.5" width="349" height="25"/>
+                                <rect key="frame" x="44" y="219.5" width="349" height="25"/>
                                 <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="21"/>
                                 <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="752" text="‣ Obey" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="8RB-vW-p6X">
-                                <rect key="frame" x="44" y="270.5" width="349" height="25"/>
+                                <rect key="frame" x="44" y="268.5" width="349" height="25"/>
                                 <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="21"/>
                                 <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="752" text="‣ Accept" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="1JA-dS-HFn">
-                                <rect key="frame" x="44" y="319.5" width="349" height="25"/>
+                                <rect key="frame" x="44" y="317.5" width="349" height="25"/>
                                 <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="21"/>
                                 <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="752" text="‣ Grasp" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="7gy-WZ-N9d">
-                                <rect key="frame" x="44" y="368.5" width="349" height="25"/>
+                                <rect key="frame" x="44" y="366.5" width="349" height="25"/>
                                 <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="21"/>
                                 <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="752" text="‣ Hear" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="DYN-Od-TMb">
-                                <rect key="frame" x="44" y="417.5" width="349" height="25"/>
+                                <rect key="frame" x="44" y="415.5" width="349" height="25"/>
                                 <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="21"/>
                                 <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>

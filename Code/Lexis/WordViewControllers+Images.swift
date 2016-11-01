@@ -119,23 +119,12 @@ extension WordViewController
     
     func expandImageCell(_ tableView: UITableView, at indexPath: IndexPath, refreshTable refresh: Bool = true)
     {
-        guard let cell = tableView.cellForRow(at: indexPath) as? ImageCell else { return }
-        
-        adjustStyle(for: cell, at: indexPath)
-        refreshTable()
-        self.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
-        
-        notifyImageClicked(at: indexPath, expanded: true)
+        adjustCell(tableView, at: indexPath)
     }
     
     func collapseImageCell(_ tableView: UITableView, at indexPath: IndexPath)
     {
-        guard let cell = tableView.cellForRow(at: indexPath) as? ImageCell else { return }
-        
-        adjustStyle(for: cell, at: indexPath)
-        refreshTable()
-        self.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
-        notifyImageClicked(at: indexPath, expanded: false)
+        adjustCell(tableView, at: indexPath)
     }
       
     private func loadImage(fromURL url: URL, intoCell cell: ImageCell, in tableView: UITableView, atIndexPath indexPath: IndexPath)
@@ -162,29 +151,60 @@ extension WordViewController
         }
     }
     
-    private func adjustStyle(for cell: ImageCell, at indexPath: IndexPath)
+    private func adjustCell(_ tableView: UITableView, at indexPath: IndexPath)
+    {
+        guard let cell = tableView.cellForRow(at: indexPath) as? ImageCell else { return }
+        
+        self.adjustStyle(for: cell, at: indexPath, animated: false)
+        UIView.animate(withDuration: 0.6)
+        {
+            self.refreshTable()
+        }
+        
+        self.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+        
+        notifyImageClicked(at: indexPath)
+    }
+    
+    private func adjustStyle(for cell: ImageCell, at indexPath: IndexPath, animated: Bool = false)
     {
         let isExpanded = self.isExpanded(indexPath)
         
-        adjustHeight(for: cell, isExpanded: isExpanded)
-        adjustColors(for: cell, isExpanded: isExpanded)
-        adjustContentMode(for: cell, isExpanded: isExpanded)
-        adjustGestures(for: cell, isExpanded: isExpanded)
+        let adjustments =
+        {
+            self.adjustSize(for: cell, isExpanded: isExpanded)
+            self.adjustColors(for: cell, isExpanded: isExpanded)
+            self.adjustContentMode(for: cell, isExpanded: isExpanded)
+            self.adjustGestures(for: cell, isExpanded: isExpanded)
+        }
+        
+        if animated
+        {
+            UIView.animate(withDuration: 0.5, animations: adjustments)
+        }
+        else
+        {
+            adjustments()
+        }
     }
     
-    private func adjustHeight(for cell: ImageCell, isExpanded: Bool)
+    private func adjustSize(for cell: ImageCell, isExpanded: Bool)
     {
         let tableHeight = tableView?.frame.height ?? collapsedImageHeight
-        var expandedHeight = tableHeight
+        let expandedHeight = tableHeight
         
         let height = isExpanded ? expandedHeight : collapsedImageHeight
         cell.photoHeightConstraint.constant = height
+        
+        let cardOffset: CGFloat = isExpanded ? 0 : 8
+        cell.cardLeadingConstraint.constant = cardOffset
+        cell.cardTrailingConstraint.constant = cardOffset
     }
     
     private func adjustColors(for cell: ImageCell, isExpanded: Bool)
     {
         let color = isExpanded ? RedRomaColors.fullyBlack :  RedRomaColors.white
-        cell.cardView.backgroundColor = color
+        cell.photoImageView.backgroundColor = color
     }
     
     private func adjustContentMode(for cell: ImageCell, isExpanded: Bool)
@@ -211,8 +231,9 @@ extension WordViewController
         tableView.endUpdates()
     }
     
-    private func notifyImageClicked(at indexPath: IndexPath, expanded: Bool)
+    private func notifyImageClicked(at indexPath: IndexPath)
     {
+        let expanded = isExpanded(indexPath)
         let row = indexPath.row
         guard row.isValidIndexFor(array: images) else { return }
         

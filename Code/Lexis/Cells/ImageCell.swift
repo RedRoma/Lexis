@@ -13,6 +13,10 @@ class ImageCell: UITableViewCell
 {
     @IBOutlet weak var cardView: LexisView!
     @IBOutlet weak var photoImageView: UIImageView!
+    
+    
+    @IBOutlet weak var cardLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var cardTrailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var photoHeightConstraint: NSLayoutConstraint!
     
     private var pressGesture: UILongPressGestureRecognizer! = nil
