@@ -10,6 +10,7 @@ import Archeota
 import AromaSwiftClient
 import AlchemyGenerator
 import Foundation
+import Kingfisher
 import LexisDatabase
 import RedRomaColors
 import SafariServices
@@ -106,7 +107,6 @@ extension WordViewController
         guard row >= 0 && row < images.count else { return emptyCell }
         guard let url = images[row].imageURL else { return emptyCell }
         
-        cell.photoImageView.contentMode = .scaleAspectFill
         loadImage(fromURL: url, intoCell: cell, in: tableView, atIndexPath: indexPath)
         
         //Adjust the collapse ImageHeight & remember it
@@ -129,26 +129,10 @@ extension WordViewController
       
     private func loadImage(fromURL url: URL, intoCell cell: ImageCell, in tableView: UITableView, atIndexPath indexPath: IndexPath)
     {
-        cell.photoImageView.image = nil
+        let fade = KingfisherOptionsInfoItem.transition(.fade(0.6))
+        let options: KingfisherOptionsInfo = [fade]
         
-        asyncImageLoads.addOperation
-        {
-            guard let image = url.downloadToImage() else { return }
-            
-            self.main.addOperation
-            {
-                if tableView.isVisible(indexPath: indexPath)
-                {
-                    let animations =
-                    {
-                        cell.photoImageView?.image = image
-                        return
-                    }
-                    
-                    UIView.transition(with: cell.photoImageView, duration: 0.6, options: .transitionCrossDissolve, animations: animations, completion: nil)
-                }
-            }
-        }
+        cell.photoImageView.kf.setImage(with: url, placeholder: nil, options: options, progressBlock: nil, completionHandler: nil)
     }
     
     private func adjustCell(_ tableView: UITableView, at indexPath: IndexPath)
