@@ -48,6 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         }
         
         ImageCache.default.maxDiskCacheSize = UInt(75.mb)
+        ImageCache.default.maxCachePeriodInSecond = (3.0).days
         
         return true
     }
