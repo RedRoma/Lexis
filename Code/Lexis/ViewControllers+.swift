@@ -23,6 +23,13 @@ extension UIViewController
     {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
     }
+    
+    var supportsForceTouch: Bool
+    {
+        guard let view = self.view else { return false }
+        return view.traitCollection.forceTouchCapability == .available
+        
+    }
 }
 
 extension UITableViewController
