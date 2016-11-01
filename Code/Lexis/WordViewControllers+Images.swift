@@ -298,7 +298,7 @@ fileprivate extension WordViewController
                 .send()
         }
         
-        let openInSafari = UIAlertAction(title: "Open", style: .default) { [weak self] action in
+        let openInSafari = UIAlertAction(title: "View", style: .default) { [weak self] action in
             
             guard let `self` = self else { return }
             
