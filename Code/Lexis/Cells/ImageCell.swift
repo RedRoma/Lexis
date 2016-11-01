@@ -13,5 +13,6 @@ class ImageCell: UITableViewCell
 {
     @IBOutlet weak var cardView: LexisView!
     @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var photoHeightConstraint: NSLayoutConstraint!
     
 }

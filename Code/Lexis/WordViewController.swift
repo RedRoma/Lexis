@@ -425,11 +425,6 @@ extension WordViewController
                     expand(atIndexPath: indexPath)
                 }
             }
-            
-            if isImageCell(indexPath: indexPath)
-            {
-                showImage(atIndexPath: indexPath)
-            }
         }
         
     }
@@ -463,7 +458,6 @@ extension WordViewController
             }
         }
     }
-    
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath)
     {

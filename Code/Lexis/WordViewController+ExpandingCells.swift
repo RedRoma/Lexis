@@ -6,9 +6,9 @@
 //  Copyright © 2016 RedRoma, Inc. All rights reserved.
 //
 
+import Archeota
 import Foundation
 import LexisDatabase
-import Archeota
 import UIKit
 
 //MARK: Expanding Cells
@@ -62,6 +62,8 @@ extension WordViewController
         else { return emptyCell }
         
         let row = indexPath.row
+        guard row.isValidIndexFor(array: word.definitions) else { return cell }
+        
         let definition = word.definitions[row]
         
         var definitionText = definition.terms.joined(separator: ", ")
@@ -83,6 +85,8 @@ extension WordViewController
         }
         
         let row = indexPath.row
+        guard row.isValidIndexFor(array: word.definitions) else { return cell }
+        
         let definition = word.definitions[row]
         
         var definitionText = definition.terms.joined(separator: ", ")
@@ -100,8 +104,15 @@ extension WordViewController
     {
         guard notSearching else { return false }
         
-        let section = indexPath.section
-        return section == 1 || section == 2
+        guard let section = SectionsWhenNotSearching.forSection(indexPath.section) else {
+            return false
+        }
+        
+        switch section
+        {
+            case .WordTitle, .WordDefinitions, .Images : return true
+            default : return false
+        }
     }
     
     func isExpanded(_ indexPath: IndexPath) -> Bool
@@ -112,13 +123,35 @@ extension WordViewController
     func expand(atIndexPath indexPath: IndexPath)
     {
         self.expandedCells[indexPath] = true
-        self.tableView.reloadRows(at: [indexPath], with: .automatic)
+        
+        guard let section = SectionsWhenNotSearching.forSection(indexPath.section) else { return }
+        
+        switch section
+        {
+            case .WordTitle, .WordDefinitions:
+                self.tableView.reloadRows(at: [indexPath], with: .automatic)
+            case .Images:
+                self.expandImageCell(tableView, at: indexPath)
+            default :
+                return
+        }
     }
     
     func collapse(atIndexPath indexPath: IndexPath)
     {
         self.expandedCells[indexPath] = nil
-        self.tableView.reloadRows(at: [indexPath], with: .automatic)
+        
+        guard let section = SectionsWhenNotSearching.forSection(indexPath.section) else { return }
+        
+        switch section
+        {
+            case .WordTitle, .WordDefinitions :
+                self.tableView.reloadRows(at: [indexPath], with: .automatic)
+            case .Images:
+                self.collapseImageCell(tableView, at: indexPath)
+            default :
+                return
+        }
     }
     
     func clearAllExpandedCells()

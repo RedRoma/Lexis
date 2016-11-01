@@ -33,9 +33,13 @@ fileprivate let samplePhotos = [ #imageLiteral(resourceName: "Art-Mural"), #imag
 
 fileprivate let maxImages = 50
 
+fileprivate var collapsedImageHeight: CGFloat = 5000
+
 /**
     This File adds support for Images in the Lexis Dictionary.
  */
+
+//MARK: Loads Images from Flickr for a word
 extension WordViewController
 {
     func loadImagesForWord()
@@ -63,33 +67,109 @@ extension WordViewController
             }
         }
     }
-    
+}
+
+//MARK: Handles creation of Image Cells
+extension WordViewController
+{
     func createImageCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
     {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImageCell", for: indexPath) as? ImageCell
-        else
-        {
-            return emptyCell
-        }
-        
         if images.isEmpty
         {
-            cell.photoImageView?.image = AlchemyGenerator.anyOf(samplePhotos)
-            cell.photoImageView.contentMode = .scaleAspectFit
-        }
-        else
-        {
-            let row = indexPath.row
-            
-            guard row >= 0 && row < images.count else { return emptyCell }
-            guard let url = images[row].imageURL else { return emptyCell }
-            
-            cell.photoImageView.contentMode = .scaleAspectFill
-            loadImage(fromURL: url, intoCell: cell, in: tableView, atIndexPath: indexPath)
-            
+            return createEmptyImageCell(tableView, at: indexPath)
         }
         
+        return createImageCell(tableView, at: indexPath)
+    }
+    
+    private func createEmptyImageCell(_ tableView: UITableView, at indexPath: IndexPath) -> UITableViewCell
+    {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImageCell", for: indexPath) as? ImageCell else {
+            return emptyCell
+        }
+    
+        cell.photoImageView?.image = AlchemyGenerator.anyOf(samplePhotos)
+        cell.photoImageView.contentMode = .scaleAspectFit
+        
         return cell
+    }
+    
+    private func createImageCell(_ tableView: UITableView, at indexPath: IndexPath) -> UITableViewCell
+    {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ImageCell", for: indexPath) as? ImageCell else {
+            return emptyCell
+        }
+     
+        let row = indexPath.row
+        
+        guard row >= 0 && row < images.count else { return emptyCell }
+        guard let url = images[row].imageURL else { return emptyCell }
+        
+        cell.photoImageView.contentMode = .scaleAspectFill
+        loadImage(fromURL: url, intoCell: cell, in: tableView, atIndexPath: indexPath)
+        
+        //Adjust the collapse ImageHeight & remember it
+        collapsedImageHeight = min(collapsedImageHeight, cell.photoHeightConstraint.constant)
+        
+        adjustStyle(for: cell, at: indexPath)
+    
+        return cell
+    }
+    
+    func expandImageCell(_ tableView: UITableView, at indexPath: IndexPath, refreshTable refresh: Bool = true)
+    {
+        guard let cell = tableView.cellForRow(at: indexPath) as? ImageCell else { return }
+        
+        adjustStyle(for: cell, at: indexPath)
+        refreshTable()
+        self.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+    }
+    
+    func collapseImageCell(_ tableView: UITableView, at indexPath: IndexPath)
+    {
+        guard let cell = tableView.cellForRow(at: indexPath) as? ImageCell else { return }
+        
+        adjustStyle(for: cell, at: indexPath)
+        refreshTable()
+        self.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+    }
+    
+    private func adjustStyle(for cell: ImageCell, at indexPath: IndexPath)
+    {
+        let isExpanded = self.isExpanded(indexPath)
+        
+        adjustHeight(for: cell, isExpanded: isExpanded)
+        adjustColors(for: cell, isExpanded: isExpanded)
+        adjustContentMode(for: cell, isExpanded: isExpanded)
+    }
+    
+    private func adjustHeight(for cell: ImageCell, isExpanded: Bool)
+    {
+        let tableHeight = tableView?.frame.height ?? collapsedImageHeight
+        var expandedHeight = tableHeight
+        
+        let height = isExpanded ? expandedHeight : collapsedImageHeight
+        cell.photoHeightConstraint.constant = height
+    }
+    
+    private func adjustColors(for cell: ImageCell, isExpanded: Bool)
+    {
+        let color = isExpanded ? RedRomaColors.fullyBlack :  RedRomaColors.white
+//        cell.cardView.borderColor = color
+        cell.cardView.backgroundColor = color
+    }
+    
+    private func adjustContentMode(for cell: ImageCell, isExpanded: Bool)
+    {
+        let contentMode: UIViewContentMode = isExpanded ? .scaleAspectFit : .scaleAspectFill
+        cell.photoImageView.contentMode = contentMode
+    }
+
+    private func refreshTable()
+    {
+        tableView.beginUpdates()
+        tableView.endUpdates()
     }
     
     private func loadImage(fromURL url: URL, intoCell cell: ImageCell, in tableView: UITableView, atIndexPath indexPath: IndexPath)
@@ -104,7 +184,8 @@ extension WordViewController
             {
                 if tableView.isVisible(indexPath: indexPath)
                 {
-                    let animations = {
+                    let animations =
+                    {
                         cell.photoImageView?.image = image
                         return
                     }
@@ -144,6 +225,8 @@ extension WordViewController
     {
         guard images.notEmpty else { return }
         
+        guard let cell = tableView?.cellForRow(at: indexPath) as? ImageCell else { return }
+        
         let row = indexPath.row
         
         if row.isValidIndexFor(array: images)
@@ -152,7 +235,7 @@ extension WordViewController
             goToImage(image)
         }
     }
-    
+        
     private func shareImage(atCell cell: ImageCell, indexPath: IndexPath)
     {
         guard let image = cell.photoImageView.image else { return }
