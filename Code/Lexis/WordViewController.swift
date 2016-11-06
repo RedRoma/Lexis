@@ -245,14 +245,14 @@ extension WordViewController
         }
         else if section == .ImageHeader
         {
-            var header = "IMAGES"
-            if let form = word.forms.first
+            var header = "images"
+            if let form = word.forms.first?.lowercased()
             {
-                header += " OF \(form.uppercased())"
+                header += " of \(form)"
                 
                 if images.isEmpty
                 {
-                    header = "no images found for \(form.lowercased())"
+                    header = "no images found for \(form)"
                 }
             }
             
@@ -367,7 +367,7 @@ extension WordViewController
     {
         let sizesForSection: [Int: CGFloat] =
         [
-            0: 80,
+            0: 70,
             1: 100,
             2: 50,
             3: 80
@@ -463,18 +463,13 @@ extension WordViewController
         
         if let searchEntryCell = cell as? SearchEntryCell
         {
-            searchEntryCell.searchTextField.text = nil
+            searchEntryCell.searchTextField.text = searchTerm
             searchEntryCell.searchTextField.becomeFirstResponder()
         }
         
         if notSearching && cell is WordNameCell
         {
-            let firstWord = word.forms.first ?? ""
-            AromaClient.beginMessage(withTitle: "Word Viewed")
-                .addBody("\(firstWord)").addLine(2)
-                .addBody("\(word.description)")
-                .withPriority(.low)
-                .send()
+            notifyAromaWordViewed()
         }
         
         if notSearching
@@ -511,6 +506,16 @@ extension WordViewController
             isViewingImages = false
         }
         
+    }
+    
+    private func notifyAromaWordViewed()
+    {
+        let firstWord = word.forms.first ?? ""
+        AromaClient.beginMessage(withTitle: "Word Viewed")
+            .addBody("\(firstWord)").addLine(2)
+            .addBody("\(word.description)")
+            .withPriority(.low)
+            .send()
     }
 }
 

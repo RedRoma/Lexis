@@ -150,6 +150,7 @@ extension WordViewController
         }
         
         cell.searchTextField.addTarget(self, action: #selector(self.editingDidChange(_:)), for: .editingChanged)
+        cell.searchTextField.text = self.searchTerm
         
         return cell
     }

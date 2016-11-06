@@ -43,9 +43,21 @@ fileprivate var collapsedImageHeight: CGFloat = 5000
 //MARK: Loads Images from Flickr for a word
 extension WordViewController
 {
+    private var imagesTitleCell: HeaderCell?
+    {
+        guard notSearching else { return nil }
+        
+        let section = SectionsWhenNotSearching.ImageHeader.section
+        let path = IndexPath(row: 0, section: section)
+        
+        return self.tableView?.cellForRow(at: path) as? HeaderCell
+    }
+    
     func loadImagesForWord()
     {
         showNetworkIndicator()
+        imagesTitleCell?.headerTitleLabel?.text = "images loading..."
+        
         asyncImageLoads.addOperation
         { [word] in
             
@@ -56,13 +68,13 @@ extension WordViewController
                 defer { self.hideNetworkIndicator() }
                 
                 self.images = images
-                let sectionToReload = SectionsWhenNotSearching.Images.section
+                let sectionsToReload = [SectionsWhenNotSearching.Images.section, SectionsWhenNotSearching.ImageHeader.section]
                 
                 if self.notSearching
                 {
-                    let section = IndexSet.init(integer: sectionToReload)
+                    let sections = IndexSet(sectionsToReload)
                     self.tableView.beginUpdates()
-                    self.tableView.reloadSections(section, with: .automatic)
+                    self.tableView.reloadSections(sections, with: .automatic)
                     self.tableView.endUpdates()
                 }
             }
