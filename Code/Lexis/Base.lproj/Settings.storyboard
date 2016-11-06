@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A319" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="S4u-FV-3QW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="S4u-FV-3QW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -60,16 +63,18 @@
                                         <rect key="frame" x="0.0" y="35" width="375" height="67"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dRZ-fU-cZk" id="iXW-UB-WNr">
-                                            <frame key="frameInset" width="375" height="67"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IA6-nO-VND" userLabel="Highlight Line">
+                                                    <rect key="frame" x="163" y="24" width="49" height="3"/>
                                                     <color key="backgroundColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="3" id="zOT-Im-cln"/>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABOUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbB-sG-AHe">
+                                                    <rect key="frame" x="160.5" y="33" width="54.5" height="18"/>
                                                     <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="16"/>
                                                     <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -93,18 +98,21 @@
                                         <rect key="frame" x="0.0" y="102" width="375" height="158"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d7p-DF-CE9" id="hIG-HB-Lyb">
-                                            <frame key="frameInset" width="375" height="158"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="158"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x1C-HS-GkY" userLabel="Card View" customClass="LexisView" customModule="Lexis" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="8" width="375" height="150"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RedRoma-Circle" translatesAutoresizingMaskIntoConstraints="NO" id="338-X2-ROD">
+                                                            <rect key="frame" x="16" y="24" width="100" height="100"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="338-X2-ROD" secondAttribute="height" multiplier="1:1" id="Fru-4n-CB5"/>
                                                                 <constraint firstAttribute="height" constant="100" id="uAt-TU-Sox"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RedRoma, inc." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9SP-r8-3ic">
+                                                            <rect key="frame" x="132" y="59.5" width="235" height="29"/>
                                                             <fontDescription key="fontDescription" name="Cinzel-Bold" family="Cinzel" pointSize="24"/>
                                                             <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -142,18 +150,21 @@
                                         <rect key="frame" x="0.0" y="260" width="375" height="74"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g7w-Ra-Bft" id="Qgb-i8-mzR">
-                                            <frame key="frameInset" width="375" height="74"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J9e-ZT-mMa" userLabel="Card View" customClass="LexisView" customModule="Lexis" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qbU-f2-WHz" userLabel="Bottom Line">
+                                                            <rect key="frame" x="0.0" y="73.5" width="375" height="0.5"/>
                                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="0.5" id="lS7-UO-Yai"/>
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This Latin Dictionary was made with glorious labor by RedRoma. If it sucks, please let us know." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qme-Co-f4O">
+                                                            <rect key="frame" x="16" y="16" width="343" height="49.5"/>
                                                             <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="15"/>
                                                             <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -197,16 +208,18 @@
                                         <rect key="frame" x="0.0" y="370" width="375" height="67"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SRD-Bc-5TB" id="NOn-Qp-Te5">
-                                            <frame key="frameInset" width="375" height="67"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x69-OC-PXn" userLabel="Highlight Line">
+                                                    <rect key="frame" x="167" y="24" width="41" height="3"/>
                                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="3" id="E8j-QQ-1uY"/>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LINKS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8HV-EC-Mhg">
+                                                    <rect key="frame" x="164.5" y="33" width="46" height="18"/>
                                                     <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="16"/>
                                                     <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -230,29 +243,44 @@
                                         <rect key="frame" x="0.0" y="437" width="375" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KkE-kb-aiS" id="n0q-u5-Ea1">
-                                            <frame key="frameInset" width="375" height="55"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GJ7-r3-Czv" userLabel="Card View" customClass="LexisView" customModule="Lexis" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
                                                     <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hbm-EA-DoD" userLabel="Top Line">
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="0.5"/>
+                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="0.5" id="OgG-H8-Izv"/>
+                                                            </constraints>
+                                                        </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zSE-nr-zpP" userLabel="Bottom Line">
+                                                            <rect key="frame" x="0.0" y="54.5" width="375" height="0.5"/>
                                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="0.5" id="u80-q5-m4S"/>
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Iz-nn-qXv">
+                                                            <rect key="frame" x="16" y="16" width="343" height="30.5"/>
                                                             <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="18"/>
                                                             <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Disclosure" translatesAutoresizingMaskIntoConstraints="NO" id="on3-VC-fjD"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Disclosure" translatesAutoresizingMaskIntoConstraints="NO" id="on3-VC-fjD">
+                                                            <rect key="frame" x="345" y="14" width="14" height="27.5"/>
+                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
+                                                        <constraint firstItem="Hbm-EA-DoD" firstAttribute="width" secondItem="GJ7-r3-Czv" secondAttribute="width" id="7iN-8L-7Ze"/>
                                                         <constraint firstItem="zSE-nr-zpP" firstAttribute="centerX" secondItem="GJ7-r3-Czv" secondAttribute="centerX" id="A0M-cN-nv3"/>
+                                                        <constraint firstItem="Hbm-EA-DoD" firstAttribute="top" secondItem="GJ7-r3-Czv" secondAttribute="top" id="DAk-qB-OFI"/>
                                                         <constraint firstItem="9Iz-nn-qXv" firstAttribute="top" secondItem="GJ7-r3-Czv" secondAttribute="topMargin" constant="8" id="GfA-Vj-ZWq"/>
                                                         <constraint firstAttribute="bottom" secondItem="zSE-nr-zpP" secondAttribute="bottom" id="Ixy-6Q-lc9"/>
+                                                        <constraint firstItem="Hbm-EA-DoD" firstAttribute="centerX" secondItem="GJ7-r3-Czv" secondAttribute="centerX" id="KKo-8h-6I1"/>
                                                         <constraint firstItem="9Iz-nn-qXv" firstAttribute="leading" secondItem="GJ7-r3-Czv" secondAttribute="leadingMargin" constant="8" id="Mjg-WW-9ZK"/>
                                                         <constraint firstItem="zSE-nr-zpP" firstAttribute="top" secondItem="9Iz-nn-qXv" secondAttribute="bottom" constant="8" id="N77-iO-b8r"/>
                                                         <constraint firstItem="on3-VC-fjD" firstAttribute="centerY" secondItem="GJ7-r3-Czv" secondAttribute="centerY" id="WCN-kv-l5g"/>
@@ -285,23 +313,28 @@
                                         <rect key="frame" x="0.0" y="492" width="375" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cZ1-ui-yYj" id="Vth-6v-qgf">
-                                            <frame key="frameInset" width="375" height="55"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="egZ-XZ-yCC" userLabel="Card View" customClass="LexisView" customModule="Lexis" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mMh-F0-Q9f" userLabel="Bottom Line">
+                                                            <rect key="frame" x="0.0" y="54.5" width="375" height="0.5"/>
                                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="0.5" id="MDP-tN-22N"/>
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GitHub Repo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oT-Xo-ziW">
+                                                            <rect key="frame" x="16" y="16" width="343" height="30.5"/>
                                                             <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="18"/>
                                                             <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Disclosure" translatesAutoresizingMaskIntoConstraints="NO" id="fmz-U0-tuW"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Disclosure" translatesAutoresizingMaskIntoConstraints="NO" id="fmz-U0-tuW">
+                                                            <rect key="frame" x="345" y="14" width="14" height="27.5"/>
+                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -350,6 +383,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Jly-8t-Yum" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="33"/>
                                     <fontDescription key="fontDescription" name="CinzelDecorative-Regular" family="Cinzel Decorative" pointSize="30"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
