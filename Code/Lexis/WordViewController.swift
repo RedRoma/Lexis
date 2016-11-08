@@ -139,7 +139,11 @@ class WordViewController: UITableViewController
         async.maxConcurrentOperationCount = 1
         loadImagesForWord()
         prepareUI()
-        update()
+        
+        if word == LexisWord.emptyWord
+        {
+            update()
+        }
     }
     
     private func prepareUI()
