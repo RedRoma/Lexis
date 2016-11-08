@@ -336,6 +336,16 @@ fileprivate extension WordViewController
         sheet.addAction(shareImage)
         sheet.addAction(cancel)
         
+        //For the iPad
+        if let popover = sheet.popoverPresentationController, let sourceView = cell.photoImageView
+        {
+            popover.sourceView = sourceView
+            
+            let sourceRect = sourceView.bounds
+            let center = CGPoint(x: sourceRect.midX, y: sourceRect.midY)
+            popover.sourceRect = CGRect(origin: center, size: CGSize.zero)
+        }
+        
         AromaClient.sendLowPriorityMessage(withTitle: "Action Sheet Created", withBody: "For: \(image)")
         
         return sheet
