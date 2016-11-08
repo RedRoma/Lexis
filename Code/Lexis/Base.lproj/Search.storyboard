@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -28,27 +28,27 @@
             <objects>
                 <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="2j9-lJ-S9d" customClass="WordViewController" customModule="Lexis" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="80" sectionHeaderHeight="18" sectionFooterHeight="18" id="Po1-wa-b3g">
-                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.72549019609999998" green="0.050980392159999999" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="80" id="lov-X9-60s" customClass="HeaderCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="56" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="56" width="768" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lov-X9-60s" id="Hpk-15-DIY">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ORE-S4-oYs" userLabel="Highlight Line">
-                                            <rect key="frame" x="104" y="24" width="167" height="3"/>
+                                            <rect key="frame" x="286.5" y="24" width="195" height="3"/>
                                             <color key="backgroundColor" red="0.72549019607843135" green="0.050980392156862744" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="3" id="eWd-og-Nn8"/>
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORD OF THE MOMENT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qyd-zb-c9U">
-                                            <rect key="frame" x="95" y="33" width="185" height="31"/>
+                                            <rect key="frame" x="275.5" y="33" width="217" height="31"/>
                                             <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="16"/>
                                             <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -73,17 +73,17 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordNameCell" rowHeight="120" id="rZq-bg-NmT" customClass="WordNameCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="136" width="375" height="120"/>
+                                <rect key="frame" x="0.0" y="136" width="768" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rZq-bg-NmT" id="AVI-8j-Fve">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7q6-xW-ezg" userLabel="Card" customClass="LexisView" customModule="Lexis" customModuleProvider="target">
-                                            <rect key="frame" x="8" y="8" width="359" height="104"/>
+                                            <rect key="frame" x="8" y="8" width="752" height="104"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACCIPIO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJ9-6J-3IY">
-                                                    <rect key="frame" x="16" y="16" width="335" height="35"/>
+                                                    <rect key="frame" x="16" y="24" width="728" height="48"/>
                                                     <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="30"/>
                                                     <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -92,7 +92,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verb, 3rd declension" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYr-4M-SqR">
-                                                    <rect key="frame" x="16" y="59" width="335" height="14"/>
+                                                    <rect key="frame" x="16" y="80" width="728" height="19.5"/>
                                                     <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="12"/>
                                                     <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -141,17 +141,17 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExpandedWordNameCell" rowHeight="120" id="U7X-Ug-2Hd" customClass="ExpandedWordNameCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="256" width="375" height="120"/>
+                                <rect key="frame" x="0.0" y="256" width="768" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U7X-Ug-2Hd" id="NlA-OJ-uLu">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yby-a6-biY" userLabel="Card" customClass="LexisView" customModule="Lexis" customModuleProvider="target">
-                                            <rect key="frame" x="8" y="8" width="359" height="104"/>
+                                            <rect key="frame" x="8" y="8" width="752" height="104"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACCIPIO" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="JIR-1R-9hb">
-                                                    <rect key="frame" x="16" y="16" width="335" height="35"/>
+                                                    <rect key="frame" x="16" y="24" width="728" height="43.5"/>
                                                     <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="30"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -160,7 +160,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verb, 3rd declension" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWP-WM-fUO">
-                                                    <rect key="frame" x="16" y="59" width="335" height="14"/>
+                                                    <rect key="frame" x="16" y="75.5" width="728" height="19.5"/>
                                                     <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="12"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -209,24 +209,24 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DefinitionCell" rowHeight="50" id="BBa-83-aoe" customClass="WordDefinitionCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="376" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="376" width="768" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BBa-83-aoe" id="8qX-bT-sJV">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k4O-1n-z1n" userLabel="Card" customClass="LexisView" customModule="Lexis" customModuleProvider="target">
-                                            <rect key="frame" x="8" y="0.0" width="359" height="50"/>
+                                            <rect key="frame" x="8" y="0.0" width="752" height="50"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DmG-we-Ud4" userLabel="Top Line">
-                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="1"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="752" height="1"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="0.5" id="PM5-ne-aoy"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h9x-zy-pO6" userLabel="Right Line">
-                                                    <rect key="frame" x="359" y="0.0" width="0.0" height="50"/>
+                                                    <rect key="frame" x="752" y="0.0" width="0.0" height="50"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="0.5" id="vMq-VU-SJp"/>
@@ -240,14 +240,14 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zc9-me-fGN" userLabel="Bottom Line">
-                                                    <rect key="frame" x="0.0" y="50" width="359" height="0.0"/>
+                                                    <rect key="frame" x="0.0" y="50" width="752" height="0.0"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="0.5" id="vln-p9-0Aw"/>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="752" text="‣ Admit, Let in, Hear, Learn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRQ-aW-0s4">
-                                                    <rect key="frame" x="16" y="15" width="307" height="20"/>
+                                                    <rect key="frame" x="16" y="15" width="700" height="20"/>
                                                     <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="18"/>
                                                     <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -256,7 +256,7 @@
                                                     </variation>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Disclosure" translatesAutoresizingMaskIntoConstraints="NO" id="wqL-XY-EoM">
-                                                    <rect key="frame" x="331" y="15" width="20" height="20"/>
+                                                    <rect key="frame" x="724" y="15" width="20" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="wqL-XY-EoM" secondAttribute="height" multiplier="1:1" id="nfF-xt-eOS"/>
                                                         <constraint firstAttribute="height" constant="20" id="t5G-iU-vJG"/>
@@ -304,24 +304,24 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExpandedDefinitionCell" rowHeight="155" id="27m-a5-S7c" customClass="ExpandedDefinitionCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="426" width="375" height="155"/>
+                                <rect key="frame" x="0.0" y="426" width="768" height="155"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="27m-a5-S7c" id="No4-Q6-m9r">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="155"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="155"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kRe-Un-9yR" userLabel="Card" customClass="LexisView" customModule="Lexis" customModuleProvider="target">
-                                            <rect key="frame" x="8" y="0.0" width="359" height="155"/>
+                                            <rect key="frame" x="8" y="0.0" width="752" height="155"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQ7-Wn-0Kx" userLabel="Top Line">
-                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="1"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="752" height="1"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="EER-51-lKe"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JWM-be-IKN" userLabel="Right Line">
-                                                    <rect key="frame" x="358" y="0.0" width="1" height="155"/>
+                                                    <rect key="frame" x="751" y="0.0" width="1" height="155"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="1" id="82D-a1-Upz"/>
@@ -335,14 +335,14 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWA-T4-tMY" userLabel="Bottom Line">
-                                                    <rect key="frame" x="0.0" y="154" width="359" height="1"/>
+                                                    <rect key="frame" x="0.0" y="154" width="752" height="1"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="uEf-YS-bKb"/>
                                                     </constraints>
                                                 </view>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="cast/throw/fling/drive out/up, extraction" translatesAutoresizingMaskIntoConstraints="NO" id="dyt-Fy-2F0">
-                                                    <rect key="frame" x="9" y="9" width="341" height="137"/>
+                                                    <rect key="frame" x="9" y="9" width="734" height="137"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="21"/>
@@ -392,17 +392,17 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordDescriptionCell" rowHeight="80" id="z8S-lO-xO6" customClass="WordDescriptionCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="581" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="581" width="768" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z8S-lO-xO6" id="Ts9-J8-yR0">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hod-Im-7PP" userLabel="Card" customClass="LexisView" customModule="Lexis" customModuleProvider="target">
-                                            <rect key="frame" x="8" y="2" width="359" height="78"/>
+                                            <rect key="frame" x="8" y="2" width="752" height="78"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Used very frequently throughout the ages. This word appeared in all Latin elementary books." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6UX-of-etj">
-                                                    <rect key="frame" x="16" y="12" width="327" height="54"/>
+                                                    <rect key="frame" x="16" y="12" width="720" height="54"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="15"/>
@@ -443,17 +443,17 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActionsCell" rowHeight="80" id="HZh-bU-rYz" customClass="ActionsCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="661" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="661" width="768" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HZh-bU-rYz" id="VFg-Eq-lLG">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QvT-fB-tRU" userLabel="Card" customClass="LexisView" customModule="Lexis" customModuleProvider="target">
-                                            <rect key="frame" x="8" y="2" width="359" height="78"/>
+                                            <rect key="frame" x="8" y="2" width="752" height="78"/>
                                             <subviews>
                                                 <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEa-Zl-plO">
-                                                    <rect key="frame" x="0.0" y="17" width="359" height="44"/>
+                                                    <rect key="frame" x="0.0" y="17" width="752" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="8E9-Ep-1Re"/>
                                                     </constraints>
@@ -507,34 +507,34 @@
                                     <outlet property="toolbar" destination="bEa-Zl-plO" id="IIw-Ck-7ZF"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="400" id="NW5-W2-qQO" customClass="ImageCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="741" width="375" height="400"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="410" id="NW5-W2-qQO" customClass="ImageCell" customModule="Lexis" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="741" width="768" height="410"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NW5-W2-qQO" id="pho-kp-fLa">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="410"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sgp-B3-Wnu" userLabel="Card" customClass="LexisView" customModule="Lexis" customModuleProvider="target">
-                                            <rect key="frame" x="8" y="2" width="359" height="396"/>
+                                            <rect key="frame" x="8" y="2" width="752" height="406"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="753" image="Art-Cicero" translatesAutoresizingMaskIntoConstraints="NO" id="N29-fH-SJX">
-                                                    <rect key="frame" x="2" y="83" width="355" height="230"/>
+                                                    <rect key="frame" x="2" y="3" width="748" height="400"/>
                                                     <color key="tintColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="230" id="jsA-7g-m1W">
                                                             <variation key="heightClass=compact" constant="250"/>
-                                                            <variation key="heightClass=regular-widthClass=regular" constant="400"/>
+                                                            <variation key="widthClass=regular" constant="400"/>
                                                         </constraint>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstItem="N29-fH-SJX" firstAttribute="centerY" secondItem="Sgp-B3-Wnu" secondAttribute="centerY" id="HrB-K8-AvA"/>
-                                                <constraint firstItem="N29-fH-SJX" firstAttribute="leading" secondItem="Sgp-B3-Wnu" secondAttribute="leading" constant="2" id="MLY-IY-6ZJ"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="N29-fH-SJX" secondAttribute="bottom" constant="2" id="Nod-sx-EfF"/>
-                                                <constraint firstAttribute="trailing" secondItem="N29-fH-SJX" secondAttribute="trailing" constant="2" id="Ope-21-cmd"/>
-                                                <constraint firstItem="N29-fH-SJX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Sgp-B3-Wnu" secondAttribute="top" constant="2" id="U0n-Wg-YSx"/>
+                                                <constraint firstAttribute="trailing" secondItem="N29-fH-SJX" secondAttribute="trailing" constant="2" id="2hF-PJ-8bJ"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="N29-fH-SJX" secondAttribute="bottom" constant="2" id="52c-Nj-NjB"/>
+                                                <constraint firstItem="N29-fH-SJX" firstAttribute="centerY" secondItem="Sgp-B3-Wnu" secondAttribute="centerY" id="6A3-O3-HrW"/>
+                                                <constraint firstItem="N29-fH-SJX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Sgp-B3-Wnu" secondAttribute="top" constant="2" id="DKk-Kz-08E"/>
+                                                <constraint firstItem="N29-fH-SJX" firstAttribute="leading" secondItem="Sgp-B3-Wnu" secondAttribute="leading" constant="2" id="r4o-ii-EVM"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="borderThickness">
@@ -547,37 +547,37 @@
                                         </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Sgp-B3-Wnu" firstAttribute="top" secondItem="pho-kp-fLa" secondAttribute="top" constant="2" id="0HC-cO-P1J"/>
-                                        <constraint firstItem="Sgp-B3-Wnu" firstAttribute="leading" secondItem="pho-kp-fLa" secondAttribute="leading" constant="8" id="Gxg-Bf-uIa"/>
-                                        <constraint firstAttribute="trailing" secondItem="Sgp-B3-Wnu" secondAttribute="trailing" constant="8" id="iof-7n-5DD"/>
-                                        <constraint firstAttribute="bottom" secondItem="Sgp-B3-Wnu" secondAttribute="bottom" constant="2" id="rqN-dV-zz3"/>
+                                        <constraint firstAttribute="trailing" secondItem="Sgp-B3-Wnu" secondAttribute="trailing" constant="8" id="9jV-BR-1Ac"/>
+                                        <constraint firstAttribute="bottom" secondItem="Sgp-B3-Wnu" secondAttribute="bottom" constant="2" id="iuh-KI-Gie"/>
+                                        <constraint firstItem="Sgp-B3-Wnu" firstAttribute="top" secondItem="pho-kp-fLa" secondAttribute="top" constant="2" id="j2J-dM-wPk"/>
+                                        <constraint firstItem="Sgp-B3-Wnu" firstAttribute="leading" secondItem="pho-kp-fLa" secondAttribute="leading" constant="8" id="sKq-Qq-JJ7"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="cardLeadingConstraint" destination="Gxg-Bf-uIa" id="N1z-mL-e9G"/>
-                                    <outlet property="cardTrailingConstraint" destination="iof-7n-5DD" id="AXf-Ro-Tsc"/>
+                                    <outlet property="cardLeadingConstraint" destination="sKq-Qq-JJ7" id="GmT-ut-HCB"/>
+                                    <outlet property="cardTrailingConstraint" destination="9jV-BR-1Ac" id="Zjl-eV-J2S"/>
                                     <outlet property="cardView" destination="Sgp-B3-Wnu" id="B43-c2-k59"/>
                                     <outlet property="photoHeightConstraint" destination="jsA-7g-m1W" id="1Uo-Su-fS2"/>
                                     <outlet property="photoImageView" destination="N29-fH-SJX" id="Sux-aF-E4C"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SearchEntryCell" rowHeight="120" id="y98-iL-76Q" customClass="SearchEntryCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="1141" width="375" height="120"/>
+                                <rect key="frame" x="0.0" y="1151" width="768" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y98-iL-76Q" id="Ebc-9P-3PY">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uXg-CG-2UV" userLabel="Highlight Line">
-                                            <rect key="frame" x="24" y="80" width="327" height="2"/>
+                                            <rect key="frame" x="24" y="81" width="384" height="2"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="2" id="6Fg-4y-DVg"/>
                                             </constraints>
                                         </view>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="PR |" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="BEQ-rI-xyN">
-                                            <rect key="frame" x="24" y="32" width="327" height="32"/>
+                                            <rect key="frame" x="24" y="32" width="384" height="33"/>
                                             <color key="tintColor" red="0.95686274510000002" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="27"/>
@@ -616,17 +616,17 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchResultCell" rowHeight="60" id="5dG-AZ-tXl" customClass="SearchResultCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="1261" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="1271" width="768" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5dG-AZ-tXl" id="pUW-DS-8N1">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YdF-JW-A3J" userLabel="Card">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="60"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRABEO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTr-6Z-Q70">
-                                                    <rect key="frame" x="24" y="16" width="97" height="28"/>
+                                                    <rect key="frame" x="24" y="11" width="125" height="38.5"/>
                                                     <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="24"/>
                                                     <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -635,7 +635,7 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(V) (2ND)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJ6-Gb-vQ7">
-                                                    <rect key="frame" x="137" y="25" width="55" height="17"/>
+                                                    <rect key="frame" x="165" y="28" width="73" height="19.5"/>
                                                     <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="14"/>
                                                     <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -654,7 +654,7 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhh-mi-x76" userLabel="Line">
-                                            <rect key="frame" x="0.0" y="59" width="375" height="1"/>
+                                            <rect key="frame" x="0.0" y="59" width="768" height="1"/>
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="Qsd-DK-bof"/>
@@ -679,25 +679,25 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SearchEmptyCell" rowHeight="500" id="fPX-Dd-cW0" customClass="SearchEmptyCell" customModule="Lexis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="1321" width="375" height="500"/>
+                                <rect key="frame" x="0.0" y="1331" width="768" height="500"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fPX-Dd-cW0" id="W7f-Hg-6c3">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="500"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Book-Black-Open" translatesAutoresizingMaskIntoConstraints="NO" id="Kci-Cc-PYq">
-                                            <rect key="frame" x="0.0" y="124" width="375" height="368"/>
+                                            <rect key="frame" x="0.0" y="135" width="768" height="357"/>
                                             <color key="tintColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ga-uL-8fb" userLabel="Highlight Line">
-                                            <rect key="frame" x="109" y="90" width="157" height="2"/>
+                                            <rect key="frame" x="253" y="101" width="261" height="2"/>
                                             <color key="backgroundColor" red="0.95686274509803915" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="2" id="9p8-HK-u8q"/>
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="753" text="nothing found" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pui-F9-dKm">
-                                            <rect key="frame" x="76" y="32" width="224" height="42"/>
+                                            <rect key="frame" x="198" y="32" width="372.5" height="53"/>
                                             <fontDescription key="fontDescription" name="Cinzel-Regular" family="Cinzel" pointSize="36"/>
                                             <color key="textColor" red="0.1058823529" green="0.12549019610000001" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -742,7 +742,7 @@
                     <navigationItem key="navigationItem" id="Pum-0d-A7o">
                         <barButtonItem key="backBarButtonItem" title=" " id="gP2-Yx-9Cc"/>
                         <view key="titleView" contentMode="scaleToFill" id="ohq-IW-8qj">
-                            <rect key="frame" x="124" y="6" width="128" height="33"/>
+                            <rect key="frame" x="320" y="6" width="128" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEXIS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="22C-oG-JeO" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
@@ -775,7 +775,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LSR-3L-20H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3808.8000000000002" y="35.532233883058474"/>
+            <point key="canvasLocation" x="3808.59375" y="35.15625"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="wF1-Jg-EKn">
@@ -786,11 +786,11 @@
                         <viewControllerLayoutGuide type="bottom" id="XtY-Pg-Zf2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="NDt-Ao-Goq">
-                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OKI-ie-qk0">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="911"/>
                                 <color key="backgroundColor" red="0.44313725490196076" green="0.058823529411764705" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <dataDetectorType key="dataDetectorTypes"/>
                             </webView>
@@ -805,7 +805,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="BlL-pU-i5N">
                         <view key="titleView" contentMode="scaleToFill" id="wH1-tl-ije">
-                            <rect key="frame" x="124" y="6" width="128" height="33"/>
+                            <rect key="frame" x="320" y="6" width="128" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="amica" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4ub-F4-4zb">
@@ -842,7 +842,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO">
                         <color key="tintColor" red="0.72549019609999998" green="0.050980392159999999" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                     </simulatedTabBarMetrics>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" id="enL-zh-NGv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="enL-zh-NGv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

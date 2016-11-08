@@ -34,7 +34,8 @@ fileprivate let samplePhotos = [ #imageLiteral(resourceName: "Art-Mural"), #imag
 
 fileprivate let maxImages = 50
 
-fileprivate var collapsedImageHeight: CGFloat = 5000
+fileprivate var startingCollapsedImageHeight: CGFloat = 5000
+fileprivate var collapsedImageHeight: CGFloat = startingCollapsedImageHeight
 
 /**
     This File adds support for Images in the Lexis Dictionary.
@@ -121,12 +122,21 @@ extension WordViewController
         
         loadImage(fromURL: url, intoCell: cell, in: tableView, atIndexPath: indexPath)
         
-        //Adjust the collapse ImageHeight & remember it
-        collapsedImageHeight = min(collapsedImageHeight, cell.photoHeightConstraint.constant)
+        //Adjust the collapse ImageHeight only if it hasn't been done before
+        if !alreadyRememberedCollapsedHeight()
+        {
+            let imageHeight = min(collapsedImageHeight, cell.photoHeightConstraint.constant)
+            collapsedImageHeight = imageHeight
+        }
         
         adjustStyle(for: cell, at: indexPath)
     
         return cell
+    }
+    
+    private func alreadyRememberedCollapsedHeight() -> Bool
+    {
+        return collapsedImageHeight < startingCollapsedImageHeight
     }
     
     func expandImageCell(_ tableView: UITableView, at indexPath: IndexPath, refreshTable refresh: Bool = true)
