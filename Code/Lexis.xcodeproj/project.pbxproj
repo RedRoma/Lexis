@@ -26,40 +26,11 @@
 		DE1295141D6982FF00687CA5 /* CinzelDecorative-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DE12950E1D6982FF00687CA5 /* CinzelDecorative-Regular.otf */; };
 		DE24652E1D8D174B00A138EB /* LexisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE24652D1D8D174B00A138EB /* LexisTests.swift */; };
 		DE3DD8641DC861D60032B42A /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3DD8631DC861D60032B42A /* UIImage+.swift */; };
-		DE3DD8671DC8D9DA0032B42A /* Kingfisher.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = DE3DD8651DC8D9D00032B42A /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3DD8681DC8D9E40032B42A /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE3DD8651DC8D9D00032B42A /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE3DD8691DC8D9FD0032B42A /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3DD8651DC8D9D00032B42A /* Kingfisher.framework */; };
 		DE3DD86A1DC8D9FD0032B42A /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDAB64E1DADA3AE006FA10C /* Fabric.framework */; };
 		DE3DD86B1DC8D9FD0032B42A /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDAB64F1DADA3AE006FA10C /* Crashlytics.framework */; };
-		DE3DD86C1DC8D9FD0032B42A /* Archeota.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE5137C61DAB080700408650 /* Archeota.framework */; };
-		DE3DD86D1DC8D9FD0032B42A /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE825F971D9FA2ED00433184 /* NVActivityIndicatorView.framework */; };
-		DE3DD86E1DC8D9FD0032B42A /* AlchemyGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A2661D98841300620411 /* AlchemyGenerator.framework */; };
-		DE3DD86F1DC8D9FD0032B42A /* AlchemyUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A2671D98841300620411 /* AlchemyUIKit.framework */; };
-		DE3DD8701DC8D9FD0032B42A /* AromaSwiftClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A2681D98841300620411 /* AromaSwiftClient.framework */; };
-		DE3DD8711DC8D9FD0032B42A /* AromaThrift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A2691D98841300620411 /* AromaThrift.framework */; };
-		DE3DD8721DC8D9FD0032B42A /* LexisDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26A1D98841300620411 /* LexisDatabase.framework */; };
-		DE3DD8731DC8D9FD0032B42A /* LTMorphingLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26B1D98841300620411 /* LTMorphingLabel.framework */; };
-		DE3DD8741DC8D9FD0032B42A /* RedRomaColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26D1D98841300620411 /* RedRomaColors.framework */; };
-		DE3DD8751DC8D9FD0032B42A /* SwiftExceptionCatcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26F1D98841300620411 /* SwiftExceptionCatcher.framework */; };
 		DE3DD8771DC8E3280032B42A /* TimeIntervals+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3DD8761DC8E3280032B42A /* TimeIntervals+.swift */; };
-		DE49A27B1D98841700620411 /* AlchemyGenerator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A2661D98841300620411 /* AlchemyGenerator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE49A27D1D98841700620411 /* AlchemyUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A2671D98841300620411 /* AlchemyUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE49A27F1D98841700620411 /* AromaSwiftClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A2681D98841300620411 /* AromaSwiftClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE49A2811D98841700620411 /* AromaThrift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A2691D98841300620411 /* AromaThrift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE49A2831D98841700620411 /* LexisDatabase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26A1D98841300620411 /* LexisDatabase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE49A2851D98841700620411 /* LTMorphingLabel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26B1D98841300620411 /* LTMorphingLabel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE49A2891D98841700620411 /* RedRomaColors.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26D1D98841300620411 /* RedRomaColors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE49A28D1D98841700620411 /* SwiftExceptionCatcher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26F1D98841300620411 /* SwiftExceptionCatcher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DE49A2A51D98C08500620411 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE49A2A41D98C08500620411 /* ImageProvider.swift */; };
 		DE49A2A81D98C46F00620411 /* ImageProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE49A2A71D98C46F00620411 /* ImageProviderTests.swift */; };
-		DE49A2A91D98C4F800620411 /* AlchemyGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A2661D98841300620411 /* AlchemyGenerator.framework */; };
-		DE49A2AA1D98C4F800620411 /* AlchemyUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A2671D98841300620411 /* AlchemyUIKit.framework */; };
-		DE49A2AB1D98C4F800620411 /* AromaSwiftClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A2681D98841300620411 /* AromaSwiftClient.framework */; };
-		DE49A2AC1D98C4F800620411 /* AromaThrift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A2691D98841300620411 /* AromaThrift.framework */; };
-		DE49A2AD1D98C4F800620411 /* LexisDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26A1D98841300620411 /* LexisDatabase.framework */; };
-		DE49A2AE1D98C4F800620411 /* LTMorphingLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26B1D98841300620411 /* LTMorphingLabel.framework */; };
-		DE49A2B01D98C4F800620411 /* RedRomaColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26D1D98841300620411 /* RedRomaColors.framework */; };
-		DE49A2B21D98C4F800620411 /* SwiftExceptionCatcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26F1D98841300620411 /* SwiftExceptionCatcher.framework */; };
 		DE49A2B41D98C55B00620411 /* FlickrImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE49A2B31D98C55B00620411 /* FlickrImageProvider.swift */; };
 		DE49A2B61D98D10600620411 /* URLs+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE49A2B51D98D10600620411 /* URLs+.swift */; };
 		DE49A2B81D98D39100620411 /* FlickrImageProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE49A2B71D98D39100620411 /* FlickrImageProviderTests.swift */; };
@@ -114,25 +85,37 @@
 		DE6C28761D9708BC00BB1D33 /* WordViewController+Sharing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6C28751D9708BC00BB1D33 /* WordViewController+Sharing.swift */; };
 		DE6C28781D97178000BB1D33 /* Doubles+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6C28771D97178000BB1D33 /* Doubles+.swift */; };
 		DE7191B51DAB2A9E00CBE500 /* SettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7191B41DAB2A9E00CBE500 /* SettingsTests.swift */; };
-		DE7191B61DAB2F6E00CBE500 /* Archeota.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = DE5137C61DAB080700408650 /* Archeota.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE7191B71DAB2F6E00CBE500 /* NVActivityIndicatorView.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = DE825F971D9FA2ED00433184 /* NVActivityIndicatorView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE7191B81DAB2F6E00CBE500 /* AlchemyGenerator.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A2661D98841300620411 /* AlchemyGenerator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE7191B91DAB2F6E00CBE500 /* AlchemyUIKit.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A2671D98841300620411 /* AlchemyUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE7191BA1DAB2F6E00CBE500 /* AromaSwiftClient.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A2681D98841300620411 /* AromaSwiftClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE7191BB1DAB2F6E00CBE500 /* AromaThrift.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A2691D98841300620411 /* AromaThrift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE7191BC1DAB2F6E00CBE500 /* LexisDatabase.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26A1D98841300620411 /* LexisDatabase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE7191BD1DAB2F6E00CBE500 /* LTMorphingLabel.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26B1D98841300620411 /* LTMorphingLabel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE7191BE1DAB2F6E00CBE500 /* RedRomaColors.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26D1D98841300620411 /* RedRomaColors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE7191BF1DAB2F6E00CBE500 /* SwiftExceptionCatcher.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = DE49A26F1D98841300620411 /* SwiftExceptionCatcher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE7191C01DAB2FAF00CBE500 /* Archeota.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE5137C61DAB080700408650 /* Archeota.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DE825F961D9F8A6300433184 /* LexisImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE825F951D9F8A6300433184 /* LexisImageView.swift */; };
-		DE825F9A1D9FA2F900433184 /* NVActivityIndicatorView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE825F971D9FA2ED00433184 /* NVActivityIndicatorView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DEA255DE1DA0BAFF009F9F3E /* UILabels+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA255DD1DA0BAFF009F9F3E /* UILabels+.swift */; };
 		DEDAB6461DADA012006FA10C /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDAB6441DADA012006FA10C /* Settings.storyboard */; };
 		DEDAB6491DADA054006FA10C /* Pinned.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDAB6471DADA054006FA10C /* Pinned.storyboard */; };
 		DEDAB64C1DADA0FC006FA10C /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDAB64A1DADA0FC006FA10C /* Search.storyboard */; };
 		DEDB439C1D925F5700BF092E /* LexisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDB439B1D925F5700BF092E /* LexisView.swift */; };
 		DEDB439D1D925F5700BF092E /* LexisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDB439B1D925F5700BF092E /* LexisView.swift */; };
+		DEDBC8231ECE1ABF00F84081 /* AlchemyGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDBC8181ECE1ABF00F84081 /* AlchemyGenerator.framework */; };
+		DEDBC8241ECE1ABF00F84081 /* AlchemyUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDBC8191ECE1ABF00F84081 /* AlchemyUIKit.framework */; };
+		DEDBC8251ECE1ABF00F84081 /* Archeota.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDBC81A1ECE1ABF00F84081 /* Archeota.framework */; };
+		DEDBC8261ECE1ABF00F84081 /* AromaSwiftClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDBC81B1ECE1ABF00F84081 /* AromaSwiftClient.framework */; };
+		DEDBC8271ECE1ABF00F84081 /* AromaThrift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDBC81C1ECE1ABF00F84081 /* AromaThrift.framework */; };
+		DEDBC8281ECE1ABF00F84081 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDBC81D1ECE1ABF00F84081 /* Kingfisher.framework */; };
+		DEDBC8291ECE1ABF00F84081 /* LexisDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDBC81E1ECE1ABF00F84081 /* LexisDatabase.framework */; };
+		DEDBC82A1ECE1ABF00F84081 /* LTMorphingLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDBC81F1ECE1ABF00F84081 /* LTMorphingLabel.framework */; };
+		DEDBC82B1ECE1ABF00F84081 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDBC8201ECE1ABF00F84081 /* NVActivityIndicatorView.framework */; };
+		DEDBC82C1ECE1ABF00F84081 /* RedRomaColors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDBC8211ECE1ABF00F84081 /* RedRomaColors.framework */; };
+		DEDBC82D1ECE1ABF00F84081 /* SwiftExceptionCatcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDBC8221ECE1ABF00F84081 /* SwiftExceptionCatcher.framework */; };
+		DEDBC82E1ECE1ACF00F84081 /* AlchemyGenerator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DEDBC8181ECE1ABF00F84081 /* AlchemyGenerator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DEDBC82F1ECE1ACF00F84081 /* AlchemyUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DEDBC8191ECE1ABF00F84081 /* AlchemyUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DEDBC8301ECE1ACF00F84081 /* Archeota.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DEDBC81A1ECE1ABF00F84081 /* Archeota.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DEDBC8311ECE1ACF00F84081 /* AromaSwiftClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DEDBC81B1ECE1ABF00F84081 /* AromaSwiftClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DEDBC8321ECE1ACF00F84081 /* AromaThrift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DEDBC81C1ECE1ABF00F84081 /* AromaThrift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DEDBC8331ECE1ACF00F84081 /* Crashlytics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DEDAB64F1DADA3AE006FA10C /* Crashlytics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DEDBC8341ECE1ACF00F84081 /* Fabric.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DEDAB64E1DADA3AE006FA10C /* Fabric.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DEDBC8351ECE1ACF00F84081 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DEDBC81D1ECE1ABF00F84081 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DEDBC8361ECE1ACF00F84081 /* LexisDatabase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DEDBC81E1ECE1ABF00F84081 /* LexisDatabase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DEDBC8371ECE1ACF00F84081 /* LTMorphingLabel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DEDBC81F1ECE1ABF00F84081 /* LTMorphingLabel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DEDBC8381ECE1ACF00F84081 /* NVActivityIndicatorView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DEDBC8201ECE1ABF00F84081 /* NVActivityIndicatorView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DEDBC8391ECE1ACF00F84081 /* RedRomaColors.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DEDBC8211ECE1ABF00F84081 /* RedRomaColors.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DEDBC83A1ECE1ACF00F84081 /* SwiftExceptionCatcher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DEDBC8221ECE1ABF00F84081 /* SwiftExceptionCatcher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,17 +135,19 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DE7191C01DAB2FAF00CBE500 /* Archeota.framework in Embed Frameworks */,
-				DE49A27F1D98841700620411 /* AromaSwiftClient.framework in Embed Frameworks */,
-				DE49A27B1D98841700620411 /* AlchemyGenerator.framework in Embed Frameworks */,
-				DE49A2811D98841700620411 /* AromaThrift.framework in Embed Frameworks */,
-				DE49A2831D98841700620411 /* LexisDatabase.framework in Embed Frameworks */,
-				DE49A28D1D98841700620411 /* SwiftExceptionCatcher.framework in Embed Frameworks */,
-				DE825F9A1D9FA2F900433184 /* NVActivityIndicatorView.framework in Embed Frameworks */,
-				DE49A27D1D98841700620411 /* AlchemyUIKit.framework in Embed Frameworks */,
-				DE49A2851D98841700620411 /* LTMorphingLabel.framework in Embed Frameworks */,
-				DE49A2891D98841700620411 /* RedRomaColors.framework in Embed Frameworks */,
-				DE3DD8681DC8D9E40032B42A /* Kingfisher.framework in Embed Frameworks */,
+				DEDBC82E1ECE1ACF00F84081 /* AlchemyGenerator.framework in Embed Frameworks */,
+				DEDBC82F1ECE1ACF00F84081 /* AlchemyUIKit.framework in Embed Frameworks */,
+				DEDBC8301ECE1ACF00F84081 /* Archeota.framework in Embed Frameworks */,
+				DEDBC8311ECE1ACF00F84081 /* AromaSwiftClient.framework in Embed Frameworks */,
+				DEDBC8321ECE1ACF00F84081 /* AromaThrift.framework in Embed Frameworks */,
+				DEDBC8331ECE1ACF00F84081 /* Crashlytics.framework in Embed Frameworks */,
+				DEDBC8341ECE1ACF00F84081 /* Fabric.framework in Embed Frameworks */,
+				DEDBC8351ECE1ACF00F84081 /* Kingfisher.framework in Embed Frameworks */,
+				DEDBC8361ECE1ACF00F84081 /* LexisDatabase.framework in Embed Frameworks */,
+				DEDBC8371ECE1ACF00F84081 /* LTMorphingLabel.framework in Embed Frameworks */,
+				DEDBC8381ECE1ACF00F84081 /* NVActivityIndicatorView.framework in Embed Frameworks */,
+				DEDBC8391ECE1ACF00F84081 /* RedRomaColors.framework in Embed Frameworks */,
+				DEDBC83A1ECE1ACF00F84081 /* SwiftExceptionCatcher.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,17 +158,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DE7191B61DAB2F6E00CBE500 /* Archeota.framework in Copy Frameworks */,
-				DE7191B71DAB2F6E00CBE500 /* NVActivityIndicatorView.framework in Copy Frameworks */,
-				DE7191B81DAB2F6E00CBE500 /* AlchemyGenerator.framework in Copy Frameworks */,
-				DE7191B91DAB2F6E00CBE500 /* AlchemyUIKit.framework in Copy Frameworks */,
-				DE7191BA1DAB2F6E00CBE500 /* AromaSwiftClient.framework in Copy Frameworks */,
-				DE7191BB1DAB2F6E00CBE500 /* AromaThrift.framework in Copy Frameworks */,
-				DE7191BC1DAB2F6E00CBE500 /* LexisDatabase.framework in Copy Frameworks */,
-				DE7191BD1DAB2F6E00CBE500 /* LTMorphingLabel.framework in Copy Frameworks */,
-				DE7191BE1DAB2F6E00CBE500 /* RedRomaColors.framework in Copy Frameworks */,
-				DE7191BF1DAB2F6E00CBE500 /* SwiftExceptionCatcher.framework in Copy Frameworks */,
-				DE3DD8671DC8D9DA0032B42A /* Kingfisher.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,16 +188,7 @@
 		DE24652D1D8D174B00A138EB /* LexisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexisTests.swift; sourceTree = "<group>"; };
 		DE24652F1D8D174B00A138EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE3DD8631DC861D60032B42A /* UIImage+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
-		DE3DD8651DC8D9D00032B42A /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		DE3DD8761DC8E3280032B42A /* TimeIntervals+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeIntervals+.swift"; sourceTree = "<group>"; };
-		DE49A2661D98841300620411 /* AlchemyGenerator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlchemyGenerator.framework; path = Carthage/Build/iOS/AlchemyGenerator.framework; sourceTree = "<group>"; };
-		DE49A2671D98841300620411 /* AlchemyUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlchemyUIKit.framework; path = Carthage/Build/iOS/AlchemyUIKit.framework; sourceTree = "<group>"; };
-		DE49A2681D98841300620411 /* AromaSwiftClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AromaSwiftClient.framework; path = Carthage/Build/iOS/AromaSwiftClient.framework; sourceTree = "<group>"; };
-		DE49A2691D98841300620411 /* AromaThrift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AromaThrift.framework; path = Carthage/Build/iOS/AromaThrift.framework; sourceTree = "<group>"; };
-		DE49A26A1D98841300620411 /* LexisDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LexisDatabase.framework; path = Carthage/Build/iOS/LexisDatabase.framework; sourceTree = "<group>"; };
-		DE49A26B1D98841300620411 /* LTMorphingLabel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LTMorphingLabel.framework; path = Carthage/Build/iOS/LTMorphingLabel.framework; sourceTree = "<group>"; };
-		DE49A26D1D98841300620411 /* RedRomaColors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RedRomaColors.framework; path = Carthage/Build/iOS/RedRomaColors.framework; sourceTree = "<group>"; };
-		DE49A26F1D98841300620411 /* SwiftExceptionCatcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftExceptionCatcher.framework; path = Carthage/Build/iOS/SwiftExceptionCatcher.framework; sourceTree = "<group>"; };
 		DE49A2A41D98C08500620411 /* ImageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
 		DE49A2A71D98C46F00620411 /* ImageProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProviderTests.swift; sourceTree = "<group>"; };
 		DE49A2B31D98C55B00620411 /* FlickrImageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrImageProvider.swift; sourceTree = "<group>"; };
@@ -238,7 +203,6 @@
 		DE4DA2D11D8E3F5C003183F4 /* LexisWord+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LexisWord+.swift"; sourceTree = "<group>"; };
 		DE4DA2D71D8E667E003183F4 /* ViewControllers+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewControllers+.swift"; sourceTree = "<group>"; };
 		DE50D8051DA640C8004552C3 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		DE5137C61DAB080700408650 /* Archeota.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Archeota.framework; path = Carthage/Build/iOS/Archeota.framework; sourceTree = "<group>"; };
 		DE5137EE1DAB1C5200408650 /* FavoriteWordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteWordCell.swift; sourceTree = "<group>"; };
 		DE5137F01DAB1D0C00408650 /* PinnedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinnedViewController.swift; sourceTree = "<group>"; };
 		DE528EEA1D9CE55A0080D973 /* SimpleShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleShareViewController.swift; sourceTree = "<group>"; };
@@ -276,7 +240,6 @@
 		DE6C28771D97178000BB1D33 /* Doubles+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Doubles+.swift"; sourceTree = "<group>"; };
 		DE7191B41DAB2A9E00CBE500 /* SettingsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTests.swift; sourceTree = "<group>"; };
 		DE825F951D9F8A6300433184 /* LexisImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LexisImageView.swift; sourceTree = "<group>"; };
-		DE825F971D9FA2ED00433184 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = Carthage/Build/iOS/NVActivityIndicatorView.framework; sourceTree = "<group>"; };
 		DEA255DD1DA0BAFF009F9F3E /* UILabels+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabels+.swift"; sourceTree = "<group>"; };
 		DEDAB6451DADA012006FA10C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
 		DEDAB6481DADA054006FA10C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Pinned.storyboard; sourceTree = "<group>"; };
@@ -284,6 +247,17 @@
 		DEDAB64E1DADA3AE006FA10C /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		DEDAB64F1DADA3AE006FA10C /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		DEDB439B1D925F5700BF092E /* LexisView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LexisView.swift; sourceTree = "<group>"; };
+		DEDBC8181ECE1ABF00F84081 /* AlchemyGenerator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlchemyGenerator.framework; path = ../../Stuff/Code/Carthage/Build/iOS/AlchemyGenerator.framework; sourceTree = "<group>"; };
+		DEDBC8191ECE1ABF00F84081 /* AlchemyUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlchemyUIKit.framework; path = ../../Stuff/Code/Carthage/Build/iOS/AlchemyUIKit.framework; sourceTree = "<group>"; };
+		DEDBC81A1ECE1ABF00F84081 /* Archeota.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Archeota.framework; path = ../../Stuff/Code/Carthage/Build/iOS/Archeota.framework; sourceTree = "<group>"; };
+		DEDBC81B1ECE1ABF00F84081 /* AromaSwiftClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AromaSwiftClient.framework; path = ../../Stuff/Code/Carthage/Build/iOS/AromaSwiftClient.framework; sourceTree = "<group>"; };
+		DEDBC81C1ECE1ABF00F84081 /* AromaThrift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AromaThrift.framework; path = ../../Stuff/Code/Carthage/Build/iOS/AromaThrift.framework; sourceTree = "<group>"; };
+		DEDBC81D1ECE1ABF00F84081 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = ../../Stuff/Code/Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		DEDBC81E1ECE1ABF00F84081 /* LexisDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LexisDatabase.framework; path = ../../Stuff/Code/Carthage/Build/iOS/LexisDatabase.framework; sourceTree = "<group>"; };
+		DEDBC81F1ECE1ABF00F84081 /* LTMorphingLabel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LTMorphingLabel.framework; path = ../../Stuff/Code/Carthage/Build/iOS/LTMorphingLabel.framework; sourceTree = "<group>"; };
+		DEDBC8201ECE1ABF00F84081 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = ../../Stuff/Code/Carthage/Build/iOS/NVActivityIndicatorView.framework; sourceTree = "<group>"; };
+		DEDBC8211ECE1ABF00F84081 /* RedRomaColors.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RedRomaColors.framework; path = ../../Stuff/Code/Carthage/Build/iOS/RedRomaColors.framework; sourceTree = "<group>"; };
+		DEDBC8221ECE1ABF00F84081 /* SwiftExceptionCatcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftExceptionCatcher.framework; path = ../../Stuff/Code/Carthage/Build/iOS/SwiftExceptionCatcher.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,19 +265,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE3DD8691DC8D9FD0032B42A /* Kingfisher.framework in Frameworks */,
+				DEDBC8261ECE1ABF00F84081 /* AromaSwiftClient.framework in Frameworks */,
+				DEDBC8291ECE1ABF00F84081 /* LexisDatabase.framework in Frameworks */,
+				DEDBC82D1ECE1ABF00F84081 /* SwiftExceptionCatcher.framework in Frameworks */,
+				DEDBC8231ECE1ABF00F84081 /* AlchemyGenerator.framework in Frameworks */,
+				DEDBC82A1ECE1ABF00F84081 /* LTMorphingLabel.framework in Frameworks */,
+				DEDBC8281ECE1ABF00F84081 /* Kingfisher.framework in Frameworks */,
+				DEDBC8271ECE1ABF00F84081 /* AromaThrift.framework in Frameworks */,
+				DEDBC82B1ECE1ABF00F84081 /* NVActivityIndicatorView.framework in Frameworks */,
 				DE3DD86A1DC8D9FD0032B42A /* Fabric.framework in Frameworks */,
 				DE3DD86B1DC8D9FD0032B42A /* Crashlytics.framework in Frameworks */,
-				DE3DD86C1DC8D9FD0032B42A /* Archeota.framework in Frameworks */,
-				DE3DD86D1DC8D9FD0032B42A /* NVActivityIndicatorView.framework in Frameworks */,
-				DE3DD86E1DC8D9FD0032B42A /* AlchemyGenerator.framework in Frameworks */,
-				DE3DD86F1DC8D9FD0032B42A /* AlchemyUIKit.framework in Frameworks */,
-				DE3DD8701DC8D9FD0032B42A /* AromaSwiftClient.framework in Frameworks */,
-				DE3DD8711DC8D9FD0032B42A /* AromaThrift.framework in Frameworks */,
-				DE3DD8721DC8D9FD0032B42A /* LexisDatabase.framework in Frameworks */,
-				DE3DD8731DC8D9FD0032B42A /* LTMorphingLabel.framework in Frameworks */,
-				DE3DD8741DC8D9FD0032B42A /* RedRomaColors.framework in Frameworks */,
-				DE3DD8751DC8D9FD0032B42A /* SwiftExceptionCatcher.framework in Frameworks */,
+				DEDBC8251ECE1ABF00F84081 /* Archeota.framework in Frameworks */,
+				DEDBC8241ECE1ABF00F84081 /* AlchemyUIKit.framework in Frameworks */,
+				DEDBC82C1ECE1ABF00F84081 /* RedRomaColors.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,14 +285,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE49A2AB1D98C4F800620411 /* AromaSwiftClient.framework in Frameworks */,
-				DE49A2A91D98C4F800620411 /* AlchemyGenerator.framework in Frameworks */,
-				DE49A2AC1D98C4F800620411 /* AromaThrift.framework in Frameworks */,
-				DE49A2AD1D98C4F800620411 /* LexisDatabase.framework in Frameworks */,
-				DE49A2B21D98C4F800620411 /* SwiftExceptionCatcher.framework in Frameworks */,
-				DE49A2AA1D98C4F800620411 /* AlchemyUIKit.framework in Frameworks */,
-				DE49A2AE1D98C4F800620411 /* LTMorphingLabel.framework in Frameworks */,
-				DE49A2B01D98C4F800620411 /* RedRomaColors.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,19 +446,19 @@
 		DE60BCC11D7B6ADE00EF15C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DE3DD8651DC8D9D00032B42A /* Kingfisher.framework */,
-				DEDAB64E1DADA3AE006FA10C /* Fabric.framework */,
+				DEDBC8181ECE1ABF00F84081 /* AlchemyGenerator.framework */,
+				DEDBC8191ECE1ABF00F84081 /* AlchemyUIKit.framework */,
+				DEDBC81A1ECE1ABF00F84081 /* Archeota.framework */,
+				DEDBC81B1ECE1ABF00F84081 /* AromaSwiftClient.framework */,
+				DEDBC81C1ECE1ABF00F84081 /* AromaThrift.framework */,
 				DEDAB64F1DADA3AE006FA10C /* Crashlytics.framework */,
-				DE5137C61DAB080700408650 /* Archeota.framework */,
-				DE825F971D9FA2ED00433184 /* NVActivityIndicatorView.framework */,
-				DE49A2661D98841300620411 /* AlchemyGenerator.framework */,
-				DE49A2671D98841300620411 /* AlchemyUIKit.framework */,
-				DE49A2681D98841300620411 /* AromaSwiftClient.framework */,
-				DE49A2691D98841300620411 /* AromaThrift.framework */,
-				DE49A26A1D98841300620411 /* LexisDatabase.framework */,
-				DE49A26B1D98841300620411 /* LTMorphingLabel.framework */,
-				DE49A26D1D98841300620411 /* RedRomaColors.framework */,
-				DE49A26F1D98841300620411 /* SwiftExceptionCatcher.framework */,
+				DEDAB64E1DADA3AE006FA10C /* Fabric.framework */,
+				DEDBC81D1ECE1ABF00F84081 /* Kingfisher.framework */,
+				DEDBC81E1ECE1ABF00F84081 /* LexisDatabase.framework */,
+				DEDBC81F1ECE1ABF00F84081 /* LTMorphingLabel.framework */,
+				DEDBC8201ECE1ABF00F84081 /* NVActivityIndicatorView.framework */,
+				DEDBC8211ECE1ABF00F84081 /* RedRomaColors.framework */,
+				DEDBC8221ECE1ABF00F84081 /* SwiftExceptionCatcher.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -554,8 +520,8 @@
 				DE1294EF1D6977F700687CA5 /* Sources */,
 				DE1294F01D6977F700687CA5 /* Frameworks */,
 				DE1294F11D6977F700687CA5 /* Resources */,
-				DE0F838F1D976B3E0069BD1D /* Strip Non-Valid Architectures */,
 				DE49A28E1D98841700620411 /* Embed Frameworks */,
+				DE0F838F1D976B3E0069BD1D /* Strip Non-Valid Architectures */,
 				DEDAB64D1DADA38D006FA10C /* Fabric */,
 			);
 			buildRules = (
