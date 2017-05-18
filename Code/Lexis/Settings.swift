@@ -34,7 +34,7 @@ class Settings
     {
         get
         {
-            guard let favoritesArray = userDefaults.array(forKey: Keys.favoriteWords) as? NSArray
+            guard let favoritesArray = userDefaults.array(forKey: Keys.favoriteWords)
             else
             {
                 return []
