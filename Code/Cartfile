@@ -1,11 +1,11 @@
 github "RedRoma/Archeota"
 github "RedRoma/Lexis-Database"
 github "RedRoma/RedRomaColors"
-github "RedRoma/AromaSwiftClient"
+github "RedRoma/AromaSwiftClient" "develop"
 
 github "SirWellington/AlchemyGenerator"
 github "SirWellington/AlchemyUIKit" "develop"
-github "lexrus/LTMorphingLabel" "swift3"
+github "lexrus/LTMorphingLabel"
 github "ninjaprox/NVActivityIndicatorView"
 
 github "onevcat/Kingfisher"
