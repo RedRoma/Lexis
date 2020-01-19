@@ -240,16 +240,11 @@ extension WordViewController
     
     internal func updateSearchResults()
     {
-        guard searchTerm.notEmpty
-        else
-        {
-            return
-        }
+        guard searchTerm.notEmpty else { return }
         
         self.async.cancelAllOperations()
         self.showNetworkIndicator()
-        self.async.addOperation
-        { [weak self, searchTerm] in
+        self.async.addOperation { [weak self, searchTerm] in
             
             defer { self?.hideNetworkIndicator() }
             
