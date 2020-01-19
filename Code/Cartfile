@@ -4,6 +4,7 @@ github "RedRoma/RedRomaColors" "develop"
 github "RedRoma/AromaSwiftClient" "develop"
 
 github "SirWellington/AlchemyGenerator"
+github "SirWellington/AlchemySwift"
 github "SirWellington/AlchemyUIKit" "develop"
 github "lexrus/LTMorphingLabel"
 github "ninjaprox/NVActivityIndicatorView"
