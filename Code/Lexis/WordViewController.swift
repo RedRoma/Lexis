@@ -154,8 +154,9 @@ class WordViewController: UITableViewController
         
         originalFontSize = navBarTitleLabel.font?.pointSize ?? 0
     }
-    
-    func update()
+
+    @objc
+    private func update()
     {
         async.addOperation {
             let word = LexisDatabase.instance.anyWord
@@ -384,9 +385,8 @@ extension WordViewController
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
-        return UITableViewAutomaticDimension
+        return UITableView.automaticDimension
     }
-    
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
     {

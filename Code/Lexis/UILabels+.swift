@@ -70,7 +70,7 @@ extension UILabel
         let size = text.boundingRect(
             with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: frame.height),
             options: [NSStringDrawingOptions.usesLineFragmentOrigin],
-            attributes: [NSFontAttributeName: font],
+            attributes: [.font: font],
             context: nil).size
         
         return ceil(size.width)

@@ -142,8 +142,7 @@ extension WordViewController
     
     private func createSearchTextFieldCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
     {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchEntryCell", for: indexPath) as? SearchEntryCell
-        else
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchEntryCell", for: indexPath) as? SearchEntryCell else
         {
             LOG.warn("Failed to load SearchEntryCell")
             return emptyCell
@@ -178,8 +177,7 @@ extension WordViewController
     
     internal func createEmptySearchResultsCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
     {
-        guard let emptySearchCell = tableView.dequeueReusableCell(withIdentifier: "SearchEmptyCell", for: indexPath) as? SearchEmptyCell
-        else
+        guard let emptySearchCell = tableView.dequeueReusableCell(withIdentifier: "SearchEmptyCell", for: indexPath) as? SearchEmptyCell else
         {
             LOG.error("Failed to load SearchEmptyCell")
             return emptyCell
@@ -240,16 +238,11 @@ extension WordViewController
     
     internal func updateSearchResults()
     {
-        guard searchTerm.notEmpty
-        else
-        {
-            return
-        }
+        guard searchTerm.notEmpty else { return }
         
         self.async.cancelAllOperations()
         self.showNetworkIndicator()
-        self.async.addOperation
-        { [weak self, searchTerm] in
+        self.async.addOperation { [weak self, searchTerm] in
             
             defer { self?.hideNetworkIndicator() }
             
@@ -307,7 +300,8 @@ extension WordViewController
 //MARK: TextField Delegate
 extension WordViewController: UITextFieldDelegate
 {
-    
+
+    @objc
     func editingDidChange(_ textField: UITextField)
     {
         let text = textField.text ?? ""

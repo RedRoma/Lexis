@@ -7,13 +7,13 @@
 //
 
 import AlchemyGenerator
+import AlchemyTest
 import Archeota
 import Foundation
 @testable import Lexis
 import LexisDatabase
-import XCTest
 
-class SettingsTests: XCTestCase
+class SettingsTests: AlchemyTest
 {
     
     fileprivate let instance = Settings.instance
@@ -22,36 +22,35 @@ class SettingsTests: XCTestCase
     
     fileprivate static var wordsBeforeTest: [LexisWord] = []
     
-    
-    override func setUp()
+
+    override func beforeEachTest()
     {
         word = LexisDatabase.instance.anyWord
     }
-    
-    override class func setUp()
+
+    override class func beforeTests()
     {
         wordsBeforeTest = Settings.instance.favoriteWords
     }
-    
-    override class func tearDown()
+
+    override class func afterTests()
     {
         Settings.instance.favoriteWords = wordsBeforeTest
     }
-    
     
     func testFavoriteWords()
     {
         let randomWords = AlchemyGenerator.array() { return LexisDatabase.instance.anyWord }
         Settings.instance.favoriteWords = randomWords
         
-        XCTAssertTrue(Settings.instance.favoriteWords == randomWords)
+        assertEquals(Settings.instance.favoriteWords, randomWords)
     }
     
     func testAddWord()
     {
         Settings.instance.addFavoriteWord(word)
         let words = Settings.instance.favoriteWords
-        XCTAssertTrue(words.contains(word))
+        assertThat(words.contains(word))
     }
     
     func testRemoveWord()
@@ -63,7 +62,7 @@ class SettingsTests: XCTestCase
         Settings.instance.removeFavoriteWord(word)
         let wordsAfter = Settings.instance.favoriteWords
         
-        XCTAssertFalse(wordsAfter.contains(word))
-        XCTAssertEqual(wordsAfter.count, words.count - 1)
+        assertThat(wordsAfter.doesNotContain(word))
+        assertEquals(wordsAfter.count, words.count - 1)
     }
 }
