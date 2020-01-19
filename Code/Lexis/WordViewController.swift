@@ -388,7 +388,6 @@ extension WordViewController
         return UITableView.automaticDimension
     }
     
-    
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
     {
         return isSearching ? 0.0001 : 15
