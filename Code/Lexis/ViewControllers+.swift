@@ -35,7 +35,7 @@ extension UIViewController
 extension UITableViewController
 {
     
-    func reloadSection(_ section: Int, withAnimation animation: UITableViewRowAnimation = .automatic)
+    func reloadSection(_ section: Int, withAnimation animation: UITableView.RowAnimation = .automatic)
     {
         let indexSet = IndexSet.init(integer: section)
         self.tableView.reloadSections(indexSet, with: animation)

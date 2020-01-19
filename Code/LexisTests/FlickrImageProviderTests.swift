@@ -7,6 +7,7 @@
 //
 
 import AlchemyGenerator
+import AlchemyTest
 import Foundation
 @testable import Lexis
 import LexisDatabase
@@ -35,20 +36,14 @@ class FlickrImageProviderTests: XCTestCase
     func testSearchAPopularTerm()
     {
         let term = AlchemyGenerator.stringFromList(popularTerms)
-        
         let results = instance.searchForImages(withTerm: term)
-        
-        XCTAssertFalse(results.isEmpty)
-        
-        XCTAssertTrue(results.count > 1)
+        assertNotEmpty(results)
     }
     
     func testSearchAWord()
     {
         let results = instance.searchForImages(withWord: word)
-        
-        XCTAssertFalse(results.isEmpty)
-        XCTAssertTrue(results.count > 1)
+        assertNotEmpty(results)
     }
     
     func testSearchResultsIncludeImages()
@@ -59,10 +54,9 @@ class FlickrImageProviderTests: XCTestCase
         guard results.notEmpty else { return }
         
         let anyURL = results.first!
-        
         let image = anyURL.downloadToImage()
         
-        XCTAssertFalse(image == nil)
+        assertNotNil(image)
         
     }
     

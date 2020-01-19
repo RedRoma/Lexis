@@ -12,11 +12,10 @@ import Foundation
 import LexisDatabase
 
 
-
-fileprivate class Flickr
+fileprivate enum Flickr
 {
     static let api = "https://api.flickr.com/services/rest/"
-    static let apiKey = "e904f6fd166f683b7e41a95949d9fc42"
+    static let apiKey = "6f7dc5dc030c0a095b7e287c7f8058f8"
     static let apiSignature = ""
     
     static let searchAPI = api + "?method=flickr.photos.search&format=json&nojsoncallback=1&api_key=\(apiKey)&sort=interestingness-desc&media=photos"
@@ -46,16 +45,10 @@ class FlickrImageProvider: ImageProvider
     func searchFlickrForImages(withTerm searchTerm: String) -> [FlickrImage]
     {
         guard searchTerm.notEmpty else { return [] }
-        
-        let searchURL = Flickr.createURLSearching(text: searchTerm)
+        guard let searchURL = Flickr.createURLSearching(text: searchTerm) else { return [] }
         LOG.info("Searching URL: \(searchURL)")
         
-        guard let searchResultsString = searchURL?.downloadToString()
-        else
-        {
-            return []
-        }
-        
+        guard let searchResultsString = searchURL.downloadToString() else { return [] }
         guard let searchResultsJSON = searchResultsString.asJSONDictionary() else { return [] }
         guard let searchResults = SearchResults.init(fromJSON: searchResultsJSON) else { return [] }
         

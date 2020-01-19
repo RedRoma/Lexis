@@ -30,7 +30,8 @@ extension UIImage
         UIImageWriteToSavedPhotosAlbum(self, self, #selector(self.onSaveComplete(_:didFinishSavingWithError:contextInfo:)), nil)
     }
     
-    func onSaveComplete(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer)
+    @objc
+    private func onSaveComplete(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer)
     {
         if let error = error
         {

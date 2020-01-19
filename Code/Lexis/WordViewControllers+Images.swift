@@ -154,8 +154,8 @@ extension WordViewController
         let fade = KingfisherOptionsInfoItem.transition(.fade(0.6))
         let scale = KingfisherOptionsInfoItem.scaleFactor(UIScreen.main.scale * 2)
         let options: KingfisherOptionsInfo = [fade, scale]
-        
-        cell.photoImageView.kf.setImage(with: url, placeholder: nil, options: options, progressBlock: nil, completionHandler: nil)
+
+        cell.photoImageView.kf.setImage(with: url, placeholder: nil, options: options)
     }
     
     private func adjustCell(_ tableView: UITableView, at indexPath: IndexPath)
@@ -216,7 +216,7 @@ extension WordViewController
     
     private func adjustContentMode(for cell: ImageCell, isExpanded: Bool)
     {
-        let contentMode: UIViewContentMode = isExpanded ? .scaleAspectFit : .scaleAspectFill
+        let contentMode: UIView.ContentMode = isExpanded ? .scaleAspectFit : .scaleAspectFill
         cell.photoImageView.contentMode = contentMode
     }
     

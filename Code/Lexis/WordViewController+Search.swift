@@ -307,7 +307,8 @@ extension WordViewController
 //MARK: TextField Delegate
 extension WordViewController: UITextFieldDelegate
 {
-    
+
+    @objc
     func editingDidChange(_ textField: UITextField)
     {
         let text = textField.text ?? ""

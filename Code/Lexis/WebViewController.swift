@@ -38,7 +38,7 @@ class WebViewController: UIViewController
     
     private func loadLink()
     {
-        LOG.info("Loading \(link)")
+        LOG.info("Loading [\(link)]")
         showNetworkIndicator()
         
         let request = URLRequest(url: link)
@@ -67,7 +67,7 @@ extension WebViewController: UIWebViewDelegate
         hideNetworkIndicator()
     }
     
-    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebView.NavigationType) -> Bool
     {
         
         guard let link = request.url, let scheme = link.scheme else { return true }
@@ -89,7 +89,7 @@ extension WebViewController: UIWebViewDelegate
     {
         LOG.error("Failed to load: \(link), \(error)")
         
-        AromaClient.sendHighPriorityMessage(withTitle: "Failed To Load Link", withBody: "\(link)\n\n\(error)")
+        AromaClient.sendHighPriorityMessage(withTitle: "Failed To Load Link", withBody: "[\(link)] | [\(error)]")
         
         hideNetworkIndicator()
     }

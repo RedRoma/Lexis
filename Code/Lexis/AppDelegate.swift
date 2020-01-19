@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 
     private let buildNumber: String = Bundle.main.infoDictionary?[kCFBundleVersionKey as String] as? String ?? ""
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
     {
         LOG.level = .debug
         LOG.enable()
@@ -47,8 +47,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate
             LOG.error("Uncaught Exception: \(error)")
         }
         
-        ImageCache.default.maxDiskCacheSize = UInt(75.mb)
-        ImageCache.default.maxCachePeriodInSecond = (3.0).days
+        ImageCache.default.diskStorage.config.sizeLimit = UInt(75.mb)
+        ImageCache.default.diskStorage.config.expiration =  .days(3)
         
         return true
     }
@@ -90,6 +90,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
             .withPriority(.medium)
             .addBody("Build #\(buildNumber)")
             .send()
+        
         ImageCache.default.clearMemoryCache()
     }
 

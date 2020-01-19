@@ -30,8 +30,9 @@ class ImageCell: UITableViewCell
         self.pressGesture = UILongPressGestureRecognizer(target: self, action: #selector(self.onLongPressGesture(gesture:)))
         self.addGestureRecognizer(pressGesture)
     }
-    
-    func removeLongPressGesture()
+
+    @objc
+    private func removeLongPressGesture()
     {
         if let existingGesture = pressGesture
         {
@@ -39,8 +40,9 @@ class ImageCell: UITableViewCell
         }
         onLongPress = nil
     }
-    
-    func onLongPressGesture(gesture: UIGestureRecognizer)
+
+    @objc
+    private func onLongPressGesture(gesture: UIGestureRecognizer)
     {
         onLongPress?(self)
     }
