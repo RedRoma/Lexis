@@ -1,6 +1,6 @@
 github "RedRoma/Archeota"
 github "RedRoma/Lexis-Database"
-github "RedRoma/RedRomaColors"
+github "RedRoma/RedRomaColors" "develop"
 github "RedRoma/AromaSwiftClient" "develop"
 
 github "SirWellington/AlchemyGenerator"
