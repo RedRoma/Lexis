@@ -27,11 +27,12 @@ extension UIImage
     
     func saveImage()
     {
+        /// Needs NSPhotoLibraryUsageDescription and NSPhotoLibraryAddUsageDescription in plist
         UIImageWriteToSavedPhotosAlbum(self, self, #selector(self.onSaveComplete(_:didFinishSavingWithError:contextInfo:)), nil)
     }
     
     @objc
-    private func onSaveComplete(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer)
+    func onSaveComplete(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer)
     {
         if let error = error
         {
