@@ -6,7 +6,7 @@ before_install:
   - brew update
 
   # Only if app has Carthage dependencies
-  - cd Code && ./update.sh
+  - cd Code && carthage update --platform ios --new-resolver
 
 script:
   - carthage build --no-skip-current
