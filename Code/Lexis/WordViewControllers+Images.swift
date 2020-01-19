@@ -224,7 +224,7 @@ extension WordViewController
     {
         cell.setupLongPressGesture() { [weak self] cell in
             
-            guard let `self` = self else { return }
+            guard let self = self else { return }
             guard let path = self.tableView?.indexPath(for: cell) else { return }
             guard let controller = self.createActionSheetFor(cell: cell, at: path) else { return }
             
@@ -310,7 +310,7 @@ fileprivate extension WordViewController
         
         let download = UIAlertAction(title: "Download", style: .default) { [path = indexPath, images, word, weak cell] action in
             
-            guard let `cell` = cell else { return }
+            guard let cell = cell else { return }
             
             cell.photoImageView.image?.saveImage()
             
@@ -318,7 +318,7 @@ fileprivate extension WordViewController
             guard row.isValidIndexFor(array: images) else { return }
             
             let flickrImage = images[row]
-            
+
             AromaClient.beginMessage(withTitle: "Image Downloaded")
                 .addBody("For Word:").addLine()
                 .addBody("\(word)").addLine(2)
@@ -326,17 +326,12 @@ fileprivate extension WordViewController
                 .send()
         }
         
-        let openInSafari = UIAlertAction(title: "View", style: .default) { [weak self] action in
-            
-            guard let `self` = self else { return }
-            
-            self.showImage(atIndexPath: indexPath)
+        let openInSafari = UIAlertAction(title: "View", style: .default) { [weak self] _ in
+            self?.showImage(atIndexPath: indexPath)
         }
         
-        let shareImage = UIAlertAction(title: "Share", style: .default) { [weak self] action in
-            guard let `self` = self else { return }
-            
-            self.shareImage(atIndexPath: indexPath)
+        let shareImage = UIAlertAction(title: "Share", style: .default) { [weak self] _ in
+            self?.shareImage(atIndexPath: indexPath)
         }
         
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
