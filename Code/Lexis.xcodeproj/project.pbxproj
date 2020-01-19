@@ -123,8 +123,6 @@
 		DEDAB64C1DADA0FC006FA10C /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDAB64A1DADA0FC006FA10C /* Search.storyboard */; };
 		DEDB439C1D925F5700BF092E /* LexisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDB439B1D925F5700BF092E /* LexisView.swift */; };
 		DEDB439D1D925F5700BF092E /* LexisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDB439B1D925F5700BF092E /* LexisView.swift */; };
-		DEDBC8331ECE1ACF00F84081 /* Crashlytics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DEDAB64F1DADA3AE006FA10C /* Crashlytics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DEDBC8341ECE1ACF00F84081 /* Fabric.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DEDAB64E1DADA3AE006FA10C /* Fabric.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,8 +149,6 @@
 				132CDFF323D4034B00B67D2A /* Archeota.framework in Embed Frameworks */,
 				132CDFF423D4034B00B67D2A /* AromaSwiftClient.framework in Embed Frameworks */,
 				132CDFF523D4034B00B67D2A /* AromaThrift.framework in Embed Frameworks */,
-				DEDBC8331ECE1ACF00F84081 /* Crashlytics.framework in Embed Frameworks */,
-				DEDBC8341ECE1ACF00F84081 /* Fabric.framework in Embed Frameworks */,
 				132CDFF623D4034B00B67D2A /* Kingfisher.framework in Embed Frameworks */,
 				132CDFF723D4034B00B67D2A /* KingfisherSwiftUI.framework in Embed Frameworks */,
 				132CDFF823D4034B00B67D2A /* LexisDatabase.framework in Embed Frameworks */,
