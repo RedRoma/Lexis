@@ -142,8 +142,7 @@ extension WordViewController
     
     private func createSearchTextFieldCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
     {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchEntryCell", for: indexPath) as? SearchEntryCell
-        else
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchEntryCell", for: indexPath) as? SearchEntryCell else
         {
             LOG.warn("Failed to load SearchEntryCell")
             return emptyCell
@@ -178,8 +177,7 @@ extension WordViewController
     
     internal func createEmptySearchResultsCell(_ tableView: UITableView, atIndexPath indexPath: IndexPath) -> UITableViewCell
     {
-        guard let emptySearchCell = tableView.dequeueReusableCell(withIdentifier: "SearchEmptyCell", for: indexPath) as? SearchEmptyCell
-        else
+        guard let emptySearchCell = tableView.dequeueReusableCell(withIdentifier: "SearchEmptyCell", for: indexPath) as? SearchEmptyCell else
         {
             LOG.error("Failed to load SearchEmptyCell")
             return emptyCell
